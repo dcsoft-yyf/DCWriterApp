@@ -3,10 +3,16 @@
 <br />Online demo:[https://dcsoft-yyf.github.io/DCWriterApp/index.html](https://dcsoft-yyf.github.io/DCWriterApp/index.html)
 <br />Site: [http://dcsoftcn.com/](http://dcsoftcn.com/).
 <br />Email: [28348092@qq.com](mailto:28348092@qq.com)
+
 # Changelog
 2025-9-17 First upload
+# Screen snapshort
 
-<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/dc-be.jpg" alt="DCWriter5" />
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/form designer.jpg"/>
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/dc-be.jpg" />
+[More screen snapshort](https://github.com/dcsoft-yyf/DCWriterApp/blob/main/snapshort.md)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oIeLRqbndKU?si=GRil_ZbsJJFhkArb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;DCWriter is a professional rich text editor based on front-end technology, dedicated to providing an editing experience consistent with MS Word, and fully supports various text formats and style settings. The product supports drag-and-drop insertion of structured elements, maintaining the flexibility of flow layout while enabling rapid construction of structured templates. With its powerful features, excellent performance, and convenient integration, DCWriter has become an industry-leading document editing solution and holds three related invention patents.
@@ -37,9 +43,9 @@ DCWriter provides highly professional clinical medical document features:
 
 # For Chinese Developers
 DCWriter has passed original manufacturer certification for domestic operating systems such as Kylin, NeoKylin, and UnionTech; supports loading and saving OFD files; and complies with Xinchuang requirements.
-<br /><img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/kylin.jpg"/>
-<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/fde.jpg"/>
-<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/uos.jpg"/>
+<br /><img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/kylin.jpg" width="30%"/>
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/fde.jpg" width="30%"/>
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/uos.jpg" width="30%"/>
 # For WinForm.NET/WPF Developers
 DCWriter provides a WinForm.NET version of the editor, maintaining the same functionality and file format, and can be used for WinForm.NET and WPF development. Supports MS .NET Framework 2.0SP2 and above.
 
@@ -103,11 +109,6 @@ Answer: DCWriter adopts an **open AI integration strategy**, providing users wit
    - **Comprehensive Integration Examples**: Offers numerous practical interaction examples and best practices to help developers quickly get started with AI feature integration
    - **Wide Application Scenarios**: Supports intelligent document generation, content intelligent proofreading, structured data extraction, automatic layout optimization, and other AI applications
    - **Developer Friendly**: Through standardized interface design, integrators can easily build powerful AI document processing applications based on DCWriter
-# Screen snapshort
-
-<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer1.png"/>
-
-
 
 # DCWriter Feature List
 ## Runtime Environment

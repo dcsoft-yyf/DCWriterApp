@@ -1,0 +1,20 @@
+#Screen snapshort of DCWriter
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/dc-be.jpg">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/form designer.jpg">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer1.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer2.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer3.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer4.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer5.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer6.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer7.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer8.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer9.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer10.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer11.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer12.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer13.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer14.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer15.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer16.png">
+<img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/customer17.png">
