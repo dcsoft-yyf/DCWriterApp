@@ -1,0 +1,157 @@
+/* Main application styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header styles */
+.app-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.app-subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Editor container */
+.editor-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.editor-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.editor-content {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    position: relative;
+}
+
+/* Document container */
+.document-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: auto;
+}
+
+.document-page {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    min-height: 800px;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    position: relative;
+}
+
+/* Rulers */
+.ruler-horizontal {
+    height: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    margin-left: 20px;
+}
+
+.ruler-vertical {
+    width: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+/* Status bar */
+.status-bar {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 4px 16px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.status-info {
+    display: flex;
+    gap: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 6px 12px;
+    }
+    
+    .app-title {
+        font-size: 20px;
+    }
+    
+    .app-subtitle {
+        font-size: 12px;
+    }
+    
+    .document-page {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .status-info {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .document-container {
+        padding: 10px;
+    }
+    
+    .document-page {
+        padding: 16px;
+        margin: 5px;
+    }
+}

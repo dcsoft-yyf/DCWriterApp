@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCWriter5 - RTF Rich Text Editor Demo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/editor.css">
+    <link rel="stylesheet" href="styles/toolbar.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">DCWriter5</h1>
+                <p class="app-subtitle">Powerful Online RTF Rich Text Editor</p>
+            </div>
+        </header>
+
+        <nav class="toolbar" id="toolbar">
+            <div class="toolbar-section">
+                <button class="toolbar-btn" id="btn-new" title="New Document">
+                    <span class="btn-icon">📄</span>
+                    New
+                </button>
+                <button class="toolbar-btn" id="btn-open" title="Open Document">
+                    <span class="btn-icon">📂</span>
+                    Open
+                </button>
+                <button class="toolbar-btn" id="btn-save" title="Save Document">
+                    <span class="btn-icon">💾</span>
+                    Save
+                </button>
+                <button class="toolbar-btn" id="btn-print" title="Print Document">
+                    <span class="btn-icon">🖨️</span>
+                    Print
+                </button>
+            </div>
+
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-section">
+                <button class="toolbar-btn" id="btn-undo" title="Undo">
+                    <span class="btn-icon">↶</span>
+                </button>
+                <button class="toolbar-btn" id="btn-redo" title="Redo">
+                    <span class="btn-icon">↷</span>
+                </button>
+            </div>
+
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-section">
+                <select class="toolbar-select" id="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+                <select class="toolbar-select" id="font-size">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                    <option value="28">28</option>
+                    <option value="32">32</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>
+                </select>
+            </div>
+
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-section">
+                <button class="toolbar-btn format-btn" id="btn-bold" title="Bold">
+                    <span class="btn-icon">B</span>
+                </button>
+                <button class="toolbar-btn format-btn" id="btn-italic" title="Italic">
+                    <span class="btn-icon">I</span>
+                </button>
+                <button class="toolbar-btn format-btn" id="btn-underline" title="Underline">
+                    <span class="btn-icon">U</span>
+                </button>
+                <button class="toolbar-btn format-btn" id="btn-strikethrough" title="Strikethrough">
+                    <span class="btn-icon">S</span>
+                </button>
+            </div>
+
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-section">
+                <button class="toolbar-btn" id="btn-align-left" title="Align Left">
+                    <span class="btn-icon">⬅️</span>
+                </button>
+                <button class="toolbar-btn" id="btn-align-center" title="Align Center">
+                    <span class="btn-icon">⬇️</span>
+                </button>
+                <button class="toolbar-btn" id="btn-align-right" title="Align Right">
+                    <span class="btn-icon">➡️</span>
+                </button>
+                <button class="toolbar-btn" id="btn-align-justify" title="Justify">
+                    <span class="btn-icon">⬌</span>
+                </button>
+            </div>
+
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-section">
+                <button class="toolbar-btn" id="btn-bullet-list" title="Bullet List">
+                    <span class="btn-icon">•</span>
+                </button>
+                <button class="toolbar-btn" id="btn-number-list" title="Numbered List">
+                    <span class="btn-icon">1.</span>
+                </button>
+            </div>
+
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-section">
+                <input type="color" class="color-picker" id="text-color" title="Text Color" value="#000000">
+                <input type="color" class="color-picker" id="bg-color" title="Background Color" value="#ffffff">
+            </div>
+        </nav>
+
+        <main class="editor-container">
+            <div class="editor-wrapper">
+                <div class="ruler-horizontal" id="ruler-horizontal"></div>
+                <div class="editor-content">
+                    <div class="ruler-vertical" id="ruler-vertical"></div>
+                    <div class="document-container" id="document-container">
+                        <div class="document-page" id="document-page">
+                            <div class="dcwriter-editor" id="dcwriter-editor" contenteditable="true">
+                                <p>Welcome to DCWriter5!</p>
+                                <p>This is a powerful RTF rich text editor that doesn't rely on HTML DOM manipulation. Start typing to experience the advanced text editing capabilities.</p>
+                                <p><br></p>
+                                <p><strong>Features:</strong></p>
+                                <ul>
+                                    <li>Rich text formatting (bold, italic, underline)</li>
+                                    <li>Font family and size selection</li>
+                                    <li>Text alignment and lists</li>
+                                    <li>Color support for text and background</li>
+                                    <li>Document operations (new, open, save, print)</li>
+                                    <li>Undo/Redo functionality</li>
+                                </ul>
+                                <p><br></p>
+                                <p>Try the toolbar buttons above to format your text. This editor is designed for professional document editing with RTF support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="status-bar">
+            <div class="status-info">
+                <span id="word-count">Words: 0</span>
+                <span id="char-count">Characters: 0</span>
+                <span id="cursor-position">Line 1, Column 1</span>
+            </div>
+        </footer>
+    </div>
+
+    <input type="file" id="file-input" accept=".rtf,.txt,.html" style="display: none;">
+
+    <script src="js/dcwriter-core.js"></script>
+    <script src="js/rtf-handler.js"></script>
+    <script src="js/toolbar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

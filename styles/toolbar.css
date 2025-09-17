@@ -1,0 +1,158 @@
+/* Toolbar styles */
+.toolbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.toolbar-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.toolbar-separator {
+    width: 1px;
+    height: 24px;
+    background-color: #dee2e6;
+    margin: 0 4px;
+}
+
+.toolbar-btn {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #495057;
+    transition: all 0.2s ease;
+    min-width: 32px;
+    height: 32px;
+    justify-content: center;
+}
+
+.toolbar-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.toolbar-btn:active,
+.toolbar-btn.active {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.toolbar-btn.format-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-icon {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.toolbar-select {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: white;
+    cursor: pointer;
+    height: 32px;
+}
+
+.toolbar-select:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.color-picker {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 3px;
+}
+
+/* Responsive toolbar */
+@media (max-width: 768px) {
+    .toolbar {
+        padding: 6px 12px;
+        gap: 4px;
+    }
+    
+    .toolbar-btn {
+        padding: 4px 6px;
+        min-width: 28px;
+        height: 28px;
+        font-size: 11px;
+    }
+    
+    .toolbar-select {
+        height: 28px;
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+    
+    .color-picker {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .toolbar-separator {
+        height: 20px;
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toolbar {
+        flex-wrap: wrap;
+        padding: 4px 8px;
+    }
+    
+    .toolbar-section {
+        gap: 2px;
+    }
+    
+    .toolbar-btn {
+        padding: 3px 4px;
+        min-width: 24px;
+        height: 24px;
+    }
+    
+    .toolbar-select {
+        height: 24px;
+        font-size: 10px;
+    }
+    
+    .color-picker {
+        width: 24px;
+        height: 24px;
+    }
+}
