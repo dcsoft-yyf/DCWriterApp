@@ -1,4 +1,4 @@
-﻿
+
 # DCWriter Structured Document Editor (Latest Version V5.0)
 <br />Online demo:[https://dcsoft-yyf.github.io/DCWriterApp/index.html](https://dcsoft-yyf.github.io/DCWriterApp/index.html)
 <br />Site: [http://dcsoftcn.com/](http://dcsoftcn.com/).
@@ -10,7 +10,7 @@
 
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/form designer.jpg"/>
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/dc-be.jpg" />
-<br/>[More screen snapshort](https://github.com/dcsoft-yyf/DCWriterApp/blob/main/snapshort.md)
+[More screen snapshort](https://github.com/dcsoft-yyf/DCWriterApp/blob/main/snapshort.md)
 
 <br/>[![Video](https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/video.jpg)](https://www.youtube.com/watch?v=oIeLRqbndKU)
 
@@ -18,7 +18,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;DCWriter is a professional rich text editor based on front-end technology, dedicated to providing an editing experience consistent with MS Word, and fully supports various text formats and style settings. The product supports drag-and-drop insertion of structured elements, maintaining the flexibility of flow layout while enabling rapid construction of structured templates. With its powerful features, excellent performance, and convenient integration, DCWriter has become an industry-leading document editing solution and holds three related invention patents.
 &nbsp;&nbsp;&nbsp;&nbsp;DCWriter can benefit the following types of users:
 
-# For B2B Developers
+# For toB Developers
 1. DCWriter provides unique structured document features. It offers free text input as well as form areas to restrict input methods in specific regions.
 2. DCWriter implements a custom DOM model, providing unlimited extensibility. Developers can create new document element types to better fit specific business needs. For example, it can be used to develop template design tools for dynamically defining various complex form interfaces required by user businesses.
 3. DCWriter is not based on the HTML DOM but implements its own document layout algorithm, overcoming some technical limitations of the HTML DOM. For example, it achieves reliable Undo/Redo functionality and maintains completely consistent layout results across different browsers.
@@ -29,31 +29,31 @@
 2. Supports real-time pagination, true WYSIWYG, consistent layout across browsers, and reliable Undo/Redo operations.
 3. Supports Windows, Linux, Mac, Android, iOS, and other operating systems.
 4. Provides a simple API programming interface, making it easy to implement multi-document tabbed mode.
+5. This version of DCWriter is built on Blazor WebAssembly 9.0. We also offer a version based on Blazor WebAssembly 7.0 to support older web browsers.
 
 # For Electronic Medical Record Developers
-DCWriter provides highly professional clinical medical document features:
+&nbsp;&nbsp;&nbsp;&nbsp;DCWriter provides highly professional clinical medical document features:
 1. Structured medical record document functionality.
 2. Can be used for medical record editing in doctor workstations, nursing record entry in nurse workstations, case editing in regional medical clients, PASC/LIS/RIS report editing and printing, front page of medical records, discharge summaries, progress notes, operation records, various consent forms, rehabilitation and psychiatric scales, clinical pathway forms, etc.
 3. The commercial version also provides writing trace retention, multi-level permission control, various medical expressions such as dental charts, menstrual history, etc., and can automatically calculate scale scores.
 4. In China, at least 50,000 hospitals are running this editor software, with an estimated 500,000 doctors using it daily to write over 10 million pages of medical records.
 5. Meets the highest level (Level 8) of the National Electronic Medical Record System Function Application Level Evaluation, and has been running stably at Beijing Fuwai Hospital.
 6. Fully supports the hospital information interconnection standardization maturity assessment, and hospital information systems built on DCWriter have passed the Class 5B interconnection certification.
-7. Meets the national Xinchuang (indigenous innovation) strategy, and DCWriter has obtained mutual recognition with operating systems such as UnionTech, Kylin, and NeoKylin.
-8. The DCWriter template design tool is compatible with domestic middleware (Tongfang), as well as domestic databases such as Dameng and Renmin Jincang.
+7. The DCWriter template design tool is compatible with domestic middleware (Tongfang), as well as domestic databases such as Dameng and Renmin Jincang.
 
 # For Chinese Developers
-DCWriter has passed original manufacturer certification for domestic operating systems such as Kylin, NeoKylin, and UnionTech; supports loading and saving OFD files; and complies with Xinchuang requirements.
+&nbsp;&nbsp;&nbsp;&nbsp;DCWriter has passed original manufacturer certification for domestic operating systems such as Kylin, NeoKylin, and UnionTech; supports loading and saving OFD files; and complies with Xinchuang requirements.
 <br /><img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/kylin.jpg" width="30%"/>
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/fde.jpg" width="30%"/>
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/uos.jpg" width="30%"/>
 # For WinForm.NET/WPF Developers
-DCWriter provides a WinForm.NET version of the editor, maintaining the same functionality and file format, and can be used for WinForm.NET and WPF development. Supports MS .NET Framework 2.0SP2 and above.
+&nbsp;&nbsp;&nbsp;&nbsp;DCWriter provides a WinForm.NET version of the editor, maintaining the same functionality and file format, and can be used for WinForm.NET and WPF development. Supports MS .NET Framework 2.0SP2 and above.
 
 # For Windows Desktop Developers
-DCWriter provides an ActiveX control version, maintaining the same functionality and file format. Can be used in PB, Delphi, VB, C++, and other development environments.
+&nbsp;&nbsp;&nbsp;&nbsp;DCWriter provides an ActiveX control version, maintaining the same functionality and file format. Can be used in PB, Delphi, VB, C++, and other development environments.
 
 # For End Users
-DCWriter provides simple yet powerful document editing features:
+&nbsp;&nbsp;&nbsp;&nbsp;DCWriter provides simple yet powerful document editing features:
 1. Offers a user experience similar to MS Word, allowing users to get started without learning.
 2. Enables precise real-time pagination, true WYSIWYG, unlimited Undo/Redo operations, helping users achieve their goals quickly.
 3. Provides tables, header table rows, and other features for quickly creating complex layout documents.
@@ -360,8 +360,7 @@ DCWriter提供非常专业的临床医疗文书的相关功能:
 4. 在中国，已经有至少5万家医院运行着这个编辑器软件，估计每天有50万个医生使用该软件书写了超过1000万页的病历文档。
 5. 满足国家电子病历系统功能应用水平分级评价8级（最高级别）要求，已在北京阜外医院稳定运行。
 6. 全面支持医院信息互联互通标准化成熟度测评，基于DCWriter构建的医院信息系统已通过互联互通五乙级认证。
-7. 满足国家信创战略，DCWriter已获得统信、麒麟、方德等操作系统互认。
-8. DCWriter配套模板设计工具兼容国产中间件(东方通)，兼容达梦、人大金仓等国产数据库。
+7. DCWriter配套模板设计工具兼容国产中间件(东方通)，兼容达梦、人大金仓等国产数据库。
 # 对于中国开发者
 DCWriter通过了国产的麒麟、方德、统信操作系统的原厂认证；支持加载和保存OFD文件；符合信创规则。
 # 对于WinForm.NET/WPF开发者
