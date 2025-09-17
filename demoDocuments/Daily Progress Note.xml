@@ -1,0 +1,3146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes />
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="18">
+               <XElements xsi:nil="true" />
+               <Text>DCWriter Demo</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+            <Element xsi:type="XString" StyleIndex="20">
+               <XElements xsi:nil="true" />
+               <Text>  Daily Progress Note</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="0" WhiteSpaceLength="1">
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+            <Element xsi:type="XString" StyleIndex="21">
+               <XElements xsi:nil="true" />
+               <Text>                   Name:   </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="22" WhiteSpaceLength="20">
+               <XElements xsi:nil="true" />
+               <Text>                    </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="21">
+               <XElements xsi:nil="true" />
+               <Text>Department:</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="22" WhiteSpaceLength="26">
+               <XElements xsi:nil="true" />
+               <Text>                          </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="21">
+               <XElements xsi:nil="true" />
+               <Text>Bed No:</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="22" WhiteSpaceLength="24">
+               <XElements xsi:nil="true" />
+               <Text>                        </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="21">
+               <XElements xsi:nil="true" />
+               <Text>Admission No.:</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="24" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <ContentReadonly>True</ContentReadonly>
+         <XElements>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>AuthorName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>Department</Name>
+                     <Value>Thoracic surgery</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Bed No.</Name>
+                     <Value>33</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>True</EnablePermission>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Select time：</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>8134238a-83cf-4a93-bf77-917a807a5b8a</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>8134238a-83cf-4a93-bf77-917a807a5b8a</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>Summary time</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <ValueName />
+                        <Required>true</Required>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                        <ExcludeKeywords />
+                        <CustomMessage />
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString">
+                           <XElements xsi:nil="true" />
+                           <Text>2013-09-29 14:36</Text>
+                        </Element>
+                     </XElements>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <UserEditable>false</UserEditable>
+                     <Name>d92b420e-8032-49a3-9ab7-946277627152</Name>
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy-MM-dd HH:mm</Format>
+                     </DisplayFormat>
+                     <InnerValue>2013-09-29 14:36:00</InnerValue>
+                     <BackgroundText>*select time*</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings>
+                        <EditStyle>DateTime</EditStyle>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23" WhiteSpaceLength="23">
+                     <XElements xsi:nil="true" />
+                     <Text>                       </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="25">
+                     <XElements xsi:nil="true" />
+                     <Text>Stage Summary</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23" WhiteSpaceLength="2">
+                     <XElements xsi:nil="true" />
+                     <Text>  </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="26" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="23" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>fd1e1ff1-1894-4f01-b2dd-deafa02d5382</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>5cec7d81-7872-4ca7-a574-40804f5b42d9</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>name1</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>Xu Cunzhi</Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>0a46b713-b846-4164-b50f-035d04d2f949</Name>
+                     <InnerValue>Xu Cunzhi</InnerValue>
+                     <BackgroundText>patient name</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>,</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>e0c229a2-5269-432b-8f4d-1875696327f7</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>043d145e-718e-4bfd-a8cc-ae4d0a11c1d7</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>sex</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>male</Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>70f03336-91de-4c1b-903d-7544d41e9563</Name>
+                     <InnerValue>male</InnerValue>
+                     <BackgroundText>sex</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>,</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>698e28fb-bce2-4309-b15c-fd2d95c5bbae</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>d40f94d2-c1a9-4a46-82e8-132e5cd5f716</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>age</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>66 years old</Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>886284e4-b912-447f-987b-88224ea4969b</Name>
+                     <InnerValue>66years old</InnerValue>
+                     <BackgroundText>age</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>. </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>e29f6e00-6dc4-4343-844e-98d4097fdd37</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>c7bcea9c-ffc7-45c4-a76c-e1d599c99959</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>Chief Complaint</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>c724f2a6-6285-4fa7-9206-ec3c88d1331f</Name>
+                     <InnerValue />
+                     <BackgroundText>enter chief complaint reason</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>at</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>abf278e2-beda-4c21-9ef1-8f6d78def97a</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>51ff71dd-0b94-43da-8d2e-f59512a834d2</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>Admission Date</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <ValueName />
+                        <Required>true</Required>
+                        <ValueType>DateTime</ValueType>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                        <ExcludeKeywords />
+                        <CustomMessage />
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <UserEditable>false</UserEditable>
+                     <Name>e2138c8b-19f0-4800-a621-43656b8c7a73</Name>
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy MM dd  HHhoursmmminutes</Format>
+                     </DisplayFormat>
+                     <InnerValue>2013 july 17th 15hours29minutes</InnerValue>
+                     <BackgroundText>*2000-1-1*</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings>
+                        <EditStyle>Date</EditStyle>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>in our hospital</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>24d3d762-18c0-41c4-b2bf-eba04903dd50</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>5643afc6-a151-439d-be50-9b99dc067f36</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>department1</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>Thoracic surgery</Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>80b8f1a2-d55a-4733-8291-b2a442d4eafe</Name>
+                     <InnerValue>Thoracic surgery</InnerValue>
+                     <BackgroundText>admissiondepartment</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>。</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>A</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>dmission</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>condition</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>:</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>c1671966-b111-491f-8fd4-e60a933dff87</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>0b076bd3-6cea-4a87-ba68-cd3f4a87540b</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="31">
+                           <XElements xsi:nil="true" />
+                           <Text>                               </Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>0b076bd3-6cea-4a87-ba68-cd3f4a87540b</Name>
+                     <InnerValue>                               </InnerValue>
+                     <BackgroundText />
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>to assist checking result）</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Admission diagnosis</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>:</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>1eea2426-11fb-4d1f-84a0-d180f715a4af</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>3646cb0f-9bef-4db4-9f60-72bf0bb6a0ad</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="33">
+                           <XElements xsi:nil="true" />
+                           <Text>                                 </Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>3646cb0f-9bef-4db4-9f60-72bf0bb6a0ad</Name>
+                     <InnerValue>                                 </InnerValue>
+                     <BackgroundText />
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23">
+                     <ID>dcid0</ID>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Diagnosis condition</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>: </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>d31660bf-ba24-41a1-882a-c809b2309733</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>0ca4a67e-2478-4530-b86b-1a3d683ab06d</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="33">
+                           <XElements xsi:nil="true" />
+                           <Text>                                 </Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>0ca4a67e-2478-4530-b86b-1a3d683ab06d</Name>
+                     <InnerValue>                                 </InnerValue>
+                     <BackgroundText />
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Current condition</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>: </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>9f9e3cb6-0d5d-47b2-9012-03a3341955c1</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>a59cacad-c635-455a-84af-67e88c64cc53</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="36">
+                           <XElements xsi:nil="true" />
+                           <Text>                                    </Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>a59cacad-c635-455a-84af-67e88c64cc53</Name>
+                     <InnerValue>                                    </InnerValue>
+                     <BackgroundText />
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Current diagnosis</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>: </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>968f0fa3-281c-4ca8-88a7-c4b769d81e7b</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>c7485334-8652-43cc-99fd-5b861c7aff16</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="36">
+                           <XElements xsi:nil="true" />
+                           <Text>                                    </Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>c7485334-8652-43cc-99fd-5b861c7aff16</Name>
+                     <InnerValue>                                    </InnerValue>
+                     <BackgroundText />
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XImage" StyleIndex="26">
+                     <ID>image1</ID>
+                     <OffsetX>690.625</OffsetX>
+                     <OffsetY>-350</OffsetY>
+                     <ZOrderStyle>InFrontOfText</ZOrderStyle>
+                     <PropertyExpressions />
+                     <TransparentColorValue>#FFFFFF</TransparentColorValue>
+                     <Width>516</Width>
+                     <Height>522</Height>
+                     <Image>
+                        <HorizontalResolution>96</HorizontalResolution>
+                        <VerticalResolution>96</VerticalResolution>
+                        <ImageDataBase64String> iVBORw0K GgoAAAAN SUhEUgAA AKUAAACn CAYAAABw 45zRAAAA AXNSR0IA rs4c6QAA AARnQU1B AACxjwv8 YQUAAAAJ cEhZcwAA DsMAAA7D AcdvqGQA AEVwSURB VHhe7Z0J
+ nFxVlf+D 4/z//9mc kRGTrlfV ndR7lSDz 11GZUVxx HZfRGR0F HVQUUNwA UVGUUdlB FNn3RSDs MVH2LUAA WQNhiUDY IXu6q7q6 s4FASOb7 O/e+6qrq Wruruyuh fp/PrXrv
+ vvvuu8u5 27nnnDup gw466KCD DjroYMtH j/83ZP9x xt/5y0mb urr+eqCn 5x90Xezf QQejxsYo +r8irv4g /Yn+VPiD 2OWC8Khs EJ2QS0Z3 5IPwrP4g PBu/Z3JB 9JtskD6B
+ +0dyyfD+ gSA8mP+r ePZTPetP hsdlk9GX Nk2a9Jol yeTW/jMd dFAZIpTe bbb7W4ju n+TsGiKC mHohsj9D gK/0J6NN ENhz5sd1 NQchvkz4 DVzbO+WO 928nTI54 T4ZID88G
+ 4Z59QfqT +qbcsz09 /+8JGoRP WgevJqyY MrWnL5n5 73wQ/QRC ubYiASUh wmR4JAS0 bOg+WkIP eZFcfzL9 RXrNn2ST 4bn5VPif 8iOuz0PQ x/DOWbqH 8Obw7ivc 31YSt30z
+ 7CPOZ4lz ceFZIjoC 4l/YT9r6 E+G7fHI7 2FLBkPqB PMSYT0a3 QxBLIYZe CODlAqEw JOPm9QfR vRDLVfRi H4CodpFb 3jX9DT6a kWAr/dAj byWXD6a/ JZfMBHzr QIjzcxD2
+ /qTjaaWB tA26RhDe z/ONPDsx n4g+lU9N f+/61IyE xdbB5ou1 k9Nv1L8q FEK7h0p+ BSJ4fogI GWqDaEBD NfPBb+K3 yyaGz43J 5F9ZBOMI LYpEfP1d 6fcoPbg5 pPcX/C8S
+ cfLfB7HO x92QpVde ndj2H/2r HWwOyHZN 37Y/kf4W BJenEpfj HikQos0L wxep5B/K 9XV3d/nX 2gpqGHI0 pp0gyktp QKcZYSbD NSJM/Bdw /ShD/DG9 PdtN0VzU v9pBu2C5
+ WDGJzFsh uAM0/EKA 51F5GgbX QZwaEp9W BTJX++Lq IJ3xr202 yPZM35Ye 8j/6g8w3 IdI71LjI 21rr/RPR aeT5ck0F fPAOJhrq 7aicyyHE dZqfUUEn cq+Vcp7/ X2QT6Q9v
+ 2n77v/TB JxSD3d2v 95cjxqxJ k/4im0r/ C/m7BMLM QaD9fhR4 ifu7xLrS 3NUH72C8 oEL3Q9u8 eGh2FROd ScXsR8Wc 3G7zrmxX uD3DcI4F 1we916hh vNRkeDzl cCf5v7lQ
+ FkG4p0aO DnGOE2wx oHlVCTEy nAXh/Vzv Il6jDzpi MMwfR5y7 alrgvUYN 0neIJ5g1 A5OnT/Pe LcNgKvo3 iLPAR1WZ cH9pf3La m32QDloN sWXyEIoN UclwtS/8 jWLfDCbD
+ j/lgTWEw ud3W2WT4 XTGuvZeB eGdaxSbD q73XqEEv /oLizNOb e6+WQz1j XzLakVHk Hl8+OFsc nS1WlA/W QQuw1ff+ dus3aY5o lZqMDuR/ AwTzID3B bj7MiNCX zLyfuOhd
+ wrsHemZM 9d4Fohzs zqR1L5YN 3/+8PawD Dc9aLdNT /ZTF1Q9E JNpiJK1K 85r81Kkl e+cxtAhb 0iJ21KZJ O75WzHe+ uUT58G4d 7vDOkD5K 5BPRdyjI Wc8k0swV oydo8Y9Q
+ wedCmN9p xXaciBJi e5545/Z1 b1tgD/Gt mfoWQ2LY 1xW+ncrd HbeRnvri NXUY6Zu2 2+7/iDkO oX8dt58t vhyzfgNx ruB7v5bD 72OKW4uf fDLci2/e nE1O/1cf TUXkouh1
+ vHe+v60L axBBeLD/ /ka+S28d zlYeHiad PlgHjUCL FG3hGcGo lTt+41Pa K/ZBWgLf U9KLpH/k vQz0aA8w BEKs0X1U 4v0MuX4r MlyrId8H awhLCO/e jdYPJjPv gGDfQV4O
+ NpeMzqNH vYV83sv/ 0/z/yr9W EVpZk4bH +xLTpnuv hiDCJ097 K/0QJ4ui 8BzK8itq QD5IB7XQ F6Q/QcE9 4SsSghRh hrNz3dF2 PkjLkGNx QNwv8c3M yslv+Zu4 ktQAIJIL
+ LBDIB5l9 lBYqtuFe KkY2ER3h 393Le1VE L6tlGsf/ 97fDIMIi rUuJawHl 8xsI+Psi sBVTom18 kLoYYLrD KKOV+npL UxBdkuvJ vMk/7qAc 8yZNei2E cADuJRWY L7T71jRR
+ aOqJent6 pvjbuoBQ TqWi77fr INpXxK8h m8rewP1g 1u83DySm 00NFmwaS 6c/qvlEM dr/59eRH fMSXtYXp vUeEbCL8 D6WB6cuP dU+8z1kZ We8bnsJc 8TUWsAHw 3i68ozmm
+ yvkJsav8 ow5iDEzu mSqC8IVk jnnW7MEm ZQ+psLm8 e1N/Kvq2 96oJI8pU 9AddszA4 lndfJh13 WxqC6FAq /iI/j7ub 6xeb3ZZk DvorH9eK fCr93uJh Vwx98VP9 bU1IBpNG
+ slIE7qY2 4VcUL/en EPcfdC2G ug/eEBgN LrC0uXgu 0HSpGcLe oqGKooCW DxVQNEBB 79/sKhGi 2pl3F9LL aUL/J+9d E/oWw9mX dE0aJLRB DzntcxDr /W7BEl1C Zf0JosxS
+ cU/bSw1C iwne67N8 iaCS4VX8 n8T943z3 Yf5nKa2s ukvms5XA u8wHiYfV fDYxY4au 86nMV5dB oHwjRzxM d5jiBOGu /pWGICEQ Sxc9LXGw Ug9nt8vu 14RhIEj/ FxWkvWn1
+ cKq8/Oom 5QhzUzJv EkFBXHdQ qB+nF7mB gmYKMKMm 0xhi+7KI QitgsWKI 41HS8KyI m/9zFUbx cW3zL+L9 rb3YIFgc XWJ5cvn6 vfc2qXbr fW3RouE3 WlKPk0AZ 3YajwWUC
+ RoM7yevp 8oeg91Mc 4kZYI3Ly nHcTpySM 7pKcp0VQ AwPd0z/c n4i+Tfgs ZXC9GuTg q3U4F3uF gnjIKlxD N0PIqmnT JvvHdbGu e9su3p1F RdALRbtr T1j+K6a8 qYd41+K/
+ wAJWAd+0 CiXcIG6V u07/WkRJ 7/0pH0w9 qEkZ8Y31 pPkozTn9 o6pYHUQ7 8M463r3C 3k2kv+of FQBxid2l Z1/zXhXR H2T+nXD0 4Ol9cqnw fyCaK+L5 Kf6raCzL tMK3wEDS
+ ReSNqUi4 ludM1RsD +fs55aD9 9LWkezXX 39Pizz/e srHqjdMm UwB7kHlW ktptiJ7P pTJfa1TR Svw1CvvH FNxyCu5M XFL+g8kw 4lrD90zi NYITQ9pe qoC+xLbT Ca/h+/S4
+ 15LwBnPZ XzJ1MAI3 Mbgg/LOl 0+KT0wIh XES6L6/E CBfB8PwU VvYXQ8Q2 96PXPFq9 nA9iIJ1X 4xi+q6+4 BYbkFcTx eHZK+l/U KOKtz1sn d38IAn2Z 9B1sAYuA /4OkISdC
+ 9l514TcI WNU7AQ/n Mvu1cqu1 LSG5PwpR hSwWifRZ LhlIhp/x jyvCDc/R TmvpRaXP QmGfTxzn 9DK0+iAF MCQvFLFq 1cz/04S9 oZbQrlhB +icdPydN 68vF2ojj ZJ49pBUu
+ Q+FPqTAI NK6wiM55 OFSR9F73 mDidyW1K uBgiDaJr yfOVNIJr SNfvuBbP cIN/rSLE siLMK9lE 9B0R2Oru 8N3+0aSH u6YST7Se 5+I7fj1u 1CbiZuUb nWEBm4RW 4rzfS/qu
+ psedo7TH GppbHNSD UDEsGuJK DR9oZLjW itcRmBX0 klz3tI/I n97n1/jd BMEeagGB rUohnHyQ +ed8Kvo0 Bfqcehf/ uCqIZx5x 3+FvDerZ iHuhVqXe i3DT3kyc t+BeVEPx
+ 3gUwJGs7 8blYKAQC vJ30vLzS S8ELGhKZ InzB5+dx 710JkoS6 h2+tyKfT f088B1F+ R+uB569q 8XWKGyEy +/Ds1lwq /TXfkF4e jdxor9hi QXQdcUkc TiPDD7c4 RrsyRAVd
+ 7YjReskc rbBmD1kM htTv6r3s lGmFbTjm WvSaxBdE J3qvSRKs oKKeolJ+ rnsK9VZ9 q9YuzGIx pZmXUdHf 916GXEKr 0ujw7IzS aQWE/yyV tKh8WKMS k8TzxxX0 7N4rJsqX
+ /G0BEGXK l8VM7zUM K4PwAwoz ADHqnjzd LKLUvjbX C4h3efFe ueOvWprV 4E/x3iPG 8q7t/1pl QlxX8j31 xlduUZqW VjmOgMRr O6WXnsw/ aghiD/H+ jRTMY1L4 Nz/x+dx2
+ 4GUU2oFc zzY9F5tP hqsVhh7k nVTUyxSu 9TCV0BdM 00JC876f kLYLiGsx 72vn5AkR Qj9TBuL5 L3sGkbtK xyXSJfPV fCrzvk07 7vhafztJ SmqE20gc N3qvAsQA 9/FUJErF
+ A9HdQ95W LUnu8Ffq Kfn28gGl o4shXSMA 0wkf3KBV PfExlxwS JBktNN1S j0kemPta z34N06bI P948sXLy 5L9h+JMk uHShIcrw npEyaCmc HXj/ReL6 jfeaNMAC ST2RhjBp
+ K/LsIcK9 4ArRzTn5 7k32/cSM wnwshoZV wtvKWw7C vL0/EX2L Sr9Ywgz8 /1nxEdcN 8rdn0jQk Hfqmj6Yi PFEq3lW8 cyVxPMr/ qbhfEqft pTMC7O2D lyCXyHzE PU//TPdm
+ FIF7rer5 9nxdQ9jn FTPzaZCf tneCzKne qyXoD6Z/ gjRnFbe5 ILxe9eof b17Q3Cmb TP9IGaES 8hRmP5mr uf9bD6pQ KlfK/GeL 7bGSuZvi ZgXrtt6i 6HX4H+8K L7pPPYYx
+ mx2L47pK K0nSRe9n 8pmXr2G1 7b0NvHcb z0uY5iIG xS+i814V MZDoeavC 9flpgeao muuKWc4U wCmzQWwW uAg2AjAN 4HkuTi+N 6mbS2Mf/ bnqP98/R lip5hEDD Y/ISLDHV
+ 4OgVRqUd LaIWwu3L R4+7NEcr KYPD/KPN CxTsnsoE hLSOHuji vu7w7f7R iLGUeRvE ZT3PQDLz WQhmBW45 7pnebbYx QV0vS2gs HirsMRN6 NaUx0sJC wCIqghYd fUH4jUqy
+ jLx/ChWw pFhbMAtR ucqZ9u/e qyI0HVC4 SlwC0iti X1MuXCzw zY/zjAWa W2CJTQWx vUyer8D/ Iq5X6T1W 5J9W2sUZ UHlQLv2U +VkWSYOw OTiE3gjb R50MYZeQ BkYP7cCF
+ NzXyXttg Nb2TMmCE EES9rdzw p+C/Qbzr 9a8tSr5j uimaT8b8 RRU2z419 Q4Xl8t02 13yMVv5o I3KEmsNp ISaepctD 5p3+kYjm Y/a9olV5 JfD9g/je C+J1eq8C SNODlMuA
+ vy1gnhqU E2UbpOKP 4lvH8r8C v5fIZ6zq cLzCEveC AhuIKZLe qzelqATL TxBeqTmp 96oKm5LY zpfkAxix SN9mod4r wqAAbWFD gT7DdV3p cBWIWp16 Oe9VFcZS EfOa4UTf
+ 0h4zlXg5 fupN9o7n rOo9PIto BWmgdy0o mR1hEVUB 8UB04VIx vqX3onfo LXfxjyXT yJTB5po1 1Rp4j/lt 2O9vCxDD nfjXSuDE exXQZws1 6+H3mzXJ NgmU3g25 RHgk33uS
+ vKxeTUMU 8ZKfxTFB uH326hsF taDpAum8 iG9eFe97 r5kSbcN3 Z8YGHYph 81u3h68O ZxXldGrc GbQljCBN BMwKU87m euWQpAuF UBjWeOc6 C+/ZH/XQ n5pufD6G MJMGgvg+
+ KEJy3wyP sTAMs1oR G08v0Mrd pQlifSIW SSuGrTQd E12rzNPk 5+aAIsrQ eqcYxPEA aV7ob4fB VssQTSWi lFyopSUY LiGE/zzi zql8elPT 30tvfInm iDnJCFh8 jotA3v5b
+ jU7XUr/g vZU8W6T7 ash3pbv9 pQFi2pX0 2QpeDVlx Q3AnqmyU P0tjlfqT piTlPLT4 SYZf94/a D341bAah 8lXYMFI7 oLA1PN0a Dz/5RPqr FMoqDfsW qAGowqio V9axAqVQ
+ t+L6MRY8 tghhODtB FSensIU5 ps1zVZjh kRaJh9g+ EO5tVMbt /M+PW77k IZUf/B+0 OZx2k5LR jXxLkkgD ONviLIe2 DvU93rvK e+EXfl3y mLxDrzSc KGWOxd4J SvmlAo1C
+ ynJr4+GZ eK/g/XsU h9Li31tp gasgm5iq Bd/yvq5p 79O9eLfc z6ceCtLu qhO+o2F5 Ed/Y+8Aa nBK+eTjh 3d4+RDww eUjHqW2w RtuB2vZy 85/da+1l U2k/IpxW mCv7Eukv
+ UqC3l698 68EsYjhV Bb/LER4g 9VviOhP/ lwa6wrfH RCkio8f5 koYlVQKE 96QWCHom 8K7jP0pm skzVAH/1 Xi/x7Nxs Kvq25pp8 42jyyJy5 8r61/Hmn j3Anea9J Uqvl27Yz
+ JTfQU6r/ TZooj3Bl uTGtvtS0 9/lG8D3d ux7dzBIu HOwOt+f+ H+TqSUUJ 2rLl3Wfi cvEj1lwt pmwa5KZF Mvp1Uyzg UgviN5Pu +0if7DSp DkdjCKy1 UKujwJ9S YZO4gUZ0
+ jTW0kiGt nmWC5Ife uynwvcOI 43mxW8xq RDI6ULxH FZRjpLvC L4YqgjQO EmZhLG0D sRmPD2Ia NlzlnWRO n781SLdH pgSryR6K wUyeboj3 1mPgd5z7 DoRe1Msy /dDuzeNM
+ NS7yXgXw TA1mfTz8 qrErDtJk w3ezsAZD o1zZ7XTP vbmbhcSX w38haWT1 z5wxFX7B XqiNrXh3 V8o9tl43 q1UamaOC E4YNr7BM iXURRDv4 RyUoZvQK eo9MXMV7 2sOVncZf
+ aBj2jxuC 6yFM1Op6 rbgl+Cp/ CRDYCrwC Udr8KZm2 uWN/kDFF NK3ISceR lZjC9LDf IX3z/e2o YNMEFjHl Cwga1c/I /x0xoXhQ 4RLiMPuW T9OI9ieN e+cSTJFk IykZ3ay8
+ +LB1IR4u 7+ymMib/ n4XYHxng e65zCFcz AmhxZ3NM 2x2ShbdE 9C3NMWup mFgjcUpw NgL0d01/ j380cdCE WYmh4rQi vcx7F2CF ISkZiK+Y 7UBln25z P9sHDpkP qvWnf9Ys
+ 70srYwp7 I/MtVs2l RFh+79Vl C3vwFOat /lHbQfM5 0idLwtqq NAOu6i1t T9pGo2hT o0pjIl6I 2tQm4oZH HPsSrwy2 UvZmCGxf vrdi0Kv5 qpfn2RP4 D/J/uPyq QWKAxPEo
+ 3xAP+aYJ taVJC3or CTHLD2Rw gYZx/6gA L18o/ZcN Igj1SpqX 4Xe8ejOF US8K4dq8 jjB3NmsI ioJ4iHQ8 y/yyREVV 4m7+0qBK Jf7d6SXO 1bdoUE1J k48nRJQQ xJ2kd49i
+ CZ14+DaX mFZXF8m0 ID1BEp/2 sa8p7BQx T6XcV9D7 2giTlRR6 MpytHlmL Qwl5qOES rq5Ft9Nf P1lrg4t9 Hc6kIYw/ m0iERAKs h5OD0GrO CyGAr5DY JRTQvSR+ oVq8f8Rw
+ O2Mq789h uLDVMwVz Vz6YVmJm JJuc9q8U 1M6VVG0J /zHiVON4 zHvVhRjj 5YuazQEl RMkQXGsO ZxJQXhGO sjf5Sq4P w82NCZNy 2It4CkIj fgEpdo96 xx415Eos tHI4TkWR
+ uZgg/U3/ aPxARs6K E+B3U+rO BxlOvUR4 2BdLCknu j9b6x3zX 9PcqDu2X Q2Bihq+V kIW9CPie MxCVqryV xlTg97yz mvlk+7Em WgyI5irK w5TtqvVi 3gjCLNz6 /lTmm3H9
+ aGhV3eWC tGlxCuqN CXdeHEZb wiJOe9gE xFslPZe5 dIVPl68j xhRU/sfJ iPHHuF5X bIenGsSf pDAuoEDV MmlR4SKt bPmfo/h8 MC+WL5lF tbYhXp5E xbifX43t oBU/LfV5
+ CmXMDEi1 C6RCrJ0V LegqbQ96 nqTKmEVg +pPe2+qN EWluNkh/ iOvZjEy2 KaDelnK7 iLr5pd7V 3NteaBJ9 iehtxGub GKIP9cL+ 0dgjnqO4 FhHt672r YpObnP9J CvW6d61V
+ JlGiTX1B eKEFAm5o Cm+QrKBY EvHweuI/ vPHNvH9v vYk9xHyA KiLb/epV rjf2kkkh iSAzQwTp tgfVaHX6 xI/E7CaM elxGvHA/ F4Z61d52 EF5hL40A ogdHF2ae cW41tllL
+ kUulv0om TJGKAnhU W2r+UVVo /jhQprVn bAfZ0pGs YxCduNHt aX9dq3Iy dEE+mTFZ w/zr03// eGLqDbz/ YXuxDCxu frIxuYPN q8R4Jj5W jOEwft+r Ba5hRjeK CHV/n+1t
+ R9+njFdB JPfEIndO G8AbgPAL PpMa0mIo Ef6P7keC +ybZ9xZY vC7uhraO RwxNjvmQ ydVR+c/y 8YrbbI1C 4vWeRycT JLIfdJ4Y z8Sr40Re 7E+mD+Na Os8l8yaG m62ltkqj
+ sIm1dm/8 o0l9SYb5 VPgDf7tF 4xt/9bp/ leWNTZN2 qrjSFbuN IVlbo+tp 7KfFXA0v s3mO1aOp 1aYLrLNN EOZo1R6I 8/Ou/oxO nmiWzdcU WIm9Vx/y mSlsoY0W AxCd9Zje
+ gJTxE51B fd/aTODg Ogr4Rrm4 p44dveWr tmdkqvMf lM3lWiCu nNwzVfND r69zqho7 biMLnUN8 cBFMMu/k Ml+hHM95 uoGRbiTQ 6Ke64TsP aRfJe7ce 6v5jQpDw rPduCUwS
+ JhVd5281 DJ0cf4sM zh9Mpf+F a7GMZIDA mMf8a/98 VvEq/dUI 281yQsU6 4cw3VjMZ MwviNANe gus53ekS ImLvPSYg PV8upAW6 8d6thWt9 bsXdN0bD YywEALFp smzCuxSg
+ 6Ynj5sSS KGLMSvay ETbUqw2u XKxsrCwp txslgaRe lGsWH1Kb cPP1sYTq xmlDWm+5 MZfKjHie WhWxkjtU /6L2TL13 y0EGfk4r nxPr1vDN mdmUFLZs uFk6FnYq t2SoPHGD
+ uDvoNR/A tZRNIwEX zWvzQXqf cnad6ET0 YnTD3FKL Wf9o9JAC FgQh2zTq uerqFI/U ooLMK/Od u+IdhFyQ ke6JCdNK MEJDEoUr NYuCJHgH tSGitHpj YTjSMyZX 9vRMlcBz
+ bNZG80XV g3NO2FfX leqdZ6ZO rCkDdTlM VnTE4IMH QvHSeVkn 6wneexgG UrapLx7Z 0nx6+6Ym 0J7he2/x llYuZWJR BdMmUkUg zG3E/1I2 GX7Xe3dQ AzTso0QU lFu8E1ZT
+ C1PnllPm l0BsV8rx 7jzKOz6N o9Q50cOn Cb+R+M/2 UZRgwBj1 Ch+upc7u jsUFRw0+ 7IwJpIZL 1Wj+Emsq SsSJxJ1D Ap4Rw9wC NIhVwbS3 FDN7BaeE Hz3vbw25 KdF29JpL
+ 8B/0Xh3U AHUhE4fF RNkwbKcn FR0dE6F6 O+J5JNcV fVQdlUQH FU4jXDXx Nmd01ql5 KA4WWKNX z4W6P0Ni /kxilpcL MDCZfQ2Z Pl5MdKkL OP5X9HsI pqHjPRqB Wqu/LEB2
+ uvlGy1hS Wyp8/dhJ uNk62pcx 9A5luwMO YnQihdTp 89TDkTKS sHLy9GlO 8iu6T7tu /rWaGOze VqeteUHg 8IZGpNpr wqicRPF/ k/cqINvT sy0fmYtb B+HqLESt 7pa3cmsp
+ W0V5qYP6 EAFRb7Mk p+q9akIq InQ+hdPc qNMXRYz+ cQnMgJi0 VhONaVES r4kLmgsy NXXma8JU LQMtcML7 q6241bLE ciADErbo gygl6Pky /yfWsmmj nQPilWDH b2qpT1SS
+ Hm9XDKam N9RztBO8 8TFJ19+K M/M6dEKX aVeMOrzP B6sIRsjf qhemHmcX y3xWAjRx PvG9IPpo 1CZ9RfSa 6L00E+vz mDZN2v4v 6dXuhIgP IVOy6a15 jIaOP+Yh 2vKV2Spb
+ 0UfrSOwD 2p/13sMA YZvpv80B 5MVUczcH 6PAD6usI 6sh0qyCs bN4Onsq8 Ux2NDeMS 2EiFO/tX hoFFqTY0 XK8qm001 TvIQXQx1 WEPHwTQN PuSPURtu LF4SPSS8 MDfwuh62
+ +e5tURrj 1BKsHRgl SBbXiqw4 DASZQ/oT Tk+7GMaj TETf8reb BcwQVBCd KUMB3qvt oI5BoxN1 Ij34Veq5 SPOTuKMr iQTSE36F OnvA3xqk TUmdvYt4 5vCeaR0U 6tnUK4b2
+ 0YshYWHC uPORWCyJ 7+0fNY6+ 5FQdESfd Zrpcp2AV wyR6gvBC zVViqxa0 gFOLlYZ4 /g3coZqn eKELmVpZ jbtez52Z 6PAGJdZe 8HDahmal bJEKwHu3 PUjvD8nj xpHyAsca
+ 4pBAEPHC BWIML5KJ w1qWjiXd JUKS6RmF 472dyKeZ G/TEJUHj w3IJ2Uv3 hm3Nkkc0 10dRAt7V ScOeiEtN KTYEs1pL ITPfuFNd ufc20M3L NraUmaTB eAYru/1x hX1rgVb2
+ yHovRWRK UE6Q4nid RCA/6Syz sr9B1zGk rEScdmiR d+f5R20N LeyoDE1Z XqGhjuoQ 07GCrCZD LOfgLsP9 oVGZU20P kq/HqZdF qnOuX+b/ FmkbFE/J eF6wQpJN hMd67xIY
+ 4z2u25Ho R5Hwy/m4 LCY8UKnH yjHX49kc ESb/UvmU mZKfyoqD 5iUQ8y98 0EnSkKPL v0q7CpIY gci3grAv zqWmfVRT AH/syNm+ 5dleKf8L 8ilnzaHd IdMwpmdu w1nzR+WN
+ N3RUDGV9 T7WdN41+ dmi+KYI5 /qJ6QOag dCqVj5Qx o2DiYUK8 1eLVGUUF omRR3BQj XXozvHSX vVxnbmfb T24XJ7Y/ ow8uJQPf 8UHEVppl BkcLRCcz yGZL+0YV Ds4b5zdT
+ c1eIN+pf 3SxA+q+n 0ijwcA7X F6xMDzcM 1W6g07id adkw5S7q YA+cs0Up 53TypVVp JrtrQUZd 86np7/W3 wyBmPPE5 25w4OrBh ZhKrwlq9 vSjxp9qy cMoYhHSh 5hwkfDcI
+ TnYUZW1t Iz3HvdlE 9G09t6E5 Ef4PiTJb Q7Hj2cnM OQPpjRQv nDYXmOkT 5Vfbn0H4 EpX9pVjt o53BSPU9 GpJpMar8 qYvDSH/h 9As6GjW0 HVQnK6ZM 7eF68SIW t/byKABN
+ nU9ZWeeE G2Z6uyry yYyzy8j8 TtTtvSuC cJdrtexv 3QImFf4T mdJ241IS IAas2A1f 1nNvys+G hNiR4UHt OOg9i2Qz gmQ5yc9+ 5FGW2HQs yS+18+Ef ty20IIMI ZYjgSv6L
+ TO6Ex0nu sryDyAfh 7Tx/kno9 qDcxdHRK s/AqF+6U EHrNhoZw nYZAwvzh neGiStpy xSBMVX1v zS2yycx+ EOTDJOAc +ZkIXJGh J96XFbPY wCor/fC3 Yiu0bON+ jEH652r+
+ zf+x5PMn XF8GYT7Y zGm6EwXK +kJPHHPV KdRKM3Xj FcKiBcVH sDQLrU/o qJ7im7IB f0VDR6us I2E29Dq9 jsK8cDSQ DomGCF2T mPm9XdPf SyV69kT4 DeOfMQ3g ehmZlpkQ
+ +Y+cwTpO ULo1bFNe rLplDsap aVDYD/VV 4de1EzyH pbcRa2nO NlP4YN9o tgiBI8ro SXpeCYrM pVeuLzDO CzqB4GmI 4lZZpfDe LYEphZlh ph1fa3ra ksULhthC 3qzzd/m+
+ nVXjvdsW 9IrnWlml okONGIPM PsyNmWOb EdiaW3Tt AtJ5HmVd YhR2rEEd F9Q2IM6S o1cqAsqV lVwd1Tun 1RLmxHlK vnv6V/yt Vu770Kus i3vRYvT2 bNfWw5/Y WhDkyTQq
+ GfbSmZCm voGbB7FC pOHalZPb f4682lhZ ZlP052LZ 1dvDbgWy LAZjotRi 2HtXB4F2 IoFL1GN5 r5ZAmSXz y4r3uZ3K bngDidzs jsCgd/yW enkIsx/3 IoRZ4MGp 0DW/lEFY
+ H7xtIXVa 8ZCV7vwo 9L2bQRlR 5mWN2T8a Dlkpo3Dv pfeStEhL u3RZ9GLl VuglY2hn h0ZQ64zC toNtELgj 7m6VDUfK 7Ew1OPyY W4ZZNWoI 9Vf4X+tf aWswn/8k 6Z9ffGJa
+ OWR2J5tI f6seN6YR zJs0iemb pjtu967m YscWOXYe iw7wyRzn vccUGgbp LY8cSERv 815tD3qW d6t1U04y c3IwhHg+ 5XYpxLjB CppK5rqX 5y+s2AwU 3VQHsVnG WuhPZr5I
+ nmSj6Bim XAXz3M3C bTv7ntJc DfFEt5Oj 1WN0hviJ 3nvMoVXs QDufMFAE KyOzyTP1 nfzfBxHq PMeNOvoY AtXptk9C pOLzyn74 pmxq+K7J 5gzpUJHP syFMcRrO FYdGi9ZY
+ MKdB6OCE hxxBatow /JD+Amjt jhelOWVQ aii+GC1V lQRqqTFz vdUQv1Nm m+UktDxS /qeEksWf 06GdVkbO EIIWhDqW b6475zE8 SnPxLL0m z2Qll0If sv3YrhB/ 0tkPDR+i
+ 7uc1ZI9S NkHtdNu4 twsXUYe3 UwYH5JLT 3lEob+rW v1IC6GvI lGSZsdsS GPNXAYNw z3IruAIf eI0P84R6 BjKxd+y0 q6NdgnLX rFXeVkOK S2ZM385w NBaU9l51 0JPO+L6T
+ ln41E+9d 8GcYtj3e Owl7pknT J20ffg69 n070ekoE iF8fbh3v z8ob+yq9 L88ZqtOf VH41tIs4 ee6IkpWt FhMaHs2k CuXRbgdu kmY7JjB2 lMFiHVYq kbVaw7pN vRLhuyiv
+ i3GOv1zs gtLjn4tR sCPgXHVj t7lU9NE4 YCUhzJWT p72DBL9S FFl9J/2e ILy+3JGJ a4uudeD5 WWNpaGDt G20Rt1Jp Ig+X8r17 +L/G7oNw Jfdz+bft Ni3IINYD 3XV0WEFN
+ dcidZ40x CG+kUn7I vQxxMcqE d5Hf/cVN oPH+gXuG OBPS0Hkz MmB6E9c6 1k584NIy kWJWKvO1 cqe99Phf 6ap0Ctho YQztoXqV 0YfHcU7R S/vUqhul Z+vodRBi RfkEr3n6
+ ed67m7J5 WfHluqob PmicKH1F KNIVVRjn hNlDPYGG sWJHYo4n USfxP7uC K9nrdt+I pdqLXVhR OLRV8Ftc J1O5yyho CNTsezuJ mFT0e7Px LaOf7jAo KcPdonvS ekdZOnOa
+ 3uC/WMxf /plbGktI tnuuhjBP IP4L8ZPd HhY/PNNZ jbwLsX6Z MEOCsrjK ZYFzK/qZ xHE/3zym 1fabikFD stN/lVfd r05MnUE6 TyMvhaOn 7XkQPazR w1wV6fFs z/RtNZL6
+ 24ooIcog Wl5N3E3M 7WMpCPVc T3qvYSDR u5Ggz2hr Kp8wqxUm SV4MG8aK dDvEmxSf 0vEqdbpX uGxJMhNo 0cC3vkfm 99Zkd3Vi 23GxQb6q e9pHqGh6 LNMZMR4d /5pP3WmW
+ 5RwxSD50 V9JnxrRc 4YXz8b+d sEwD6B0V D727thR5 drLTHgwf ywbpw8yq rU44c1L0 58vYPfFJ MFoEthT3 uzhenaLL CvRYnpUQ q3O2R6wz J8dUgkp2 K60BSbC7 SBtACxgZ
+ FMD/GvIS m2BxrgEF sEGZbaxw jE1ZT7lp oNIpx95o qUTOFvBf dSXM8z1E lO5AdB34 PmTVSzBF dc0v6Cns PoiSmmd5 p92im1Wx mp/queZl fO9juh5P 6JgNpR0X mx3ReTU6
+ 5H4m/xpO NQzpwHjm iyaaplPH ILLoBK6f ItyBlMMx fYlpn+J+ kUya+Mm/ DsK/ViJt sljM/RlS G5HdcZse ubjXEc9K 3rsId5vm tZqr07tc wrt5ve/T dEd8hMh4 gKnK70nP
+ i9XOMtd8 mLTpqJP1 uCeqqVKb UQqbp8sc oJXx1f5R AZK7JA43 ZWCKl506 dfgRiNaL QZB89AVJ 9njvYSAi I0pd80Gd TV2yTeRW oSYpc5vf fL/cPqxC DkJNiMlU +EcffMKI
+ UlD6KJCT SNefScNa /jWnXGfz RCM+a1zL +deq8ikx ymV7XStL SZvjfy/P 1atu6A8y /861zJzI TOKB+P3G 4k6Ge9nq Vsc7S8fF 6VXrfJpL XO9kahT6 9kKenUI6 ZhPuSf5H
+ dArbaCCd HaU/H0y1 QxJiaL6o RY2/NbUV mdnxtwZp MtpOjZtL 6/Qy6Xct xKmRVTRB Ttlowagp QX9fmXUU A6ukrYnM THxAdFW3 GIuJUuCd 68tbjKnP anJMb6pK I7FHqJfQ
+ SljPSUzB 6oV6CeKY EKKMAUHs ShokCe+N eJk9dinP S9ntLBW0 CE8rUq4v U/7Nn/mo lQfEa6YS taBx04Lf S5hFRyUz 5zxb16uD zDtFuDTC U1VmfOMZ 4j9cZa1v xo74Ls0n
+ M+/3SRtX mC4+jVC9 tt0zmknt hbReW36k n6CVuSyu UZ8PqtES Tsc/P5JL RLtxbfpZ kmvQdM5e KIMRZWAL wE3Z7vSH vPcQ1H0S 4HkK5RU+ MOzY3xg8 350EGlVr rkgillHI
+ D+Dv2Ck4 7nVQ+Rqu WSCE11MR exU7/AoL GhJ0BPcT SpQChcjK 0U7fWkqe 3PEo9Go0 mtMoD/Wk KynErOa9 3Gte+Djv PMzz0yUZ RJl8Aj/x LOdTqb8m 77crX8Qz j/nTfxJW
+ W5Hz+Rc3 4hEcq//M Owjjzmt0 Ut8rR3JU SCvhNwEO cXv7kaW3 ktCyjNhS DrdZ2p17 QhwC/7gh uJ7SDimt PKd0hogk KR4N0qtV NdlGYdsh QYJvJdrr nUdGGOYk mOCdI279
+ m9WFYoff nT4KxSfC nXCiFJzY v1kRU8N6 wCyG2fCs Q+B1UHt0 HuVzNI5h KVxJD/ll wh0z0D39 Q1LMNzVW Vahbve/i bLrTa7DI oYI1lK8Z SIbn8p5E 3v6osnPl IRZK+me1
+ LIqMJdQj ZhPTP6we kvw43Syl C4IcYCTw wQrQtiDP hhaAyWiW NA7844ZB vm34lqtI lE7QtqBN WCC8chDR 0NALUVLA +/vbAtTa WX2bnW0x YMnA52JH Tyl5yVss IGgnooxB
+ Gcz05aC0 rVXPx79Y WzrObxbp 10LnGvJy KsR2gn9N AswyBPZb /O6jnI7U 8EZYHSQg w/QQu/Wk NkVS3LjF hL2n2EDD RIB07KY0 +XR59lS4 aABC9UEK 6O+246sL jHKujx4p
+ Z6A+UaqV KwAEQ8Ia IkoN+cx/ hjFIRWQi QH9bAimi qcL8rcUX r8TbBUoP vd0xlMMq ESVpvIrF yx6aK+Nn vNzBILMn /0fYcEfh 4i/+reaU t4gAeTZL 8ynuZfiV BhlKXfUx
+ VShOFkOe p+Ge3A55 91aTtQa4 lnReqDlz NUIjDwVW FuH/OJr0 FxMlcQ0f nU0aPEiz 6rPWMqqe UkTJxP+j /rYEtmpN hgWb28Xx tRskaKCV tBGTLXpY kWtawnRF x/jZLgcE
+ S0Vu0PCn LTXK73DC zZfetC2I ktGDvL+G Rc6eYrRb JUgwuEYZ tzNErCac zWgxWmZ+ MVFW7CmL V9/VCsyx DFjA0EJI lOZYGuZu 1uraXBAd qkWQjBEY X5JeMXa8 41ZjmxFR
+ 2tF9Nmzb 1uNZ5O9a CEsntUo6 6DYdfM81 q0dpBOps SOPNnWBq tzL4ZApz MqPI6pQF Iv9a1Dwu FWb/ic0S 6sBkO8rf jhh1iVJg 9fQdBahE lP6I3vso 2EJEzTgq SPwq8eKe
+ wS0XMeqe f1bp4ZVU 9gG0wrY6 7UET+jjt pE9SNGJ9 PEcZaOFz FOUhmzyy 5Z3n+l4X JlpAuL3w PxVC/gBl +lh/F/Ow KZk3aacH /1ftmT/l oJyMlii/ /qpnhEMs 17tAQwuR
+ GGI0izBl zdd6wRqO j3yOSjqx sgvvpVJl 6iV2mo9J Yvv8dphf xZAUtojQ yiNpOizX 0OMfzr82 BhbhJB0l dtHFNhxr aGYqw3PZ WTp5VRDt IN6kjndh ofRlZ+U4 PAj3iP/E
+ qx6Un+vg gmiFRmrv XQoK9AxP uXYiw3jA mYgLPzbR /LlyaL5M uu5nLngI 5fJzykQW JS6287CD 8Fbps8hI lBm3svNi wtmyw0kB 64jnc3SG 5cYoeh0F T68aJXHa 6fg6cV09
+ UayfdkKu J9qBstlA I70Fmqsu JUQAE7wU cXqvVy3o FcWL0zaj t3VkLKHj NUTrLEhG hJ1VXlrg cJ1iqJeV jKvlz/9e CieGuozU a45NXJ+T PSXiWCe2 mP9M26GX RjemZyl6
+ NCy6RoFp B4JAIz9a d0tBLpm2 82cgJOlF H0fveAAE dwzX96u3 05A80G3M 9VsguBcg tF/y7CEx yqXfJB6l 5pQ8u8R2 vpLhXCNa CFxh/Wfa DqRXsgDa AOkn/efw v6s4Ka2e
+ WpWKrg2X NCtA+7Ak qp/CW+e9 XpWwjYSE GeY61Rfa aspFQhLH aZVI+Ugc 7S7t4HDN EB9eyLD9 ZM5sOWa+ KHaRKpFF zhmaR/d2 aeeL1bcb qtTox1Ru dDQgzTuS Vh3MWmTg
+ 1ObVErK4 jvyc4EaA 4fK2trdf RcayHLlk Zu9C/EGm cOb7MAw4 vpqG743a iPfeo0ax 2ZbNART8 /iLAPunA m6Bu9Lyk qPn/PoR6 Me4CCOy3 /ItZrn1y UxXlXpyF g7OuR5VE
+ ugwTSBTw 4yYRlIr+ jec6dLU3 P7WyeFi7 YKBHh9RH 8waC6R8i XwdAlA/x X7ABBY1I 1O8ZNV7/ isrthGJr ztq6rqYO w7sHEadJ txPXgd57 OCS4S8Rm KzLrJUVG ChnG6g2m
+ /rOZNJHk SBDmJZjg H7c1KCSn AMWCpi+Z eT+933EU YLbQe2iV bWJuEt5g uNvaLWjI p9QcZOrw MYa+s+l1 RNCX0ROc TZyn4y7P pcwcouao bbW1Wg5Z wBOR+VuD 5pruEC41
+ 2ugx8nen xNr8YxHa PeLt+lsW i9JzGr53 LhVbyqVI eDrayT+q DOZNjlnc xLESGqrE UJUAgoyo 8r50VhbG HyVhG1Wp VETbq9H2 MzSpAVFQ ps9DQa9m WjMbd720 9MiDTrzQ
+ sW+PyMCC f80wEIQf pKKuIcxD 5FdDv9tD t+HdLSKp KPU60u2p aIK5XaBG mU9En/a3 w0Aezi9W YZAEPmW2 wN8a6JBO onEOM0AB tiLsrVa+ uLqW1wh8 LwT1wkAy 81nvVROD
+ 3W9+PQkU I1xS087u oCrCBF+j +fQy0oPJ +eA1Iea5 WCyjPpFq FCDNf4jz IKceDyI7 xvLo8rmK 1fQ+1bT0 xCTPqzdx w3evxZMI v6CelTK5 j/j2JB7p PA87LGui IdVa2RNS
+ x6KGpJ0p /6gEUl6j HEpUZsjj uxgFSkQe KYPfVVrJ y0CuyoVv 1LeQIYgo 3QvRxd6r JkysPXAm 8Jwzjb6T JPSq5zJq QCVco4za CxWgnlZb mFSaVF83 5YP0JcXD wnjB7Ook
+ w7vjvJDu ZzWM0fvN Im1L6O2W NXrgvVQj iCM203x3 VuJwGhJl YJXGixvw QdsGpM1z X7yD8PJB eJTqpngO 7CXmS44h 5F2mOEMn m1Gnf0GY +fr3XgUQ 9y6EX+q+ ET4l4WL/
+ qDJEUD7w MhGL964K JViETAVm tetT6R0m +EeTuZID K51Yl5TG bP5WMGss x/2tE8Fg VgHmAwnn +nRomJaK bDLsY/Hy u2at0Gl1 ztxc6g69 5P8iN8/M vF9l5b7R HvNK0vJj
+ ndetujOV BiMwM7ZQ qBPo4SXq +QWeS1J8 VjlREv4S VuWFHk8L W8Jc5m9L wFRIo4iT sy2LpyLo hiWgqgK7 QRYOvHdN rJF+Bi2/ Wu9GnFLQ X6MtShK6 Lz2PTBXn 3XesR1rE
+ 935HT7Kz FluVWtd4 gIK1Ha1y R9ovrKYk VQ8a5snf +VTq06xU jxCzne+Y oQLK4Ewf bNzhe21N rbI0mDXl JgA1hVJd 6KgTL41+ IQ12aHrG /LF4UUM8 zxRzWMTH 1QaCvy0B
+ YU2DFLeq ePVeFQOJ 9IfjD0M8 DVny1T4x GWTYKzXa b/vlTuRf sonqdWJh jvVk6mES /SstHmod MDResJ57 qLDigtcp abvWM7Hd CIhLqsQP 0UB3piwO pIfQQmrC +JWrEzNm
+ kLd4hHpc RFpV99pD 5WA23qXK USQva/pJ yehmf2sg zln9XcNH gkVmvjxa 77+rEyLq CziviXRI aHy8WXh/ oz2EbbMl wtM0sfXb ajonunD0 BQUg6RoJ uX5voiWt KyHnz6Es
+ co+tnNwz 1T9uCYy9 5E+JhUB1 MNbiwa7o 3/zjcQd1 4pn5vo6Y N+NuEjtQ p9RKLqER 20vS4eF9 CM1xFDQN IH8VbSgt loGs+JvQ mejNP6oN Ck7bSy/S U57BB+qK k2nYJkES
+ NpDJD1ME skyK6czc RKtV/n9B nJJUnrCV dS2QbmeU QFtsifTP ZBbRP2op vKFYreaN cTxehkor wVSMu9Lv yZNfze2s oQyb30cP 43ex3+3b 4ekKUzS3 xSpdcLd9 qh6X+q5o
+ Hpxh/TdF cZecUlcT EKXYIHdp 7qdu3Xsb ZPCSRO4a OxUwzlRT vTMxNG03 FS9WbIhn HiKTHt6r bbBUBhOC cAUFv1Rq sd57TMH3 ZFBLbLNV WvV77wmH 8RtTZjRC e/53kc6X
+ VKdx/VK3 ayGma+lN T9C8Ufv6 YoHlp7yp sDof6Ine xoKo4hGG xGf8SWjn OfI/jLFe FWt0LJ1P RLmUtGvp BQL0Llyn 1SWZOZnr 3/mgw8Cz 2VIh0DUZ M0n0dgCF 83PcNZIk
+ 917jAh1v TCUt0wLQ e7UljAeZ DPemAUks b7iQt2Mj zqJRf0b1 Ki0EbUL4 1wtYZhL5 OjDMvde0 SUkKy6w9 QGwlrJwh ojS2xhF9 XeHb44XA GloZiX92 0047DRui Nc8gTukJ
+ LybhUp56 sqmWMkbw 8pxHVjJ9 OB4Qm4lV a4G/1+5Q XYupPuA0 IM/Lylqd 70n532j1 GoTPMMoO O/tchEo4 t6HQCCuo HESqOeBz uJfUUry3 iGurFVOi bSqxfzRf JGFaYX5B
+ 9/ynuN+d hOokLs+b syHgWfyu 4/mIT65q FbQ9OtHz 3Fas7icS Yh2ZKrUb cRbjZGlu mNqHDGLF NCD68t6N oz+Z/mKB iJoYatXF Q3Qy8nQd rrDpTkI1 hziNnuHD sfmWDrY8
+ aJGzcvKM YVwLk4vw iom4V8SC 848ah19B WbdMZMd4 75qgx2ER ZDsY2gHQ Ku4hCctK vjDbgsMm O9h8MdgV bu8JEhde 5b2bB0Tp jqpjclt3 0xyYoU2d E55M/ywf TH+L9+6g
+ A00HzT46 08FnuW7K 5lAJzGiT E41/jv9D vXcHHTQF bVeL9WUd XCsEUej5 /AGe1a37 dtBBLTDS ygaTDd3Z oAWngDCE 72HdLst9 WRbz3h10 0DCgncLR Jtpq9d4j h2x3M3yb
+ rWsinzdR K2d9N5uM ftysro/2 2WWYyt/W hHip1XRK KmEwud3W zI++MxGy n7UgDkg+ 0ZgC11jD DsPyAhiM ugtHKm01 DIUVtblw XI7HK0cu SLtDlZLh s+KJee+6 gGh2JP1P
+ sviqK0nP vFmG8++p Jy0TQ1up vkx0okTK ezcEDWP5 ZOZn0u/x XsMgjgUd wc2Vdkdq gfxehntB imrea8JA +cSn+27q 6xq9/aEC skH4wThi KtmOtBhv 2DamT4PS 473rQkSp
+ dyBmHcrk VBqqusIp YXc1wtBm BDnA4g7C B7xXw6DX d3abAjMB cyWN4Xr+ H4SYZIvI pScIb9W0 SUTfTA/O exe4fGR+ 5L280Exm XE/V9WoV 2jtX+eca OcmsYSzT zowXyqWQ
+ ZApvd/9o XKAunyHp eTKmnYKF uSYka2Ki pNIP8l5V Qb5s/oyb KZ6r964K CtyIkgZz gPcySPJn WSJRUb8l RkyUhDVr GeoV86Yd GZ5jATzI s+yCL6qk E6TdKNK8 m+IqdqRr
+ vstHeGyR nxEq8RUs 3o016KmL 9Z0u996t gxO2iD8Q 3k2ljZuF NDLnzowM okvV2sQJ kES0f1wT 9YhS+ZAi k/5joqQn rigxXQ7C OdnIomEy NyXajnTK /F/NDQcR iqUrMXTe
+ kPIF8ZSc U+iJcr6/ LYHmtExL TieemXzv d7wrtd/z 3X00k3e9 0LKJE5pf rZM/WglJ iFGeTsJe i+RWrLrL 0dfd3UWm CyoM1c5a aTW0+CBT ZvI4O8VZ ZaCQ7yct VQ8LKEY9
+ oswmok9b waWi79ci Sklc81zH Jw85zy4j LRpmzY/7 J8yPyX35 sR7FaIoo E+EP/G1V SBiX9DxM Pi+MOww7 YErfSEb3 WaBxBPk/ zX9bjWKO 9249RO3x hyiA5qU8 RgAqbxf7
+ Xiq6OC5s Mrwbhf9i bwMT+Zgo SbsOOj2c 9w5hbqUT ws5ioaHz Ff0JB+Ej GoZd2OFE KSsfUtuI nZSkRJS8 31/sX+zU oPzrw9Bq ohSIzy0q vAAN7x7J /fpYJnbV G6dNVuei
+ 67GERg6+ WziAIZtK tW4uWQ4v tmYqDhCG JH3GVCaS SpXU0c18 Jy9rG97b DpCCiNZQ ic9TABXN WMco6ikP NbaS34NX HBISkNO1 09FpfPiW 6WlfDhUt 1CneWvv9 MVGqIUiP
+ yesyLYWQ ztd1Did2 FkT6fH8i Oty/VhOU k1RQtBi1 bTwROH6X 6loNBP/T yds5Klf5 jQWkgEaZ aMRwBMmi UXTjH48N ZAUi/iDu vPsmtYjv VAG5lCTb +U6i9PQt M99sxleV
+ hnDdYI0e s97wXYxm iFIV7+It NW0SQ9Yl IIpT/O0w xEQJ0Vwi eUryoXMx dcTLEt2b c+fxvMI3 Kuq7kAam DEPcA96/ BWdHRzs/ O4FCZ0nq +VX2DKfT z3wULQff OY10+9Mj
+ wjUSc/SP xg62Evbz Jjla85jo LjsenR2i dCVEmSpx 5TrJUseQ wakKvWYx UW6cPPlv yi1/EN+7 4oZVjSjV y5jUNN+O /yE4W/hJ 4Sz2K3bE dSfp37Cq Sk/ezPAt nSF/WxFa
+ hdfirWrY lj6Ovx0z qLMg/Ssg yjz53yhr G/7R2AMi +Lg+apXC 8DoWZlaI WyeRyVrF EepxKjkq cX+IrXCy aiURu2Ki lDIY6d0A QRxuAqc4 ClDHh5zk pwoViXKt dKSlU2Pf
+ DA8mjCxm iDUm0b5Z 8bOKLpWp WDFNzSmD qOT8y3K4 04B1duTU GSLOYid2 Hul7lrKc 3bLdlCog nSdanpyr qDg2puCj hd6Siv0V ldoyFpGO wqAgV6xu QHdFNhGp OJ0we8NK
+ ekLvXUA5 Ufo0n2eG rCAYrm0L zCzuNjh8 K6+ElVT+ s96raTRF lInqek+C 38pTHm8g /Pmxw+94 MdAhSEn9 vyxz2P6V lkO7bHzD 6XNbRxF+ 3D8aP5jx 0AK33vRu Kh7m1Cz8
+ KRQ3sjJu eONeCl/V 2C+ViDJf ZCeJwhPD +lxdN0qU EMm7LU4q 3nsVQDkM O9u6Epoi ymRUk6US EyXprrjT Rf5kIvtR f9tySDSN dJpOlxzX w/Rzxg1k VEOZT0i0 YElyu8oW
+ /puAMjjo W7SO65U9 R3tQBqey Gx5cj4ne IFHakX0N E6VUT12c Z8cKZ1qN S+WUODaw SKm7a1Ig ymR0E/Gc 5d1qiFLH usT3Z1HB L0O4s/1r FRETJQ1C fMrCuwXn NAjX++At
+ B2XsFn1K gxmQLbWU Mq7QHIVE mKU0uSxz PP+oJZCR VYvbnd9z bLHju1e7 Z+Ej5XZw ijEWRMnz uT5dl+FO Ir6fQDy/ 5NpZ9IWQ 6u1giCj5 3isQ0r4F xzCLu8rO 3Sn4yzhC
+ dLp/rSKK iPL7WtSU O+KUsdcx IUqNbJTH aisPylKb Ef7RxEE2 aahUs6pA oQxIkd0/ GjV6ezJv VbwsYPaW vZpiN+Cf 8e1Fm2qw pcaCKPNd mfcR9o7y xkBcc/y3 5vaSRu9d
+ EZ4oN/hb Q9XhO4hK 9sPL0dDw PQZEudim Wha36yWD 9D7+0cRj wB2IKaOg MkVybqtk LrV6tAwX zbtiOKkX EUDtjf5K REk6H9QC gEb0a9Kt RVJTRCmU S+1oB4d4 XsQtr0eQ
+ QlZ2Khsn yrqrb5cv HbcX8yfD B/Bz/Eqn VdpSohSb jF7xcH3X l9k9tUas CQEZv4TC kHH2RynY W2rtZjSK sSJKVT69 2im42T7N TROlGl4x 709iYXqX vO/qvWqC cBdQZiW2
+ dEZKlBo5 +PZ62QrV veJWWgYS 0dt0Tz5v wt2l61ax hX75+jfs zHecgV2m K7Kq4h+1 D9RKSOAC JdK7eZVY NM1grIgy Hr61vUjB 9o+EKAl3 jhG3TJnY atyG7jmN HsYOQWoD
+ YKa/NVQl yjoLHaFY VjEmSr5R sg2cn5J5 P+Vx9Wht F8mqx9Xb JPfSN+SI c+TaiWMN SapQOc5s sE3ao9NH M5SPGVEm w8IZ5fif 3cvCQtfN EKWQt+1B VzFyxZZs a0GykXzj
+ 0f4g/U3v ZahBlBWl /ZkCnGsj VLkbOkLl imJ/8qqT KzYxnz3C R9E0SEuK dJqRCeK/ neuKJqTb CpJNpADc yQqW8CbM vZWh1UQp pvemrq6/ rlaIzRKl 4oOwTrD4 9V6DsoqD
+ 7kjm9evL erKqRJmM jve3JZCg g+WnzPXp hF3SM9id +Uil5yPd crQyL7Vp ubjRhjjh sMPZA2fI iIre0B9k 9vSPmkJW x8xZHOHV 9LwlLKGC 0HETROm9 hqHPjlDW 1qntgjRM
+ lMJasVyG 5CpfbIRX 2xdEv2Kl +mt/W0BM lJr2UG53 EKe2Mzfi d4EP0hAU 3qWndVJc GrKLCZJ0 LWlGV6ot oIqlkuMd n95cIv21 Zhc/7iRZ FW56H4lx Fbu+Hi/A 2gKipNF8
+ kuc2tMk1 Q5QClW8i Y3LLu6a/ wXtXhIm0 iY3CMOi9 CijuKaVQ Rpoc/y8I f2sBGkSr iZJ4dmAe fi3pcKw/ esgVU6Lt /OPNC73d 6fdAmEPW 1po0PN/f E77L3q0w fGdnzPg7
+ 4nuhXoUV iDIZ/dh7 VQQEoVO0 1Cvn1nR1 1SSscsic tv9GXaIk zZ8bCKJ9 /W0JZLC0 bMEie59z ZK7QezWE VhKldmeI p/igrsXN ale2HZiM f5dCinc6 sjJ25R/V hSpIyuvV
+ ZPJiiepa 0DxIcYiP 6L0q4gn1 TMlwv2oH GtWC5pYs Hr5Ehf2i nnypLJI1 bSy0SUix jkY2V8xt 7zUimPhg 6ZC9YUVy +rCDQjc7 OKay64Vi wiRzu4/I FFwH4wY1 HEahoUWN
+ 5CRTabPC vEVALY4h +AdkbHmc yVbvk3fQ OlBX72LI dod8eUdH MuFWl8cE ucS0j9BT Ssn+JTIp Adl5Gl79 4w7aABDk uyHIYmO3 2vE6eCLP yxxzyEIw mTY+puaa ZHpmhzAn
+ Hk73Kjym mCBxq8oZ /FssdNIr 88yTaIEx y+OCRhYt HYwN3Kmy 4aN+9HI9 JKOZpKF8 kFcHvNXf a10ByKJE NDM1aVJd 6ZoOWgtn 0DTWfXd1 gbsu3np9 1WEwmdya AnkKZwug
+ bBCeg/v9 SNgyHTSP gW6dw1l8 LHa0aSAZ 7jcemo9t D0luW6EU VufhY1zX 1dPuYGRY mZYxBx2R XHJSnMp9 zDUeNxts mjTpNRTI fsxjCsMI bj2EeYhO 4ffBOmgB dAY55SqD
+ BQViZLi+ uJUaA1sU 3In74YXF BYZb3+w2 WwfDIZZO PpH+as7L I5gz84rp z1aTmurA wyxwmAae rQCl8KSW fCY96ce2 WAbuGEON nXJ8sECM zhUk1Tto AJJil5U0 iPFJV4Ca
+ +0iuMFwn sTitGH3Q DmpACxZ6 xr1x0tfR nH011yrH Yzqjzwgh QYy735B6 n4aZohau wn0km5gx o7NKrIz1 zrDsYRDg Isrqz9aY XRnepAPj fbAORoE3 UrDfUGtn +Db7RdzL
+ fHIvhX2F 1C06K0YH GbrqDzLf LJSTd9wv 0Hyynlhd ByNAriv6 qK0Uiwrc uVBnQNY9 /WFLBuUi 4wW2GVHk bpKEViMq vx2MEoMs eijwc8sq QAujizSH erWcC0kP eGB/KtyZ
+ RnkcxOfn 387pNA0f rIPxglfp PZzewR1q bkRpIvtr +H8+n4y+ 1Kix/s0J ypNZEQ7C k+NhmoYo IxD6f2Ag CA+SqGBn SjOBkMaj 7HhTSQfb vNNbgvNE OoA706yy FakZbG6Q
+ IpnykHcG tB4nj6Yr U3BSC0lG h1XS++lg AqGVuAkS M5RRac+W VJq5MEeF XiqTgXKt Mi0zlsgl MwHp/joN 6zL+bY+a PLzCtVhk sl68Ar8f D/QMP/S9 gzaDP8vm 6Jj5Xskx
+ vN9Oxf4w m5j+YQ13 Ev8freWI 0UAypWbB jB4dwtuD 9C/ADdL7 FxTv5PD7 k2QFZKql FaYXOxhn OIP90U5U poQPpNRf Qpixgwhk lfcpSSjx f0E2kf6W 3hWLxeZn Ld6GW0kD
+ MKUsU6M1 9d7rSd9S vj0fZ0p2 JelzvMY1 hDukrwHr xh1sJtC8 LJ+IPkXl ypiBNy1T 29EruePk guiPXJ8E cZySpXft T2b26wvC b2ST0S6a 65lAicyZ JMIvmB+O sD+1/2R4
+ mhYleodr d4pDMrbn WMGZOZdw mfiN/F+o /zXdm6mO dQfNQcMk hPLfEM9R EMkVcvFQ CQHKOkVl oqngiKNw mGnDrsj4 Qez47r4D icxb81Pe NC6nuXWw GcCpA2c+ yXC+G+4M
+ iDQHsd4N sQwp4xex oOJ7whlL pjEX3g1B HsRUYS7f OFDf27TN dn9rjh7X J6WDDipj STK5teaT WtnL2IAN 3anwn/Qf O/W0xffl DqL9fl/3 tl2x64iJ ddBBBx10 0EEHHXTQ
+ wVhj0qT/ Baq6WkUk wHMOAAAA AElFTkSu QmCC</ImageDataBase64String>
+                     </Image>
+                     <PageImages />
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Disgnosis and treatment plan</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="26">
+                     <XElements xsi:nil="true" />
+                     <Text>: </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>281020e1-97a7-4bfb-9dd1-122b6f02955a</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>127703da-0520-494c-9719-e456d3528610</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>127703da-0520-494c-9719-e456d3528610</Name>
+                     <InnerValue />
+                     <BackgroundText>enter diagnosis plan/BackgroundText&gt;</BackgroundText>
+                     <EditorActiveMode>F2</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>（prompt disgnosis and treatment scheme that prepare to carry out）</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XInputField" StyleIndex="27">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>cc0d3c99-4388-423e-9d74-824393b2c6db</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>e0ebf464-ff10-498b-b087-35fa8383d85c</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>signature</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>4bc51975-6823-4283-83c2-7b22aab9fd39</Name>
+                     <InnerValue />
+                     <BackgroundText>doctor signature</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <Title>22013.9.29 14:36 stage summary(Duchang)</Title>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-05-31T20:45:44.875+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T11:01:24.040796+08:00</LastModifiedTime>
+                  <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1413.30368</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord1.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>AuthorName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Thoracic surgery</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>bed No.</Name>
+                     <Value>33</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XInputField">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>f38f05c8-26e6-4968-8386-e02686a68b88</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>f38f05c8-26e6-4968-8386-e02686a68b88</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>record time</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <ValueName />
+                        <Required>true</Required>
+                        <ValueType>DateTime</ValueType>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                        <ExcludeKeywords />
+                        <CustomMessage />
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString">
+                           <XElements xsi:nil="true" />
+                           <Text>2013-09-29 00:00</Text>
+                        </Element>
+                     </XElements>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <UserEditable>false</UserEditable>
+                     <Name>d92b420e-8032-49a3-9ab7-946277627152</Name>
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy-MM-dd HH:mm</Format>
+                     </DisplayFormat>
+                     <InnerValue>2013-09-29</InnerValue>
+                     <BackgroundText>*select time*</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings>
+                        <EditStyle>Date</EditStyle>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" WhiteSpaceLength="15">
+                     <XElements xsi:nil="true" />
+                     <Text>               </Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="28">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>60060fe7-8210-47f1-90b8-5c50b64aec71</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>21034952-b1ec-4b68-8805-0dc00b174d88</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>ward doctor</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="28">
+                           <XElements xsi:nil="true" />
+                           <Text>MaShengfeng </Text>
+                        </Element>
+                     </XElements>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <UserEditable>false</UserEditable>
+                     <Name>5bf50b22-fdd4-4e8e-974f-0d463ef231a3</Name>
+                     <InnerValue>MaShengfeng </InnerValue>
+                     <BackgroundText>select value</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings>
+                        <EditStyle>DropdownList</EditStyle>
+                        <ListSource>
+                           <Items>
+                              <Item>
+                                 <Text>Fengguang</Text>
+                                 <Value>Fengguang</Value>
+                              </Item>
+                              <Item>
+                                 <Text>WangMing</Text>
+                                 <Value>WangMing</Value>
+                              </Item>
+                              <Item>
+                                 <Text>WangYongwen</Text>
+                                 <Value>WangYongwen</Value>
+                              </Item>
+                              <Item>
+                                 <Text>Yangyanni</Text>
+                                 <Value>Yangyanni</Value>
+                              </Item>
+                              <Item>
+                                 <Text>ZhuMengying</Text>
+                                 <Value>ZhuMengying</Value>
+                              </Item>
+                              <Item>
+                                 <Text>GuoLe</Text>
+                                 <Value>GuoLe</Value>
+                              </Item>
+                              <Item>
+                                 <Text>LeiTing</Text>
+                                 <Value>LeiTing</Value>
+                              </Item>
+                              <Item>
+                                 <Text>ZhouWentao</Text>
+                                 <Value>ZhouWentao</Value>
+                              </Item>
+                              <Item>
+                                 <Text>MaShengfeng</Text>
+                                 <Value>MaShengfeng</Value>
+                              </Item>
+                              <Item>
+                                 <Text>LiYonghong</Text>
+                                 <Value>LiYonghong</Value>
+                              </Item>
+                              <Item>
+                                 <Text>XuShaSha</Text>
+                                 <Value>XuShaSha</Value>
+                              </Item>
+                              <Item>
+                                 <Text>FengGang</Text>
+                                 <Value>FengGang</Value>
+                              </Item>
+                           </Items>
+                        </ListSource>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="29">
+                     <XElements xsi:nil="true" />
+                     <Text>Ward  Record</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" />
+                  <Element xsi:type="XParagraphFlag" />
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Patient's symptoms</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>5e458034-de03-41c7-b6aa-812fa0886435</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>91d2ab06-8c88-47a6-88f7-88c79fcbb100</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>91d2ab06-8c88-47a6-88f7-88c79fcbb100</Name>
+                     <InnerValue />
+                     <BackgroundText>XXXX</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>, vital signs</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>ff447b34-dd41-4258-ae91-ea57889e0491</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>9665842a-d161-47e4-9b8c-a93e89095e9a</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>9665842a-d161-47e4-9b8c-a93e89095e9a</Name>
+                     <InnerValue />
+                     <BackgroundText>enter sign</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>,major diagnosis results 1</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>f16c454f-2c42-4d9f-96d2-86c7fbefc2a5</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>dd484e5c-e5dc-4022-86e0-d78fd3d9bb9b</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>dd484e5c-e5dc-4022-86e0-d78fd3d9bb9b</Name>
+                     <InnerValue />
+                     <BackgroundText>enter</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>. Good spirit, appetite, good sleep, normal defecation (whether patient have new</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="30">
+                     <XElements xsi:nil="true" />
+                     <Text> medical history、sign add</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>）. According to condition, the diagnosis of “ XXX ” is confirmed. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>The treatment should follow the above. After the treatment,the patient's XXX is getting better. The original diagnosis and treatment is effective. Please implement the physician order and keep monitoring. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" />
+                  <Element xsi:type="XInputField" StyleIndex="5">
+                     <Attributes>
+                        <Attribute>
+                           <Name>ID</Name>
+                           <Value>5380ad9a-9055-411e-a0ae-d840be73999c</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ClickID</Name>
+                           <Value>c9544cd0-f7c6-428f-89f8-54d3a19cd535</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>signature</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <ValueBinding />
+                     <XElements />
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>0fb60954-777b-40c4-8869-f065ec0f026d</Name>
+                     <InnerValue />
+                     <BackgroundText>signature</BackgroundText>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings />
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <Title>2013.9.29 0:00 ward record (Duchang)</Title>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-05-31T20:04:10.984375+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.026988+08:00</LastModifiedTime>
+                  <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1413.30368</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value>ZhangSan</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Hematology</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>The patient was in clear mental state with fast-recovering incision.</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-02-11T21:35:15.5720115+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.026988+08:00</LastModifiedTime>
+                  <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.37865</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month11日 .xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value>Lee doctor</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Pediatrics</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>True</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="34">
+                     <XElements xsi:nil="true" />
+                     <Text>The patient didn’t feel comfortable today due to his bad defecation for three days, the condition didn’t get better after taking one pill of phenolphthalein and another one later. After two more pills permitted by XXX chief physician, the patient felt much better.</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="26" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.026988+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month13日 12hours01minutes03秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Pediatrics</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>The patient was highly suspicious of rupture of abdominal parenchymal viscera and will need B-ultrasound to decide if we need laparotomy for further check. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="32" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="32" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.026988+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month14日 12hours01minutes54秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Psychiatry</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>The chief physician went on a ward round and said nothing.</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="31" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month15日 12hours02minutes30秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>writer</Name>
+                     <Value>Lee doctor</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Psychiatry</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>True</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="34">
+                     <XElements xsi:nil="true" />
+                     <Text>Today, the chief physician and I went on ward round. We walked into the ward, the chief physician was standing on the left side of the bed and I was standing on the other side. Both of us kept silent. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="26" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month16日 12hours03minutes12秒.xml</FileName>
+               <NewPage>true</NewPage>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>writer</Name>
+                     <Value>Lee doctor</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Psychiatry</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>The chief physician XXX moved toward the ward in the heavy snow. He hold the patient’s hands firmly after he arrived and asked if the patient was getting better. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="32" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="32" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month17日 12hours03minutes32秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Pneumology </Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>Visible peristalsis</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="32" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="32" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month18日 12hours04minutes21秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>writer</Name>
+                     <Value>doctor Zhang</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Pneumology </Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>True</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="34">
+                     <XElements xsi:nil="true" />
+                     <Text>Difficult defecation for 3 days </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="26" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="23" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month19日 12hours05minutes22秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>department</Name>
+                     <Value>Pneumology </Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>The patient has been in the hospital for two days. He is quite stable with a little bit low fever(37.5℃-38t), the arthralgia didn’t get worse. The chief physician Wang XXX went on a ward round this afternoon and checked the patient’s medical history and physical examination results. The chief physician considered that CTD including RA and SLE should be excluded based on patient’s swelling pain of big joint, subcutaneous nodules, faster ESR, ST-T in ECG as well as other negative laboratory tests results. The original diagnosis and treatment suggestions are confirmed. Start using anti-rheumatic drugs. Take aspirin 0.9g first, 3 times a day, and pay attention to gastrointestinal reactions.If there is high heat, taking prednisone 10mg, 3 times a day. In view of multiple subcutaneous nodules, patients were asked to have 24-hour urinary and uric acid tests as well as joint radiology. Anti-rheumatism treatment has been started, to closely observe the changes in the disease. Follow the instructions. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="14" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年02month20日 20hours49minutes41秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>UserName</Name>
+                     <Value />
+                  </Attribute>
+                  <Attribute>
+                     <Name>ward</Name>
+                     <Value>Pediatrics</Value>
+                  </Attribute>
+               </Attributes>
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XParagraphFlag" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <LicenseText>Lanzhou xinhaoyuan electronic technology co. LTD:Lanzhou xinhaoyuan electronic technology co. LTD</LicenseText>
+                  <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+                  <LastModifiedTime>2015-10-05T10:41:06.0425881+08:00</LastModifiedTime>
+                  <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+                  <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2013年06month04日 10hours17minutes28秒.xml</FileName>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes />
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>True</EnablePermission>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XInputField" StyleIndex="6">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>NewControl</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>NsoControlTypeName</Name>
+                           <Value>DateTimeBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Type</Name>
+                           <Value>8</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlID</Name>
+                           <Value>20140801114124</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ElementID</Name>
+                           <Value>52</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WordVersion</Name>
+                           <Value>2</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsSaveAsNode</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNotRecordInXML</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>MustFillContent</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reference</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExpandInput</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Edge</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WomanUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlType</Name>
+                           <Value>8</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlTypeTemplate</Name>
+                           <Value>ElementLableAndDateTimePicker</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsCtrlHidden</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ViewSecret</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlName</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UpdateEveryTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ConsistenceType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reserve</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle</Name>
+                           <Value>[</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle2</Name>
+                           <Value>]</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsDefault</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>BetweenInTimeAndOutTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WritingInAdvance</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupReplace</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNullPrint</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ReplaceOldValue</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>20140801114124</ID>
+                     <ToolTip>recorddate</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <Required>true</Required>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="6">
+                           <XElements xsi:nil="true" />
+                           <Text>2014-09-28 10:36</Text>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <BackgroundTextColor>#FF0000</BackgroundTextColor>
+                     <EventExpressions />
+                     <Name>recorddate</Name>
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy-MM-dd HH:mm</Format>
+                     </DisplayFormat>
+                     <InnerValue>2014-09-28 10:36</InnerValue>
+                     <BackgroundText>recorddate</BackgroundText>
+                     <BorderVisible>Hidden</BorderVisible>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings>
+                        <EditStyle>DateTime</EditStyle>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="7">
+                     <XElements xsi:nil="true" />
+                     <Text>       </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="35">
+                     <XElements xsi:nil="true" />
+                     <Text>Ward Record from Deputy Chief Physician</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="36">
+                     <XElements xsi:nil="true" />
+                     <Text> Qi</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="35" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="36">
+                     <XElements xsi:nil="true" />
+                     <Text>XX </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="15" />
+                  <Element xsi:type="XString" StyleIndex="34">
+                     <XElements xsi:nil="true" />
+                     <Text>The patient’s dyspnea was recovering, but the whole body was in fatigue, 3020 ml of urine for 24 hours, ECG monitoring: HR: 68 times/min, not neat, a few of ventricular premature beat, BP155/70mmHg, SO298 %; physical examination: clear mental state, flat breathing, low breathing sounds from double lungs, a little phlegm, heart rate 68 times/min, audible premature beat, soft abdomen, no tenderness and piercing pain, no swelling in double lower limbs. Liver, kidney, electricity, sugar: urea *:16.25mmol/L ↑Creatinine * : 158 umol/L↑; Glucose * : 8.42mmol/L ↑; TP*: 62.0g/L↓Albumin*: 31.2 g/L↓TBIL*: 24.4umol/L↑DBIL*: 12.5umol/L↑IBIL: 11.9umol/L; GGT*: 81U/L↑; ALP*: 48U/L; ALT*:225U/L ↑; AST*:56U/L ↑; Potassium: 3.55mmol/L; Sodium: 136.9mmol/L↓; Ward round instructions from deputy chief physician Qi Lianrong showed that the patient's liver,kidney and electrolyte were improved, and the treatment was continued to reduce phlegm, protect gastric mucosa, correct electrolyte disturbance and improve heart function.</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="16" />
+                  <Element xsi:type="XString" StyleIndex="17" WhiteSpaceLength="59">
+                     <XElements xsi:nil="true" />
+                     <Text>                                                           </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="9" WhiteSpaceLength="44">
+                     <XElements xsi:nil="true" />
+                     <Text>                                            </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="15" />
+                  <Element xsi:type="XString" StyleIndex="37" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="38">
+                     <XElements xsi:nil="true" />
+                     <Text>Qi</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="37" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="38">
+                     <XElements xsi:nil="true" />
+                     <Text>XX/</Text>
+                  </Element>
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>Section</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>signature</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>signature</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UserSet</Name>
+                           <Value>signature</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>true</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>true</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>AllDoctorSignHorizontal20140801135519</ID>
+                     <ToolTip>signature</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ContentReadonly>False</ContentReadonly>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>Zhu</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="26" WhiteSpaceLength="1">
+                           <XElements xsi:nil="true" />
+                           <Text> </Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>XX</Text>
+                        </Element>
+                     </XElements>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <InnerValue>Zhu XX</InnerValue>
+                     <BackgroundText>signature</BackgroundText>
+                     <EnableHighlight>Disabled</EnableHighlight>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="8">
+                     <ID>dcid23</ID>
+                  </Element>
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <Title>disease course record 2015.10.5 10:56:38</Title>
+                  <LicenseText>Nanjing duchang information technology co., LTD 2016 beta version:Nanjing duchang information technology co., LTD 2016 beta version</LicenseText>
+                  <CreationTime>1980-01-01T00:00:00</CreationTime>
+                  <LastModifiedTime>2016-01-15T13:51:49.5643033+08:00</LastModifiedTime>
+                  <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+                  <Author>yfyuan</Author>
+                  <Operator>DCSoft.Writer Version:1.2014.4.30</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2015年10month05日 10hours56minutes38秒.xml</FileName>
+               <FileFormat>XML</FileFormat>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes />
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XInputField" StyleIndex="6">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>NewControl</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>NsoControlTypeName</Name>
+                           <Value>DateTimeBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Type</Name>
+                           <Value>8</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlID</Name>
+                           <Value>20140801114124</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ElementID</Name>
+                           <Value>52</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WordVersion</Name>
+                           <Value>2</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsSaveAsNode</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNotRecordInXML</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>MustFillContent</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reference</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExpandInput</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Edge</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WomanUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlType</Name>
+                           <Value>8</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlTypeTemplate</Name>
+                           <Value>ElementLableAndDateTimePicker</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsCtrlHidden</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ViewSecret</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlName</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UpdateEveryTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ConsistenceType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reserve</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle</Name>
+                           <Value>[</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle2</Name>
+                           <Value>]</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsDefault</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>BetweenInTimeAndOutTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WritingInAdvance</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupReplace</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNullPrint</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ReplaceOldValue</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>field24</ID>
+                     <ToolTip>recorddate</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <Required>true</Required>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="6">
+                           <XElements xsi:nil="true" />
+                           <Text>2014-09-18 15:25</Text>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <BackgroundTextColor>#FF0000</BackgroundTextColor>
+                     <EventExpressions />
+                     <Name>recorddate</Name>
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy-MM-dd HH:mm</Format>
+                     </DisplayFormat>
+                     <InnerValue>2014-09-18 15:25</InnerValue>
+                     <BackgroundText>recorddate</BackgroundText>
+                     <BorderVisible>Hidden</BorderVisible>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings>
+                        <EditStyle>DateTime</EditStyle>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="13">
+                     <XElements xsi:nil="true" />
+                     <Text>             </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>NewControl</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>NsoControlTypeName</Name>
+                           <Value>TextBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Type</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlID</Name>
+                           <Value>20140801135105</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ElementID</Name>
+                           <Value>937</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WordVersion</Name>
+                           <Value>2</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExternalDataSourceId</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>wardrecord</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsSaveAsNode</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNotRecordInXML</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>MustFillContent</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reference</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExpandInput</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Edge</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WomanUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlTypeTemplate</Name>
+                           <Value>ElementLableAndRichTextBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsCtrlHidden</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ViewSecret</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlName</Name>
+                           <Value>ward advise</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UpdateEveryTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Code</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ConsistenceType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>please enter ward record here</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reserve</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle</Name>
+                           <Value>[</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle2</Name>
+                           <Value>]</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsDefault</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>BetweenInTimeAndOutTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WritingInAdvance</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupReplace</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UserSet</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>CheckboxCaption</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNullPrint</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ReplaceOldValue</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>FormatConvertClassWord</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>CalcText</Name>
+                        </Attribute>
+                     </Attributes>
+                     <ID>20140801135105</ID>
+                     <ToolTip>wardrecord</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="23">
+                           <XElements xsi:nil="true" />
+                           <Text>Patient, male, 85 years old, </Text>
+                        </Element>
+                     </XElements>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>ward advise</Name>
+                     <InnerValue>Patient, male, 85 years old, </InnerValue>
+                     <BackgroundText>please enter ward record here</BackgroundText>
+                     <BorderVisible>Visible</BorderVisible>
+                     <EditorActiveMode>MouseClick</EditorActiveMode>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="40">
+                     <XElements xsi:nil="true" />
+                     <Text>Normal development, moderate nutrition, clear mental state, half-lying position, supportive of physical examination. Shallow and quick breath, feeble, no visible pallor, stained yellow, cyanosis, bleeding spots and spider nevus on skin and mucosa, no swelling superficial lymph nodes. Normal head, mouth and lips, no congestion in pharynx, non-swelling tonsil, soft neck with weasand in the middle, the thyroid was not large, the bilateral jugular veins were full, and the hepatic jugular venous reflux was negative.</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="39" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="40">
+                     <XElements xsi:nil="true" />
+                     <Text>The chest was symmetrical and free of deformity, bilateral respiratory mobility was consistent, bilateral lung percussion was clear, respiratory tone was rough, a small amount of moist rales can be heard at the bottom of both lungs. There was no upheaval in the anterior area of the heart, no diffuse apical pulse, no enlargement in percussion, the heart tone was strong, the heart rate was 77 times/min, and no murmurs were heard in auscultatory valve area. The abdomen was flat, no intestinal type and peristaltic wave were visible, soft abdomen, no tenderness, rebound tenderness and muscle tension. The liver and spleen are unreachable, shifting dullness is negative, no abdominal vascular murmur, borborygmus exists. No spinal deformity, slight flexion of both lower limbs, inability to straighten, limited movement of both knee joints, decreased pain and temperature sensation of both lower limbs, normal muscle strength and muscle tension, limited movement of both knee joints, decreased pain and temperature sensation of both lower limbs, no edema in both lower limbs, decreased pulse movement of dorsal artery of both feet, patellar tendon reflex exists. Coronary atherosclerotic heart disease, grade III heart function (NYHA classification), pneumonia, acute cholecystitis?, type II diabetes, type II diabetic peripheral neuropathy, type II diabetic peripheral vascular disease, hypertension II (very high risk), cerebral infarction (old), BPH, chronic gastritis, malnutrition, electrolyte disturbance: hyponatremia. Treatment: 1. Examination plan: blood/urine/stool routine examination, blood gas analysis, laboratory test, blood coagulation test, thyroid function,</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="33">
+                     <XElements xsi:nil="true" />
+                     <Text>NT-proBNP,</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="40">
+                     <XElements xsi:nil="true" />
+                     <Text>glycosylated hemoglobin, tumor marker, troponin T, blood sugar, ECG, chest X-ray, UCG, urinary color doppler ultrasound, abdominal color doppler ultrasound. 2. Treatment plan: monitoring ECG, blood pressure and oxyhemoglobin saturation results, oxygen inhalation, IV drip of ISDN for dilating blood vessel, improving blood circulation, anti-infection, reducing phlegm and platelet aggregation, protecting gastric mucosa, enhancing cardiac function and supporting treatment. Relatives are totally aware of the serious condition of the patient and expressed their understanding. </Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+                  <Element xsi:type="XParagraphFlag" />
+                  <Element xsi:type="XString" WhiteSpaceLength="1">
+                     <XElements xsi:nil="true" />
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="23">
+                     <XElements xsi:nil="true" />
+                     <Text>Zhu XX</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <Title>disease courserecord2015年10month05日 10hours59minutes42秒</Title>
+                  <LicenseText>Nanjing duchang information technology co., LTD 2016 beta version:Nanjing duchang information technology co., LTD 2016 beta version</LicenseText>
+                  <CreationTime>1980-01-01T00:00:00</CreationTime>
+                  <LastModifiedTime>2016-01-15T13:51:34.4732748+08:00</LastModifiedTime>
+                  <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+                  <Author>yfyuan</Author>
+                  <Operator>DCSoft.Writer Version:1.2014.4.30</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2015年10month05日 10hours59minutes42秒.xml</FileName>
+               <FileFormat>XML</FileFormat>
+            </Element>
+            <Element xsi:type="XTextSubDocument" StyleIndex="11">
+               <Attributes />
+               <AcceptTab>true</AcceptTab>
+               <EnablePermission>False</EnablePermission>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XInputField" StyleIndex="6">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>NewControl</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>NsoControlTypeName</Name>
+                           <Value>DateTimeBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Type</Name>
+                           <Value>8</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlID</Name>
+                           <Value>20140801114124</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ElementID</Name>
+                           <Value>52</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WordVersion</Name>
+                           <Value>2</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsSaveAsNode</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNotRecordInXML</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>MustFillContent</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reference</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExpandInput</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Edge</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WomanUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlType</Name>
+                           <Value>8</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlTypeTemplate</Name>
+                           <Value>ElementLableAndDateTimePicker</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsCtrlHidden</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ViewSecret</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlName</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UpdateEveryTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ConsistenceType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>recorddate</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reserve</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle</Name>
+                           <Value>[</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle2</Name>
+                           <Value>]</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsDefault</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>BetweenInTimeAndOutTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WritingInAdvance</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupReplace</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNullPrint</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ReplaceOldValue</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>field27</ID>
+                     <ToolTip>recorddate</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <Required>true</Required>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="6">
+                           <XElements xsi:nil="true" />
+                           <Text>2014-09-18 15:37</Text>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <BackgroundTextColor>#FF0000</BackgroundTextColor>
+                     <EventExpressions />
+                     <Name>recorddate</Name>
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy-MM-dd HH:mm</Format>
+                     </DisplayFormat>
+                     <InnerValue>2014-09-18 15:37</InnerValue>
+                     <BackgroundText>recorddate</BackgroundText>
+                     <BorderVisible>Hidden</BorderVisible>
+                     <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                     <LastSelectedListItems />
+                     <FieldSettings>
+                        <EditStyle>DateTime</EditStyle>
+                     </FieldSettings>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="8">
+                     <XElements xsi:nil="true" />
+                     <Text>        </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="7" WhiteSpaceLength="2">
+                     <XElements xsi:nil="true" />
+                     <Text>  </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="36">
+                     <XElements xsi:nil="true" />
+                     <Text> Ward Record from Phycian-in-charge QiXX</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                  <Element xsi:type="XInputField" StyleIndex="23">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>NewControl</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>NsoControlTypeName</Name>
+                           <Value>TextBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Type</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlID</Name>
+                           <Value>20140801135105</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ElementID</Name>
+                           <Value>937</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WordVersion</Name>
+                           <Value>2</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExternalDataSourceId</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>wardrecord</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsSaveAsNode</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNotRecordInXML</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>MustFillContent</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reference</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ExpandInput</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Edge</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WomanUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlTypeTemplate</Name>
+                           <Value>ElementLableAndRichTextBox</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsCtrlHidden</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ViewSecret</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ControlName</Name>
+                           <Value>ward advise</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UpdateEveryTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupUse</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Code</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>ConsistenceType</Name>
+                           <Value>3</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>please enter ward record here</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>Reserve</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle</Name>
+                           <Value>[</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EdgeStyle2</Name>
+                           <Value>]</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsDefault</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>BetweenInTimeAndOutTime</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>WritingInAdvance</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsGroupReplace</Name>
+                           <Value>TRUE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UserSet</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>CheckboxCaption</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>IsNullPrint</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>ReplaceOldValue</Name>
+                           <Value>FALSE</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>FormatConvertClassWord</Name>
+                           <Value />
+                        </Attribute>
+                        <Attribute>
+                           <Name>CalcText</Name>
+                        </Attribute>
+                     </Attributes>
+                     <ID>field27635796396235990895</ID>
+                     <ToolTip>wardrecord</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValidateStyle>
+                        <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                        <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                     </ValidateStyle>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>Patients with intermittent complaint of holding breath, ECG monitoring result: HR80 times/min, blood pressure 130/70mmhg, SO295%, semi-reclining position. Laboratory test result: Procalcitonin: 0.16ng/ml; Urine routine test on admission: ketone body*: negtive; N-terminal pro-brain natriuretic peptide: 17213pg/ml; Troponin T: 0.063ng/ml</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↑</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>Urea*: 16.98mmol/L</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↑; </Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>Creatinine* : 129umol/L</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↑; </Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>Creatine kinase: 28U/L</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↑;</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text> Creatine kinase isozyme: 3.4U/L; Blood routine test on admission: WBC*: 7.79</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>×</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>10^9/L; Neutrophilic granulocyte percentage*:82.6; Lymphocytes percentage*: 9.6%</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↓</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>HGB*: 122.00g/L </Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↓</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>; PLT*: 133.00</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>×</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>10^9/L; BG+lactic acid (biochemical): lactic acid: 1.6mmol/L; PH: 7.459; PCO2: 33.1mmHg</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↓</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text>; PO2: 125mmHgl</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↑;</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text> AB:23.2mmol/L; SB: 24.7mmol/L; BE: 0.3mmol/L; Oxygen saturation: 99.1%</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="33">
+                           <XElements xsi:nil="true" />
+                           <Text>↑;</Text>
+                        </Element>
+                        <Element xsi:type="XString" StyleIndex="40">
+                           <XElements xsi:nil="true" />
+                           <Text> Qi Lianrong, Deputy Chief Physician, has already checked the patient’s medical history and symptoms, all test results showed that the patient is suffering from coronary heart disease, heart failure, pneumonia, cholecystitis, electrolyte disorder, type II diabetes, so physician’s instructions are provided for dialating  blood vessels, improving blood circulation, reduce cardiac load, improving heart function, anti-infection, reducing phlegm, monitoring blood sugar; Considering the community-acquired pneumonia, the patient needs the injection of piperacillin sodium which is effective for common G + and G -, anaerobic bacteria; Meanwhile, the sputum culture and drug allergy test are necessary for further medical instructions. </Text>
+                        </Element>
+                     </XElements>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <Name>ward advise</Name>
+                     <InnerValue>Patients with intermittent complaint of holding breath, ECG monitoring result: HR80 times/min, blood pressure 130/70mmhg, SO295%, semi-reclining position. Laboratory test result: Procalcitonin: 0.16ng/ml; Urine routine test on admission: ketone body*: negtive; N-terminal pro-brain natriuretic peptide: 17213pg/ml; Troponin T: 0.063ng/ml↑Urea*: 16.98mmol/L↑; Creatinine* : 129umol/L↑; Creatine kinase: 28U/L↑; Creatine kinase isozyme: 3.4U/L; Blood routine test on admission: WBC*: 7.79×10^9/L; Neutrophilic granulocyte percentage*:82.6; Lymphocytes percentage*: 9.6%↓HGB*: 122.00g/L ↓; PLT*: 133.00×10^9/L; BG+lactic acid (biochemical): lactic acid: 1.6mmol/L; PH: 7.459; PCO2: 33.1mmHg↓; PO2: 125mmHgl↑; AB:23.2mmol/L; SB: 24.7mmol/L; BE: 0.3mmol/L; Oxygen saturation: 99.1%↑; Qi Lianrong, Deputy Chief Physician, has already checked the patient’s medical history and symptoms, all test results showed that the patient is suffering from coronary heart disease, heart failure, pneumonia, cholecystitis, electrolyte disorder, type II diabetes, so physician’s instructions are provided for dialating  blood vessels, improving blood circulation, reduce cardiac load, improving heart function, anti-infection, reducing phlegm, monitoring blood sugar; Considering the community-acquired pneumonia, the patient needs the injection of piperacillin sodium which is effective for common G + and G -, anaerobic bacteria; Meanwhile, the sputum culture and drug allergy test are necessary for further medical instructions. </InnerValue>
+                     <BackgroundText>please enter ward record here</BackgroundText>
+                     <BorderVisible>Visible</BorderVisible>
+                     <EditorActiveMode>MouseClick</EditorActiveMode>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XInputField" StyleIndex="9">
+                     <Attributes>
+                        <Attribute>
+                           <Name>NsoElementTypeName</Name>
+                           <Value>Section</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>HelpTip</Name>
+                           <Value>signature</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>PlaceHolder</Name>
+                           <Value>signature</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>UserSet</Name>
+                           <Value>signature</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>DelFlag</Name>
+                           <Value>true</Value>
+                        </Attribute>
+                        <Attribute>
+                           <Name>EditProtect</Name>
+                           <Value>true</Value>
+                        </Attribute>
+                     </Attributes>
+                     <ID>field27635796396235990896</ID>
+                     <ToolTip>signature</ToolTip>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ContentReadonly>True</ContentReadonly>
+                     <XElements>
+                        <Element xsi:type="XString" StyleIndex="38">
+                           <XElements xsi:nil="true" />
+                           <Text>ZhuXX</Text>
+                        </Element>
+                     </XElements>
+                     <Deleteable>false</Deleteable>
+                     <BorderElementColor />
+                     <EventExpressions />
+                     <InnerValue>ZhuXX</InnerValue>
+                     <BackgroundText>signature</BackgroundText>
+                     <EnableHighlight>Disabled</EnableHighlight>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <DocumentInfo>
+                  <Title>disease courserecord2015年10month05日 11hours00minutes00秒</Title>
+                  <LicenseText>Nanjing duchang information technology co., LTD 2016 beta version:Nanjing duchang information technology co., LTD 2016 beta version</LicenseText>
+                  <CreationTime>1980-01-01T00:00:00</CreationTime>
+                  <LastModifiedTime>2016-01-15T13:51:21.4162501+08:00</LastModifiedTime>
+                  <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+                  <Author>yfyuan</Author>
+                  <Operator>DCSoft.Writer Version:1.2014.4.30</Operator>
+                  <NumOfPage>1</NumOfPage>
+               </DocumentInfo>
+               <FileName>E:\Source\DCSoft\08代码\DCSoft\DCSoft.Writer.Demo\Bin\DemoFile\disease courserecord内容\disease courserecord2015年10month05日 11hours00minutes00秒.xml</FileName>
+               <FileFormat>XML</FileFormat>
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+         </XElements>
+      </Element>
+   </XElements>
+   <RepeatedImages />
+   <GlobalJavaScriptReferences />
+   <ScriptText>
+// An effective event response to all document sections JavaScript
+
+function _XTextSectionElement_GotFocus( eventSender , Args ) 
+{
+	eventSender.Style.BackgroundColor = Color.Yellow;
+	eventSender.InvalidateView();
+}
+
+function _XTextSectionElement_LostFocus( eventSender , Args )
+{
+	eventSender.Style.BackgroundColor = Color.Transparent;
+	eventSender.InvalidateView();
+	
+}
+
+function _XTextSectionElement_MouseDblClick( eventSender , Args ){
+	window.alert( document.FileName );
+}</ScriptText>
+   <ScriptLanguage>JScript</ScriptLanguage>
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司2018年旗舰版:南京都昌信息科技有限公司2018年旗舰版</LicenseText>
+      <CreationTime>2013-01-11T16:19:02.7134633+08:00</CreationTime>
+      <LastModifiedTime>2018-09-11T17:36:09.6585565+08:00</LastModifiedTime>
+      <LastPrintTime>2013-01-11T16:19:02.7134633+08:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.1.1111.29168</Operator>
+      <NumOfPage>4</NumOfPage>
+   </Info>
+   <BodyText>Select time：2013-09-29 14:36                       Stage Summary  
+
+ Xu Cunzhi,male,66 years old. atin our hospitalThoracic surgery。
+Admission condition:                               to assist checking result）
+Admission diagnosis:                                 
+Diagnosis condition:                                  
+Current condition:                                     
+Current diagnosis:                                     
+Disgnosis and treatment plan: （prompt disgnosis and treatment scheme that prepare to carry out）
+
+2013-09-29 00:00               MaShengfeng Ward  Record
+
+Patient's symptoms, vital signs,major diagnosis results 1. Good spirit, appetite, good sleep, normal defecation (whether patient have new medical history、sign add）. According to condition, the diagnosis of “ XXX ” is confirmed. 
+The treatment should follow the above. After the treatment,the patient's XXX is getting better. The original diagnosis and treatment is effective. Please implement the physician order and keep monitoring. 
+The patient was in clear mental state with fast-recovering incision.
+The patient didn’t feel comfortable today due to his bad defecation for three days, the condition didn’t get better after taking one pill of phenolphthalein and another one later. After two more pills permitted by XXX chief physician, the patient felt much better.
+The patient was highly suspicious of rupture of abdominal parenchymal viscera and will need B-ultrasound to decide if we need laparotomy for further check. 
+The chief physician went on a ward round and said nothing. Today, the chief physician and I went on ward round. We walked into the ward, the chief physician was standing on the left side of the bed and I was standing on the other side. Both of us kept silent. 
+The chief physician XXX moved toward the ward in the heavy snow. He hold the patient’s hands firmly after he arrived and asked if the patient was getting better. 
+Visible peristalsis
+Difficult defecation for 3 days 
+The patient has been in the hospital for two days. He is quite stable with a little bit low fever(37.5℃-38t), the arthralgia didn’t get worse. The chief physician Wang XXX went on a ward round this afternoon and checked the patient’s medical history and physical examination results. The chief physician considered that CTD including RA and SLE should be excluded based on patient’s swelling pain of big joint, subcutaneous nodules, faster ESR, ST-T in ECG as well as other negative laboratory tests results. The original diagnosis and treatment suggestions are confirmed. Start using anti-rheumatic drugs. Take aspirin 0.9g first, 3 times a day, and pay attention to gastrointestinal reactions.If there is high heat, taking prednisone 10mg, 3 times a day. In view of multiple subcutaneous nodules, patients were asked to have 24-hour urinary and uric acid tests as well as joint radiology. Anti-rheumatism treatment has been started, to closely observe the changes in the disease. Follow the instructions. 2014-09-28 10:36       Ward Record from Deputy Chief Physician Qi XX 
+The patient’s dyspnea was recovering, but the whole body was in fatigue, 3020 ml of urine for 24 hours, ECG monitoring: HR: 68 times/min, not neat, a few of ventricular premature beat, BP155/70mmHg, SO298 %; physical examination: clear mental state, flat breathing, low breathing sounds from double lungs, a little phlegm, heart rate 68 times/min, audible premature beat, soft abdomen, no tenderness and piercing pain, no swelling in double lower limbs. Liver, kidney, electricity, sugar: urea *:16.25mmol/L ↑Creatinine * : 158 umol/L↑; Glucose * : 8.42mmol/L ↑; TP*: 62.0g/L↓Albumin*: 31.2 g/L↓TBIL*: 24.4umol/L↑DBIL*: 12.5umol/L↑IBIL: 11.9umol/L; GGT*: 81U/L↑; ALP*: 48U/L; ALT*:225U/L ↑; AST*:56U/L ↑; Potassium: 3.55mmol/L; Sodium: 136.9mmol/L↓; Ward round instructions from deputy chief physician Qi Lianrong showed that the patient's liver,kidney and electrolyte were improved, and the treatment was continued to reduce phlegm, protect gastric mucosa, correct electrolyte disturbance and improve heart function.
+                                                                                                       
+ Qi XX/Zhu XX2014-09-18 15:25             
+Patient, male, 85 years old, Normal development, moderate nutrition, clear mental state, half-lying position, supportive of physical examination. Shallow and quick breath, feeble, no visible pallor, stained yellow, cyanosis, bleeding spots and spider nevus on skin and mucosa, no swelling superficial lymph nodes. Normal head, mouth and lips, no congestion in pharynx, non-swelling tonsil, soft neck with weasand in the middle, the thyroid was not large, the bilateral jugular veins were full, and the hepatic jugular venous reflux was negative. The chest was symmetrical and free of deformity, bilateral respiratory mobility was consistent, bilateral lung percussion was clear, respiratory tone was rough, a small amount of moist rales can be heard at the bottom of both lungs. There was no upheaval in the anterior area of the heart, no diffuse apical pulse, no enlargement in percussion, the heart tone was strong, the heart rate was 77 times/min, and no murmurs were heard in auscultatory valve area. The abdomen was flat, no intestinal type and peristaltic wave were visible, soft abdomen, no tenderness, rebound tenderness and muscle tension. The liver and spleen are unreachable, shifting dullness is negative, no abdominal vascular murmur, borborygmus exists. No spinal deformity, slight flexion of both lower limbs, inability to straighten, limited movement of both knee joints, decreased pain and temperature sensation of both lower limbs, normal muscle strength and muscle tension, limited movement of both knee joints, decreased pain and temperature sensation of both lower limbs, no edema in both lower limbs, decreased pulse movement of dorsal artery of both feet, patellar tendon reflex exists. Coronary atherosclerotic heart disease, grade III heart function (NYHA classification), pneumonia, acute cholecystitis?, type II diabetes, type II diabetic peripheral neuropathy, type II diabetic peripheral vascular disease, hypertension II (very high risk), cerebral infarction (old), BPH, chronic gastritis, malnutrition, electrolyte disturbance: hyponatremia. Treatment: 1. Examination plan: blood/urine/stool routine examination, blood gas analysis, laboratory test, blood coagulation test, thyroid function,NT-proBNP,glycosylated hemoglobin, tumor marker, troponin T, blood sugar, ECG, chest X-ray, UCG, urinary color doppler ultrasound, abdominal color doppler ultrasound. 2. Treatment plan: monitoring ECG, blood pressure and oxyhemoglobin saturation results, oxygen inhalation, IV drip of ISDN for dilating blood vessel, improving blood circulation, anti-infection, reducing phlegm and platelet aggregation, protecting gastric mucosa, enhancing cardiac function and supporting treatment. Relatives are totally aware of the serious condition of the patient and expressed their understanding. 
+
+ Zhu XX2014-09-18 15:37           Ward Record from Phycian-in-charge QiXX
+Patients with intermittent complaint of holding breath, ECG monitoring result: HR80 times/min, blood pressure 130/70mmhg, SO295%, semi-reclining position. Laboratory test result: Procalcitonin: 0.16ng/ml; Urine routine test on admission: ketone body*: negtive; N-terminal pro-brain natriuretic peptide: 17213pg/ml; Troponin T: 0.063ng/ml↑Urea*: 16.98mmol/L↑; Creatinine* : 129umol/L↑; Creatine kinase: 28U/L↑; Creatine kinase isozyme: 3.4U/L; Blood routine test on admission: WBC*: 7.79×10^9/L; Neutrophilic granulocyte percentage*:82.6; Lymphocytes percentage*: 9.6%↓HGB*: 122.00g/L ↓; PLT*: 133.00×10^9/L; BG+lactic acid (biochemical): lactic acid: 1.6mmol/L; PH: 7.459; PCO2: 33.1mmHg↓; PO2: 125mmHgl↑; AB:23.2mmol/L; SB: 24.7mmol/L; BE: 0.3mmol/L; Oxygen saturation: 99.1%↑; Qi Lianrong, Deputy Chief Physician, has already checked the patient’s medical history and symptoms, all test results showed that the patient is suffering from coronary heart disease, heart failure, pneumonia, cholecystitis, electrolyte disorder, type II diabetes, so physician’s instructions are provided for dialating  blood vessels, improving blood circulation, reduce cardiac load, improving heart function, anti-infection, reducing phlegm, monitoring blood sugar; Considering the community-acquired pneumonia, the patient needs the injection of piperacillin sodium which is effective for common G + and G -, anaerobic bacteria; Meanwhile, the sputum culture and drug allergy test are necessary for further medical instructions. 
+ZhuXX</BodyText>
+   <Comments>
+      <Comment Index="0">
+         <Attributes />
+         <Author>WangMing</Author>
+         <CreationTime>2013-09-30T11:03:58.0854295+08:00</CreationTime>
+         <Text>ssssssssss</Text>
+         <CreatorIndex>0</CreatorIndex>
+      </Comment>
+      <Comment Index="1">
+         <Attributes />
+         <Author>yyf</Author>
+         <CreationTime>2013-09-30T14:10:49.6388282+08:00</CreationTime>
+         <Text>vvvvvvvv</Text>
+      </Comment>
+   </Comments>
+   <LocalConfig />
+   <PageSettings>
+      <HeaderDistance>39</HeaderDistance>
+      <FooterDistance>39</FooterDistance>
+      <LeftMargin>59</LeftMargin>
+      <TopMargin>135</TopMargin>
+      <RightMargin>59</RightMargin>
+      <BottomMargin>79</BottomMargin>
+   </PageSettings>
+   <UserHistories>
+      <History Index="1">
+         <ID>0734</ID>
+         <Name>WangMing</Name>
+         <SavedTime>2015-10-05T10:40:23.6836303+08:00</SavedTime>
+         <PermissionLevel>1</PermissionLevel>
+      </History>
+   </UserHistories>
+   <Parameters>
+      <Parameter Name="当前时间" />
+   </Parameters>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>20</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>30</BorderWidth>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+            <CommentIndex>0</CommentIndex>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+            <Align>Right</Align>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>100</LineSpacing>
+         </Style>
+         <Style Index="7">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>100</LineSpacing>
+         </Style>
+         <Style Index="8">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>91.6666641</LineSpacing>
+         </Style>
+         <Style Index="9">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.25</LineSpacing>
+         </Style>
+         <Style Index="10">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Right</Align>
+         </Style>
+         <Style Index="11">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderLeftColor>#808080</BorderLeftColor>
+            <BorderTopColor>#808080</BorderTopColor>
+            <BorderRightColor>#808080</BorderRightColor>
+            <BorderBottomColor>#808080</BorderBottomColor>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PrintBackColor>#00FFFFFF</PrintBackColor>
+         </Style>
+         <Style Index="12">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="13">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>12</FontSize>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="14">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceExactly</LineSpacingStyle>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="15">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>91.6666641</LineSpacing>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="16">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceExactly</LineSpacingStyle>
+            <Align>Justify</Align>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="17">
+            <FontName>Arial</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.25</LineSpacing>
+         </Style>
+         <Style Index="18">
+            <Color>#000080</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>22</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="19">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="20">
+            <FontName>Times New Roman</FontName>
+            <FontSize>20</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="21">
+            <FontName>Times New Roman</FontName>
+            <FontSize>11</FontSize>
+         </Style>
+         <Style Index="22">
+            <Color>#000080</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>11</FontSize>
+         </Style>
+         <Style Index="23">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="24">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>30</BorderWidth>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="25">
+            <FontName>Times New Roman</FontName>
+            <FontSize>9</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="26">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="27">
+            <FontName>Times New Roman</FontName>
+            <FontSize>9</FontSize>
+            <CommentIndex>0</CommentIndex>
+         </Style>
+         <Style Index="28">
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+         </Style>
+         <Style Index="29">
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="30">
+            <FontName>Times New Roman</FontName>
+            <FontSize>9</FontSize>
+            <CommentIndex>1</CommentIndex>
+         </Style>
+         <Style Index="31">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="32">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="33">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="34">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="35">
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>100</LineSpacing>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="36">
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>100</LineSpacing>
+         </Style>
+         <Style Index="37">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.25</LineSpacing>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="38">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.25</LineSpacing>
+         </Style>
+         <Style Index="39">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>SpaceSpecify</LineSpacingStyle>
+            <LineSpacing>91.6666641</LineSpacing>
+         </Style>
+         <Style Index="40">
+            <BackgroundColor>#F7F8FA</BackgroundColor>
+            <Color>#333333</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <FileName>C:\Users\Administrator\Desktop\Test2病程记录--病程记录.xml</FileName>
+   <FileFormat>XML</FileFormat>
+</XTextDocument>

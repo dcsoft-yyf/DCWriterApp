@@ -1,0 +1,685 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script type="text/javascript" src="https://www.dcwriter.cn:8006/res/dcwriter5service?wasmres=dcwriter5.js"></script>
+  <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="https://www.dcwriter.cn:8006/res/dcwriter5service?wasmres=dcwriter5.js"></script>
+  <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+  <link222 href="DCSoft.WASM.styles.css" rel="stylesheet"></link222>
+  <style>
+    .toolBox {
+      height: 40px;
+      width: 100%;
+      border: 1px solid #dcdfe6;
+      display: flex;
+      font-size: 13px;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .toolBox span {
+      display: inline-table;
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 5px 10px;
+      min-width: 50px;
+      height: 18px;
+      white-space: nowrap
+    }
+
+    .toolBox select {
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 3px 10px;
+      min-width: 50px;
+      height: 29px;
+    }
+
+    #FontNameSelect {
+      min-width: 150px
+    }
+
+    .describe-box {
+      border: 1px solid #dcdfe6;
+      line-height: 23px;
+      text-align: left;
+      background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+      box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+      border-radius: 0px 8px 8px 0px;
+      border-bottom: 1px solid rgb(155, 187, 227)
+    }
+
+    .describe-box span:first-child {
+      /* text-align: center; */
+      font-weight: bold;
+      line-height: 32px;
+
+    }
+
+    .toolBox span:has(select) {
+      padding: 0px;
+      /* margin: 0px; */
+    }
+
+    .toolBox span:hover {
+      border: 1px solid #4e6ef2;
+      cursor: pointer;
+    }
+
+    .dc-writer-box {
+      /* height: 100% !important; */
+      border-bottom: 0px solid black;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .main-container {
+      height: 100%;
+      display: flex;
+
+    }
+
+    .ringbox {
+      width: 30%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    #myWriterControl {
+      width: 70%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      --tools-height: 80px;
+    }
+
+
+
+    #main {
+      display: flex;
+      height: calc(100% - var(--tools-height));
+      overflow: hidden;
+    }
+
+    #main #myWriterControl {
+      flex: 1;
+      border: 1px solid #000;
+    }
+
+    #hasXml {
+      width: 30%;
+      height: 100%;
+      padding: 10px 10px 30px;
+      border: 1px solid #000;
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+      --hasXml-headerfooter-height: 32px;
+    }
+
+    #hasXml .tabheader {
+      font-size: 18px;
+      font-weight: 700;
+      height: var(--hasXml-headerfooter-height);
+      line-height: var(--hasXml-headerfooter-height);
+      border-bottom: 1px solid #ddd;
+    }
+
+    #hasXml .tabbody {
+      height: calc(100% - var(--hasXml-headerfooter-height) * 2);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #hasXml .tabfooter {
+      text-align: center;
+      height: var(--hasXml-headerfooter-height);
+    }
+
+    #hasXml .tabfooter button {
+      padding: 4px 12px;
+    }
+
+    #dc_box {
+      flex: 1;
+      width: 100%-400px;
+      overflow: hidden;
+    }
+
+    #TracesList {
+      width: 400px;
+      height: 100%;
+      padding: 10px 10px 30px;
+      border: 1px solid #000;
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+      --hasXml-header-height: 32px;
+      --hasXml-footer-height: 0px;
+    }
+
+    #TracesList .tabheader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 700;
+      height: var(--hasXml-header-height);
+      line-height: var(--hasXml-header-height);
+      border-bottom: 1px solid #ddd;
+    }
+
+    #TracesList .tabheader .refresh {
+      cursor: pointer;
+    }
+
+    #TracesList .tabheader .refresh svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    #TracesList .tabbody {
+      height: calc(100% - var(--hasXml-header-height) - var(--hasXml-footer-height));
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #TracesList #TracesListContent {
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 10px 0;
+      font-size: 13px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+      background: #fff;
+      cursor: pointer;
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem:hover {
+      transform: scale(101%);
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem .userName {
+      width: 100%;
+      border-bottom: 1px solid #ebeef5;
+      font-size: 16px;
+      font-weight: 600;
+      /* padding-bottom: 10px; */
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem .data {
+      width: 100%;
+      margin: 10px 2px;
+      word-break: break-all;
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem .timeBox {
+      width: 100%;
+      text-align: right;
+      color: #8c8c8c;
+    }
+
+    #TracesList .tabfooter {
+      text-align: center;
+      height: var(--hasXml-footer-height);
+    }
+  </style>
+  <div id="tools">
+    <div class="header">
+      <div class="describe-box">
+        <span>五代编辑器支持多tab页打开</span>
+      </div>
+      <div class="toolBox">
+        <span commandname="fileopen">打开本地文件</span>
+        <span localmethod="DownLoadFile">导出到本地</span>
+        <span localmethod="PrintDocument">打印</span>
+        <span localmethod="LoadPrintPreview">打印预览</span>
+        <span localmethod="ClosePrintPreview">关闭预览</span>
+        <span localmethod="AboutControl">关于</span>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <div id="TracesList">
+      <div class="tabheader">
+        <span>选择文档</span>
+
+      </div>
+      <div class="tabbody">
+        <div id="TracesListContent">
+          <div class="TracesListContentItem" nativehandle="strDemoFileXml2">
+            <span id="draggable" onclick="tab('tab1')">tab页1</span>
+          </div>
+          <div class="TracesListContentItem" nativehandle="strDemoFileXml3">
+            <span id="checkbox" onclick="tab('tab2')">tab页2</span>
+
+          </div>
+          <div class="TracesListContentItem" nativehandle="strDemoFileXml3">
+            <span id="radio" onclick="tab('tab3')">tab页3</span>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="tabfooter"></div>
+    </div>
+    <div id="dc_box">
+      <div>
+        <span class="tab1"
+          style="display: inline-block;  width: 100px; height: 35px; margin-left: 10px; text-align: center; line-height: 35px; display: none ; background-color: #8c8c8c;"
+          onclick="xxxx('tab1')">tab页1 </span>
+        <span class="tab2"
+          style="display: inline-block;  width: 100px; height: 35px; margin-left: 10px; text-align: center; line-height: 35px; display: none ; background-color: #8c8c8c;"
+          onclick="xxxx('tab2')">tab页2 </span>
+        <span class="tab3"
+          style="display: inline-block;  width: 100px; height: 35px; margin-left: 10px; text-align: center; line-height: 35px; display: none ; background-color: #8c8c8c;"
+          onclick="xxxx('tab3')">tab页3 </span>
+      </div>
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        rulevisible="true" rulebackcolor="#F3F5F7" ruleclientbackcolor="#F3F5F7"
+        ruleclientbordercolor="rgb(237 240 243)" rulelinecolor="#CCCCCC" pagecssstring222="box-shadow:0px 0px 0px grey"
+        pagebordercolor="#F3F5F7" pagetitleposition="BottomRight" allowdrop="true" allowdragcontent="true"
+        registercode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+      <div id="myWriterControl2" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        rulevisible="true" rulebackcolor="#F3F5F7" ruleclientbackcolor="#F3F5F7"
+        ruleclientbordercolor="rgb(237 240 243)" rulelinecolor="#CCCCCC" pagecssstring222="box-shadow:0px 0px 0px grey"
+        pagebordercolor="#F3F5F7" pagetitleposition="BottomRight" allowdrop="true" allowdragcontent="true"
+        registercode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+      <div id="myWriterControl3" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        rulevisible="true" rulebackcolor="#F3F5F7" ruleclientbackcolor="#F3F5F7"
+        ruleclientbordercolor="rgb(237 240 243)" rulelinecolor="#CCCCCC" pagecssstring222="box-shadow:0px 0px 0px grey"
+        pagebordercolor="#F3F5F7" pagetitleposition="BottomRight" allowdrop="true" allowdragcontent="true"
+        registercode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+<script src="../../_framework/dcwriter5.js"></script>
+   <script src="../../js/jquery-1.7.2.min.js"></script>
+   <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+  <script>
+
+    var dateTypeFormat = function (fmt, date) {
+      const opt = {
+        'Y+': date.getFullYear().toString(), // 年
+        'm+': (date.getMonth() + 1).toString(), // 月
+        'd+': date.getDate().toString(), // 日
+        'H+': date.getHours().toString(), // 时
+        'M+': date.getMinutes().toString(), // 分
+        'S+': date.getSeconds().toString() // 秒
+        // 有其他格式化字符需求可以继续添加，必须转化成字符串
+      };
+      for (const k in opt) {
+        ret = new RegExp('(' + k + ')').exec(fmt);
+        if (ret) {
+          fmt = fmt.replace(ret[1], (ret[1].length === 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, '0')));
+        }
+      }
+      return fmt;
+    };
+    var ctl = document.getElementById("myWriterControl");
+
+    window.WriterControl_OnLoad = function () {
+
+    };
+    var toolBoxDOM = document.querySelector(".toolBox");
+    if (toolBoxDOM) {
+      toolBoxDOM.addEventListener("click", (e) => {
+        if (e.target.tagName == "SPAN") {
+          var commandName = e.target.getAttribute("commandName");
+          var localMethod = e.target.getAttribute("localMethod");
+          if (commandName) {
+            var ctl = document.getElementById("myWriterControl");
+            ctl.DCExecuteCommand(commandName, false, null);
+          } else if (localMethod) {
+            funcOBJ[localMethod].call(funcOBJ);
+          }
+        }
+      });
+    }
+    //编辑器方法组
+    var funcOBJ = {
+      DownLoadFile: function () {
+        var ctl = document.getElementById("myWriterControl");
+        var fName = Date.now();
+        ctl.DownLoadFile("xml");
+      },
+      PrintDocument: function () {
+        var ctl = document.getElementById("myWriterControl");
+        var fName = Date.now();
+        ctl.PrintDocument();
+      },
+      LoadPrintPreview: function () {
+        var ctl = document.getElementById("myWriterControl");
+        var fName = Date.now();
+        ctl.LoadPrintPreview();
+      },
+      ClosePrintPreview: function () {
+        var ctl = document.getElementById("myWriterControl");
+        var fName = Date.now();
+        ctl.ClosePrintPreview();
+      },
+      AboutControl: function () {
+        var ctl = document.getElementById("myWriterControl");
+        var fName = Date.now();
+        ctl.AboutControl();
+      },
+    };
+    function loadXML() {
+      var ctl = document.getElementById('myWriterControl');
+    }
+    window.WriterControl_OnLoad = function (rootElement) {
+      // loadXML()
+    };
+    var ctl = document.getElementById('myWriterControl');
+    var ctl2 = document.getElementById('myWriterControl2');
+    var ctl3 = document.getElementById('myWriterControl3');
+
+    ctl2.style.display = "none";
+    ctl3.style.display = "none";
+
+
+    function tab(params) {
+      let tab1 = document.querySelector(".tab1");
+      let tab2 = document.querySelector(".tab2");
+      let tab3 = document.querySelector(".tab3");
+      if (params == "tab1") {
+        tab1.style.display = "inline-block";
+        ctl.LoadDocumentFromString(xml1);
+
+      } else if (params == "tab2") {
+        tab2.style.display = "inline-block";
+        ctl.style.display = "none";
+        ctl3.style.display = "none";
+        ctl2.style.display = "block";
+
+        ctl2.LoadDocumentFromString(xml2);
+
+      } else if (params == "tab3") {
+        tab3.style.display = "inline-block";
+        ctl.style.display = "none";
+        ctl2.style.display = "none";
+        ctl3.style.display = "block";
+
+        ctl3.LoadDocumentFromString(xml3);
+
+      }
+    }
+
+    function xxxx(params) {
+      let tab1 = document.querySelector(".tab1");
+      let tab2 = document.querySelector(".tab2");
+      let tab3 = document.querySelector(".tab3");
+      console.log("222222");
+
+      if (params == "tab1") {
+        ctl.style.display = "block";
+        ctl3.style.display = "none";
+        ctl2.style.display = "none";
+        ctl.LoadDocumentFromString(xml1);
+
+
+      } else if (params == "tab2") {
+        ctl.style.display = "none";
+        ctl3.style.display = "none";
+        ctl2.style.display = "block";
+        ctl2.LoadDocumentFromString(xml2);
+
+      } else if (params == "tab3") {
+        ctl.style.display = "none";
+        ctl2.style.display = "none";
+        ctl3.style.display = "block";
+
+        ctl3.LoadDocumentFromString(xml3);
+
+      }
+    }
+
+    let xml1 = `<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2024.4.23">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>3569</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>3575</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>3570</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <InnerID>3587</InnerID>
+               <Text>tab页1</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3574</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>3571</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3576</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <SerializeParameterValue>true</SerializeParameterValue>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司:南京都昌</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2025-03-18T11:59:14.7259541+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2024.4.23</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>tab页1</BodyText>
+   <LocalConfig />
+   <PageSettings />
+</XTextDocument>`;
+    let xml2 = `<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2024.4.23">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>3569</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>3575</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>3570</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <InnerID>3587</InnerID>
+               <Text>tab页2</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3574</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>3571</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3576</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <SerializeParameterValue>true</SerializeParameterValue>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司:南京都昌</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2025-03-18T11:59:14.7259541+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2024.4.23</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>tab页1</BodyText>
+   <LocalConfig />
+   <PageSettings />
+</XTextDocument>`;
+    let xml3 = `<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2024.4.23">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>3569</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>3575</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>3570</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <InnerID>3587</InnerID>
+               <Text>tab页3</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3574</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>3571</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3576</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <SerializeParameterValue>true</SerializeParameterValue>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司:南京都昌</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2025-03-18T11:59:14.7259541+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2024.4.23</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>tab页1</BodyText>
+   <LocalConfig />
+   <PageSettings />
+</XTextDocument>`
+  </script>
+</body>
+
+</html>

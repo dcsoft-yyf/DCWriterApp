@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>测试第五代接口</title>
+   <style>
+      html,
+      body {
+         height: 100%;
+         overflow: hidden;
+         padding: 0;
+         margin: 0;
+      }
+
+
+      .describe-box {
+         /* max-width: 50%;
+        min-width: 500px; */
+         border: 1px solid #dcdfe6;
+         line-height: 23px;
+         text-align: left;
+         background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+         box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+         border-radius: 0px 8px 8px 0px;
+      }
+
+      .describe-box span:first-child {
+         /* text-align: center; */
+         font-weight: bold;
+         line-height: 32px;
+         border-bottom: 1px solid rgb(155, 187, 227)
+      }
+
+      .describe-box span {
+         display: block;
+         margin: 0 5px;
+         font-size: 13px;
+
+      }
+
+      .toolBox {
+         /* height: 40px; */
+         width: 100%;
+         border: 1px solid #dcdfe6;
+         display: flex;
+         font-size: 13px;
+         overflow-x: auto;
+         overflow-y: hidden;
+      }
+
+      .toolBox span {
+         display: inline-table;
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 5px 10px;
+         min-width: 50px;
+         height: 18px;
+         white-space: nowrap
+      }
+
+      .toolBox select {
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 3px 10px;
+         min-width: 50px;
+         height: 29px;
+      }
+
+      #FontNameSelect {
+         min-width: 150px
+      }
+
+      .toolBox span:has(select) {
+         padding: 0px;
+         /* margin: 0px; */
+      }
+
+      .toolBox span:hover {
+         border: 1px solid #4e6ef2;
+         cursor: pointer;
+      }
+
+      .dc-writer-box {
+         /* height: 100% !important; */
+         border-bottom: 0px solid black;
+         background-attachment: fixed;
+         background-size: cover;
+         background-position: center top;
+      }
+
+      .main-container {
+         height: 100%;
+         display: flex;
+
+      }
+
+      .ringbox {
+         width: 30%;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+      }
+
+      .list-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px;
+         border-bottom: 1px solid #eee;
+      }
+
+      .list-item:last-child {
+         border-bottom: none;
+      }
+
+      #myWriterControl {
+         width: 70%;
+      }
+
+      .TracesListContentItem {
+         height: 50px;
+         width: 100%;
+         border-bottom: 1px solid saddlebrown;
+         text-align: center;
+         line-height: 50px;
+         background: #dce1f7;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body style="text-align: center">
+   <div class="header">
+      <div class="describe-box">
+         <span>数据源绑定</span>
+
+      </div>
+      <div class="toolBox">
+         <span commandName="fileopen">打开本地文件</span>
+         <span localMethod="DownLoadFile">导出到本地</span>
+         <span localMethod="PrintDocument">打印</span>
+         <span localMethod="LoadPrintPreview">打印预览</span>
+         <span localMethod="ClosePrintPreview">关闭预览</span>
+         <span localMethod="AboutControl">关于</span>
+         <br>
+
+      </div>
+
+      <div class="toolBox">
+         <span onclick="TestSetDataWithDataSources()">执行数据源绑定</span>
+         <span onclick="TestgetDataWithDataSources()">获取绑定的数据</span>
+
+
+
+
+      </div>
+   </div>
+
+
+   <div class="main-container">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+         RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+         RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+         PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+         RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+   </div>
+   </div>
+
+   <script src=""></script>
+
+<script src="../../_framework/dcwriter5.js"></script>
+   <script src="../../js/jquery-1.7.2.min.js"></script>
+   <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+
+   <script>
+      window.onload = function () {
+      };
+      let toolBoxDOM = document.querySelector(".toolBox");
+      if (toolBoxDOM) {
+         toolBoxDOM.addEventListener("click", (e) => {
+            if (e.target.tagName == "SPAN") {
+               let commandName = e.target.getAttribute("commandName");
+               let localMethod = e.target.getAttribute("localMethod");
+               if (commandName) {
+                  let ctl = document.getElementById("myWriterControl");
+                  ctl.DCExecuteCommand(commandName, false, null);
+               } else if (localMethod) {
+                  funcOBJ[localMethod].call(funcOBJ);
+               }
+            }
+         });
+      }
+      //编辑器方法组
+      let funcOBJ = {
+         DownLoadFile: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.DownLoadFile("xml");
+         },
+         PrintDocument: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.PrintDocument();
+         },
+         LoadPrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.LoadPrintPreview();
+         },
+         ClosePrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.ClosePrintPreview();
+         },
+         AboutControl: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.AboutControl();
+         },
+      };
+
+      function loadXML() {
+         console.log('loadXML');
+         let ctl = document.getElementById('myWriterControl');
+         ctl.LoadDocumentFromString(strDemoFileXml);
+      }
+      window.WriterControl_OnLoad = function (rootElement) {
+         loadXML();
+      };
+
+      function TestgetDataWithDataSources() {
+         var ctl = document.getElementById("myWriterControl");
+         var retjson = ctl.getDataWithDataSources();
+         console.log(retjson);
+         alert(JSON.stringify(retjson));
+      }
+
+      function TestSetDataWithDataSources() {
+         var ctl = document.getElementById("myWriterControl");
+         var values = {
+            PatientName: "张入梅",
+            Gender: "女",
+            Age: "23",
+            Ward: "内科",
+            BedNO: "0001",
+            EmpiID: "2024080923341",
+            EhealthCardNO: "3242234",
+            DischargeDiag: "无大碍，在家观察三天，如有不适在进行就医",
+            DischargeDateTime: "2024-09-04 13:34:23",
+            SpecialityGuide: "望闻问切都进行观察，没有问题，只是身体有点虚，回家炖老母鸡吃吃",
+            Remark: "多补补",
+            EducationalNurse: "小美",
+            EducationalDatetime: "2024-09-04 13:34:23"
+         };
+         var values1 = {
+            Badl: "完全自理",
+            DischargeStatus: "未愈",
+            DischargeMethod: "非医嘱离院",
+            UsageGuide: "餐前服药",
+            DietStatus: "较差",
+            DietGuide: "软食",
+            LivingGuides: "戒烟戒酒",
+            EducationalContents: "记住管床医生、护士",
+            SafetyNotices: "绝对卧床",
+            Time: "出院半年",
+            Place: "门诊",
+            Process: "预约挂号"
+         };
+         var dataobj = {
+            "emr": values,
+            "Patient": values1
+         };
+         ctl.setDataWithDataSources(null, dataobj);
+      }
+
+
+
+
+
+
+      var strDemoFileXml = `<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2024.3.13">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>3556</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <InnerID>3569</InnerID>
+               <ID>field1</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>DocumentName</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <Alignment>Center</Alignment>
+               <BackgroundText>模板名称</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>3562</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>3557</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>432</InnerID>
+               <Text>姓名：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3801</InnerID>
+               <ID>field2</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>PatientName</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>姓名</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>433</InnerID>
+               <Text>  性别：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3806</InnerID>
+               <ID>field3</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>Gender</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>性别</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>434</InnerID>
+               <Text>  年龄：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3811</InnerID>
+               <ID>field4</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>Age</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>年龄</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>435</InnerID>
+               <Text>  科室：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3821</InnerID>
+               <ID>field6</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>Ward</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>科室</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>436</InnerID>
+               <Text>  床号：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3828</InnerID>
+               <ID>field7</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>BedNO</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>床号</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>437</InnerID>
+               <Text>  档案号：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3833</InnerID>
+               <ID>field8</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>EmpiID</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>档案号</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>438</InnerID>
+               <Text>  居民健康卡号：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3839</InnerID>
+               <ID>field9</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>EhealthCardNO</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>居民健康卡号</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3638</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>439</InnerID>
+               <Text>出院诊断：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3848</InnerID>
+               <ID>field10</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>DischargeDiag</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>出院诊断</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3644</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>440</InnerID>
+               <Text>出院时间：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3855</InnerID>
+               <ID>field11</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>DischargeDateTime</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>出院时间</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3650</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>441</InnerID>
+               <Text>自理能力：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3862</InnerID>
+               <ID>Badl_0</ID>
+               <Name>Badl</Name>
+               <Caption>完全自理</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Badl</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>Badl</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>完全自理</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3863</InnerID>
+               <ID>Badl_1</ID>
+               <Name>Badl</Name>
+               <Caption>部分自理</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Badl</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>Badl</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>部分自理</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3864</InnerID>
+               <ID>Badl_2</ID>
+               <Name>Badl</Name>
+               <Caption>不能自理</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Badl</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>Badl</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <Checked>true</Checked>
+               <CheckedValue>不能自理</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3656</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>442</InnerID>
+               <Text>出院情况：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3865</InnerID>
+               <ID>DischargeStatus_0</ID>
+               <Name>DischargeStatus</Name>
+               <Caption>治愈</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DischargeStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>治愈</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3866</InnerID>
+               <ID>DischargeStatus_1</ID>
+               <Name>DischargeStatus</Name>
+               <Caption>未愈</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DischargeStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>未愈</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3867</InnerID>
+               <ID>DischargeStatus_2</ID>
+               <Name>DischargeStatus</Name>
+               <Caption>好转</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DischargeStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>好转</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3868</InnerID>
+               <ID>DischargeStatus_3</ID>
+               <Name>DischargeStatus</Name>
+               <Caption>其他</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DischargeStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>其他</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3662</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>443</InnerID>
+               <Text>离院方式：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3869</InnerID>
+               <ID>DischargeMethod_0</ID>
+               <Name>DischargeMethod</Name>
+               <Caption>医嘱离院</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeMethod</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>DischargeMethod</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>医嘱离院</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3870</InnerID>
+               <ID>DischargeMethod_1</ID>
+               <Name>DischargeMethod</Name>
+               <Caption>医嘱转院</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeMethod</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>DischargeMethod</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>医嘱转院</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3871</InnerID>
+               <ID>DischargeMethod_2</ID>
+               <Name>DischargeMethod</Name>
+               <Caption>医嘱转社区卫生服务机构/乡镇卫生院</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeMethod</BindingPath>
+               </ValueBinding>
+               <Width>793.8749</Width>
+               <Height>50</Height>
+               <GroupName>DischargeMethod</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>医嘱转社区卫生服务机构/乡镇卫生院</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3872</InnerID>
+               <ID>DischargeMethod_3</ID>
+               <Name>DischargeMethod</Name>
+               <Caption>非医嘱离院</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeMethod</BindingPath>
+               </ValueBinding>
+               <Width>290.75</Width>
+               <Height>50</Height>
+               <GroupName>DischargeMethod</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>非医嘱离院</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3873</InnerID>
+               <ID>DischargeMethod_4</ID>
+               <Name>DischargeMethod</Name>
+               <Caption>死亡</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeMethod</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DischargeMethod</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>死亡</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3874</InnerID>
+               <ID>DischargeMethod_5</ID>
+               <Name>DischargeMethod</Name>
+               <Caption>其他</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DischargeMethod</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DischargeMethod</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>其他</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3669</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>444</InnerID>
+               <Text>用药指导：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3875</InnerID>
+               <ID>UsageGuide_0</ID>
+               <Name>UsageGuide</Name>
+               <Caption>无</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>UsageGuide</BindingPath>
+               </ValueBinding>
+               <Width>115.75</Width>
+               <Height>50</Height>
+               <GroupName>UsageGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>无</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3876</InnerID>
+               <ID>UsageGuide_1</ID>
+               <Name>UsageGuide</Name>
+               <Caption>按医嘱服药</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>UsageGuide</BindingPath>
+               </ValueBinding>
+               <Width>290.75</Width>
+               <Height>50</Height>
+               <GroupName>UsageGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>按医嘱服药</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3877</InnerID>
+               <ID>UsageGuide_2</ID>
+               <Name>UsageGuide</Name>
+               <Caption>餐前服药</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>UsageGuide</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>UsageGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>餐前服药</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3878</InnerID>
+               <ID>UsageGuide_3</ID>
+               <Name>UsageGuide</Name>
+               <Caption>餐后服药</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>UsageGuide</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>UsageGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>餐后服药</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3879</InnerID>
+               <ID>UsageGuide_4</ID>
+               <Name>UsageGuide</Name>
+               <Caption>餐时服药</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>UsageGuide</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>UsageGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>餐时服药</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3880</InnerID>
+               <ID>UsageGuide_5</ID>
+               <Name>UsageGuide</Name>
+               <Caption>服药后观察心率、血压情况</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>UsageGuide</BindingPath>
+               </ValueBinding>
+               <Width>596.9999</Width>
+               <Height>50</Height>
+               <GroupName>UsageGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>服药后观察心率、血压情况</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3675</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>445</InnerID>
+               <Text>饮食情况：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3881</InnerID>
+               <ID>DietStatus_0</ID>
+               <Name>DietStatus</Name>
+               <Caption>良好</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>良好</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3882</InnerID>
+               <ID>DietStatus_1</ID>
+               <Name>DietStatus</Name>
+               <Caption>一般</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>一般</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3883</InnerID>
+               <ID>DietStatus_2</ID>
+               <Name>DietStatus</Name>
+               <Caption>较差</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietStatus</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietStatus</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>较差</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3681</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>446</InnerID>
+               <Text>饮食指导：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3885</InnerID>
+               <ID>DietGuide_0</ID>
+               <Name>DietGuide</Name>
+               <Caption>普通饮食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>普通饮食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3886</InnerID>
+               <ID>DietGuide_1</ID>
+               <Name>DietGuide</Name>
+               <Caption>软食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>软食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3887</InnerID>
+               <ID>DietGuide_2</ID>
+               <Name>DietGuide</Name>
+               <Caption>半流食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>半流食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3888</InnerID>
+               <ID>DietGuide_3</ID>
+               <Name>DietGuide</Name>
+               <Caption>流食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>流食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3889</InnerID>
+               <ID>DietGuide_4</ID>
+               <Name>DietGuide</Name>
+               <Caption>禁食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>禁食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3890</InnerID>
+               <ID>DietGuide_5</ID>
+               <Name>DietGuide</Name>
+               <Caption>禁食水</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>禁食水</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3891</InnerID>
+               <ID>DietGuide_6</ID>
+               <Name>DietGuide</Name>
+               <Caption>鼻饲饮食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>鼻饲饮食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3892</InnerID>
+               <ID>DietGuide_7</ID>
+               <Name>DietGuide</Name>
+               <Caption>低盐低脂饮食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>334.5</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>低盐低脂饮食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3893</InnerID>
+               <ID>DietGuide_8</ID>
+               <Name>DietGuide</Name>
+               <Caption>糖尿病饮食</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>290.75</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <Checked>true</Checked>
+               <CheckedValue>糖尿病饮食</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3907</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2" WhitespaceCount="10">
+               <InnerID>447</InnerID>
+               <Text>          </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3894</InnerID>
+               <ID>DietGuide_9</ID>
+               <Name>DietGuide</Name>
+               <Caption>其他</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>DietGuide</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>DietGuide</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>其他</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3687</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>448</InnerID>
+               <Text>生活方式指导：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3908</InnerID>
+               <ID>LivingGuides_0</ID>
+               <Name>LivingGuides</Name>
+               <Caption>避免剧烈运动</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>LivingGuides</BindingPath>
+               </ValueBinding>
+               <Width>334.5</Width>
+               <Height>50</Height>
+               <GroupName>LivingGuides</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>避免剧烈运动</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3909</InnerID>
+               <ID>LivingGuides_1</ID>
+               <Name>LivingGuides</Name>
+               <Caption>避免重体力劳动</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>LivingGuides</BindingPath>
+               </ValueBinding>
+               <Width>378.25</Width>
+               <Height>50</Height>
+               <GroupName>LivingGuides</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>避免重体力劳动</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3910</InnerID>
+               <ID>LivingGuides_2</ID>
+               <Name>LivingGuides</Name>
+               <Caption>适当运动（如散步）</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>LivingGuides</BindingPath>
+               </ValueBinding>
+               <Width>465.75</Width>
+               <Height>50</Height>
+               <GroupName>LivingGuides</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>适当运动（如散步）</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3911</InnerID>
+               <ID>LivingGuides_3</ID>
+               <Name>LivingGuides</Name>
+               <Caption>卧床休息</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>LivingGuides</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>LivingGuides</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>卧床休息</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3912</InnerID>
+               <ID>LivingGuides_4</ID>
+               <Name>LivingGuides</Name>
+               <Caption>戒烟戒酒</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>LivingGuides</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>LivingGuides</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>戒烟戒酒</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3921</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2" WhitespaceCount="14">
+               <InnerID>449</InnerID>
+               <Text>              </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3913</InnerID>
+               <ID>LivingGuides_5</ID>
+               <Name>LivingGuides</Name>
+               <Caption>保持大便通畅</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>LivingGuides</BindingPath>
+               </ValueBinding>
+               <Width>334.5</Width>
+               <Height>50</Height>
+               <GroupName>LivingGuides</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>保持大便通畅</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3697</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>450</InnerID>
+               <Text>宣教内容：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3914</InnerID>
+               <ID>EducationalContents_0</ID>
+               <Name>EducationalContents</Name>
+               <Caption>记住管床医生、护士</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>EducationalContents</BindingPath>
+               </ValueBinding>
+               <Width>465.75</Width>
+               <Height>50</Height>
+               <GroupName>EducationalContents</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>记住管床医生、护士</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3915</InnerID>
+               <ID>EducationalContents_1</ID>
+               <Name>EducationalContents</Name>
+               <Caption>配合出院随访及满意度调查</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>EducationalContents</BindingPath>
+               </ValueBinding>
+               <Width>596.9999</Width>
+               <Height>50</Height>
+               <GroupName>EducationalContents</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>配合出院随访及满意度调查</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3936</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2" WhitespaceCount="10">
+               <InnerID>451</InnerID>
+               <Text>          </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3916</InnerID>
+               <ID>EducationalContents_2</ID>
+               <Name>EducationalContents</Name>
+               <Caption>办理出院时请携带押金条（出院证明在结算处办理）
+</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>EducationalContents</BindingPath>
+               </ValueBinding>
+               <Width>1100.125</Width>
+               <Height>50</Height>
+               <GroupName>EducationalContents</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>办理出院时请携带押金条（出院证明在结算处办理）
+</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3917</InnerID>
+               <ID>EducationalContents_3</ID>
+               <Name>EducationalContents</Name>
+               <Caption>出院复印病历流程</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>EducationalContents</BindingPath>
+               </ValueBinding>
+               <Width>422</Width>
+               <Height>50</Height>
+               <GroupName>EducationalContents</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>出院复印病历流程</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3918</InnerID>
+               <ID>EducationalContents_4</ID>
+               <Name>EducationalContents</Name>
+               <Caption>功能康复方法</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>EducationalContents</BindingPath>
+               </ValueBinding>
+               <Width>334.5</Width>
+               <Height>50</Height>
+               <GroupName>EducationalContents</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>功能康复方法</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3947</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2" WhitespaceCount="10">
+               <InnerID>452</InnerID>
+               <Text>          </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3919</InnerID>
+               <ID>EducationalContents_5</ID>
+               <Name>EducationalContents</Name>
+               <Caption>预防深静脉血栓方法</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>EducationalContents</BindingPath>
+               </ValueBinding>
+               <Width>465.75</Width>
+               <Height>50</Height>
+               <GroupName>EducationalContents</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>预防深静脉血栓方法</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3703</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>453</InnerID>
+               <Text>安全告知：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3958</InnerID>
+               <ID>SafetyNotices_0</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>无</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>115.75</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>无</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3959</InnerID>
+               <ID>SafetyNotices_1</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防跌倒</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防跌倒</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3960</InnerID>
+               <ID>SafetyNotices_2</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防坠床</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防坠床</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3961</InnerID>
+               <ID>SafetyNotices_3</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防误吸</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防误吸</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3962</InnerID>
+               <ID>SafetyNotices_4</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防外渗</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防外渗</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3963</InnerID>
+               <ID>SafetyNotices_5</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防走失</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防走失</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3964</InnerID>
+               <ID>SafetyNotices_6</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防烫伤</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防烫伤</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3965</InnerID>
+               <ID>SafetyNotices_7</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防窒息</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防窒息</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3966</InnerID>
+               <ID>SafetyNotices_8</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防脱管</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防脱管</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3969</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2" WhitespaceCount="10">
+               <InnerID>454</InnerID>
+               <Text>          </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3967</InnerID>
+               <ID>SafetyNotices_9</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>防压力性损伤</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>334.5</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>防压力性损伤</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3968</InnerID>
+               <ID>SafetyNotices_10</ID>
+               <Name>SafetyNotices</Name>
+               <Caption>绝对卧床</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>SafetyNotices</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>SafetyNotices</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>绝对卧床</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3709</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>455</InnerID>
+               <Text>复诊指导：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3986</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>456</InnerID>
+               <Text>    时间：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3980</InnerID>
+               <ID>Time_0</ID>
+               <Name>Time</Name>
+               <Caption>出院1周</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Time</BindingPath>
+               </ValueBinding>
+               <Width>225.125</Width>
+               <Height>50</Height>
+               <GroupName>Time</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>出院1周</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3981</InnerID>
+               <ID>Time_1</ID>
+               <Name>Time</Name>
+               <Caption>出院1个月</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Time</BindingPath>
+               </ValueBinding>
+               <Width>268.875</Width>
+               <Height>50</Height>
+               <GroupName>Time</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>出院1个月</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3982</InnerID>
+               <ID>Time_2</ID>
+               <Name>Time</Name>
+               <Caption>出院3个月</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Time</BindingPath>
+               </ValueBinding>
+               <Width>268.875</Width>
+               <Height>50</Height>
+               <GroupName>Time</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>出院3个月</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3983</InnerID>
+               <ID>Time_3</ID>
+               <Name>Time</Name>
+               <Caption>出院半年</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Time</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>Time</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>出院半年</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3984</InnerID>
+               <ID>Time_4</ID>
+               <Name>Time</Name>
+               <Caption>以出生证明书上医生预约时间为准</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Time</BindingPath>
+               </ValueBinding>
+               <Width>728.2499</Width>
+               <Height>50</Height>
+               <GroupName>Time</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>以出生证明书上医生预约时间为准</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3720</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>457</InnerID>
+               <Text>    地点：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3992</InnerID>
+               <ID>Place_0</ID>
+               <Name>Place</Name>
+               <Caption>病房</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Place</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>Place</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>病房</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3993</InnerID>
+               <ID>Place_1</ID>
+               <Name>Place</Name>
+               <Caption>门诊</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Place</BindingPath>
+               </ValueBinding>
+               <Width>159.5</Width>
+               <Height>50</Height>
+               <GroupName>Place</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>门诊</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3734</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>458</InnerID>
+               <Text>    流程：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3994</InnerID>
+               <ID>Process_0</ID>
+               <Name>Process</Name>
+               <Caption>预约挂号</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Process</BindingPath>
+               </ValueBinding>
+               <Width>247</Width>
+               <Height>50</Height>
+               <GroupName>Process</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>预约挂号</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="2">
+               <InnerID>3995</InnerID>
+               <ID>Process_1</ID>
+               <Name>Process</Name>
+               <Caption>无需挂</Caption>
+               <ValueBinding>
+                  <DataSource>Patient</DataSource>
+                  <BindingPath>Process</BindingPath>
+               </ValueBinding>
+               <Width>203.25</Width>
+               <Height>50</Height>
+               <GroupName>Process</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>无需挂</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3748</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>459</InnerID>
+               <Text>专科指导：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>3996</InnerID>
+               <ID>field12</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>SpecialityGuide</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>专科指导</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3754</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>460</InnerID>
+               <Text>    备注：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>4003</InnerID>
+               <ID>field13</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>Remark</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>备注</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3">
+               <InnerID>3758</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>461</InnerID>
+               <Text>宣教护士签名：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>4008</InnerID>
+               <ID>field14</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>EducationalNurse</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>护士签名</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>462</InnerID>
+               <Text>    宣教时间：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <InnerID>4015</InnerID>
+               <ID>field15</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>emr</DataSource>
+                  <BindingPath>EducationalDatetime</BindingPath>
+               </ValueBinding>
+               <BorderElementColor />
+               <BackgroundText>宣教时间</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="4">
+               <InnerID>3561</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>3558</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3563</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <FileName>C:\Users\UserName\Downloads\龙华测试xml带数据源.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>21.75</FontSize>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>都昌信息科技有限公司:都昌CS旗舰版演示</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2024-09-04T15:47:09.6810948+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2023.3.6</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>姓名：姓名  性别：性别  年龄：年龄月龄  科室：科室  床号：床号  档案号：档案号  居民健康卡号：居民健康卡号
+出院诊断：出院诊断
+出院时间：出院时间
+自理能力：○完全自理○部分自理●不能自理
+出院情况：○治愈○未愈○好转○其他
+离院方式：○医嘱离院○医嘱转院○医嘱转社区卫生服务机构/乡镇卫生院○非医嘱离院○死亡○其他
+用药指导：○无○按医嘱服药○餐前服药○餐后服药○餐时服药○服药后观察心率、血压情况
+饮食情况：○良好○一般○较差
+饮食指导：○普通饮食○软食○半流食○流食○禁食○禁食水○鼻饲饮食○低盐低脂饮食●糖尿病饮食
+          ○其他
+生活方式指导：○避免剧烈运动○避免重体力劳动○适当运动（如散步）○卧床休息○戒烟戒酒
+              ○保持大便通畅
+宣教内容：○记住管床医生、护士○配合出院随访及满意度调查
+          ○办理出院时请携带押金条（出院证明在结算处办理）
+○出院复印病历流程○功能康复方法
+          ○预防深静脉血栓方法
+安全告知：○无○防跌倒○防坠床○防误吸○防外渗○防走失○防烫伤○防窒息○防脱管
+          ○防压力性损伤○绝对卧床
+复诊指导：
+    时间：○出院1周○出院1个月○出院3个月○出院半年○以出生证明书上医生预约时间为准
+    地点：○病房○门诊
+    流程：○预约挂号○无需挂
+专科指导：专科指导
+    备注：备注
+宣教护士签名：护士签名    宣教时间：宣教时间</BodyText>
+   <LocalConfig />
+   <PageSettings>
+      <LeftMargin>39</LeftMargin>
+      <RightMargin>39</RightMargin>
+   </PageSettings>
+</XTextDocument>`
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【第五代】属性表达式</title>
+  <link222 href="DCSoft.WASM.styles.css" rel="stylesheet"></link222>
+  <style>
+    .toolBox {
+      height: 40px;
+      width: 100%;
+      border: 1px solid #dcdfe6;
+      display: flex;
+      font-size: 13px;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .toolBox span {
+      display: inline-table;
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 5px 10px;
+      min-width: 50px;
+      height: 18px;
+      white-space: nowrap
+    }
+
+    .toolBox select {
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 3px 10px;
+      min-width: 50px;
+      height: 29px;
+    }
+
+    #FontNameSelect {
+      min-width: 150px
+    }
+
+    .describe-box {
+      border: 1px solid #dcdfe6;
+      line-height: 23px;
+      text-align: left;
+      background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+      box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+      border-radius: 0px 8px 8px 0px;
+      border-bottom: 1px solid rgb(155, 187, 227)
+    }
+
+    .describe-box span:first-child {
+      /* text-align: center; */
+      font-weight: bold;
+      line-height: 32px;
+
+    }
+
+    .toolBox span:has(select) {
+      padding: 0px;
+      /* margin: 0px; */
+    }
+
+    .toolBox span:hover {
+      border: 1px solid #4e6ef2;
+      cursor: pointer;
+    }
+
+    .dc-writer-box {
+      /* height: 100% !important; */
+      border-bottom: 0px solid black;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .main-container {
+      height: 100%;
+      display: flex;
+
+    }
+
+    .ringbox {
+      width: 30%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    #myWriterControl {
+      width: 70%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      --tools-height: 80px;
+    }
+
+
+
+    #main {
+      display: flex;
+      height: calc(100% - var(--tools-height));
+      overflow: hidden;
+    }
+
+    #main #myWriterControl {
+      flex: 1;
+      border: 1px solid #000;
+    }
+
+    #hasXml {
+      width: 30%;
+      height: 100%;
+      padding: 10px 10px 30px;
+      border: 1px solid #000;
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+      --hasXml-headerfooter-height: 32px;
+    }
+
+    #hasXml .tabheader {
+      font-size: 18px;
+      font-weight: 700;
+      height: var(--hasXml-headerfooter-height);
+      line-height: var(--hasXml-headerfooter-height);
+      border-bottom: 1px solid #ddd;
+    }
+
+    #hasXml .tabbody {
+      height: calc(100% - var(--hasXml-headerfooter-height) * 2);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #hasXml .tabfooter {
+      text-align: center;
+      height: var(--hasXml-headerfooter-height);
+    }
+
+    #hasXml .tabfooter button {
+      padding: 4px 12px;
+    }
+
+    #dc_box {
+      flex: 1;
+      width: 100%-400px;
+      overflow: hidden;
+    }
+
+    #TracesList {
+      width: 400px;
+      height: 100%;
+      padding: 10px 10px 30px;
+      border: 1px solid #000;
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+      --hasXml-header-height: 32px;
+      --hasXml-footer-height: 0px;
+    }
+
+    #TracesList .tabheader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 700;
+      height: var(--hasXml-header-height);
+      line-height: var(--hasXml-header-height);
+      border-bottom: 1px solid #ddd;
+    }
+
+    #TracesList .tabheader .refresh {
+      cursor: pointer;
+    }
+
+    #TracesList .tabheader .refresh svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    #TracesList .tabbody {
+      height: calc(100% - var(--hasXml-header-height) - var(--hasXml-footer-height));
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #TracesList #TracesListContent {
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 10px 0;
+      font-size: 13px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+      background: #fff;
+      cursor: pointer;
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem:hover {
+      transform: scale(101%);
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem .userName {
+      width: 100%;
+      border-bottom: 1px solid #ebeef5;
+      font-size: 16px;
+      font-weight: 600;
+      /* padding-bottom: 10px; */
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem .data {
+      width: 100%;
+      margin: 10px 2px;
+      word-break: break-all;
+    }
+
+    #TracesList #TracesListContent .TracesListContentItem .timeBox {
+      width: 100%;
+      text-align: right;
+      color: #8c8c8c;
+    }
+
+    #TracesList .tabfooter {
+      text-align: center;
+      height: var(--hasXml-footer-height);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tools">
+    <div class="header">
+      <div class="describe-box">
+        <span>DCWriter5.0 内置集成了属性表达式功能，用户可以根据不同的逻辑处理业务场景。</span>
+      </div>
+      <div class="toolBox">
+        <span commandName="fileopen">打开本地文件</span>
+        <span localMethod="DownLoadFile">导出到本地</span>
+        <span localMethod="PrintDocument">打印</span>
+        <span localMethod="LoadPrintPreview">打印预览</span>
+        <span localMethod="ClosePrintPreview">关闭预览</span>
+        <span localMethod="AboutControl">关于</span>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <div id="TracesList">
+      <div class="tabheader">
+        <span>属性表达式模版</span>
+      </div>
+      <div class="tabbody">
+        <div id="TracesListContent">
+          <div class="TracesListContentItem" nativehandle="strDemoFileXml2">
+            <div class="userName">属性表达式模板1</div>
+          </div>
+          <div class="TracesListContentItem" nativehandle="strDemoFileXml3">
+            <div class="userName">属性表达式模板2</div>
+          </div>
+        </div>
+      </div>
+      <div class="tabfooter"></div>
+    </div>
+    <div id="dc_box">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+        RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+        PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+        RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="../../_framework/dcwriter5.js"></script>
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+<script>
+  var dateTypeFormat = function (fmt, date) {
+    let ret;
+    const opt = {
+      'Y+': date.getFullYear().toString(), // 年
+      'm+': (date.getMonth() + 1).toString(), // 月
+      'd+': date.getDate().toString(), // 日
+      'H+': date.getHours().toString(), // 时
+      'M+': date.getMinutes().toString(), // 分
+      'S+': date.getSeconds().toString() // 秒
+      // 有其他格式化字符需求可以继续添加，必须转化成字符串
+    };
+    for (const k in opt) {
+      ret = new RegExp('(' + k + ')').exec(fmt);
+      if (ret) {
+        fmt = fmt.replace(ret[1], (ret[1].length === 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, '0')));
+      }
+    }
+    return fmt;
+  };
+  var ctl = document.getElementById("myWriterControl");
+
+  window.onload = function () {
+  };
+  let toolBoxDOM = document.querySelector(".toolBox");
+  if (toolBoxDOM) {
+    toolBoxDOM.addEventListener("click", (e) => {
+      if (e.target.tagName == "SPAN") {
+        let commandName = e.target.getAttribute("commandName");
+        let localMethod = e.target.getAttribute("localMethod");
+        if (commandName) {
+          let ctl = document.getElementById("myWriterControl");
+          ctl.DCExecuteCommand(commandName, false, null);
+        } else if (localMethod) {
+          funcOBJ[localMethod].call(funcOBJ);
+        }
+      }
+    });
+  }
+  //编辑器方法组
+  let funcOBJ = {
+    DownLoadFile: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.DownLoadFile("xml");
+    },
+    PrintDocument: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.PrintDocument();
+    },
+    LoadPrintPreview: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.LoadPrintPreview();
+    },
+    ClosePrintPreview: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.ClosePrintPreview();
+    },
+    AboutControl: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.AboutControl();
+    },
+  };
+  function loadXML() {
+    let ctl = document.getElementById('myWriterControl');
+    ctl.LoadDocumentFromString(strDemoFileXml);
+  }
+  window.WriterControl_OnLoad = function (rootElement) {
+    loadXML();
+    $('#TracesListContent').on("click", ".TracesListContentItem", function () {
+      var NativeHandle = this.getAttribute('NativeHandle');
+      console.log(NativeHandle);
+      if (NativeHandle == "strDemoFileXml2") {
+        ctl.LoadDocumentFromString(strDemoFileXml2, "xml");
+      }
+      else if (NativeHandle == "strDemoFileXml3") {
+        ctl.LoadDocumentFromString(strDemoFileXml3, "xml");
+      }
+    });
+  }
+
+
+
+
+</script>
+<script>
+  var strDemoFileXml2 = `<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="1.0.0.0"><Attributes><Attribute><Name>IsShowGridLine</Name><Value>false</Value></Attribute></Attributes><EnableValueValidate>true</EnableValueValidate><XElements Count="5"><Element xsi:type="XTextHeader"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements Count="77"><Element xsi:type="XString" StyleIndex="2"><Text>中华人民共和国传染病报告卡</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="1" /><Element xsi:type="XString" StyleIndex="4"><Text>卡片编号：             </Text></Element><Element xsi:type="XString"><Text> </Text></Element><Element xsi:type="XString" StyleIndex="4"><Text>     报卡类别：1、初次报告       2、订正报告（A、死亡    B、其它）</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="3" /></XElements></Element><Element xsi:type="XTextBody"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements Count="2"><Element xsi:type="XTextTable" NumOfRows="2" NumOfColumns="1"><EnableValueValidate>true</EnableValueValidate><XElements Count="2"><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements Count="1"><Element xsi:type="XTextTableCell" StyleIndex="5"><EnableValueValidate>true</EnableValueValidate><XElements Count="577"><Element xsi:type="XString" StyleIndex="6"><Text>患者姓名：</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>                    </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>    （患者家长姓名：</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>                    </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>） </Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>身份证号：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>                  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>   性别：</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>男</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>a286db3e-8de9-45a0-a3a8-fe9efe</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>女</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>出生日期：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>    </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>年</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>月</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>日（如出生日期不详，实足年龄：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>   </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>年龄单位：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text> </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>岁</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text> </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>月</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text> </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>天）</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>工作单位：                                         联系电话：（</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>        </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>）</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>病例属于：</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>3da0abe6-92b6-4d1b-9467-17c7bf</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>本县区</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>04e72433-4957-43cc-bc82-bf758b</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>本市其他县区</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>5f7c2eb0-5abb-4150-b109-367934</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>本省其它地方     </Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>5b59904b-c27b-4dfd-8670-fad159</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>外省     </Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>05fdd43e-3d45-4879-b364-80e167</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>港澳台     </Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>3a61858d-e733-4a2d-8361-e03b3a</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>外籍</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>现住地（详填）：</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>      </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>省</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>      </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>市</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>      </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>县(区)</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>      </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>乡（镇、街道）</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>       </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>村</Text></Element><Element xsi:type="XString" StyleIndex="7"><Text>       </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>（门牌号）</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>患者职业：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>6641a389-6499-492e-8bf9-a4debc</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>幼托儿童、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>131b2288-0753-49ca-ae7c-7040e0</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>散居儿童、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>71496654-01cb-4af9-8ed6-9cd4be</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>学生(大中小学)、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>aaff008c-1e83-45e7-8048-2eb098</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>教师、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>a8cd836f-88d9-4601-8ec9-ae2f30</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>保育员及保姆、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>839c4881-70cf-43be-bd1d-82d824</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>餐饮食品业、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>93568771-ed13-4ba9-9660-b7f4cf</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>商业服务、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>020b9770-082d-4d56-abc7-5e16cb</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>医务人员、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>15e2e49f-9d5b-4bab-9884-95d617</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>工人、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>e71d8e26-754e-4763-b491-d9b394</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>民工、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>ab1665be-3280-4e78-adaa-9deaf3</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>农民、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>8a5e93b9-f3af-42d3-b060-38d52d</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>牧民、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>42dc5e9b-099b-4edd-b109-d030b7</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>渔（船）民、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>ffe1f7c3-d4d7-44ec-9bdf-364845</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>干部职员、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>0111976f-2a6d-43f6-9cf5-a6ff08</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>离退人员、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>4fe5ce84-a758-4fcc-b799-ee1c93</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>家务及待业、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>2b7ef61d-83fd-4736-b4a4-271ec1</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>其他（   ）、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>fe93ea81-6848-4dea-be46-b52dba</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>不详</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>病例分类：（1）</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>9b507696-45e9-40f6-9562-9d2fd6</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>疑似病例、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>f0629bb7-dad6-44b0-b109-42b40d</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>临床诊断病例、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>1e5af5df-afab-4561-a671-72ad9d</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>实验室确诊病例、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>afc44b9e-4884-489e-b290-611838</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>病原携带者</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>          （2）</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>fd8e8481-f2db-4140-94ab-e134ac</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>急性、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>32bf0dbb-4f5c-4881-9fc4-502eb5</ID><Width>62</Width><Height>62</Height></Element><Element xsi:type="XString" StyleIndex="6"><Text>慢性、（乙型肝炎，血吸虫病填写）</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>发病日期：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>    </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>年</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>月</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>日（病原携带者填初检日期     就诊时间）</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>诊断日期：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>    </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>年</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>月</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>日</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="6"><Text>死亡时期：</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>    </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>年</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>月</Text></Element><Element xsi:type="XString" StyleIndex="8"><Text>  </Text></Element><Element xsi:type="XString" StyleIndex="6"><Text>日</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements Count="1"><Element xsi:type="XTextTableCell" StyleIndex="5"><EnableValueValidate>true</EnableValueValidate><XElements Count="18"><Element xsi:type="XString" StyleIndex="6"><Text>甲类传染病：</Text></Element><Element xsi:type="XTextCheckBox"><ID>qx</ID><Name>quanxuan</Name><Caption>全选</Caption><Width>172</Width><Height>57.031246</Height><GroupName>quanxuan</GroupName><Checked>true</Checked><CheckedValue>1</CheckedValue><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>2b3cab88-aa38-4e75-bb9a-d28cca</ID><PropertyExpressions><Item Name="Checked">if([quanxuan]=1,true,false)</Item></PropertyExpressions><Width>62</Width><Height>62</Height><Checked>true</Checked></Element><Element xsi:type="XString" StyleIndex="6"><Text> 鼠疫、</Text></Element><Element xsi:type="XTextCheckBox" StyleIndex="6"><ID>95ff3e8d-6af1-4ef1-93f4-f268a3</ID><PropertyExpressions><Item Name="Checked">if([quanxuan]=1,true,false)</Item></PropertyExpressions><Width>62</Width><Height>62</Height><Checked>true</Checked></Element><Element xsi:type="XString" StyleIndex="6"><Text> 霍乱</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element></XElements><AcceptChildElementTypes2>TableRow TableColumn</AcceptChildElementTypes2><Columns><Element xsi:type="XTextTableColumn"><Width>2006.75</Width></Element></Columns></Element></XElements></Element><Element xsi:type="XTextFooter"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements Count="1" /></Element><Element xsi:type="XTextHeaderForFirstPage"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements Count="1"><Element xsi:type="XParagraphFlag" StyleIndex="0"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextFooterForFirstPage"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements Count="1" /></Element></XElements><FileFormat>XML</FileFormat><ContentStyles><Default xsi:type="DocumentContentStyle"><FontName>宋体</FontName><FontSize>12</FontSize></Default><Styles><Style Index="0"><FontName>宋体</FontName><FontSize>12</FontSize><Align>Center</Align></Style><Style Index="1"><Color>#201F35</Color><FontName>宋体</FontName><FontSize>18</FontSize><Bold>true</Bold><Align>Center</Align></Style><Style Index="2"><Color>#201F35</Color><FontName>宋体</FontName><FontSize>21.75</FontSize><Bold>true</Bold><Align>Center</Align></Style><Style Index="3"><Color>#201F35</Color><FontName>宋体</FontName><FontSize>18</FontSize><Bold>true</Bold></Style><Style Index="4"><Color>#201F35</Color><FontName>宋体</FontName><FontSize>10.5</FontSize><Bold>true</Bold><Align>Center</Align></Style><Style Index="5"><FontName>宋体</FontName><FontSize>12</FontSize><VerticalAlign>Middle</VerticalAlign><BorderWidth>1</BorderWidth><BorderLeft>true</BorderLeft><BorderBottom>true</BorderBottom><BorderTop>true</BorderTop><BorderRight>true</BorderRight><PaddingLeft>15</PaddingLeft><PaddingTop>10</PaddingTop><PaddingBottom>10</PaddingBottom></Style><Style Index="6"><FontName>宋体</FontName><FontSize>10.5</FontSize></Style><Style Index="7"><FontName>宋体</FontName><FontSize>10.5</FontSize><Underline>true</Underline></Style><Style Index="8"><FontName>宋体</FontName><FontSize>10.5</FontSize><CharacterCircle>Rectangle</CharacterCircle></Style></Styles></ContentStyles><Info><LicenseText>山东智政软件科技有限公司:平罗县妇幼保健计划生育服务中心</LicenseText><CreationTime>2014-01-24T10:04:18+08:00</CreationTime><LastModifiedTime>2025-04-09T15:16:42+08:00</LastModifiedTime><LastPrintTime>1980-01-01T00:00:00+08:00</LastPrintTime><Operator>DCSoft.Writer Version:1.1.1820.25330</Operator><NumOfPage>1</NumOfPage></Info><BodyText>患者姓名：                        （患者家长姓名：                    ）
+身份证号：                     性别：□男□女
+出生日期：    年  月  日（如出生日期不详，实足年龄：   年龄单位： 岁 月 天）
+工作单位：                                         联系电话：（        ）
+病例属于：□本县区□本市其他县区□本省其它地方     □外省     □港澳台     □外籍
+现住地（详填）：      省      市      县(区)      乡（镇、街道）       村       （门牌号）
+患者职业：
+□幼托儿童、□散居儿童、□学生(大中小学)、□教师、□保育员及保姆、□餐饮食品业、□商业服务、□医务人员、□工人、□民工、□农民、□牧民、□渔（船）民、□干部职员、□离退人员、□家务及待业、□其他（   ）、□不详
+
+病例分类：（1）□疑似病例、□临床诊断病例、□实验室确诊病例、□病原携带者
+          （2）□急性、□慢性、（乙型肝炎，血吸虫病填写）
+发病日期：    年  月  日（病原携带者填初检日期     就诊时间）
+诊断日期：    年  月  日
+死亡时期：    年  月  日
+甲类传染病：■全选
+■ 鼠疫、■ 霍乱 </BodyText><PageSettings><LeftMargin>77</LeftMargin><RightMargin>77</RightMargin><BottomMargin>82</BottomMargin></PageSettings></XTextDocument>`;
+
+  var strDemoFileXml3 = `<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2023.8.22">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>862</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>868</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>863</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <InnerID>902</InnerID>
+               <Text>年龄：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>882</InnerID>
+               <ID>age</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements>
+                  <Element xsi:type="XString">
+                     <InnerID>905</InnerID>
+                     <Text>0</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <SpecifyWidth>236.220474</SpecifyWidth>
+               <InnerValue>0</InnerValue>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>885</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>886</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>903</InnerID>
+               <Text>&lt;1：</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox">
+               <InnerID>893</InnerID>
+               <ID>rad1</ID>
+               <PropertyExpressions>
+                  <Item Name="Enabled">if([age]&lt;1,true,false)</Item>
+               </PropertyExpressions>
+               <Name>radage</Name>
+               <Caption>哈哈哈哈</Caption>
+               <Width>272</Width>
+               <Height>57.0312424</Height>
+               <GroupName>radage</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <Checked>true</Checked>
+               <CheckedValue>1</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>894</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>904</InnerID>
+               <Text>&gt;1:</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox">
+               <InnerID>899</InnerID>
+               <ID>rad2</ID>
+               <PropertyExpressions>
+                  <Item Name="Enabled">if([age]&gt;1,true,false)</Item>
+               </PropertyExpressions>
+               <Name>radage1</Name>
+               <Enabled>false</Enabled>
+               <Caption>啊啊啊啊啊</Caption>
+               <Width>321.999969</Width>
+               <Height>57.0312424</Height>
+               <GroupName>radage1</GroupName>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>2</CheckedValue>
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>867</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>864</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>869</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <FileName>E:\客户xml文档\表达式文档\年龄为某个值，单选框是否可用（属性表达式）.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>都昌信息科技有限公司:都昌CS旗舰版演示</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2024-09-25T10:04:23.5444401+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2023.8.22</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>年龄：0
+
+&lt;1：●哈哈哈哈
+&gt;1:○啊啊啊啊啊</BodyText>
+   <LocalConfig />
+   <PageSettings>
+      <StrictUsePageSize>false</StrictUsePageSize>
+   </PageSettings>
+</XTextDocument>`;
+
+
+  var strDemoFileXml = `<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="1.2023.3.6">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>3556</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>3562</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>3557</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <InnerID>3826</InnerID>
+               <Text>1.元素1为空时，元素2只读： </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3594</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>3827</InnerID>
+               <Text>元素1：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>3604</InnerID>
+               <ID>field1</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <SpecifyWidth>236.220474</SpecifyWidth>
+               <BackgroundText>我是元素1</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3599</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>3828</InnerID>
+               <Text>元素2：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>3612</InnerID>
+               <ID>field2</ID>
+               <PropertyExpressions>
+                  <Item Name="ContentReadonly">[field1]!=null</Item>
+               </PropertyExpressions>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ContentReadonlyExpression>[field1]!=null</ContentReadonlyExpression>
+               <ContentReadonly>True</ContentReadonly>
+               <BorderElementColor />
+               <SpecifyWidth>236.220474</SpecifyWidth>
+               <BackgroundText>我是元素2</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3668</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3669</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3670</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>3829</InnerID>
+               <Text>2.元素3大于42时，元素4背景文字颜色变成红色；</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3705</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>3830</InnerID>
+               <Text>元素3：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>3713</InnerID>
+               <ID>field3</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <SpecifyWidth>236.220474</SpecifyWidth>
+               <BackgroundText>体温</BackgroundText>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>3831</InnerID>
+               <Text>℃</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3718</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>3832</InnerID>
+               <Text>元素4：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>3726</InnerID>
+               <ID>field4</ID>
+               <PropertyExpressions>
+                  <Item Name="BackgroundTextColor">IF([field3]&gt;40,'Red','Transparent')</Item>
+               </PropertyExpressions>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <SpecifyWidth>354.330719</SpecifyWidth>
+               <BackgroundText>体温大于40度时必填</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3561</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>3558</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>3563</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <FileFormat>XML</FileFormat>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司:南京都昌</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2025-02-24T15:31:15.0317883+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2023.3.6</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>1.元素1为空时，元素2只读：
+元素1：
+元素2：
+
+
+2.元素3大于42时，元素4背景文字颜色变成红色；
+元素3：℃
+元素4：</BodyText>
+   <LocalConfig />
+   <PageSettings>
+      <StrictUsePageSize>false</StrictUsePageSize>
+   </PageSettings>
+</XTextDocument>`
+</script>
+
+</html>

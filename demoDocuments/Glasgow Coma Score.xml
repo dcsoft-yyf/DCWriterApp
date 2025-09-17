@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes>
+      <Attribute>
+         <Name>DC_RecordID</Name>
+         <Value>标准评定量表\格拉斯哥昏迷评分量表</Value>
+      </Attribute>
+      <Attribute>
+         <Name>DC_TemplateFlags</Name>
+         <Value>All</Value>
+      </Attribute>
+      <Attribute>
+         <Name>DC_UseLanguage2</Name>
+         <Value>False</Value>
+      </Attribute>
+      <Attribute>
+         <Name>DC_OwnerLevel</Name>
+         <Value>Global</Value>
+      </Attribute>
+   </Attributes>
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XInputField" StyleIndex="8">
+               <Attributes />
+               <ID>HospitalName</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>userItem</DataSource>
+                  <BindingPath>HospitalName</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>HospitalName</Name>
+               <InnerValue />
+               <BackgroundText>Hospital Name</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+            <Element xsi:type="XString" StyleIndex="9">
+               <XElements xsi:nil="true" />
+               <Text>G</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="8">
+               <XElements xsi:nil="true" />
+               <Text>lasgow Coma Score</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+            <Element xsi:type="XString" StyleIndex="10">
+               <XElements xsi:nil="true" />
+               <Text>Name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>PAT1</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>patientItem</DataSource>
+                  <BindingPath>Name</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>177.165359</SpecifyWidth>
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>PATNAME</Name>
+               <InnerValue />
+               <BackgroundText>Name</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="10">
+               <XElements xsi:nil="true" />
+               <Text>   Sex：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>PAT2</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>patientItem</DataSource>
+                  <BindingPath>Sex</BindingPath>
+                  <WriteTextBindingPath />
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>118.110237</SpecifyWidth>
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>PATSEX</Name>
+               <InnerValue />
+               <BackgroundText>Sex</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="10">
+               <XElements xsi:nil="true" />
+               <Text>   Age：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>PAT3</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>patientItem</DataSource>
+                  <BindingPath>VisitAge</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>118.110237</SpecifyWidth>
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>PATAGE</Name>
+               <InnerValue />
+               <BackgroundText>Age</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="10">
+               <XElements xsi:nil="true" />
+               <Text>   Dept：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>PAT4</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>patientItem</DataSource>
+                  <BindingPath>DeptName</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>295.2756</SpecifyWidth>
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>DeptName</Name>
+               <InnerValue />
+               <BackgroundText>Dept</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="10">
+               <XElements xsi:nil="true" />
+               <Text>  Inpatient No：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>PAT5</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>patientItem</DataSource>
+                  <BindingPath>VisitNo</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>248.0315</SpecifyWidth>
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>VisitNo</Name>
+               <InnerValue />
+               <BackgroundText>ID</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="10">
+               <XElements xsi:nil="true" />
+               <Text>Clinical Diagnosis：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="12">
+               <Attributes />
+               <ID>PAT6</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding />
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <Name>Diagnosis</Name>
+               <InnerValue />
+               <BackgroundText>Clinical diagnosis</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XTextTable" NumOfRows="6" NumOfColumns="3">
+               <Attributes />
+               <ID>GCS</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="17">
+                                 <XElements xsi:nil="true" />
+                                 <Text>I</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="18">
+                                 <XElements xsi:nil="true" />
+                                 <Text>tem</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="18" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="17">
+                                 <XElements xsi:nil="true" />
+                                 <Text>C</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="18">
+                                 <XElements xsi:nil="true" />
+                                 <Text>ondition</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="18" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="17">
+                                 <XElements xsi:nil="true" />
+                                 <Text>S</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="18">
+                                 <XElements xsi:nil="true" />
+                                 <Text>core</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="18" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="19">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Eye response</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>睁眼反应_0</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>睁眼反应</Name>
+                                 <Caption>4 Points  Eye opening spontaneously</Caption>
+                                 <ValueBinding />
+                                 <Width>717.2697</Width>
+                                 <Height>62</Height>
+                                 <GroupName>睁眼反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>4</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>睁眼反应_1</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>睁眼反应</Name>
+                                 <Caption>3 Points  Eye opening to speech</Caption>
+                                 <ValueBinding />
+                                 <Width>630.944641</Width>
+                                 <Height>62</Height>
+                                 <GroupName>睁眼反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>3</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>睁眼反应_2</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>睁眼反应</Name>
+                                 <Caption>2 points  Eye opening in response to pain stimulus</Caption>
+                                 <ValueBinding />
+                                 <Width>953.0027</Width>
+                                 <Height>62</Height>
+                                 <GroupName>睁眼反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>2</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>睁眼反应_3</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>睁眼反应</Name>
+                                 <Caption>1 point   Eye opening in response to pain stimulus</Caption>
+                                 <ValueBinding />
+                                 <Width>946.9144</Width>
+                                 <Height>62</Height>
+                                 <GroupName>睁眼反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>1</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="19">
+                                 <Attributes />
+                                 <ID>睁眼反应Score</ID>
+                                 <PropertyExpressions>
+                                    <Item Name="FormulaValue">[睁眼反应]</Item>
+                                 </PropertyExpressions>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding />
+                                 <ValueExpression>[睁眼反应]</ValueExpression>
+                                 <UserFlags>1</UserFlags>
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>睁眼反应Score</Name>
+                                 <InnerValue />
+                                 <BackgroundText>score</BackgroundText>
+                                 <BorderVisible>Hidden</BorderVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="19">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Motor reponse </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>运动反应_0</ID>
+                                 <PropertyExpressions />
+                                 <Name>运动反应</Name>
+                                 <Caption>6 points  Obey easy commands</Caption>
+                                 <ValueBinding />
+                                 <Width>617.571838</Width>
+                                 <Height>62</Height>
+                                 <GroupName>运动反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>6</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>运动反应_1</ID>
+                                 <PropertyExpressions />
+                                 <Name>运动反应</Name>
+                                 <Caption>5 points   Localize to pain</Caption>
+                                 <ValueBinding />
+                                 <Width>526.3975</Width>
+                                 <Height>62</Height>
+                                 <GroupName>运动反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>5</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>运动反应_2</ID>
+                                 <PropertyExpressions />
+                                 <Name>运动反应</Name>
+                                 <Caption>4 points   Withdrawal from pain</Caption>
+                                 <ValueBinding />
+                                 <Width>633.3372</Width>
+                                 <Height>62</Height>
+                                 <GroupName>运动反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>4</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>运动反应_3</ID>
+                                 <PropertyExpressions />
+                                 <Name>运动反应</Name>
+                                 <Caption>3 points  Decorticate posturing accentuated by pain</Caption>
+                                 <ValueBinding />
+                                 <Width>969.793457</Width>
+                                 <Height>62</Height>
+                                 <GroupName>运动反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>3</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XString" StyleIndex="14">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  (flexor response: internal rotation of shoulder, flexion of forearm and wrist with clenched fist, leg extension, plantarflexion of foot)</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>运动反应_4</ID>
+                                 <PropertyExpressions />
+                                 <Name>运动反应</Name>
+                                 <Caption>2 points   Decorticate posturing accentuated by pain</Caption>
+                                 <ValueBinding />
+                                 <Width>980.730957</Width>
+                                 <Height>62</Height>
+                                 <GroupName>运动反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>2</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XString" StyleIndex="14">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  （extensor response: adduction of arm, internal rotation of shoulder, pronation of forearm and extension at elbow, flexion of wrist and fingers, leg extension, plantarflexion of foot）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="15" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>运动反应_5</ID>
+                                 <PropertyExpressions />
+                                 <Name>运动反应</Name>
+                                 <Caption>1 point  No motor response</Caption>
+                                 <ValueBinding />
+                                 <Width>549.55426</Width>
+                                 <Height>62</Height>
+                                 <GroupName>运动反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>1</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="19">
+                                 <Attributes />
+                                 <ID>运动反应Score</ID>
+                                 <PropertyExpressions>
+                                    <Item Name="FormulaValue">[运动反应]</Item>
+                                 </PropertyExpressions>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding />
+                                 <ValueExpression>[运动反应]</ValueExpression>
+                                 <UserFlags>1</UserFlags>
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>运动反应Score</Name>
+                                 <InnerValue />
+                                 <BackgroundText>score</BackgroundText>
+                                 <BorderVisible>Hidden</BorderVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="19">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Verbal response</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>语言反应_0</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>语言反应</Name>
+                                 <Caption>5 points  Oriented</Caption>
+                                 <ValueBinding />
+                                 <Width>386.709442</Width>
+                                 <Height>62</Height>
+                                 <GroupName>语言反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>5</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>语言反应_1</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>语言反应</Name>
+                                 <Caption>4 points   Confused</Caption>
+                                 <ValueBinding />
+                                 <Width>412.280121</Width>
+                                 <Height>62</Height>
+                                 <GroupName>语言反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>4</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>语言反应_2</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>语言反应</Name>
+                                 <Caption>3 points  Inappropriate words</Caption>
+                                 <ValueBinding />
+                                 <Width>587.1733</Width>
+                                 <Height>62</Height>
+                                 <GroupName>语言反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>3</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>语言反应_3</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>语言反应</Name>
+                                 <Caption>2 points  Incomprehensible sounds</Caption>
+                                 <ValueBinding />
+                                 <Width>679.565247</Width>
+                                 <Height>62</Height>
+                                 <GroupName>语言反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>2</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                              <Element xsi:type="XTextRadioBox" StyleIndex="20">
+                                 <ID>语言反应_4</ID>
+                                 <PropertyExpressions />
+                                 <Deleteable>false</Deleteable>
+                                 <Name>语言反应</Name>
+                                 <Caption>1 point   No verbal response</Caption>
+                                 <ValueBinding />
+                                 <Width>565.2983</Width>
+                                 <Height>62</Height>
+                                 <GroupName>语言反应</GroupName>
+                                 <ControlStyle>RadioBox</ControlStyle>
+                                 <CheckedValue>1</CheckedValue>
+                                 <EventExpressions />
+                                 <VisualStyle>CheckBox</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="19">
+                                 <Attributes />
+                                 <ID>语言反应Score</ID>
+                                 <PropertyExpressions>
+                                    <Item Name="FormulaValue">[语言反应]</Item>
+                                 </PropertyExpressions>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding />
+                                 <ValueExpression>[语言反应]</ValueExpression>
+                                 <UserFlags>1</UserFlags>
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>语言反应Score</Name>
+                                 <InnerValue />
+                                 <BackgroundText>score</BackgroundText>
+                                 <BorderVisible>Hidden</BorderVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="19" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Total：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="21" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="19">
+                                 <Attributes />
+                                 <ID>Total</ID>
+                                 <PropertyExpressions>
+                                    <Item Name="FormulaValue">[睁眼反应Score]+[运动反应Score]+[语言反应Score]</Item>
+                                 </PropertyExpressions>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding />
+                                 <ValueExpression>[睁眼反应Score]+[运动反应Score]+[语言反应Score]</ValueExpression>
+                                 <UserFlags>1</UserFlags>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="19">
+                                       <XElements xsi:nil="true" />
+                                       <Text>0</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Total</Name>
+                                 <InnerValue>0</InnerValue>
+                                 <BackgroundText>总分</BackgroundText>
+                                 <BorderVisible>Hidden</BorderVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Function condition：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="21" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="19">
+                                 <Attributes />
+                                 <ID>Result</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding />
+                                 <UserFlags>1</UserFlags>
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Result</Name>
+                                 <InnerValue />
+                                 <BackgroundText>please select by double clicks or fill in by yourself</BackgroundText>
+                                 <BorderVisible>Hidden</BorderVisible>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName />
+                                       <Items>
+                                          <Item>
+                                             <TextInList>重度损伤，预后差</TextInList>
+                                             <Text>重度损伤，预后差</Text>
+                                             <Value />
+                                             <Group />
+                                          </Item>
+                                          <Item>
+                                             <TextInList>中度损伤</TextInList>
+                                             <Text>中度损伤</Text>
+                                             <Value />
+                                             <Group />
+                                          </Item>
+                                          <Item>
+                                             <TextInList>轻度损伤</TextInList>
+                                             <Text>轻度损伤</Text>
+                                             <Value />
+                                             <Group />
+                                          </Item>
+                                          <Item>
+                                             <TextInList>无昏迷</TextInList>
+                                             <Text>无昏迷</Text>
+                                             <Value />
+                                             <Group />
+                                          </Item>
+                                          <Item>
+                                             <TextInList>昏迷</TextInList>
+                                             <Text>昏迷</Text>
+                                             <Value />
+                                             <Group />
+                                          </Item>
+                                       </Items>
+                                    </ListSource>
+                                    <ListValueFormatString />
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="6">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>479.9167</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1272.91675</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>253.916748</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <XElements xsi:nil="true" />
+               <Text>Note：The total scores are from 3 points to 15 points：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="15" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <XElements xsi:nil="true" />
+               <Text>   Severe, GCS≤8 </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="16" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <XElements xsi:nil="true" />
+               <Text>   Moderate, GCS 9-11 </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="16" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <XElements xsi:nil="true" />
+               <Text>   Minor, GCS≥12 </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="16" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <XElements xsi:nil="true" />
+               <Text>   Coma, GCS≤8; No coma, GCS≥9 </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="16" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <XElements xsi:nil="true" />
+               <Text>The lower values indicate severer conditions. </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XPageInfo" StyleIndex="1">
+               <PropertyExpressions />
+               <Width>312.5</Width>
+               <AutoHeight>true</AutoHeight>
+               <Height>54.89257</Height>
+               <FormatString>第[%PageIndex%]页 共[%NumOfPages%]页</FormatString>
+               <SpecifyPageIndexTextList />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="35">
+               <XElements xsi:nil="true" />
+               <Text>                                   </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="4">
+               <XElements xsi:nil="true" />
+               <Text>S</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="1">
+               <XElements xsi:nil="true" />
+               <Text>taff</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="4">
+               <XElements xsi:nil="true" />
+               <Text>：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes />
+               <ID>EVI1</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>userItem</DataSource>
+                  <BindingPath>Name</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>177.165359</SpecifyWidth>
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>EVDOCTOR</Name>
+               <InnerValue />
+               <BackgroundText>Staff</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="4">
+               <XElements xsi:nil="true" />
+               <Text> Date：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes />
+               <ID>EVI2</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>userItem</DataSource>
+                  <BindingPath>Date</BindingPath>
+                  <WriteTextBindingPath />
+                  <AutoUpdate>true</AutoUpdate>
+                  <Readonly>true</Readonly>
+                  <Handled>true</Handled>
+               </ValueBinding>
+               <XElements />
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <SpecifyWidth>354.330719</SpecifyWidth>
+               <EventExpressions />
+               <Name>EVTIME</Name>
+               <DisplayFormat>
+                  <Style>DateTime</Style>
+                  <Format>yyyy-MM-dd HH:mm</Format>
+               </DisplayFormat>
+               <InnerValue />
+               <BackgroundText>Date</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <FieldSettings>
+                  <EditStyle>DateTimeWithoutSecond</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+         </XElements>
+      </Element>
+   </XElements>
+   <RepeatedImages />
+   <GlobalJavaScriptReferences />
+   <Info>
+      <ID>标准评定量表\格拉斯哥昏迷评分量表</ID>
+      <LicenseText>南京都昌信息科技有限公司2017年旗舰版:南京都昌信息科技有限公司2017年旗舰版</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2018-10-30T11:29:38.8537047+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2015.12.23</Operator>
+      <NumOfPage>2</NumOfPage>
+   </Info>
+   <BodyText>Item Condition Score 
+Eye response ○4 Points  Eye opening spontaneously
+○3 Points  Eye opening to speech
+○2 points  Eye opening in response to pain stimulus
+○1 point   Eye opening in response to pain stimulus   
+Motor reponse  ○6 points  Obey easy commands
+○5 points   Localize to pain
+○4 points   Withdrawal from pain
+○3 points  Decorticate posturing accentuated by pain
+  (flexor response: internal rotation of shoulder, flexion of forearm and wrist with clenched fist, leg extension, plantarflexion of foot)
+○2 points   Decorticate posturing accentuated by pain
+  （extensor response: adduction of arm, internal rotation of shoulder, pronation of forearm and extension at elbow, flexion of wrist and fingers, leg extension, plantarflexion of foot）
+○1 point  No motor response   
+Verbal response ○5 points  Oriented
+○4 points   Confused
+○3 points  Inappropriate words
+○2 points  Incomprehensible sounds
+○1 point   No verbal response   
+Total： 0 
+Function condition：   Note：The total scores are from 3 points to 15 points：
+   Severe, GCS≤8 
+   Moderate, GCS 9-11 
+   Minor, GCS≥12 
+   Coma, GCS≤8; No coma, GCS≥9 
+The lower values indicate severer conditions. </BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <PageIndexsForHideHeaderFooter />
+      <PrinterName />
+      <PaperSource />
+      <LeftMargin>78</LeftMargin>
+      <TopMargin>78</TopMargin>
+      <RightMargin>78</RightMargin>
+      <BottomMargin>78</BottomMargin>
+   </PageSettings>
+   <UserHistories />
+   <Parameters>
+      <Parameter Name="当前时间" />
+   </Parameters>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>15.75</FontSize>
+            <Bold>true</Bold>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="7">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Justify</Align>
+            <FirstLineIndent>100</FirstLineIndent>
+         </Style>
+         <Style Index="8">
+            <FontName>Times New Roman</FontName>
+            <FontSize>15.75</FontSize>
+            <Bold>true</Bold>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="9">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>15.75</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="10">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="11">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+         </Style>
+         <Style Index="12">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="13">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+         </Style>
+         <Style Index="14">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="15">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="16">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Justify</Align>
+            <FirstLineIndent>100</FirstLineIndent>
+         </Style>
+         <Style Index="17">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="18">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="19">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="20">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="21">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+            <Align>Right</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <FileName>C:\Users\binguo\Desktop\Glasgow Coma Score.xml</FileName>
+   <FileFormat>XML</FileFormat>
+</XTextDocument>

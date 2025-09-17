@@ -1,0 +1,3073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>测试第五代接口</title>
+   <style>
+      html,
+      body {
+         height: 100%;
+         overflow: hidden;
+         padding: 0;
+         margin: 0;
+      }
+
+      .describe-box {
+         /* max-width: 50%;
+        min-width: 500px; */
+         border: 1px solid #dcdfe6;
+         line-height: 23px;
+         text-align: left;
+         background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+         box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+         border-radius: 0px 8px 8px 0px;
+      }
+
+      .describe-box span:first-child {
+         /* text-align: center; */
+         font-weight: bold;
+         line-height: 32px;
+         border-bottom: 1px solid rgb(155, 187, 227)
+      }
+
+      .describe-box span {
+         display: block;
+         margin: 0 5px;
+         font-size: 13px;
+
+      }
+
+      .toolBox {
+         /* height: 40px; */
+         width: 100%;
+         border: 1px solid #dcdfe6;
+         display: flex;
+         font-size: 13px;
+         overflow-x: auto;
+         overflow-y: hidden;
+      }
+
+      .toolBox span {
+         display: inline-table;
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 5px 10px;
+         min-width: 50px;
+         height: 18px;
+         white-space: nowrap
+      }
+
+      .toolBox select {
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 3px 10px;
+         min-width: 50px;
+         height: 29px;
+      }
+
+      #FontNameSelect {
+         min-width: 150px
+      }
+
+      .toolBox span:has(select) {
+         padding: 0px;
+         /* margin: 0px; */
+      }
+
+      .toolBox span:hover {
+         border: 1px solid #4e6ef2;
+         cursor: pointer;
+      }
+
+      .dc-writer-box {
+         /* height: 100% !important; */
+         border-bottom: 0px solid black;
+         background-attachment: fixed;
+         background-size: cover;
+         background-position: center top;
+      }
+
+      .main-container {
+         height: 100%;
+         display: flex;
+
+      }
+
+      .ringbox {
+         width: 30%;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+      }
+
+      .list-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px;
+         border-bottom: 1px solid #eee;
+      }
+
+      .list-item:last-child {
+         border-bottom: none;
+      }
+
+      #myWriterControl {
+         width: 70%;
+      }
+
+      .TracesListContentItem {
+         height: 50px;
+         width: 100%;
+         border-bottom: 1px solid saddlebrown;
+         text-align: center;
+         line-height: 50px;
+         background: #dce1f7;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body style="text-align: center">
+   <div class="header">
+      <div class="describe-box">
+         <span>DCWriter5.0 构成了表格界面的高级操作集，使用户能够方便地对表格进行创建、修改和管理。</span>
+
+      </div>
+      <div class="toolBox">
+         <span commandName="fileopen">打开本地文件</span>
+         <span localMethod="DownLoadFile">导出到本地</span>
+         <span localMethod="PrintDocument">打印</span>
+         <span localMethod="LoadPrintPreview">打印预览</span>
+         <span localMethod="ClosePrintPreview">关闭预览</span>
+         <span localMethod="AboutControl">关于</span>
+         <br>
+
+      </div>
+      <div class="toolBox">
+         <span onclick="SetTableCellGridLineInfo()">单元格网格线</span>
+         <span onclick="SetTableCellSlantSplitlineStyle()">单元格斜分线</span>
+
+         <span onclick="SetTableCellText ()">单元格赋值</span>
+         <span onclick="GetTableCellText ()">单元格取值</span>
+         <span onclick="SetDocumentParameterValue()">表格赋值（数据源绑定方式）</span>
+         <span onclick="GetDocumentParameterValue()">表格取值</span>
+
+      </div>
+   </div>
+   <div class="main-container">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+         RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+         RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+         PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+         RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+   </div>
+
+<script src="../../_framework/dcwriter5.js"></script>
+   <script src="../../js/jquery-1.7.2.min.js"></script>
+   <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+   <script>
+
+      window.onload = function () {
+      };
+      let toolBoxDOM = document.querySelector(".toolBox");
+      if (toolBoxDOM) {
+         toolBoxDOM.addEventListener("click", (e) => {
+            if (e.target.tagName == "SPAN") {
+               let commandName = e.target.getAttribute("commandName");
+               let localMethod = e.target.getAttribute("localMethod");
+               if (commandName) {
+                  let ctl = document.getElementById("myWriterControl");
+                  ctl.DCExecuteCommand(commandName, false, null);
+               } else if (localMethod) {
+                  funcOBJ[localMethod].call(funcOBJ);
+               }
+            }
+         });
+      }
+      //编辑器方法组
+      let funcOBJ = {
+         DownLoadFile: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.DownLoadFile("xml");
+         },
+         PrintDocument: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.PrintDocument();
+         },
+         LoadPrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.LoadPrintPreview();
+         },
+         ClosePrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.ClosePrintPreview();
+         },
+         AboutControl: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.AboutControl();
+         },
+      };
+      function loadXML() {
+         console.log('loadXML');
+         let ctl = document.getElementById('myWriterControl');
+         ctl.LoadDocumentFromString(strDemoFileXml);
+      }
+      window.WriterControl_OnLoad = function (rootElement) {
+         loadXML();
+      };
+      // -------------------------------------------------------------------------------------------
+      //单元格网格线
+      function SetTableCellGridLineInfo() {
+         var ctl = document.getElementById("myWriterControl");
+         ctl.cellGridlineDialog();
+
+      }
+      //单元格斜分线
+      function SetTableCellSlantSplitlineStyle() {
+         var ctl = document.getElementById("myWriterControl");
+         ctl.cellDiagonalLineDialog(null, ctl);
+
+      }
+      //单元格取值
+      function GetTableCellText() {
+         var ctl = document.getElementById("myWriterControl");
+         var result = ctl.GetTableCellText("table1", 1, 1);
+         alert(result);
+      }
+      //单元格赋值
+      function SetTableCellText() {
+         var ctl = document.getElementById("myWriterControl");
+         var result = ctl.SetTableCellText("table1", 1, 1, "dddd");
+         console.log(result);
+      }
+
+      //表格取值
+      function GetDocumentParameterValue() {
+         var ctl = document.getElementById("myWriterControl");
+         ctl.WriteDataFromDocumentToDataSource();
+         var data = ctl.GetDocumentParameterValue("peopledatasource");//T_DA_0001
+         if (data != null) {
+            var json = JSON.stringify(data);
+         }
+         alert(json);
+      }
+      //表格赋值
+      function SetDocumentParameterValue() {
+         var ctl = document.getElementById("myWriterControl");
+         var options = [
+            {
+               Data: "2022-08-21",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-08-22",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-08-23",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "王五"
+            },
+            {
+               Data: "2022-08-24",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-08-25",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+            },
+            {
+               Data: "2022-08-26",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "王五"
+            },
+            {
+               Data: "2022-08-27",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-08-28",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-08-29",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-08-30",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "王五"
+            },
+            {
+               Data: "2022-08-31",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-01",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-09-02",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "王五"
+            },
+            {
+               Data: "2022-09-03",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-04",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-09-05",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-06",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "王五"
+            },
+            {
+               Data: "2022-09-07",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-09-08",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "张三"
+            },
+            {
+               Data: "2022-09-09",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "王五"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            },
+            {
+               Data: "2022-09-10",
+               Time: "09:31",
+               Consciousness: "清醒",
+               Temperature: "36",
+               Pulse: "120",
+               Breathe: "25",
+               Blutdruck: "150/89",
+               Saturation: "95",
+               Oxygen: "3",
+               DRIsName: "0.9%氯化钠注射液（软袋",
+               DRIsMl: "100",
+               OutputName: "尿量",
+               OutputMl: "100",
+               OutputColor: "黄色",
+               Skin: "2√",
+               LimbsLeft: "行动正常",
+               LimbsRight: "行动正常",
+               PupilLeft: "2/3",
+               PupilRight: "2/3",
+               Nursing: "通畅",
+               Measure: "健康状况：良好。疾病史：否认冠心病史,否认高血压病史,否认糖尿病病史,否认支气管哮喘病史,否认鼻窦炎病史。...",
+               Signature: "李四"
+            }
+         ];
+
+         ctl.SetDocumentParameterValue("peopledatasource", options);//patInfo  EMR_Patients
+         var result = ctl.WriteDataFromDataSourceToDocument();
+      }
+
+      var strDemoFileXml = `<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2024.4.23">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>6</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <EnableValueValidate>true</EnableValueValidate>
+         <XElements>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>b6cffed9-80f6-48dc-b82c-d3610f7abd9a</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>7</InnerID>
+               <ID>医院名称</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="1">
+                     <InnerID>290</InnerID>
+                     <Text>社区卫生服务中心</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <Name>59966178-271c-4cc4-abf9-c79d664be178</Name>
+               <InnerValue>社区卫生服务中心</InnerValue>
+               <BackgroundText>医院名称</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>9</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="1">
+               <InnerID>281</InnerID>
+               <Text>神经外科护理记录单</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>11</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>282</InnerID>
+               <Text>姓名</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>ca9a744f-8026-4b94-b59d-7986bc1ef684</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>13</InnerID>
+               <ID>姓名</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>96141e24-4e9b-4056-b6a4-cd34d2eb66f8</Name>
+               <BackgroundText>XXXX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>283</InnerID>
+               <Text> 年龄</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>44f49606-6602-4595-8e42-0325574a8cf4</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>15</InnerID>
+               <ID>年龄</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>1409339b-1fe2-406f-9f19-134789af796e</Name>
+               <BackgroundText>XXXX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>284</InnerID>
+               <Text> 性别</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>905a3502-5ae5-47de-9903-4c0761322f71</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>17</InnerID>
+               <ID>性别</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>48fb8187-f84c-47e3-ab9f-45fc86a5627b</Name>
+               <BackgroundText>XX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>285</InnerID>
+               <Text> 科别</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>5bd34653-34ad-465c-881f-56cdf6edcbd7</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>19</InnerID>
+               <ID>入院科室</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>89fafddb-4676-4b5f-9c7d-b88d3e3c1d94</Name>
+               <BackgroundText>XXXX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>286</InnerID>
+               <Text> 床号</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>bea82ebe-e9f9-4c07-8884-3d22e9c10a27</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>21</InnerID>
+               <ID>床号</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>96141e24-4e9b-4056-b6a4-cd34d2eb66f8</Name>
+               <BackgroundText>XX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>287</InnerID>
+               <Text> 入院日期</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>b6060a20-a110-475a-a68b-b58d8c48351b</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>23</InnerID>
+               <ID>入院日期</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <UserEditable>false</UserEditable>
+               <Name>529cdc52-28c4-4041-9d11-28a99f061350</Name>
+               <DisplayFormat>
+                  <Style>DateTime</Style>
+                  <Format>yyyy年MM月dd日</Format>
+               </DisplayFormat>
+               <BackgroundText>yyyy年MM月dd日</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <FieldSettings>
+                  <EditStyle>DateTime</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>288</InnerID>
+               <Text> 住院号</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>0da2ade7-2028-4c37-990e-a0d5f1b5fd09</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>25</InnerID>
+               <ID>住院号</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>96141e24-4e9b-4056-b6a4-cd34d2eb66f8</Name>
+               <BackgroundText>XXXXXXXXXX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>289</InnerID>
+               <Text> 诊断</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <Attributes>
+                  <Attribute>
+                     <Name>ID</Name>
+                     <Value>f592f244-ae49-474e-b61a-93e06c03abc2</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>27</InnerID>
+               <ID>护理记录诊断</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <BorderElementColor />
+               <Name>96141e24-4e9b-4056-b6a4-cd34d2eb66f8</Name>
+               <BackgroundText>XXXX</BackgroundText>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>28</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>29</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <EnableValueValidate>true</EnableValueValidate>
+         <XElements>
+            <Element xsi:type="XTextTable" NumOfRows="4" NumOfColumns="22">
+               <Attributes>
+                  <Attribute>
+                     <Name>direction</Name>
+                     <Value>horizontal</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>tableHeaderNumber</Name>
+                     <Value>3</Value>
+                  </Attribute>
+               </Attributes>
+               <InnerID>30</InnerID>
+               <ID>table12</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>31</InnerID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>date</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>32</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>291</InnerID>
+                                 <Text>日期</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>34</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>time</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>35</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>292</InnerID>
+                                 <Text>时间</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>37</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>38</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>293</InnerID>
+                                 <Text>意识</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>40</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>41</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>294</InnerID>
+                                 <Text>体</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>43</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>295</InnerID>
+                                 <Text>温</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>45</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>46</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>296</InnerID>
+                                 <Text>脉搏</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>48</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>297</InnerID>
+                                 <Text>/心率</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>50</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>51</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>298</InnerID>
+                                 <Text>呼吸</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>53</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>54</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>299</InnerID>
+                                 <Text>血压</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>56</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>57</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>300</InnerID>
+                                 <Text>血氧饱和度</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>59</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>60</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>301</InnerID>
+                                 <Text>吸氧</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>62</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>63</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>302</InnerID>
+                                 <Text>入量</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>65</InnerID>
+                              </Element>
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>66</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>332</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>67</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>303</InnerID>
+                                 <Text>出量</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>69</InnerID>
+                              </Element>
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>70</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>335</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>71</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>336</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>72</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>304</InnerID>
+                                 <Text>皮</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>74</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>305</InnerID>
+                                 <Text>肤</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>76</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>306</InnerID>
+                                 <Text>情</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>78</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>307</InnerID>
+                                 <Text>况</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>80</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>81</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>308</InnerID>
+                                 <Text>肢体活动</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>83</InnerID>
+                              </Element>
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>84</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>345</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>85</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>309</InnerID>
+                                 <Text>瞳孔</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>87</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>310</InnerID>
+                                 <Text>大小</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>89</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>311</InnerID>
+                                 <Text>左/右</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>91</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>92</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>312</InnerID>
+                                 <Text>瞳孔</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>94</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>313</InnerID>
+                                 <Text>反射</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>96</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>314</InnerID>
+                                 <Text>左/右</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>98</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>99</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>315</InnerID>
+                                 <Text>管</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>101</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>316</InnerID>
+                                 <Text>道</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>103</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>317</InnerID>
+                                 <Text>护</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>105</InnerID>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>318</InnerID>
+                                 <Text>理</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>107</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>box</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>108</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>319</InnerID>
+                                 <Text>病情观察及措施</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>110</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>111</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>320</InnerID>
+                                 <Text>护士签名</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>113</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2>
+                     <CanSplitByPageLine>false</CanSplitByPageLine>
+                     <HeaderStyle>true</HeaderStyle>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>114</InnerID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>115</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>375</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>116</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>376</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>117</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>377</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>118</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>321</InnerID>
+                                 <Text>℃</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>120</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>121</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>322</InnerID>
+                                 <Text>次/分</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>123</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>124</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>323</InnerID>
+                                 <Text>次/分</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>126</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>text</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>127</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>324</InnerID>
+                                 <Text>mmHg</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>129</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>130</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>325</InnerID>
+                                 <Text>%</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>132</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>133</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>326</InnerID>
+                                 <Text>L/min</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>135</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>136</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>327</InnerID>
+                                 <Text>名称</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>138</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>139</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>328</InnerID>
+                                 <Text>ml</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>141</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>142</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>329</InnerID>
+                                 <Text>名称</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>144</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes>
+                              <Attribute>
+                                 <Name>displayType</Name>
+                                 <Value>number</Value>
+                              </Attribute>
+                           </Attributes>
+                           <InnerID>145</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>330</InnerID>
+                                 <Text>ml</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>147</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>148</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>331</InnerID>
+                                 <Text>颜色性状</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>150</InnerID>
+                              </Element>
+                           </XElements>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>151</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>407</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>152</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>332</InnerID>
+                                 <Text>左</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>154</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>155</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>333</InnerID>
+                                 <Text>右</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>157</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>158</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>410</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>159</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>411</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>160</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>412</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>161</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>413</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>162</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>414</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2>
+                     <CanSplitByPageLine>false</CanSplitByPageLine>
+                     <HeaderStyle>true</HeaderStyle>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>163</InnerID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>164</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>415</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>165</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>416</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>166</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>417</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>167</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>418</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>168</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>419</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>169</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>420</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>170</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>421</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>171</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>422</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>172</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>423</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>173</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>424</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>174</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>425</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>175</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>426</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>176</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>427</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>177</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>428</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell">
+                           <InnerID>178</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>429</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>179</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>334</InnerID>
+                                 <Text>上下</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>181</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>182</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="3">
+                                 <InnerID>335</InnerID>
+                                 <Text>上下</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>184</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>185</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>434</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>186</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>435</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>187</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>436</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>188</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>437</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <InnerID>189</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>438</InnerID>
+                                 <AutoCreate>true</AutoCreate>
+                              </Element>
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2>
+                     <CanSplitByPageLine>false</CanSplitByPageLine>
+                     <HeaderStyle>true</HeaderStyle>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>190</InnerID>
+                     <ID>row9</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValueBinding>
+                        <DataSource>peopledatasource</DataSource>
+                     </ValueBinding>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>191</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Data</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>192</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>193</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Time</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>194</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>195</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Consciousness</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>196</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>197</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Temperature</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>198</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>199</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Pulse</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>200</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>201</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Breathe</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>202</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>203</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Blutdruck</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>204</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>205</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Saturation</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>206</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>207</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Oxygen</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>208</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>209</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>DRIsName</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>210</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>211</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>DRIsMl</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>212</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>213</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>OutputName</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>214</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>215</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>OutputMl</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>216</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>217</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>OutputColor</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>218</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>219</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Skin</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>220</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>221</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>LimbsLeft</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>222</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>223</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>LimbsRight</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>224</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>225</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>PupilLeft</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>226</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>227</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>PupilRight</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>228</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>229</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Nursing</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>230</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>231</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Measure</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>232</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <InnerID>233</InnerID>
+                           <EnableValueValidate>true</EnableValueValidate>
+                           <ValueBinding>
+                              <BindingPath>Signature</BindingPath>
+                           </ValueBinding>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                                 <InnerID>234</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <LineWidth>0</LineWidth>
+                              <GridSpanInCM>1</GridSpanInCM>
+                           </GridLine>
+                        </Element>
+                     </XElements>
+                     <AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2>
+                     <SpecifyHeight>115.5</SpecifyHeight>
+                  </Element>
+               </XElements>
+               <AcceptChildElementTypes2>TableRow TableColumn</AcceptChildElementTypes2>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>235</InnerID>
+                     <Width>125.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>236</InnerID>
+                     <Width>134.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>237</InnerID>
+                     <Width>72.6022</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>238</InnerID>
+                     <Width>99.1022</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>239</InnerID>
+                     <Width>132.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>240</InnerID>
+                     <Width>91.85232</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>241</InnerID>
+                     <Width>161.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>242</InnerID>
+                     <Width>110.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>243</InnerID>
+                     <Width>124.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>244</InnerID>
+                     <Width>127.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>245</InnerID>
+                     <Width>89.85229</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>246</InnerID>
+                     <Width>124.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>247</InnerID>
+                     <Width>96.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>248</InnerID>
+                     <Width>106.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>249</InnerID>
+                     <Width>73.00001</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>250</InnerID>
+                     <Width>111.7046</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>251</InnerID>
+                     <Width>108.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>252</InnerID>
+                     <Width>161.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>253</InnerID>
+                     <Width>132.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>254</InnerID>
+                     <Width>156.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>255</InnerID>
+                     <Width>372.8523</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>256</InnerID>
+                     <Width>181.8523</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>624</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>625</InnerID>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="2" NumOfColumns="3">
+               <InnerID>59</InnerID>
+               <ID>table1</ID>
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>63</InnerID>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="8">
+                           <InnerID>64</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <InnerID>336</InnerID>
+                                 <Text>此表格测试单元格赋值</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>65</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <InnerID>66</InnerID>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>67</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <InnerID>68</InnerID>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>69</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>70</InnerID>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <InnerID>71</InnerID>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>72</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <InnerID>73</InnerID>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>74</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <InnerID>75</InnerID>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag">
+                                 <InnerID>76</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>60</InnerID>
+                     <Width>966.9167</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>61</InnerID>
+                     <Width>966.9167</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>62</InnerID>
+                     <Width>966.9167</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>626</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>257</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>258</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <EnableValueValidate>true</EnableValueValidate>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>259</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <SerializeParameterValue>true</SerializeParameterValue>
+   <FileFormat>XML</FileFormat>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>15</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>12.5</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>20</PaddingLeft>
+            <PaddingTop>15</PaddingTop>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>9.5</FontSize>
+            <LineSpacingStyle>Space1pt5</LineSpacingStyle>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="7">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="8">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="9">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>20</PaddingLeft>
+            <PaddingTop>15</PaddingTop>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <ShowHeaderBottomLine>False</ShowHeaderBottomLine>
+      <LicenseText>未注册|Unregister</LicenseText>
+      <CreationTime>1980-01-01T00:00:00+08:00</CreationTime>
+      <LastModifiedTime>2025-02-21T15:55:32.4969615+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00+08:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2015.1217.10</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>日期 时间 意识 体
+温 脉搏
+/心率 呼吸 血压 血氧饱和度 吸氧 入量 出量 皮
+肤
+情
+况 肢体活动 瞳孔
+大小
+左/右 瞳孔
+反射
+左/右 管
+道
+护
+理 病情观察及措施 护士签名 
+℃ 次/分 次/分 mmHg % L/min 名称 ml 名称 ml 颜色性状 左 右 
+上下 上下 
+                                          
+
+
+此表格测试单元格赋值     
+      
+</BodyText>
+   <LocalConfig />
+   <PageSettings>
+      <Landscape>true</Landscape>
+   </PageSettings>
+</XTextDocument>`
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>

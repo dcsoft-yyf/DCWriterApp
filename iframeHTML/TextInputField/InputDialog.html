@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>测试第五代接口</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .describe-box {
+            /* max-width: 50%;
+        min-width: 500px; */
+            border: 1px solid #dcdfe6;
+            line-height: 23px;
+            text-align: left;
+            background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+            box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+            border-radius: 0px 8px 8px 0px;
+        }
+
+        .describe-box span:first-child {
+            /* text-align: center; */
+            font-weight: bold;
+            line-height: 32px;
+            border-bottom: 1px solid rgb(155, 187, 227)
+        }
+
+        .describe-box span {
+            display: block;
+            margin: 0 5px;
+            font-size: 13px;
+
+        }
+
+        .toolBox {
+            /* height: 40px; */
+            width: 100%;
+            border: 1px solid #dcdfe6;
+            display: flex;
+            font-size: 13px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .toolBox span {
+            display: inline-table;
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            padding: 5px 10px;
+            min-width: 50px;
+            height: 18px;
+            white-space: nowrap
+        }
+
+        .toolBox select {
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            padding: 3px 10px;
+            min-width: 50px;
+            height: 29px;
+        }
+
+        #FontNameSelect {
+            min-width: 150px
+        }
+
+        .toolBox span:has(select) {
+            padding: 0px;
+            /* margin: 0px; */
+        }
+
+        .toolBox span:hover {
+            border: 1px solid #4e6ef2;
+            cursor: pointer;
+        }
+
+        .dc-writer-box {
+            /* height: 100% !important; */
+            border-bottom: 0px solid black;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .main-container {
+            height: 100%;
+            display: flex;
+
+        }
+
+        .ringbox {
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        #myWriterControl {
+            width: 70%;
+        }
+
+        .TracesListContentItem {
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid saddlebrown;
+            text-align: center;
+            line-height: 50px;
+            background: #dce1f7;
+            border-radius: 5px;
+        }
+
+        .dialogMask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .dialogContent {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 300px;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 10000;
+
+        }
+
+        .dialogTitle {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #img,
+        #img2 {
+            border: 1px solid #ccc;
+            max-width: 100px;
+            max-height: 100px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .btnBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            margin-top: 30px;
+        }
+
+        .btnBox>button {
+            margin: 0 10px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btnBox>button:hover {
+            background-color: #3e8e41;
+        }
+
+        #imgBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        #img.active,
+        #img2.active {
+            border-color: #003b02;
+            border-width: 4px;
+        }
+
+        .dialog {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="text-align: center">
+    <div class="header">
+        <div class="describe-box">
+            <span>点击评定人元素弹窗签名</span>
+
+        </div>
+        <div class="toolBox">
+            <span commandName="fileopen">打开本地文件</span>
+            <span localMethod="DownLoadFile">导出到本地</span>
+            <span localMethod="PrintDocument">打印</span>
+            <span localMethod="LoadPrintPreview">打印预览</span>
+            <span localMethod="ClosePrintPreview">关闭预览</span>
+            <span localMethod="AboutControl">关于</span>
+            <br>
+
+        </div>
+
+        <div class="toolBox">
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+            RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+            RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC"
+            PageCssString222="box-shadow:0px 0px 0px grey" PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+            RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816"
+            OnLoad="this.LoadDocumentFromString(xml2, 'xml');">
+        </div>
+        <div class="dialogMask dialog"> </div>
+        <div class="dialogContent dialog">
+            <div class="dialogTitle">请选择图片</div>
+            <div class="imgBox">
+                <img onclick="selectImg(this)" id="img" src="" />
+                <img onclick="selectImg(this)" id="img2" src="" />
+            </div>
+            <div class="btnBox">
+                <button onclick="InsertImage()">确认</button>
+                <button onclick="closeDialog()">取消</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src=""></script>
+
+
+    <script src="../../_framework/dcwriter5.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+    <script>
+        window.onload = function () {
+            var img = document.getElementById("img");
+            img.src = "data:image/png;base64," + base64Image;
+
+            var img2 = document.getElementById("img2");
+            img2.src = "data:image/png;base64," + base64Image2;
+        };
+        let toolBoxDOM = document.querySelector(".toolBox");
+        if (toolBoxDOM) {
+            toolBoxDOM.addEventListener("click", (e) => {
+                if (e.target.tagName == "SPAN") {
+                    let commandName = e.target.getAttribute("commandName");
+                    let localMethod = e.target.getAttribute("localMethod");
+                    if (commandName) {
+                        let ctl = document.getElementById("myWriterControl");
+                        ctl.DCExecuteCommand(commandName, false, null);
+                    } else if (localMethod) {
+                        funcOBJ[localMethod].call(funcOBJ);
+                    }
+                }
+            });
+        }
+        //编辑器方法组
+        let funcOBJ = {
+            DownLoadFile: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.DownLoadFile("xml");
+            },
+            PrintDocument: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.PrintDocument();
+            },
+            LoadPrintPreview: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.LoadPrintPreview();
+            },
+            ClosePrintPreview: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.ClosePrintPreview();
+            },
+            AboutControl: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.AboutControl();
+            },
+        };
+
+
+
+        var base64Image2 = "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";
+        var base64Image = "iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAAK/INwWK6QAAAAZiS0dEAP8A/wD / oL2nkwAAI4BJREFUeNrtnXl0FNed77 + tBS1ItCTMJgnEIrFKSCC22CR0Mk4yk + eJmTMnsSfkDe05M15iE7Cx491gG + 8mFhjHjJM8Kxkzzjjn5GBns2NnLG8xuxsJMDsCJIExiAYkWmjr90d1tUrVt7qr16rq / n7OqdPd1dVVt6rr + 733 / u5SACGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgKxGZ0AQpKRlw6VLALgUKxqBtBwe0XrcaPTpoQGQEiMeOlQSRmA1QAWAyjQ2MwFoO72itZfGZ1egAZASEx46VDJUgB10Ba + GheAxUaXCGgAhETJS4dKXgXgjOCnbgCO2ytadxuVdhoAIVEQhfhl3DDQBGgAhERIMPEPy6qAPbvC / 7mr9xwudh3Clb520eZuGGQCNABCIkAk / qz0Ioy1fwdFuTORkZYr / F1ndwvaLr2PLzu3qr9yQTKBC4k8DxoAIWEiEv + IofMxofCfNYWvprO7Bfu / fEVdInAhwSZAAyBEJy8dKrED2IzB7fsoL / ohRuYtCNi + s7sFvf0eAMDQISUB5tDbfxl7vliHyz2tytUuJNAEaACE6MAn / gYANcr1avFf6DqEM51b0H65EX1ez6B95GaWYOTQBRiZN99vBkabAA2AkBDoEX9v / 2UcPvca2j2NIfeXbsvBhMJ / HvTb3aeeNqQ6QAMgJAh6xK9Rnw / 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";
+    </script>
+
+    <script>
+        var ctl = document.getElementById("myWriterControl");
+
+        function selectImg(e) {
+            var prevActive = document.querySelector('.active');
+            if (prevActive) {
+                prevActive.className = "";
+            }
+            e.className = "active";
+        }
+
+        var targetInputId = "";
+        let timer;
+        // 编辑器加载成功
+        function WriterControl_OnLoad(rootElement) {
+            ctl.SetPageLayoutMode("SingleColumn");//设置页面布局方式为单栏展示
+            console.log("WriterControl_OnLoad：编辑器加载成功");
+            rootElement.DocumentLoad = function () {
+            };
+            rootElement.EventElementMouseClick = debounce(function (rootElement, args) {
+                var ele = rootElement.GetElementProperties(rootElement.CurrentElement());
+                if (ele.Name === "EVDOCTOR" || ele.ID === "SignatureImage") {
+                    var dialogArr = document.querySelectorAll(".dialog");
+                    for (var i = 0; i < dialogArr.length; i++) {
+                        dialogArr[i].style.display = "block";
+                    }
+                    console.log("WriterControl_EventElementMouseClick：鼠标点击事件", args);
+                }
+
+            }, 200);
+            rootElement.EventElementMouseDblClick = function (rootElement, args) {
+                console.log("WriterControl_EventElementMouseDblClick：鼠标双击事件", args);
+                var ele = rootElement.GetElementProperties(rootElement.CurrentElement());
+                if (ele.ID === "SignatureImage") {
+                    args.Handled = true;
+                    clearTimeout(timer);
+                    deleteImg();
+                }
+
+
+            };
+        };
+
+
+
+        function closeDialog() {
+            var dialogArr = document.querySelectorAll(".dialog");
+            for (var i = 0; i < dialogArr.length; i++) {
+                dialogArr[i].style.display = "none";
+            }
+        }
+
+
+        function loadfile() {
+            ctl.LoadDocumentFromString(strDemoFileXml, 'xml');
+        }
+        function InsertImage() {
+            var field = ctl.GetElementById("EVI1");
+            if (!field) return;
+
+            var avtiveImg = document.querySelector(".active");
+
+
+            ctl.SetElementTextByID(field.NativeHandle, "");//清除字段内容
+            var options = {
+                ID: "SignatureImage",
+                Width: 300,
+                Height: 200,
+                SaveContentInFile: true,
+                Src: avtiveImg && avtiveImg.id && avtiveImg.id == "img" ? base64Image : base64Image2,
+                ContentReadonly: "True",//是否只读，可以让图片不能弹出图片编辑窗口 True,False,Inherit
+                //AfterElement: -1,     //表示将图片插在哪个元素之前，传递参数为元素的后台NativeHandle，可以从元素属性中获取
+                //BeforeElement: -1,    //表示将图片插在哪个元素之后，传递参数为元素的后台NativeHandle，可以从元素属性中获取
+                InsideElement: field.NativeHandle,    //表示将图片插在哪个元素之内，效果为直接在子元素中追加，传递参数为元素的后台NativeHandle，可以从元素属性中获取
+                // AutoFitImageSize: true      //根据当前单元格宽高自适应缩放
+            };
+            ctl.DCExecuteCommand("InsertImage", false, options);
+
+            var dialogArr = document.querySelectorAll(".dialog");
+            for (var i = 0; i < dialogArr.length; i++) {
+                dialogArr[i].style.display = "none";
+            }
+
+
+        }
+        function deleteImg() {
+            var img = ctl.GetElementById("SignatureImage");
+            if (img) {
+                var isDelete = confirm("确定要删除该图片吗？");
+                if (isDelete) {
+                    var field = ctl.GetElementById("EVI1");
+                    if (!field) return;
+
+                    ctl.SetElementTextByID(field.NativeHandle, "");//清除字段内容
+                }
+
+            }
+        }
+        function Signature() {
+            var field = ctl.GetElementById("医师签名");
+            if (!field) return;
+            ctl.SetElementTextByID(field.NativeHandle, "");//清除字段内容
+            // ctl.FocusElement(field.NativeHandle);//设置焦点到医师签名
+            var obj = {
+                "id": "SignatureImage",
+                "base64Img": base64Image,//图片base64 （优先png格式）
+                "scope": " InputField",//签名范围 InputField:输入域;TableCell:单元格; TableRow:表格行; Table:表格; Section:文档节; Body: 文档;
+                "userID": "011",
+                "userName": "张三",
+                "imageInFrontOfText": "false",//默认false
+                "clientName": "home-pc",//客户端名
+                "width": 100,//签名图片宽度
+                "height": 50,//签名图片高度
+                "providerName": "1", //1:软签 2：诺安签名
+                "specifycontainer": field.NativeHandle//为签名图片插入的父容器的id或nativehandle，可以在不能直接输入的输入域中签名
+            };
+            ctl.CASignature(obj, function (result) {
+                console.log("签名是否成功：", result);
+            });
+        }
+
+        function debounce(func, delay) {
+            return function () {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    func.apply(this, arguments);
+                }, delay);
+            };
+        }
+
+
+
+
+    </script>
+    <script>
+        var xml2 = `<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="1.0.0.0"><Attributes><Attribute><Name>DC_RecordID</Name><Value>标准评定量表\格拉斯哥昏迷评分量表</Value></Attribute><Attribute><Name>DC_TemplateFlags</Name><Value>All</Value></Attribute><Attribute><Name>DC_UseLanguage2</Name><Value>False</Value></Attribute><Attribute><Name>DC_OwnerLevel</Name><Value>Global</Value></Attribute></Attributes><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextHeader"><InnerID>6</InnerID><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag" StyleIndex="5"><InnerID>85</InnerID></Element></XElements></Element><Element xsi:type="XTextBody"><InnerID>25</InnerID><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField" StyleIndex="1"><InnerID>23</InnerID><ID>HospitalName</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>hospitalName</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><Deleteable>false</Deleteable><BorderElementColor /><UserEditable>false</UserEditable><Name>HospitalName</Name><DisplayFormat /><BackgroundText>医院名称</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XParagraphFlag" StyleIndex="4"><InnerID>24</InnerID></Element><Element xsi:type="XString" StyleIndex="1"><Text>压疮危险因素Braden评分</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="4"><InnerID>41</InnerID></Element><Element xsi:type="XString" StyleIndex="2"><Text>姓  名：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>50</InnerID><ID>PAT1</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:15:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:15:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>patientName</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><BorderElementColor /><SpecifyWidth>177.1654</SpecifyWidth><Name>PATNAME</Name><DisplayFormat /><BackgroundText>姓名</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XString" StyleIndex="2"><Text>性  别：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>57</InnerID><ID>PAT2</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:15:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:15:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>sex</BindingPath></ValueBinding><CopySource /><BorderElementColor /><SpecifyWidth>118.1102</SpecifyWidth><Name>PATSEX</Name><DisplayFormat /><BackgroundText>性别</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XString" StyleIndex="2"><Text>年  龄：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>64</InnerID><ID>PAT3</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:15:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:15:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>age</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><BorderElementColor /><SpecifyWidth>118.1102</SpecifyWidth><Name>PATAGE</Name><DisplayFormat /><BackgroundText>年龄</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XString" StyleIndex="2"><Text>科  室：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>71</InnerID><ID>PAT4</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:15:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:15:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>sectionName</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><BorderElementColor /><SpecifyWidth>295.2756</SpecifyWidth><Name>DeptName</Name><DisplayFormat /><BackgroundText>科室</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XString" StyleIndex="2"><Text>住院号：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>76</InnerID><ID>PAT5</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:15:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:15:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>inpatientNo</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><BorderElementColor /><SpecifyWidth>248.0315</SpecifyWidth><Name>VisitNo</Name><DisplayFormat /><BackgroundText>住院号</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XString" StyleIndex="2"><Text>日  期：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>76</InnerID><ID>Date</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:30:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:30:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>admitDT</BindingPath></ValueBinding><CopySource /><BorderElementColor /><SpecifyWidth>248.0315</SpecifyWidth><Name>Date</Name><DisplayFormat /><BackgroundText>日期</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings><EditStyle>Date</EditStyle></FieldSettings></Element><Element xsi:type="XParagraphFlag" StyleIndex="5"><InnerID>77</InnerID></Element><Element xsi:type="XString" StyleIndex="2"><Text>临床诊断：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>84</InnerID><ID>PAT6</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:15:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:15:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>admissionDiagnosisName</BindingPath></ValueBinding><CopySource /><BorderElementColor /><Name>Diagnosis</Name><DisplayFormat /><BackgroundText>临床诊断</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XParagraphFlag" StyleIndex="5"><InnerID>85</InnerID></Element><Element xsi:type="XTextTable" StyleIndex="11" NumOfRows="11" NumOfColumns="5"><EnableValueValidate>true</EnableValueValidate><ValueBinding /><XElements><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>项目</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="0" /></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>评估</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="0" /></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>1、感觉</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>计分项</Value></Attribute></Attributes><ID>{57D045BE-7925-4FD4-9843-A755BE1C3596}</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>ganjue_index</BindingPath></ValueBinding><CopySource /><AcceptChildElementTypes2>Text</AcceptChildElementTypes2><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>感觉</Name><DisplayFormat /><BackgroundText>未填</BackgroundText><EditorActiveMode>GotFocus MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><ListSource><Items><Item><Text>1 完全受限</Text><Value>1</Value></Item><Item><Text>2 非常受限</Text><Value>2</Value></Item><Item><Text>3 轻度受限</Text><Value>3</Value></Item><Item><Text>4 未受限</Text><Value>4</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>2、移动力</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>计分项</Value></Attribute></Attributes><ID>{D3C708FF-609B-4389-BA00-6DAE0D486F81}</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>yidongli_index</BindingPath></ValueBinding><CopySource /><AcceptChildElementTypes2>Text</AcceptChildElementTypes2><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>移动力</Name><DisplayFormat /><BackgroundText>未填</BackgroundText><EditorActiveMode>GotFocus MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><ListSource><Items><Item><Text>1 完全无法移动</Text><Value>1</Value></Item><Item><Text>2 严重受限</Text><Value>2</Value></Item><Item><Text>3 轻度受限</Text><Value>3</Value></Item><Item><Text>4 未受限</Text><Value>4</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>3、潮湿</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>计分项</Value></Attribute></Attributes><ID>{44C3A69F-F0B7-4E3F-86AE-DB67F967B066}</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>chaoshi_index</BindingPath></ValueBinding><CopySource /><AcceptChildElementTypes2>Text</AcceptChildElementTypes2><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>潮湿</Name><DisplayFormat /><BackgroundText>未填</BackgroundText><EditorActiveMode>GotFocus MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><ListSource><Items><Item><Text>1 持续潮湿</Text><Value>1</Value></Item><Item><Text>2 潮湿</Text><Value>2</Value></Item><Item><Text>3 有时潮湿</Text><Value>3</Value></Item><Item><Text>4 很少潮湿</Text><Value>4</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>4、营养</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>计分项</Value></Attribute></Attributes><ID>{110CF9A4-895B-46EF-94DE-EDA8A36EC04C}</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>yingyang_index</BindingPath></ValueBinding><CopySource /><AcceptChildElementTypes2>Text</AcceptChildElementTypes2><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>营养</Name><DisplayFormat /><BackgroundText>未填</BackgroundText><EditorActiveMode>GotFocus MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><ListSource><Items><Item><Text>1 非常差</Text><Value>1</Value></Item><Item><Text>2 可能不足够</Text><Value>2</Value></Item><Item><Text>3 足够</Text><Value>3</Value></Item><Item><Text>4 非常好</Text><Value>4</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>5、活动力</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>计分项</Value></Attribute></Attributes><ID>{253C9249-86C7-492F-922A-6A42E64BAA7E}</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>huodongli_index</BindingPath></ValueBinding><CopySource /><AcceptChildElementTypes2>Text</AcceptChildElementTypes2><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>活动力</Name><DisplayFormat /><BackgroundText>未填</BackgroundText><EditorActiveMode>GotFocus MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><ListSource><Items><Item><Text>1 限制卧床</Text><Value>1</Value></Item><Item><Text>2 可以坐椅子</Text><Value>2</Value></Item><Item><Text>3 偶尔行走</Text><Value>3</Value></Item><Item><Text>4 经常行走</Text><Value>4</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>6、摩擦力、剪切力</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>计分项</Value></Attribute></Attributes><ID>{2DCAF8E6-6248-4F61-B05B-9C62F8A118D4}</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>mocali_index</BindingPath></ValueBinding><CopySource /><AcceptChildElementTypes2>Text</AcceptChildElementTypes2><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>摩擦力剪切力</Name><DisplayFormat /><BackgroundText>未填</BackgroundText><EditorActiveMode>GotFocus MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><ListSource><Items><Item><Text>1 有问题</Text><Value>1</Value></Item><Item><Text>2 有潜在问题</Text><Value>2</Value></Item><Item><Text>3 无明显问题</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>总分：</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><PropertyExpressions><Item Name="FormulaValue">SUM([C2:C7])</Item></PropertyExpressions><EnableValueValidate>true</EnableValueValidate><ValueExpression>SUM([C2:C7])</ValueExpression><XElements><Element xsi:type="XInputField"><Attributes><Attribute><Name>Sum</Name><Value>总分项</Value></Attribute></Attributes><ID>WXYSScore</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><ValueType>Numeric</ValueType><CustomMessage>只能输入数字。</CustomMessage></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>ScoreValue</BindingPath></ValueBinding><CopySource /><BorderElementColor /><MoveFocusHotKey>Enter</MoveFocusHotKey><Name>WXYSScore</Name><DisplayFormat /><BackgroundText>未计算</BackgroundText><FieldSettings /></Element><Element xsi:type="XString"><Text>分</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>3</ColSpan><Expression>SUM([C2:C7])</Expression></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="13"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>护理措施</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><RowSpan>3</RowSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_1</ID><Name>WXYS</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYS_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>避免压力和摩擦力</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_2</ID><Name>WXYS2</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYS2_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS2</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>保持皮肤清洁、干燥、及时清理</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="14"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_3</ID><Name>WXYS_3</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYSGYQ_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS_3</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>给予气垫床</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_4</ID><Name>WXYS_4</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYS2H_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS_4</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>2h更换尿不湿一次</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="14"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_5</ID><Name>WXYS_5</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WYXSGY_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS_5</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>给予减压用具，保护皮肤受压部位</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="14"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_6</ID><Name>WXYS_6</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYSXZ_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS_6</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>洗澡每周一次</Text></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="13"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>WXYS_7</ID><Name>WXYS_7</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYSBC30_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>WXYS_7</GroupName></Element><Element xsi:type="XString"><Text>保持30度侧卧位</Text></Element><Element xsi:type="XParagraphFlag" /></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="12"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="14"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextCheckBox"><ID>其他勾选</ID><Name>其他</Name><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYSQT_index</BindingPath></ValueBinding><Width>62</Width><Height>62</Height><GroupName>其他</GroupName><VisualStyle>CheckBox</VisualStyle></Element><Element xsi:type="XString"><Text>其他</Text></Element><Element xsi:type="XInputField"><ID>其他护理措施</ID><ToolTip>请输入年龄</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:25:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:25:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>CURRENT_TABLE</DataSource><BindingPath>WXYSTXT_index</BindingPath></ValueBinding><CopySource /><StartBorderText>【</StartBorderText><EndBorderText>】</EndBorderText><BorderElementColor /><MoveFocusHotKey>None</MoveFocusHotKey><Name>其他</Name><DisplayFormat /><InnerValue>e</InnerValue><BackgroundText>其他护理措施</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings /></Element><Element xsi:type="XParagraphFlag" /></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="14"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag" /></XElements></Element></XElements><SpecifyHeight>89.10314</SpecifyHeight></Element></XElements><Columns><Element xsi:type="XTextTableColumn"><Width>280.875</Width></Element><Element xsi:type="XTextTableColumn"><Width>280.875</Width></Element><Element xsi:type="XTextTableColumn"><Width>239.75</Width></Element><Element xsi:type="XTextTableColumn"><Width>906.875</Width></Element><Element xsi:type="XTextTableColumn"><Width>538.625</Width></Element></Columns></Element><Element xsi:type="XParagraphFlag" StyleIndex="6" /><Element xsi:type="XString" StyleIndex="8"><Text>评分范围：6~23分；轻度危险：15~18分；中度危险：13~14分；高度危险：10~12分；极度危险：&lt; 9分</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="9" /><Element xsi:type="XParagraphFlag" StyleIndex="10" /><Element xsi:type="XParagraphFlag" StyleIndex="15" /><Element xsi:type="XParagraphFlag" StyleIndex="15" /><Element xsi:type="XString" StyleIndex="3"><Text>评定人：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>127</InnerID><ID>EVI1</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>currentUserName</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><Deleteable>false</Deleteable><BorderElementColor /><SpecifyWidth>177.1654</SpecifyWidth><UserEditable>false</UserEditable><Name>EVDOCTOR</Name><DisplayFormat /><BackgroundText>评定人</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings /></Element><Element xsi:type="XString" StyleIndex="3"><Text>评定日期：</Text></Element><Element xsi:type="XInputField" StyleIndex="3"><InnerID>133</InnerID><ID>EVI2</ID><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding><DataSource>patientInfo</DataSource><BindingPath>currentDate</BindingPath><AutoUpdate>true</AutoUpdate><Readonly>true</Readonly></ValueBinding><CopySource /><Deleteable>false</Deleteable><BorderElementColor /><SpecifyWidth>354.3307</SpecifyWidth><Name>EVTIME</Name><DisplayFormat><Style>DateTime</Style><Format>yyyy-MM-dd HH:mm</Format></DisplayFormat><BackgroundText>评定日期</BackgroundText><BorderVisible>Hidden</BorderVisible><FieldSettings><EditStyle>DateTimeWithoutSecond</EditStyle></FieldSettings></Element><Element xsi:type="XParagraphFlag" StyleIndex="7"><InnerID>418</InnerID></Element></XElements></Element><Element xsi:type="XTextFooter"><InnerID>130</InnerID><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XPageInfo" StyleIndex="3"><InnerID>87</InnerID><Width>312.5</Width><AutoHeight>true</AutoHeight><Height>54.89258</Height><FormatString>第[%PageIndex%]页 共[%NumOfPages%]页</FormatString></Element><Element xsi:type="XParagraphFlag" StyleIndex="4"><InnerID>134</InnerID></Element></XElements></Element></XElements><SerializeParameterValue>true</SerializeParameterValue><FileName>Test/演示文档/05-评分表/格拉斯哥昏迷评分量表(GCS).xml</FileName><FileFormat>XML</FileFormat><ContentStyles><Default xsi:type="DocumentContentStyle"><FontName>宋体</FontName><FontSize>12</FontSize></Default><Styles><Style Index="0"><FontName>宋体</FontName><FontSize>12</FontSize><Align>Center</Align></Style><Style Index="1"><FontName>宋体</FontName><FontSize>15.75</FontSize><Bold>true</Bold></Style><Style Index="2"><FontName>宋体</FontName><FontSize>10.5</FontSize><Bold>true</Bold></Style><Style Index="3"><FontName>宋体</FontName><FontSize>10.5</FontSize></Style><Style Index="4"><FontName>宋体</FontName><FontSize>12</FontSize><LineSpacingStyle>Space1pt5</LineSpacingStyle><Align>Center</Align></Style><Style Index="5"><FontName>宋体</FontName><FontSize>12</FontSize><LineSpacingStyle>Space1pt5</LineSpacingStyle></Style><Style Index="6"><FontName>宋体</FontName><FontSize>10.5</FontSize><LineSpacingStyle>Space1pt5</LineSpacingStyle><Align>Justify</Align></Style><Style Index="7"><FontName>宋体</FontName><FontSize>10.5</FontSize><SpacingBeforeParagraph>20</SpacingBeforeParagraph><LineSpacingStyle>Space1pt5</LineSpacingStyle><Align>Right</Align></Style><Style Index="8"><FontName>宋体</FontName><FontSize>9</FontSize></Style><Style Index="9"><FontName>宋体</FontName><FontSize>9</FontSize><SpacingBeforeParagraph>20</SpacingBeforeParagraph><Align>Justify</Align></Style><Style Index="10"><FontName>宋体</FontName><FontSize>10.5</FontSize><SpacingBeforeParagraph>20</SpacingBeforeParagraph><Align>Justify</Align></Style><Style Index="11"><FontName>Microsoft Sans Serif</FontName><FontSize>12</FontSize></Style><Style Index="12"><FontName>宋体</FontName><FontSize>12</FontSize><VerticalAlign>Middle</VerticalAlign><BorderWidth>1</BorderWidth><BorderLeft>true</BorderLeft><BorderBottom>true</BorderBottom><BorderTop>true</BorderTop><BorderRight>true</BorderRight><PaddingLeft>22</PaddingLeft><PaddingRight>22</PaddingRight></Style><Style Index="13"><FontName>宋体</FontName><FontSize>12</FontSize><VerticalAlign>Middle</VerticalAlign><BorderWidth>1</BorderWidth><BorderLeft>true</BorderLeft><BorderBottom>true</BorderBottom><BorderTop>true</BorderTop><BorderRight>true</BorderRight><PaddingLeft>22</PaddingLeft><PaddingRight>22</PaddingRight></Style><Style Index="14"><FontName>宋体</FontName><FontSize>12</FontSize><VerticalAlign>Middle</VerticalAlign><BorderWidth>1</BorderWidth><BorderLeft>true</BorderLeft><BorderBottom>true</BorderBottom><BorderTop>true</BorderTop><BorderRight>true</BorderRight><PaddingLeft>22</PaddingLeft><PaddingRight>22</PaddingRight></Style><Style Index="15"><FontName>宋体</FontName><FontSize>12</FontSize><SpacingBeforeParagraph>20</SpacingBeforeParagraph><Align>Justify</Align></Style></Styles></ContentStyles><Info><ID>标准评定量表\格拉斯哥昏迷评分量表</ID><LicenseText>都昌信息科技有限公司:都昌WEB4.0旗舰版演示</LicenseText><CreationTime>1980-01-01T00:00:00+08:00</CreationTime><LastModifiedTime>2024-09-24T18:14:27+08:00</LastModifiedTime><LastPrintTime>1980-01-01T00:00:00+08:00</LastPrintTime><Operator>DCSoft.Writer Version:1.2015.12.23</Operator><NumOfPage>1</NumOfPage></Info><BodyText>医院名称
+压疮危险因素Braden评分
+姓  名：姓名性  别：性别年  龄：年龄科  室：科室住院号：住院号日  期：日期
+临床诊断：临床诊断
+
+项目 评估
+1、感觉 未填
+2、移动力 未填
+3、潮湿 未填
+4、营养 未填
+5、活动力 未填
+6、摩擦力、剪切力 未填
+总分： 未计算分
+护理措施 □避免压力和摩擦力 □保持皮肤清洁、干燥、及时清理 □给予气垫床
+□2h更换尿不湿一次 □给予减压用具，保护皮肤受压部位 □洗澡每周一次
+□保持30度侧卧位 □其他【其他护理措施】
+评分范围：6~23分；轻度危险：15~18分；中度危险：13~14分；高度危险：10~12分；极度危险：&lt; 9分
+
+
+
+评定人：评定人评定日期：评定日期</BodyText><LocalConfig /><PageSettings><HeaderDistance>10</HeaderDistance><FooterDistance>10</FooterDistance><LeftMargin>39</LeftMargin><TopMargin>39</TopMargin><RightMargin>39</RightMargin><BottomMargin>39</BottomMargin></PageSettings></XTextDocument>`;
+
+    </script>
+
+</body>
+
+</html>

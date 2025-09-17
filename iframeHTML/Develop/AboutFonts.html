@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>测试第五代接口</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    .describe-box {
+      /* max-width: 50%;
+        min-width: 500px; */
+      border: 1px solid #dcdfe6;
+      line-height: 23px;
+      text-align: left;
+      background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+      box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+      border-radius: 0px 8px 8px 0px;
+    }
+
+    .describe-box span:first-child {
+      /* text-align: center; */
+      font-weight: bold;
+      line-height: 32px;
+      border-bottom: 1px solid rgb(155, 187, 227)
+    }
+
+    .describe-box span {
+      display: block;
+      margin: 0 5px;
+      font-size: 13px;
+
+    }
+
+    .toolBox {
+      /* height: 40px; */
+      width: 100%;
+      border: 1px solid #dcdfe6;
+      display: flex;
+      font-size: 13px;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .toolBox span {
+      display: inline-table;
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 5px 10px;
+      min-width: 50px;
+      height: 18px;
+      white-space: nowrap
+    }
+
+    .toolBox select {
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 3px 10px;
+      min-width: 50px;
+      height: 29px;
+    }
+
+    #FontNameSelect {
+      min-width: 150px
+    }
+
+    .toolBox span:has(select) {
+      padding: 0px;
+      /* margin: 0px; */
+    }
+
+    .toolBox span:hover {
+      border: 1px solid #4e6ef2;
+      cursor: pointer;
+    }
+
+    .dc-writer-box {
+      /* height: 100% !important; */
+      border-bottom: 0px solid black;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .main-container {
+      height: 100%;
+      display: flex;
+
+    }
+
+    .ringbox {
+      width: 30%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    #myWriterControl {
+      width: 70%;
+    }
+
+    .TracesListContentItem {
+      height: 50px;
+      width: 100%;
+      border-bottom: 1px solid saddlebrown;
+      text-align: center;
+      line-height: 50px;
+      background: #dce1f7;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body style="text-align: center">
+  <div class="header">
+    <div class="describe-box">
+      <span>DCWriter5.0 集成了播放api日志操作，可提供客户更快的查找错误信息。</span>
+    </div>
+    <div class="toolBox">
+      <span commandName="fileopen">打开本地文件</span>
+      <span localMethod="DownLoadFile">导出到本地</span>
+      <span localMethod="PrintDocument">打印</span>
+      <span localMethod="LoadPrintPreview">打印预览</span>
+      <span localMethod="ClosePrintPreview">关闭预览</span>
+      <span localMethod="AboutControl">关于</span>
+    </div>
+    <!-- 修改内容 -->
+
+    <div class="main-container">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+        RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+        PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+        RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+    </div>
+  </div>
+
+  <script src="../../_framework/dcwriter5.js"></script>
+  <script src="../../js/jquery-1.7.2.min.js"></script>
+  <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+  <script>
+    window.onload = function () {
+    };
+    let toolBoxDOM = document.querySelector(".toolBox");
+    if (toolBoxDOM) {
+      toolBoxDOM.addEventListener("click", (e) => {
+        if (e.target.tagName == "SPAN") {
+          let commandName = e.target.getAttribute("commandName");
+          let localMethod = e.target.getAttribute("localMethod");
+          if (commandName) {
+            let ctl = document.getElementById("myWriterControl");
+            ctl.DCExecuteCommand(commandName, false, null);
+          } else if (localMethod) {
+            funcOBJ[localMethod].call(funcOBJ);
+          }
+        }
+      });
+    }
+    //编辑器方法组
+    let funcOBJ = {
+      DownLoadFile: function () {
+        let ctl = document.getElementById("myWriterControl");
+        let fName = Date.now();
+        ctl.DownLoadFile("xml");
+      },
+      PrintDocument: function () {
+        let ctl = document.getElementById("myWriterControl");
+        let fName = Date.now();
+        ctl.PrintDocument();
+      },
+      LoadPrintPreview: function () {
+        let ctl = document.getElementById("myWriterControl");
+        let fName = Date.now();
+        ctl.LoadPrintPreview();
+      },
+      ClosePrintPreview: function () {
+        let ctl = document.getElementById("myWriterControl");
+        let fName = Date.now();
+        ctl.ClosePrintPreview();
+      },
+      AboutControl: function () {
+        let ctl = document.getElementById("myWriterControl");
+        let fName = Date.now();
+        ctl.AboutControl();
+      },
+    };
+    function loadXML() {
+      console.log('loadXML');
+      let ctl = document.getElementById('myWriterControl');
+      ctl.LoadDocumentFromString(strDemoFileXml);
+    }
+    window.WriterControl_OnLoad = function (rootElement) {
+      loadXML();
+    };
+
+
+
+    var strDemoFileXml = `<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2024.4.23">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>6517</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="1">
+               <InnerID>6745</InnerID>
+               <Text>字体介绍</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>6523</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>6518</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <InnerID>6746</InnerID>
+               <Text>当使用DCWriter5.0时，需要在编辑器服务的Fonts文件夹内，放入需要使用的字体文件，并且使前端设置字体的种类与字体文件夹内保持一致。</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>6747</InnerID>
+               <Text>如果前端使用了编辑器服务内不存在的字体，会导致报错等问题。</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6634</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6635</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>6748</InnerID>
+               <Text>推荐字体：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6744</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6740</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>6749</InnerID>
+               <Text>中文&lt;宋体、黑体、微软雅黑、仿宋、楷体、华文宋体&gt;</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6743</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6739</InnerID>
+            </Element>
+            <Element xsi:type="XString">
+               <InnerID>6750</InnerID>
+               <Text>英文&lt;Arial、Times New Roman、Calibri、Courier New、Verdana、Tahoma、Garamond &gt;</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6522</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>6519</InnerID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag">
+               <InnerID>6524</InnerID>
+               <AutoCreate>true</AutoCreate>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <SerializeParameterValue>true</SerializeParameterValue>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>26.25</FontSize>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>山东智政软件科技有限公司:平罗县妇幼保健计划生育服务中心</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2025-02-25T10:03:18.9546926+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2024.4.23</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>当使用DCWriter5.0时，需要在编辑器服务的Fonts文件夹内，放入需要使用的字体文件，并且使前端设置字体的种类与字体文件夹内保持一致。如果前端使用了编辑器服务内不存在的字体，会导致报错等问题。
+
+推荐字体：
+
+中文&lt;宋体、黑体、微软雅黑、仿宋、楷体、华文宋体&gt;
+
+英文&lt;Arial、Times New Roman、Calibri、Courier New、Verdana、Tahoma、Garamond &gt;</BodyText>
+   <LocalConfig />
+   <PageSettings />
+</XTextDocument>`
+
+
+  </script>
+</body>
+
+</html>

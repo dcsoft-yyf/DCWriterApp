@@ -1,0 +1,1996 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes />
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="5">
+               <XElements xsi:nil="true" />
+               <Text>Patient Info</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="3">
+               <XElements xsi:nil="true" />
+               <Text>---------------------------------------------------------------------------------------------------------------------------------------------</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <ID>table7</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <XElements xsi:nil="true" />
+                                 <Text>* </Text>
+                              </Element>
+                              <Element xsi:type="XTextLabelElement" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataSource</Name>
+                                       <Value>BHosCheckRIS</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>BindingPath</Name>
+                                       <Value>Name1</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>AllowQuery</Name>
+                                       <Value>1</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>Label_BHosCheckRIS.Name1</ID>
+                                 <PropertyExpressions />
+                                 <EventTemplateName>MdcLabelEventTemplate</EventTemplateName>
+                                 <Name>Name</Name>
+                                 <Width>133.276352</Width>
+                                 <Height>57.49511</Height>
+                                 <Text>Name:</Text>
+                                 <PageTexts />
+                                 <Alignment>MiddleLeft</Alignment>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Name1</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Name1</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>460</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Name</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XTextLabelElement" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataSource</Name>
+                                       <Value>BHosCheckRIS</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>BindingPath</Name>
+                                       <Value>Sex1</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>AllowQuery</Name>
+                                       <Value>1</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>Label_BHosCheckRIS.Sex1</ID>
+                                 <PropertyExpressions />
+                                 <EventTemplateName>MdcLabelEventTemplate</EventTemplateName>
+                                 <Name>Sex</Name>
+                                 <Width>88.8915939</Width>
+                                 <Height>57.49511</Height>
+                                 <Text>Sex:</Text>
+                                 <PageTexts />
+                                 <Alignment>MiddleLeft</Alignment>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Sex1</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Sex1</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>330</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Sex</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>AZSex</SourceName>
+                                       <DisplayPath>ChsName</DisplayPath>
+                                       <ValuePath>ChsName</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XTextLabelElement" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataSource</Name>
+                                       <Value>BHosCheckRIS</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>BindingPath</Name>
+                                       <Value>Age1</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>AllowQuery</Name>
+                                       <Value>1</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>Label_BHosCheckRIS.Age1</ID>
+                                 <PropertyExpressions />
+                                 <EventTemplateName>MdcLabelEventTemplate</EventTemplateName>
+                                 <Name>Age</Name>
+                                 <Width>97.1923752</Width>
+                                 <Height>57.49511</Height>
+                                 <Text>Age:</Text>
+                                 <PageTexts />
+                                 <Alignment>MiddleLeft</Alignment>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Numeric</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Age1</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <ValueType>Numeric</ValueType>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                    <CustomMessage>You have to enter numbers</CustomMessage>
+                                 </ValidateStyle>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Age1</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>600</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Age</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>209.458344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>481.916656</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>154</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>375.458374</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>153.458374</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>635.4584</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <ID>table19</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Application Sheet No:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ApplyID</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ApplyID</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>410</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>apply No.</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Patient No:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.PatientID1</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>PatientID1</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>300</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Patient No.</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Dept:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Department</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Department</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>520</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Department</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>BHosDepartmentRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>275.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>339.9584</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>263.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>363.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>216.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>548.9584</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <ID>table6</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Inpatient ID:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.InPatNo</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>InPatNo</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>460</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Inpatient No.</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Physician: </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ApplyDr</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ApplyDr</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>260</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Delivery doctor </Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>BHosDrRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Access No:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.AccessNo</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>AccessNo</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>520</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>AccessNo</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>278.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>331.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>265.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>372.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>199.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>559.9584</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="4">
+               <Attributes />
+               <ID>table8</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Tel:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Phone1</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Phone1</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>500</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>TEL</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Add.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Address1</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Address1</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1130</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Address</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>158.4375</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>533.4375</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>152.4375</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1165.4375</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+            <Element xsi:type="XString" StyleIndex="5">
+               <XElements xsi:nil="true" />
+               <Text>Application Sheet Info</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="3">
+               <XElements xsi:nil="true" />
+               <Text>----------------------------------------------------------------------------------------------------------------------</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="2">
+               <Attributes />
+               <ID>table9</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XTextLabelElement" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataSource</Name>
+                                       <Value>BHosCheckRIS</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>BindingPath</Name>
+                                       <Value>ClinicDiagnoseNew</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>AllowQuery</Name>
+                                       <Value>1</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>Label_BHosCheckRIS.ClinicDiagnoseNew</ID>
+                                 <PropertyExpressions />
+                                 <EventTemplateName>MdcLabelEventTemplate</EventTemplateName>
+                                 <Name>Clinical diagnosis</Name>
+                                 <Width>373.583954</Width>
+                                 <Height>57.49511</Height>
+                                 <Text>Clinical diagnosis:</Text>
+                                 <PageTexts />
+                                 <Alignment>MiddleLeft</Alignment>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ClinicDiagnoseNew</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ClinicDiagnoseNew</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1720</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Clinical diagnosis</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>406.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1602.875</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="2">
+               <Attributes />
+               <ID>table10</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Medical History:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ClinicDiagnose</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ClinicDiagnose</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1720</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name> medical history description</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>406.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1602.875</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <ID>table11</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Check areas:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.DiseasePart</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>DiseasePart</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>380</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Checkpoint</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <DynamicListItems>true</DynamicListItems>
+                                    <ListSource>
+                                       <SourceName>BHosDiseasePartRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                    <ListValueFormatString />
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Check Category:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ExamType</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ExamType</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>380</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Check category</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>BHosExamTypeRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Check items:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Text</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.CheckItems</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>CheckItems</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>390</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Check item</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>279.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>324.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>356.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>352.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>291.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>402.958344</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="2">
+               <Attributes />
+               <ID>table12</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Notes：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>EditText</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.DealDesc</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>DealDescXml</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1720</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Additional instructions</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>247.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1761.875</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+            <Element xsi:type="XString" StyleIndex="8">
+               <XElements xsi:nil="true" />
+               <Text>Examination Info</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="9">
+               <XElements xsi:nil="true" />
+               <Text>-</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="3">
+               <XElements xsi:nil="true" />
+               <Text>------------------------------------------------------------------------------------------------------------------------</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="2">
+               <Attributes />
+               <ID>table13</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Method：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>EditText</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ExamDesc</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ExamDescXml</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1730</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Check method</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>244.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1764.875</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="2">
+               <Attributes />
+               <ID>table14</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Imaging captured: </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>EditText</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.PACSDesc</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>PACSDescXml</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1730</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Image finding</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>244.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1764.875</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="2">
+               <Attributes />
+               <ID>table15</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Diagnosis:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>EditText</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.PACSDiagnose</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>PACSDiagnoseXml</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <SpecifyWidth>1730</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Imaging diagnosis</Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>244.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>1764.875</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <ID>table16</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Imaging physician:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ExamDr</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ExamDr</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>380</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Check doctor </Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>BHosDrRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Report </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>physician</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.Dr</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>Dr</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>380</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Report doctor </Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>BHosDrRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Approval physician </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>DropdownList</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.CheckDr</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>CheckDr</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>390</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>Auditing doctor </Name>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>DropdownList</EditStyle>
+                                    <ListSource>
+                                       <SourceName>BHosDrRIS</SourceName>
+                                       <DisplayPath>Name</DisplayPath>
+                                       <ValuePath>Name</ValuePath>
+                                       <Items />
+                                    </ListSource>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>244.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>424.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>253.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>415.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>245.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>423.958344</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <ID>table17</ID>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Exam </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>date:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Date</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.ExamTime</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>ExamTime</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>380</SpecifyWidth>
+                                 <EventExpressions />
+                                 <DisplayFormat>
+                                    <Style>DateTime</Style>
+                                    <Format>yyyy-MM-dd</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>Date</EditStyle>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Report</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>date:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>DataCtrl</Name>
+                                       <Value>Date</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>BHosCheckRIS.RptDate</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>BHosCheckRIS</DataSource>
+                                    <BindingPath>RptDate</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <SpecifyWidth>380</SpecifyWidth>
+                                 <EventExpressions />
+                                 <DisplayFormat>
+                                    <Style>DateTime</Style>
+                                    <Format>yyyy-MM-dd</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <FieldSettings>
+                                    <EditStyle>Date</EditStyle>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Apporval </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>date:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>241.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>427.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>250.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>418.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>247.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>421.958344</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XTextLabelElement" StyleIndex="7">
+               <Attributes>
+                  <Attribute>
+                     <Name>DataSource</Name>
+                     <Value>BHosCheckRIS</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>BindingPath</Name>
+                     <Value>XNo</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>AllowQuery</Name>
+                     <Value>1</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>Label_BHosCheckRIS.XNo</ID>
+               <PropertyExpressions />
+               <EventTemplateName>MdcLabelEventTemplate</EventTemplateName>
+               <Name>X-ray No.</Name>
+               <Width>216.601532</Width>
+               <Height>57.49511</Height>
+               <Text>X-ray No.:</Text>
+               <PageTexts />
+               <Alignment>MiddleLeft</Alignment>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="7">
+               <Attributes>
+                  <Attribute>
+                     <Name>DataCtrl</Name>
+                     <Value>Text</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>BHosCheckRIS.XNo</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>BHosCheckRIS</DataSource>
+                  <BindingPath>XNo</BindingPath>
+                  <AutoUpdate>true</AutoUpdate>
+               </ValueBinding>
+               <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <BorderElementColor />
+               <SpecifyWidth>480</SpecifyWidth>
+               <EventExpressions />
+               <Name>X-ray No.</Name>
+               <InnerValue />
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <FieldSettings />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="7">
+               <XElements xsi:nil="true" />
+               <Text>Equipment Model</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="7">
+               <Attributes>
+                  <Attribute>
+                     <Name>DataCtrl</Name>
+                     <Value>DropdownList</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>BHosCheckRIS.EqMode</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>BHosCheckRIS</DataSource>
+                  <BindingPath>EqMode</BindingPath>
+                  <AutoUpdate>true</AutoUpdate>
+               </ValueBinding>
+               <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <BorderElementColor />
+               <SpecifyWidth>480</SpecifyWidth>
+               <EventExpressions />
+               <Name>Instrument model</Name>
+               <InnerValue />
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <FieldSettings>
+                  <EditStyle>DropdownList</EditStyle>
+                  <ListSource>
+                     <SourceName>BHosEqModeRIS</SourceName>
+                     <DisplayPath>Name</DisplayPath>
+                     <ValuePath>Name</ValuePath>
+                     <Items />
+                  </ListSource>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XTextLabelElement" StyleIndex="7">
+               <Attributes>
+                  <Attribute>
+                     <Name>DataSource</Name>
+                     <Value>BHosCheckRIS</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>BindingPath</Name>
+                     <Value>Printed</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>AllowQuery</Name>
+                     <Value>1</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>Label_BHosCheckRIS.Printed</ID>
+               <PropertyExpressions />
+               <EventTemplateName>MdcLabelEventTemplate</EventTemplateName>
+               <Name>Printed</Name>
+               <Width>158.32518</Width>
+               <Height>57.49511</Height>
+               <Text>Printed:</Text>
+               <PageTexts />
+               <Alignment>MiddleLeft</Alignment>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="7">
+               <Attributes>
+                  <Attribute>
+                     <Name>DataCtrl</Name>
+                     <Value>Text</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>BHosCheckRIS.Printed</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>BHosCheckRIS</DataSource>
+                  <BindingPath>Printed</BindingPath>
+                  <AutoUpdate>true</AutoUpdate>
+               </ValueBinding>
+               <EventTemplateName>MdcFieldEventTemplate</EventTemplateName>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <BorderElementColor />
+               <SpecifyWidth>480</SpecifyWidth>
+               <EventExpressions />
+               <Name>Printed</Name>
+               <InnerValue />
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <FieldSettings />
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+   </XElements>
+   <RepeatedImages />
+   <ControlOptionsForDebug>
+      <HeaderFooterFlagVisible>None</HeaderFooterFlagVisible>
+   </ControlOptionsForDebug>
+   <GlobalJavaScriptReferences />
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司2018年旗舰版:南京都昌信息科技有限公司2018年旗舰版</LicenseText>
+      <CreationTime>2014-06-03T17:32:16.5+08:00</CreationTime>
+      <LastModifiedTime>2018-09-17T10:18:15.4539832+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2014.1217.1</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>Patient Info---------------------------------------------------------------------------------------------------------------------------------------------
+* Name:   Sex:   Age:   Application Sheet No:   Patient No:   Dept:   Inpatient ID:   Physician:    Access No:   Tel:   Add.:   
+Application Sheet Info----------------------------------------------------------------------------------------------------------------------
+
+Clinical diagnosis:   Medical History:   Check areas:   Check Category:   Check items:   Notes：   
+Examination Info-------------------------------------------------------------------------------------------------------------------------
+
+Method：   Imaging captured:    Diagnosis:   Imaging physician:   Report 
+physician   Approval physician    Exam 
+date:   Report
+date:   Apporval 
+date:   X-ray No.:Equipment ModelPrinted:</BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <PrinterName />
+      <EditTimeBackgroundImage>
+         <ImageDataBase64String> /9j/4AAQ SkZJRgAB AQEASABI AAD/4QBc RXhpZgAA TU0AKgAA AAgABAEx AAIAAAAW AAAAPlEQ AAEAAAAB AQAAAFER AAQAAAAB AAALElES AAQAAAAB AAALEgAA AABBZG9i
+ ZSBGaXJl d29ya3Mg Q1M1LjEA /9sAQwAI BgYHBgUI BwcHCQkI CgwUDQwL CwwZEhMP FB0aHx4d GhwcICQu JyAiLCMc HCg3KSww MTQ0NB8n OT04Mjwu MzQy/9sA QwEJCQkM
+ CwwYDQ0Y MiEcITIy MjIyMjIy MjIyMjIy MjIyMjIy MjIyMjIy MjIyMjIy MjIyMjIy MjIyMjIy MjIyMjIy /8AAEQgA 0gDSAwEi AAIRAQMR Af/EAB8A AAEFAQEB AQEBAAAA
+ AAAAAAAB AgMEBQYH CAkKC//E ALUQAAIB AwMCBAMF BQQEAAAB fQECAwAE EQUSITFB BhNRYQci cRQygZGh CCNCscEV UtHwJDNi coIJChYX GBkaJSYn KCkqNDU2 Nzg5OkNE
+ RUZHSElK U1RVVldY WVpjZGVm Z2hpanN0 dXZ3eHl6 g4SFhoeI iYqSk5SV lpeYmZqi o6Slpqeo qaqys7S1 tre4ubrC w8TFxsfI ycrS09TV 1tfY2drh 4uPk5ebn 6Onq8fLz
+ 9PX29/j5 +v/EAB8B AAMBAQEB AQEBAQEA AAAAAAAB AgMEBQYH CAkKC//E ALURAAIB AgQEAwQH BQQEAAEC dwABAgMR BAUhMQYS QVEHYXET IjKBCBRC kaGxwQkj M1LwFWJy
+ 0QoWJDTh JfEXGBka JicoKSo1 Njc4OTpD REVGR0hJ SlNUVVZX WFlaY2Rl ZmdoaWpz dHV2d3h5 eoKDhIWG h4iJipKT lJWWl5iZ mqKjpKWm p6ipqrKz tLW2t7i5 usLDxMXG
+ x8jJytLT 1NXW19jZ 2uLj5OXm 5+jp6vLz 9PX29/j5 +v/aAAwD AQACEQMR AD8A9xLE k8k5/wDH v8KUMSw5 Jyf++qQg knjOf/Hq FBLDjOT/ AN9f4Vzj DcfU+n/1 v/r0Bj6n
+ 0/8Arf8A 16MH09v/ AK1AB9Pb /wCtQAbj 6n06/pQG PPJ9P/rf /XowfT2/ +tQAeePb /wCtQAbj 6n0/+tRu OOp9P/rU YPp7f/Wo wcdPb/61 MA3H1Pp/ 9b/69G44 6n0/+tRg
+ +nt/9ajB x09v/rf/ AF6ADcfU +nX9KCx4 5Pp/9ajB 9Pb/AOtR g8ce3/1q ADcfU+nX 9KCx9T6d f0owfT2/ +tQQfT2/ +tQAbj6n 0/8ArUrE gnkrg/8A fNJg+nt/ 9b/69DAh
+ jxjB/wC+ f8aQAGIP UjH/AI7/ AI0biO5G P/Hf8aAC COMY/wDH aMEdsY/8 d/xpgKGI 7kY/HbSb iO5GP/Ha ACO2Mf8A jv8AjRgj tjH/AI7Q ABiAeSMf +O0biO5G P/HaMEZ4
+ xj9P8aME dsY/8doA NxA6kY/8 do3EdyMf +O0YIHTG P/Hf8aTB HbGP/HaQ C7iB1Ix/ 47/jRuI7 kY/8dowQ OmMf+O/4 0YI7Yx/4 7TAMH+4f ++qKNh/5 5frRQAHk nvn/AMe/
+ woXlh3yf ++v8KCMk 98/hu/wo Ayw75P8A 31SAT/8A V/8AW/8A r0o/+t/9 ajH+H/1q AP8AD/63 /wBemAn/ AOr/AOt/ 9elHf8v/ AK1GP8Ov 6UAdfy/+ t/8AXpAJ /wDq/wDr
+ Uvb9P/rf /Xox/h/9 ajHH6f8A 1qAE/wD1 f/W/+vS9 v0/+t/8A Xox/h/8A Woxx+n/1 qAE//V/9 b/69L2H5 f/Wox/h1 /SjHT8v/ AK3/ANeg BP8A9X/1 qU//AFv/ AK1GP8Ov
+ 6UEf4f8A 1v8A69MB P/1f/WpW 4Y9sH/vn /Gkx/h/9 alYYY9sH /vmkADgj tj/x2k6e 2P8Ax3/G lAwR2x+O 3/GjGPbH v0pgA49s f+O0nT2x /wCO/wCN KBj2x/47 RjHtj/x3
+ /GgAHAPb H/jv+NJ0 9sf+O0uM Z7Y/8dox j2x/47/j QAdB6Y/8 d/xpOntj /wAd/wAa XGB6Y/8A HaMY9se/ T/GgA6D0 x/47SdPb H/jv+NLj A9Mf+O/4 0Yx7Y/8A Hf8AGkAm
+ z/pn/wCP UUuz/pn/ AOPUUwA8 k98/+Pf4 ULyw75P/ AH1/hQeS ec5/WhRk jndk/wDf X+FACf8A 6v8A61KP /rf/AFqM e/t/9agD 39v/AK1I BP8A9X/1 qUd/y/8A rf8A16Me
+ /t/9b/69 AHXn2/8A rUAJ/wDq /wDrf/Xp e36f/W/+ vRj39v8A 61Hbr7f/ AFv/AK9M BP8A9X/1 qXt+n/1q Me/t/wDW /wDr0Y46 +3/1v/r0 AJ/+r/63 /wBelPQf l/8AW/8A
+ r0Y9/b/6 3/16MdOf b/61ACf/ AKv/AK1K f/rf/Wox 7+3/ANag j39v/rUA J/8Aq/8A rUrcMe2D /wB8/wCN GPf2/wDr UMMMecYP /fP+NAAO CO2P/Hf8 aTp7Y/8A Hf8AGlAw
+ RzjH/jv+ NGMd8Y/8 d/xoABx7 Y/8AHf8A Gk6e2P8A x3/GlHHf GP8Ax3/G jGO+Mf8A jtAAOM9s f+O/40nT 2x/47/jS gYzzjH/j v+NGMd8Y /wDHf8aA DoPTH/jv +NJ09sf+
+ O0uMDrjH /jtGMd8Y /wDHaAE6 D0x/47R0 9sf+O/40 uMDrjH/j tGMd8Y/S gBNv/TP/ AMeopdn/ AEzH/fVF AAeSe+f/ AB6heWHf J/76oOCT 3z/49QuC w75P03f4 UAJ/+r/6
+ 1KP/AK3/ ANb/AOvR x/T/AOtQ Mf0/+tSA T/8AV/8A W/8Ar0o7 /l/9ajj+ n/1v/r0c c/l/9agB P/1f/Wpe 36f/AFv/ AK9HH9P/ AK3/ANej jH6f/W/+ vTAT/wDV /wDWpe36
+ f/Wo4/p/ 9b/69HGP 0/8Arf8A 16AE/wD1 f/WpT2/L /wCtRx/T /wCtQccf l/8AWoAT /wDV/wDW pT/9b/61 HH9P/rUH H9P/AK1I BP8A9X/1 qVuGPbB/ 75/xo4/p /wDWobAY
+ 9sH67f8A GmADgjtj /wAd/wAa Tp7Y/wDH aUYBHbH/ AI7RwO+M f+O/40AA 49sf+O0n T2x/47Sj A9sf+O/4 0cD2x/47 /jQADjPb H/jv+NJ0 9sf+O/40 owM9sf8A jv8AjRwP
+ bH/jtAB0 Hpj/AMd/ xpOntj/x 3/Gl4A9M f+O/40cD 2x/47/jQ AdB6Y/8A Hf8AGk6e 2P8Ax2l4 A9Mf+O0c D2x/47/j QAm3/pn/ AOPUUuwf 88/1ooAD yT3z/wCP f4ULyw75
+ P/fX+FBw Se+fw3f4 ULgsO+T/ AN9UAJ/+ r/61KP8A 63/1qOP6 f/WoGP6f /W/+vQAn /wCr/wCt Sjv+X/1q OP6f/W/+ vQMc/l/9 b/69ACf/ AKv/AK3/ ANel7fp/ 9b/69HH9
+ P/rUcY/T /wCtQAn/ AOr/AOt/ 9el7fp/9 ajj09v8A 61HGP0/+ tQAn/wCr /wCtSnt+ X/1qOPT2 /wDrf/Xo 44/L/wCt /wDXoAT/ APV/9alP /wBb/wCt /wDXo4/p /wDW/wDr
+ 0HH9P/rf /XoAT/8A V/8AW/8A r0rcMe2D /wB8/wCN HH9P/rUN gMe2D/3z QADgjtj/ AMd/xpOn tj/x2lGA R2x/47/j RwPbH/jv +NAAOPbH 6f40nT2x /wCO0owP bH/jtHA7
+ Yx/47QAD jPbH/jtJ 09sf+O/4 0owM9sf+ O0cDtjH/ AI7QAdB6 Y/8AHf8A Gk6e2P8A x3/Gl4A9 Mf8AjtHA 9sf+O0AH QemP/Hf8 aTp7Y/8A Hf8AGl4A 9Mf+O/40 cDtjH/jv
+ +NACbf8A pn/49RS7 R/zy/wDH qKAA8k98 /wDj3+FC 8sO+T/31 /hQTknjO f/Hv8KFO WHGcn/vq gBP/ANX/ ANalH/1v /rUZ9vb/ AOt/9egH 29v/AK3/ ANegBP8A 9X/1qUd/
+ y/8ArUZ9 vb/63/16 PXj2/wDr UAJ/+r/6 1L2/T/61 Gfb2/wDr Udunt/8A WoAT/wDV /wDWpe36 f/Woz7e3 /wBb/wCv Rnjp7f8A 1qAE/wD1 f/WpT2/L /wCt/wDX oz7e3/1q
+ CenHt/8A WoAT/wDV /wDW/wDr 0p/+t/8A Woz7e3/1 qCfb2/8A rf8A16AE /wD1f/Wp W4Y9sH/v mjPt7f8A 1qGOGPGM H8v8aAAc Edsf+O0n T2x/47Sg 4I4xj/x3 /GjOO2Mf
+ +O/40AA4 Ppj/AMdp Ontj/wAd pQcdsY/8 do6dsY/8 doABxntj /wAd/wAa Tp7Y/wDH f8aUHGeM Y/8AHaM4 7Yx+lAB0 Hpj/AMd/ xpOntj9K XOB0xj/x 3/GjOO2M f+O0AHQe
+ mP8Ax3/G k6e2P/Hf 8aXOB0xj /wAd/wAa M47Yx/47 QAmz/pn/ AOPUUu3/ AKZD/vqi gAPJPfP/ AI9/hQvL Dvk/99Up JJOcHPXA 6/SgEluc HJGcDr9K QDf/ANX/ ANalH/1v
+ /rUZ+nTH Tt/jQD9O mOnb/GgB P/1f/WpR 3/L/AOt/ 9ejJ9umO nb/GgHr0 6Y6dvT60 wE//AFf/ AFqXt+n/ ANajP06Y 6dv8aMnH bpjp2/xo AT/9X/1q Xt+n/wBa jJ9umOnb
+ /GjPHbpj p2/xoAT/ APV/9alP b8v/AK1G T7dMdO3+ NKSeOnTH Tt/jQA3/ APV/9alP /wBb/wCt /wDXoyfb pjp2/wAa CT7dMdO3 +NACf/q/ +tStwx7Y P/fNGT7d MdO3+NKT
+ huMDBOMj p9aAEHBH bH/jv+NJ 09sf+O/4 0oJBXGOO mR0+tAOM YwMdMjp9 aAAce2P/ AB3/ABpO ntj/AMdp QcYxjjOM jp9aASMY xx0yOn1o ABxntj/x 2k6e2P8A x2lBx0wM
+ dMjp9aAS MYxx0yOn 1oAOg9Mf +O/40nT2 x/47/jSg 4AxgY6ZH T60AkYxj jpkdPrQA dB6Y/wDH f8aTp7Y/ 8dpQcAYx x0yOn1oB IxjHHTI6 fWgBNv8A 0z/8eoow P7rfkKKA
+ FPU/0/pQ v3h9e39K CTk8/l/S hSdw579v 6UgE/wA/ 596Udf8A P+c0ZPr/ AJ/xoBPr /n/GgBP8 /wCfelHf /P8Ak0ZP r/n/ABoB PPP+f8aY Cf5/z70v Y/5/yaMn 1/z/AI0Z
+ OOv+f8aA E/z/AJ96 Xt/n/OaM n1P+f60Z OOv+f8aA E/z/AJ96 U9v8/wCT Rk+v+f8A Ggk8c/5/ xoAT/P8A n3pT/n/P rRk+v+f8 aCT6/wCf 8aAE/wA/ 596VvvH6 9/60ZPr/
+ AJ/xoYnc ee/f+tAA Oo/r/Wk/ zz/WlBOR /X+tJk+v 5/1oAUdf 8f60n+ef 60oJ9fz/ AK0ZPr+f 9aAAd/6/ 1pP88/1p cnn+v9aM n1/P+tAB 2/x/rSf5 5/rS5OOv 5/1oyfX8
+ /wCtAB2/ x/rSf55/ rS5OOv5/ 1oyfU/j/ AFpAJ/38 opcn1lop gBByePy/ pQoO4cd+ 39KD1P8A T+lC/eH1 7f0oAMH0 /wA/40AH 0/z/AI0n +f8APvSj /P8An1pA GD6f5/xo
+ x1/z/k0n +f8APvSj v/n/ACaY Bg+n+f8A GjBx0/z/ AI0n+f8A PvS9v8/5 zQAYPp/n /GjBx0/z /jSf5/z7 0vYf5/ya ADB9P8/4 0EHjj/P+ NJ/n/PvS nt/n/JoA MH0/z/jQ
+ QfT/AD/j Sf5/z70p /wA/59aQ Bg+h/wA/ 1oYHceO/ f+tJ/n/P vSt94/Xv /WmAAHI4 /P8ArRg+ n5/1oHUf 1/rSf55/ rQAoB9Pz /rRg+n5/ 1oH+c/1p P88/1oAX B54/P+tG
+ D6fn/Wj1 /r/Wk/zz /WgBcHHT 8/60YPp+ f9aO3+P9 aT/PP9aA FwcdPz/r Rg+n5/1o 7f4/1pP8 8/1oAMH0 loo/7+UU AKRyf6f0 oA+YfXt/ Sg9T/T+l C/eH17f0 oAMf5z/n
+ mgD/AD/n vSf5/wA+ 9KP8/wCf WgAx/n/P egDr/n/J pP8AP+fe lHf/AD/k 0AGP85/z zRjj/P8A nNJ/n/Pv S9v8/wCc 0gDH+c/5 5oxx/n/O aT/P+fel 7f5/zmmA Y/zn/PNG
+ On+f8mk/ z/n3pT2/ z/k0AGP8 /wCe9BH+ f896T/P+ felP+f8A PrSAMf5/ z3oYfMfr 3/rSf5/z 70rfeP17 /wBaAADk f1/rRj/J /rQOo/r/ AFpP88/1 pgKB/k/1 ox/k/wBa
+ B/nP9aT/ ADz/AFoA UDr/AF/r Rj/JP86B 3/r/AFpP 88/1oAXH H+P9aMfT 8f60dv8A H+tJ/nn+ tAC44/x/ rRj/ACf6 0dv8f60n +ef60ALj /rp+dFJ/ 38ooAUjk 8/l/ShR8
+ w579v6UH qf6f0oX7 w+vb+lIA x7/5/wAa APf/AD/j Sf5/z70o /wA/59aA DHv/AJ/x oA4PP+f8 aT/P+fel Hf8Az/k0 AGPcf5/r Rjjr/n/G k/z/AJ96 Xsf8/wCT QAY9/wDP
+ +NGOOv8A n/Gk/wA/ 596Xt/n/ ADmgAx7/ AOf8aCOn P+f8aT/P +felPQf5 /wAmmAY9 /wDP+NBH v/n/ABpP 8/596U9f 8/5zSATH v/n/ABpW +8ee/f8A rSf5/wA+ 9K33j9e/
+ 9aAADkc/ n/Wj8fz/ AK0DqP6/ 1pP88/1p gKB7/n/W jHv+f9aB /nP9aT/P P9aAFHfn 8/60Y9/z /rQO/wDX +tJ/nn+t AC446/n/ AFox7/n/ AFo7f4/1 pP8APP8A WgBe3X8/
+ 60Y9/wA/ 60dh/X+t J/nn+tAB j3koo/7+ UUAKcZ/w /pQuNw+v b+lB6n+n 9KF+8Pr2 /pSAOP8A P+etAx/n /PWk/wA/ 596Uf5/z 60AHH+f8 9aOOf8/5 NJ/n/PvS jv8A5/ya
+ ADj/AD/n rRxj/P8A nNJ/n/Pv S9v8/wCc 0AHH+f8A PWjjH+f8 5pP8/wCf el7f5/zm mAcf5/z1 oOOP8/5N J/n/AD70 p7f5/wAm gA4/z/nr Qcf5/wA9 aT/P+fel P+f8+tAB
+ x7/5/rQ2 Nx+vf+tJ /n/PvSt9 4/Xv/WkA DGR/X+tH H/6/60Dq P6/1pP8A PP8AWmAo xn/H+tHH /wCv+tA/ zn+tJ/nn +tAC8c/1 /rRx/wDr /rQO/wDX +tJ/nn+t AC8Y/wAf
+ 60cf/r/r R2/x/rSf 55/rQAvG P8f60cf/ AK/60dv8 f60n+ef6 0ALx/wBN aKT/AL+U UgFOMn+n 9KB94fXt /Sg9T/T+ lC/eH17f 0oAOP8/5 60DH+f8A PWk/z/n3 pR1/z/nN
+ ABx/n/PW jjn/AD/k 0n+f8+9L 6/5/yaYB x/n/AD1o 4x/n/OaT /P8An3pe 3+f85pAH Hp/n/Gjj H+f85pP8 /wCfel7f 5/zmgA4/ z/nrQccf 5/yaT/P+ felPb/P+ TTAOP8/5
+ 60HH+f8A PWk/z/n3 pT/n/PrS AOP8/wCe tK2Nx69e /wDWm/5/ z70rfeP1 7/1pgAxk f1/rRx6f n/WgdR/X +tJ/nn+t ACjH/wCv +tHH/wCv +tA/zn+t J/nn+tAC jHP9f60c
+ f/r/AK0D v/X+tJ/n n+tAC8Y/ x/rRx7/j /Wjsf6/1 pP8APP8A WgBeMf4/ 1o4//X/W jt/j/Wk/ zz/WkAuR /wBNaKT/ AL+UU9QF fgyY7Yx7 UHgtjsRj 2oopAJ/8 Rn8aUf8A
+ smfxoooQ Cf8AxOfx pfX/AHM/ jRRTAT/4 jP40vb/g OfxoopAJ /wDE5/Gl 7f8AAc/j RRQgE/8A ic/jSnt/ uZ/GiimA n/xGfxpT /wCyZ/Gi igBP/iM/ jS9Sueck 596KKABO
+ THnnOc+9 IvOzPfOf eiigBU52 Z5znPvSL zszznOfe iigBU525 75z70i87 M85zn3oo pAKvITPf OfekXnZn vnPvRRTA VeQme+c+ 9IvOzPfO feiigCPc 394/nRRR QB//2Q==</ImageDataBase64String>
+      </EditTimeBackgroundImage>
+      <PaperSource />
+      <LeftMargin>77</LeftMargin>
+      <TopMargin>77</TopMargin>
+      <RightMargin>77</RightMargin>
+      <BottomMargin>77</BottomMargin>
+   </PageSettings>
+   <UserHistories />
+   <Parameters>
+      <Parameter Name="当前时间" />
+   </Parameters>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="2">
+            <Color>#527AAE</Color>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="3">
+            <FontName>微软雅黑</FontName>
+            <FontSize>6.75</FontSize>
+         </Style>
+         <Style Index="4">
+            <Color>#527AAE</Color>
+            <FontName>微软雅黑</FontName>
+            <FontSize>6.75</FontSize>
+         </Style>
+         <Style Index="5">
+            <Color>#2278CB</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="6">
+            <Color>#EA161E</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="7">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="8">
+            <Color>#0072BC</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="9">
+            <FontName>Times New Roman</FontName>
+            <FontSize>6.75</FontSize>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <FileName>C:\Users\Administrator\Desktop\Imaging Examination Application Sheet .xml</FileName>
+   <FileFormat>XML</FileFormat>
+</XTextDocument>

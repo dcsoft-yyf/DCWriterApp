@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>测试第五代接口</title>
+   <style>
+      html,
+      body {
+         height: 100%;
+         overflow: hidden;
+         padding: 0;
+         margin: 0;
+      }
+
+
+      .describe-box {
+         /* max-width: 50%;
+        min-width: 500px; */
+         border: 1px solid #dcdfe6;
+         line-height: 23px;
+         text-align: left;
+         background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+         box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+         border-radius: 0px 8px 8px 0px;
+      }
+
+      .describe-box span:first-child {
+         /* text-align: center; */
+         font-weight: bold;
+         line-height: 32px;
+         border-bottom: 1px solid rgb(155, 187, 227)
+      }
+
+      .describe-box span {
+         display: block;
+         margin: 0 5px;
+         font-size: 13px;
+
+      }
+
+      .toolBox {
+         /* height: 40px; */
+         width: 100%;
+         border: 1px solid #dcdfe6;
+         display: flex;
+         font-size: 13px;
+         overflow-x: auto;
+         overflow-y: hidden;
+      }
+
+      .toolBox span {
+         display: inline-table;
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 5px 10px;
+         min-width: 50px;
+         height: 18px;
+         white-space: nowrap
+      }
+
+      .toolBox select {
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 3px 10px;
+         min-width: 50px;
+         height: 29px;
+      }
+
+      #FontNameSelect {
+         min-width: 150px
+      }
+
+      .toolBox span:has(select) {
+         padding: 0px;
+         /* margin: 0px; */
+      }
+
+      .toolBox span:hover {
+         border: 1px solid #4e6ef2;
+         cursor: pointer;
+      }
+
+      .dc-writer-box {
+         /* height: 100% !important; */
+         border-bottom: 0px solid black;
+         background-attachment: fixed;
+         background-size: cover;
+         background-position: center top;
+      }
+
+      .main-container {
+         height: 100%;
+         display: flex;
+
+      }
+
+      .ringbox {
+         width: 30%;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+      }
+
+      .list-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px;
+         border-bottom: 1px solid #eee;
+      }
+
+      .list-item:last-child {
+         border-bottom: none;
+      }
+
+      #myWriterControl {
+         width: 70%;
+      }
+
+      .TracesListContentItem {
+         height: 50px;
+         width: 100%;
+         border-bottom: 1px solid saddlebrown;
+         text-align: center;
+         line-height: 50px;
+         background: #dce1f7;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body style="text-align: center">
+   <div class="header">
+      <div class="describe-box">
+         <span>代码插入结构化元素</span>
+
+      </div>
+      <div class="toolBox">
+         <span commandName="fileopen">打开本地文件</span>
+         <span localMethod="DownLoadFile">导出到本地</span>
+         <span localMethod="PrintDocument">打印</span>
+         <span localMethod="LoadPrintPreview">打印预览</span>
+         <span localMethod="ClosePrintPreview">关闭预览</span>
+         <span localMethod="AboutControl">关于</span>
+         <br>
+
+      </div>
+
+      <div class="toolBox">
+         <span onclick="InsertInput()">插入输入域</span>
+         <span onclick="InsertRadioBox()">插入单选框</span>
+         <span onclick="InsertCheckBox()">插入复选框</span>
+
+         <span onclick="InsertTable()">插入表格</span>
+         <span onclick="InsertLabelElement()">插入标签文本</span>
+         <span onclick="InsertBarcodeElement()">插入条形码</span>
+         <span onclick="InsertTDBarcodeElement()">插入二维码</span>
+
+
+      </div>
+   </div>
+
+
+   <div class="main-container">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+         RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+         RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+         PageBorderColor="#F3F5F7" pagetitleposition="BottomRight" style="background-image: url();"
+         RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+   </div>
+   </div>
+
+   <script src=""></script>
+
+
+<script src="../../_framework/dcwriter5.js"></script>
+   <script src="../../js/jquery-1.7.2.min.js"></script>
+   <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+   <script>
+      window.onload = function () {
+      };
+      let toolBoxDOM = document.querySelector(".toolBox");
+      if (toolBoxDOM) {
+         toolBoxDOM.addEventListener("click", (e) => {
+            if (e.target.tagName == "SPAN") {
+               let commandName = e.target.getAttribute("commandName");
+               let localMethod = e.target.getAttribute("localMethod");
+               if (commandName) {
+                  let ctl = document.getElementById("myWriterControl");
+                  ctl.DCExecuteCommand(commandName, false, null);
+               } else if (localMethod) {
+                  funcOBJ[localMethod].call(funcOBJ);
+               }
+            }
+         });
+      }
+      //编辑器方法组
+      let funcOBJ = {
+         DownLoadFile: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.DownLoadFile("xml");
+         },
+         PrintDocument: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.PrintDocument();
+         },
+         LoadPrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.LoadPrintPreview();
+         },
+         ClosePrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.ClosePrintPreview();
+         },
+         AboutControl: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.AboutControl();
+         },
+      };
+
+
+
+      function InsertInput() {
+         var ctl = document.getElementById("myWriterControl");
+         var options = {
+            "ToolTip": "请双击",
+            "BackgroundText": "年龄",
+            "ID": "年龄",
+            "Alignment": "Near",
+            "BackgroundTextColor": "blue",
+            "TextColor": "red",
+            "SpecifyWidth": "300",
+            "InnerEditStyle": "Text",
+         };
+         ctl.DCExecuteCommand("InsertInputField", false, options);
+      }
+
+      function InsertLabelElement() {
+         var ctl = document.getElementById("myWriterControl");
+
+         var options = {
+            ID: "label1",       //标签ID
+            Text: "测试用标签",   //标签文本
+            Bold: true,        //标签文本是否加粗，不设置则不加粗
+            Deletable: false,   //标签是否可以删除，不设置则可以删除
+            TitleLevel: -1,       //标签大纲级别，值从0到7，若不设置则此标签不作为大纲节点
+            Attributes: {       //自定义属性，直接传JSON对象
+               Name: "张三",
+               Sex: "男",
+               Age: "20"
+            },
+
+            ContactAction: "Normal",    //连接模式
+            AttributeNameForContactAction: "科室",    //连接模式提取值的来源属性名称
+            LinkTextForContactAction: "-"   //连接字符串
+         };
+         ctl.DCExecuteCommand("InsertLabelElement", false, options);
+
+
+      }
+
+      function InsertRadioBox() {
+         let ctl = document.getElementById("myWriterControl");
+
+         var options = {
+            "Name": "name001", //单选框的Name属性相同
+            "Type": "radio", //radio、checkbox
+            "ListItems": [
+               {
+                  "ID": "chk1",
+                  "ToolTip": "提示信息1",
+                  "MultiLine": "true",
+                  "Checked": "false",
+                  "StringTag": "附加数据1",
+                  "VisualStyle": "RadioBox", //"Default", "CheckBox", "RadioBox", "SystemDefault", "SystemCheckBox", "SystemRadioBox"
+                  "Text": "男性",
+                  "Value": "值1",
+                  "CaptionFlowLayout": "true"
+               },
+               {
+                  "ID": "chk2",
+                  "ToolTip": "提示信息2",
+                  "MultiLine": "false",
+                  "Checked": "true",
+                  "StringTag": "附加数据2",
+                  "VisualStyle": "RadioBox", //"Default", "CheckBox", "RadioBox", "SystemDefault", "SystemCheckBox", "SystemRadioBox"
+                  "Text": "女性",
+                  "Value": "值2",
+                  "CaptionFlowLayout": "true"
+               }
+            ]
+         };
+         ctl.DCExecuteCommand("InsertCheckBoxOrRadio", false, options);
+      };
+      function InsertCheckBox() {
+         let ctl = document.getElementById("myWriterControl");
+
+         var options = {
+            "Name": "name001", //单选框的Name属性相同
+            "Type": "checkbox", //radio、checkbox
+            "ListItems": [
+               {
+                  "ID": "chk1",
+                  "ToolTip": "提示信息1",
+                  "MultiLine": "true",
+                  "Checked": "false",
+                  "StringTag": "附加数据1",
+                  "VisualStyle": "CheckBox", //"Default", "CheckBox", "RadioBox", "SystemDefault", "SystemCheckBox", "SystemRadioBox"
+                  "Text": "男性",
+                  "Value": "值1",
+                  "CaptionFlowLayout": "true"
+               },
+               {
+                  "ID": "chk2",
+                  "ToolTip": "提示信息2",
+                  "MultiLine": "false",
+                  "Checked": "true",
+                  "StringTag": "附加数据2",
+                  "VisualStyle": "CheckBox", //"Default", "CheckBox", "RadioBox", "SystemDefault", "SystemCheckBox", "SystemRadioBox"
+                  "Text": "女性",
+                  "Value": "值2",
+                  "CaptionFlowLayout": "true"
+               }
+            ]
+         };
+         ctl.DCExecuteCommand("InsertCheckBoxOrRadio", false, options);
+      };
+
+
+      function InsertTDBarcodeElement() {
+         let ctl = document.getElementById("myWriterControl");
+
+         var tdoptions = {
+            ID: 'tdbarcode1', //元素ID
+            Text: "http://www.dcwriter.cn:6788/", //二维码内容文本
+            Width: 300, //像素宽度
+            Height: 300, //像素高度
+            ValueBinding: {
+               DataSource: "datasourcefortdbarcode",
+               BindingPath: "path2"
+            }
+         };
+         ctl.DCExecuteCommand('InsertTDBarcodeElement', false, tdoptions);
+      }
+
+
+      function InsertBarcodeElement() {
+         let ctl = document.getElementById("myWriterControl");
+         var options = {
+            ID: "barcode1",
+            Text: "1234566",
+            Width: "1000",
+            Height: "300",
+            ShowText: true,
+            TextAlignment: "Right",
+            ValueBinding: {
+               DataSource: "datasourceforbarcode",
+               BindingPath: "path1"
+            }
+         };
+         ctl.DCExecuteCommand("InsertBarcodeElement", false, options);
+      }
+
+      function InsertTable() {
+         let ctl = document.getElementById("myWriterControl");
+         var parameter = {
+            'RowCount': 4,//行数
+            'ColumnCount': 4,//列数
+            'TableID': 'img_box',//表格id
+            "CompressOwnerLineSpacing": "true"
+         };
+         let result = ctl.DCExecuteCommand('InsertTable', false, parameter);// 插入表格
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,1728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes>
+      <Attribute>
+         <Name>IsShowGridLine</Name>
+         <Value>false</Value>
+      </Attribute>
+   </Attributes>
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="7">
+               <XElements xsi:nil="true" />
+               <Text>The Infectious Disease Report Card of PRC</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+            <Element xsi:type="XString" StyleIndex="8">
+               <XElements xsi:nil="true" />
+               <Text>Report No：            Report Category：1. Initial Report        2. Modification Report （A. Dead  B.Others）</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XTextTable" NumOfRows="7" NumOfColumns="1">
+               <Attributes />
+               <ID />
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Patient name</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="5" WhiteSpaceLength="20">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>    （</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Patient's parents name：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="5" WhiteSpaceLength="20">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>） </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>ID</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="18">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4" WhiteSpaceLength="3">
+                                 <XElements xsi:nil="true" />
+                                 <Text>   </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Sex：</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="4">
+                                 <ID />
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Male</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="4">
+                                 <ID>a286db3e-8de9-45a0-a3a8-fe9efe</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Female</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>DoB</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>YY</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>MM</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>DD</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>（</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>If the DoB was unknown, Age</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="3">
+                                 <XElements xsi:nil="true" />
+                                 <Text>   </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>unit：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="1">
+                                 <XElements xsi:nil="true" />
+                                 <Text> </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Y</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="1">
+                                 <XElements xsi:nil="true" />
+                                 <Text> </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>M</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="1">
+                                 <XElements xsi:nil="true" />
+                                 <Text> </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>D）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Organization：                                                                            Tel：（</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="8">
+                                 <XElements xsi:nil="true" />
+                                 <Text>        </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Origin：</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>3da0abe6-92b6-4d1b-9467-17c7bf</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>local county</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>04e72433-4957-43cc-bc82-bf758b</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>other counties</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>5f7c2eb0-5abb-4150-b109-367934</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>other palces within the Province </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>5b59904b-c27b-4dfd-8670-fad159</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>other Provinces  </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>05fdd43e-3d45-4879-b364-80e167</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Hong Kong, Macao, Taiwan     </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>3a61858d-e733-4a2d-8361-e03b3a</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>foreigner</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Current Add.：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="6">
+                                 <XElements xsi:nil="true" />
+                                 <Text>      </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> Province </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>       </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> City </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>       </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> County  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="6">
+                                 <XElements xsi:nil="true" />
+                                 <Text>      </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> Town（Street）</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>       </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>     Village </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="8">
+                                 <XElements xsi:nil="true" />
+                                 <Text>        </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>（Room No）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Occupation：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>6641a389-6499-492e-8bf9-a4debc</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>kid with childcare,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>131b2288-0753-49ca-ae7c-7040e0</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>children,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>71496654-01cb-4af9-8ed6-9cd4be</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>student(University,Middle school, Primary school),</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>aaff008c-1e83-45e7-8048-2eb098</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>teacher,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>a8cd836f-88d9-4601-8ec9-ae2f30</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>nanny,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>839c4881-70cf-43be-bd1d-82d824</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>dinning and food,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>93568771-ed13-4ba9-9660-b7f4cf</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>business service,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>020b9770-082d-4d56-abc7-5e16cb</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>medical care staff,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>15e2e49f-9d5b-4bab-9884-95d617</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>worker,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>e71d8e26-754e-4763-b491-d9b394</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>migrant labor</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>ab1665be-3280-4e78-adaa-9deaf3</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>farmer,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>42dc5e9b-099b-4edd-b109-d030b7</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>fisherman,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>ffe1f7c3-d4d7-44ec-9bdf-364845</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>clerk,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>0111976f-2a6d-43f6-9cf5-a6ff08</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>retired, </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>4fe5ce84-a758-4fcc-b799-ee1c93</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>unemployed,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>2b7ef61d-83fd-4736-b4a4-271ec1</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>others（   ）,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>fe93ea81-6848-4dea-be46-b52dba</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>unknown</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Case Category：（1）</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>9b507696-45e9-40f6-9562-9d2fd6</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>suspected cases,  </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>f0629bb7-dad6-44b0-b109-42b40d</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>clinical diagnosis cases,  </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>1e5af5df-afab-4561-a671-72ad9d</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>lab test cases    </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>afc44b9e-4884-489e-b290-611838</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>carrier</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>          （2）</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>fd8e8481-f2db-4140-94ab-e134ac</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>acute,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>32bf0dbb-4f5c-4881-9fc4-502eb5</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>chronic（for hepatitis B and bilharziasis patients only）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Date of  onset ：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>YY</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>MM</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>DD (For carrier: Date of the initial exam:      Diagnosis time:         )</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Date of diagnosis：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>YY</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>MM</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>DD</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Date of death：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>YY</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>MM</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="10" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>DD</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>The infectious diseases in Category A：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>2b3cab88-aa38-4e75-bb9a-d28cca</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> plague, </Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>95ff3e8d-6af1-4ef1-93f4-f268a3</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> cholera</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>The infectious diseases in Category B：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>995f4abc-ca4c-4800-9ca6-ad2364</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>infectious atypical pneumonias,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>b5e93e69-dfa5-4eb6-8ff1-b84205</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>AIDS：viral hepatitis（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>0fa96134-f33b-4dc4-8476-09b1fa</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>A,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>d588c1f6-10ac-4ddf-8629-0f8211</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>B,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>02abd65d-4ecf-4b42-b2ae-9d084b</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>C,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>fa0a016a-973f-4cef-8bfc-ef0a88</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>D,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>a07d7661-1d16-492e-824b-85ca46</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>unclassified）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>b3ce9d39-0c27-41ee-af39-7c25fd</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>polio,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>8eb7ab2b-8393-42e4-af31-2435c9</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>avian-human influenza,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>09103f88-bc0c-4437-a91b-ed7a6e</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>measles,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>8185cafc-e4f7-45ca-a2a2-30dc23</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>hemorhagic fever,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>ffaeaf94-c684-4231-9571-907a8f</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>rabies,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>645919fd-f03f-499b-b526-4bd65c</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>epidemic encephalitis B,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>1d570166-6df8-4ea1-b646-639660</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>dengue, anthrax（pulmonary anthrax,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>aff9e476-ce21-459c-8d57-9352b3</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>cutaneus anthrax、</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>8dc89287-7dc3-4710-801f-526da9</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>unclassified）,dysentery（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>1c8fbfeb-4c48-4c61-bcc5-891026</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>bacterial,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>79e94df8-cd79-4748-b97d-fec0c0</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>amebic）,pulmonary tuberculoisis（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>1d3058e9-da53-4846-8dc1-c5df83</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>smear positive,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>1cacbbc7-5528-4b95-8bca-0282e0</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>culture,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>8147f37d-ad51-461e-a1c6-96081a</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>bacterium negative,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>33b2ff64-362d-4497-8d3e-279acb</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>no sputum examination）,typhoid fever（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>b30ea204-18bc-45b9-8905-8b0484</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>typhoid fever,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>6a9131d4-e19c-469e-8ed8-6be201</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>paratyphoid）,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>7a571064-9886-478d-88e2-56c33f</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>epidemic cerebrospinal meningitis,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>ccd7e60e-6a34-4b74-b66a-4292eb</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>pertussis,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>9c5299c0-4d68-4cbd-848c-a1658c</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>diphtheria,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>d4c8d7f0-5683-4879-a1ab-996ba9</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>neonatal tetanus,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>7c89c8cb-d555-4be1-ab46-9c23c1</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>scarlatina,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>97d0f85b-dcdb-480e-9a5d-246b02</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>brucellosis,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>c767ec5f-69fb-4ec7-8e05-bcaa12</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <Checked>true</Checked>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>gonorrhea or syphilis（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>0c61fc61-f2f8-46aa-ac89-074316</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Ⅰ,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>e6989f57-878a-4ed1-a4ea-c863d4</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Ⅱ,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>7c0187c8-c188-4131-809a-314962</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Ⅲ,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>26f2771e-5cf2-4f98-bf41-fd5a6f</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>fatal infection,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>3cbf5729-9d09-4c34-8082-910e77</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>recessiveness）,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>5f6dd9ba-1317-48ac-824e-20a1fc</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>leptospirosis,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>e5f53e8f-6c8d-435d-bac0-e8203b</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>bilharziasis,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>2cf1b366-9a39-4070-a1f8-964a25</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>malaria(</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>b6ac2825-8a81-41f6-8e12-f39c23</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>plasmodium vivax,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>b35fc077-ae40-4808-815f-447741</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>malignant malaria,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>d9e0bc49-f347-4575-9d72-05daa8</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>unclassified)</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>The infectious diseases in Category C：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>24c41dae-6528-4962-bb5b-0d75df</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>flu,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>9beae38d-e25f-4227-b394-5d2a0b</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>mumps,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>4bc8af85-f7b5-45e3-88c0-6743a3</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>rubella,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>109c6b80-398a-4992-bee2-168fcd</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>AHC,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>f21c2bdb-75e9-45ac-8f6d-ed744d</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>lepriasis,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>7be82455-ce8c-4692-9890-ebe357</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>epidemic and endemic typhus,</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>9a13abfc-b88f-4e50-bd6b-f8944f</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>kala-azar and hydatidosis</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>75785608-5336-41ae-883e-06d34f</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>filariasis</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="9">
+                                 <ID>e92e50ac-ad5b-4bef-a771-8083ba</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>the infectious diarrhea excepet cholera, bacterial and amebic dysentery as well as typhoid fever and paratyphoid</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Other infectious diseases with statutory management and intensive monitoring:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Disease name modification：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="5" WhiteSpaceLength="19">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                   </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4" WhiteSpaceLength="1">
+                                 <XElements xsi:nil="true" />
+                                 <Text> </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Reason of withdrawal：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="5" WhiteSpaceLength="25">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                         </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Report unit：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="32">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                                </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                                   Tel：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="30">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                              </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Reporter：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="5" WhiteSpaceLength="30">
+                                 <XElements xsi:nil="true" />
+                                 <Text>                              </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text> Report date：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>YY</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>MM</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="2">
+                                 <XElements xsi:nil="true" />
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>DD</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="4">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Notes：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="4" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>2006.75</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+   </XElements>
+   <RepeatedImages />
+   <ControlOptionsForDebug>
+      <RuleVisible>false</RuleVisible>
+      <UserInfo>
+         <ID>511</ID>
+         <Name>上官海燕</Name>
+         <PermissionLevel>0</PermissionLevel>
+      </UserInfo>
+      <DocumentOptions>
+         <SecurityOptions>
+            <AutoEnablePermissionWhenUserLogin>false</AutoEnablePermissionWhenUserLogin>
+            <TrackVisibleLevel0>
+               <UnderLineColorString>#ADD8E6</UnderLineColorString>
+               <DeleteLineColorString>#FF7F50</DeleteLineColorString>
+            </TrackVisibleLevel0>
+            <TrackVisibleLevel1 />
+            <TrackVisibleLevel2>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel2>
+            <TrackVisibleLevel3>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel3>
+         </SecurityOptions>
+         <ViewOptions>
+            <NewInputContentUnderlineColor />
+            <AdornTextBackColorValue>#64808080</AdornTextBackColorValue>
+            <FieldBackColorValue>#F0F8FF</FieldBackColorValue>
+            <FieldHoverBackColorValue>#FFFFFF</FieldHoverBackColorValue>
+            <TagColorForNormalFieldValue>#FF0000</TagColorForNormalFieldValue>
+         </ViewOptions>
+         <BehaviorOptions>
+            <ParagraphFlagFollowTableOrSection>true</ParagraphFlagFollowTableOrSection>
+            <ValidateUserIDWhenEditDeleteComment>true</ValidateUserIDWhenEditDeleteComment>
+            <InsertDocumentWithCheckMRID>PromptForbitWhenFail</InsertDocumentWithCheckMRID>
+         </BehaviorOptions>
+         <EditOptions>
+            <GridLinePreviewText>DCWriter是南京都昌信息科技有限公司自主研发的专业的电子病历文档编辑器。</GridLinePreviewText>
+         </EditOptions>
+      </DocumentOptions>
+      <Font>
+         <Size>12</Size>
+      </Font>
+      <HeaderFooterFlagVisible>None</HeaderFooterFlagVisible>
+      <JumpPrint />
+      <PageTitlePosition>BottomRight</PageTitlePosition>
+      <Readonly>true</Readonly>
+   </ControlOptionsForDebug>
+   <GlobalJavaScriptReferences />
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司2018年旗舰版:南京都昌信息科技有限公司2018年旗舰版</LicenseText>
+      <CreationTime>2014-01-24T10:04:18.8070458+08:00</CreationTime>
+      <LastModifiedTime>2018-10-17T14:53:26.2651738+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.1.1820.25330</Operator>
+      <NumOfPage>2</NumOfPage>
+   </Info>
+   <BodyText>Patient name：                        （Patient's parents name：                    ） 
+ID：                     Sex：□Male□Female
+DoB：    YY  MM  DD（If the DoB was unknown, Age：   unit： Y M D）
+Organization：                                                                            Tel：（        ）
+Origin：□local county□other counties□other palces within the Province □other Provinces  □Hong Kong, Macao, Taiwan     □foreigner
+Current Add.：       Province         City         County         Town（Street）            Village         （Room No）
+Occupation：
+□kid with childcare,□children,□student(University,Middle school, Primary school),□teacher,□nanny,□dinning and food,□business service,□medical care staff,□worker,□migrant labor□farmer,□fisherman,□clerk,□retired, □unemployed,□others（   ）,□unknown
+
+Case Category：（1）□suspected cases,  □clinical diagnosis cases,  □lab test cases    □carrier
+          （2）□acute,□chronic（for hepatitis B and bilharziasis patients only）
+Date of  onset ：    YY  MM  DD (For carrier: Date of the initial exam:      Diagnosis time:         )
+Date of diagnosis：    YY  MM  DD
+Date of death：    YY  MM  DD 
+The infectious diseases in Category A：
+□ plague, □ cholera 
+The infectious diseases in Category B：
+□infectious atypical pneumonias,□AIDS：viral hepatitis（□A,□B,□C,□D,□unclassified）
+□polio,□avian-human influenza,□measles,□hemorhagic fever,□rabies,□epidemic encephalitis B,□dengue, anthrax（pulmonary anthrax,□cutaneus anthrax、□unclassified）,dysentery（□bacterial,□amebic）,pulmonary tuberculoisis（□smear positive,□culture,□bacterium negative,□no sputum examination）,typhoid fever（□typhoid fever,□paratyphoid）,□epidemic cerebrospinal meningitis,□pertussis,□diphtheria,□neonatal tetanus,□scarlatina,□brucellosis,■gonorrhea or syphilis（□Ⅰ,□Ⅱ,□Ⅲ,□fatal infection,□recessiveness）,□leptospirosis,□bilharziasis,□malaria(□plasmodium vivax,□malignant malaria,□unclassified) 
+The infectious diseases in Category C：
+□flu,□mumps,□rubella,□AHC,□lepriasis,□epidemic and endemic typhus,□kala-azar and hydatidosis□filariasis□the infectious diarrhea excepet cholera, bacterial and amebic dysentery as well as typhoid fever and paratyphoid 
+Other infectious diseases with statutory management and intensive monitoring:
+ 
+Disease name modification：                    Reason of withdrawal：                         
+Report unit：                                                                   Tel：                              
+Reporter：                               Report date：    YY  MM  DD 
+Notes： </BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <PrinterName />
+      <PaperSource />
+      <LeftMargin>77</LeftMargin>
+      <RightMargin>77</RightMargin>
+      <BottomMargin>82</BottomMargin>
+   </PageSettings>
+   <UserHistories />
+   <Parameters />
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <Color>#201F35</Color>
+            <FontName>宋体</FontName>
+            <FontSize>18</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="2">
+            <Color>#201F35</Color>
+            <FontName>宋体</FontName>
+            <FontSize>18</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <Underline>true</Underline>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <CharacterCircle>Rectangle</CharacterCircle>
+         </Style>
+         <Style Index="7">
+            <Color>#201F35</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>18</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="8">
+            <Color>#201F35</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="9">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="10">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <CharacterCircle>Rectangle</CharacterCircle>
+         </Style>
+         <Style Index="11">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Underline>true</Underline>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <FileName>C:\Users\Administrator\Desktop\The Infectious Disease Report Card of PRC.xml</FileName>
+   <FileFormat>XML</FileFormat>
+</XTextDocument>

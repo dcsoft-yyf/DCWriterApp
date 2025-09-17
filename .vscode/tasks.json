@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start-server",
+            "type": "shell",
+            "command": "http-server.cmd -p 8899 -c-1 .",
+            "problemMatcher": []
+        }
+    ],
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch on http://localhost:8899",
+            "url": "http://localhost:8899",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "start-server"
+        }
+    ]
+}

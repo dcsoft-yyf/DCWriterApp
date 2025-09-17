@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>【第五代】用户内容锁定</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    .describe-box {
+      /* max-width: 50%;
+        min-width: 500px; */
+      border: 1px solid #dcdfe6;
+      line-height: 23px;
+      text-align: left;
+      background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+      box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+      border-radius: 0px 8px 8px 0px;
+    }
+
+    .describe-box span:first-child {
+      /* text-align: center; */
+      font-weight: bold;
+      line-height: 32px;
+      border-bottom: 1px solid rgb(155, 187, 227)
+    }
+
+    .describe-box span {
+      display: block;
+      margin: 0 5px;
+      font-size: 13px;
+
+    }
+
+    .toolBox {
+      height: 40px;
+      width: 100%;
+      border: 1px solid #dcdfe6;
+      display: flex;
+      font-size: 13px;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .toolBox span {
+      text-align: center;
+      display: inline-table;
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 5px 10px;
+      min-width: 50px;
+      height: 18px;
+      white-space: nowrap
+    }
+
+    .toolBox label {
+      line-height: 40px;
+    }
+
+    .toolBox select {
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #dcdfe6;
+      padding: 3px 10px;
+      min-width: 50px;
+      height: 29px;
+    }
+
+    #FontNameSelect {
+      min-width: 150px
+    }
+
+    .toolBox span:has(select) {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .toolBox span:hover {
+      border: 1px solid #4e6ef2;
+      cursor: pointer;
+    }
+
+    .dc-writer-box {
+      /* height: 100% !important; */
+      border-bottom: 0px solid black;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .main-container {
+      height: 100%;
+      display: flex;
+
+    }
+
+    .ringbox {
+      width: 30%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    #myWriterControl {
+      width: 70%;
+    }
+
+    .TracesListContentItem {
+      height: 50px;
+      width: 100%;
+      border-bottom: 1px solid saddlebrown;
+      text-align: center;
+      line-height: 50px;
+      background: #dce1f7;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="describe-box">
+      <span>DCWriter5.0 集成了跨病历权限功能，可提供用户在跨病历的操作权限控制。</span>
+
+    </div>
+    <div class="toolBox">
+      <span commandName="fileopen">打开本地文件</span>
+      <span localMethod="DownLoadFile">导出到本地</span>
+      <span localMethod="PrintDocument">打印</span>
+      <span localMethod="LoadPrintPreview">打印预览</span>
+      <span localMethod="ClosePrintPreview">关闭预览</span>
+      <span localMethod="AboutControl">关于</span>
+    </div>
+    <!-- 修改内容 -->
+    <div class="toolBox">
+      <label>1. 检查类型：</label>
+      <select id="checkStyle">
+        <option value="none">不检查</option>
+        <option value="WarringWhenFail">检查并警告</option>
+        <option value="PromptForBitWhenFail">检查并禁止</option>
+        <option value="ForBitWhenFail">检查</option>
+      </select>
+      <label>2. 作用范围：</label>
+      <select id="scope">
+        <option value="system">操作系统</option>
+        <option value="controls">单控件</option>
+      </select>
+    </div>
+  </div>
+  <div class="main-container">
+
+    <div style="height: 100%; width: 50%;">
+      <label for="text1">MRID: </label><input id="text1" type="text" style="width: 50px" />
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+        RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+        PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+        RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816"
+        OnLoad="this.LoadDocumentFromString(strDemoFileXml, 'xml');">
+      </div>
+    </div>
+
+    <div style="height: 100%; width: 50%;">
+      <label for="text2">MRID: </label><input id="text2" type="text" style="width: 50px" />
+      <div id="myWriterControl2" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+        RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+        RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+        PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+        RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816"
+        OnLoad="this.LoadDocumentFromString(strDemoFileXml, 'xml');">
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../_framework/dcwriter5.js"></script>
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+<script>
+
+  function WriterControl_OnLoad(rootElement) {
+    loadXML();
+  };
+
+  let toolBoxDOM = document.querySelector(".toolBox");
+  if (toolBoxDOM) {
+    toolBoxDOM.addEventListener("click", (e) => {
+      if (e.target.tagName == "SPAN") {
+        let commandName = e.target.getAttribute("commandName");
+        let localMethod = e.target.getAttribute("localMethod");
+        if (commandName) {
+          let ctl = document.getElementById("myWriterControl");
+          ctl.DCExecuteCommand(commandName, false, null);
+        } else if (localMethod) {
+          funcOBJ[localMethod].call(funcOBJ);
+        }
+      }
+    });
+  }
+  //编辑器方法组
+  let funcOBJ = {
+    DownLoadFile: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.DownLoadFile("xml");
+    },
+    PrintDocument: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.PrintDocument();
+    },
+    LoadPrintPreview: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.LoadPrintPreview();
+    },
+    ClosePrintPreview: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.ClosePrintPreview();
+    },
+    AboutControl: function () {
+      let ctl = document.getElementById("myWriterControl");
+      let fName = Date.now();
+      ctl.AboutControl();
+    },
+  };
+  function loadXML() {
+    console.log('loadXML');
+    let ctl = document.getElementById('myWriterControl');
+    ctl.LoadDocumentFromString(strDemoFileXml);
+  }
+  window.WriterControl_OnLoad = function (rootElement) {
+    // loadXML()
+    //限制复制粘贴
+    rootElement.EventBeforeCopy = function (eventObj, copydata) {
+      var text1Inner = document.getElementById("text1").value;
+      var text2Inner = document.getElementById("text2").value;
+      var dcClipboardDataKey =
+        rootElement.id === "myWriterControl" ? text1Inner : text2Inner;
+      copydata.datas[0] = dcClipboardDataKey; //设置唯一性
+    };
+    rootElement.EventBeforePaste = function (copydata) {
+      var dcClipboardDataJson =
+        JSON.parse(localStorage.getItem("dcClipboardData")) || [];
+      var copydataKeyInner = copydata && copydata[0];
+      var dcClipboardDataKeyInner = dcClipboardDataJson[0];
+      var checkStyle = document.getElementById("checkStyle").value;
+      var scope = document.getElementById("scope").value;
+      var text1 = document.getElementById("text1").value;
+      var text2 = document.getElementById("text2").value;
+      var currentControlId =
+        rootElement.id === "myWriterControl" ? text1 : text2;
+      //不检查
+      if (checkStyle === "none") {
+        if (scope === "controls") {
+          //本地存储中的id等于当前粘贴数据的id，表示要粘贴的数据来自编辑器
+          if (dcClipboardDataKeyInner === copydataKeyInner) {
+            //复制的数据id和要粘贴的数据id相同，表示在同一个编辑器内操作，不需要校验
+            return true;
+          } else {
+            //来自于外部的数据
+            window.alert("禁止从编辑器外部获得数据");
+            return false;
+          }
+        }
+        return true;
+      }
+      // 检查并警告
+      if (checkStyle === "WarringWhenFail") {
+        // 单控件
+        if (scope === "controls") {
+          //本地存储中的id等于当前粘贴数据的id，表示要粘贴的数据来自编辑器
+          if (dcClipboardDataKeyInner === copydataKeyInner) {
+            if (text1 !== text2) {
+              //复制的组件id等于当前要粘贴的id
+              if (copydataKeyInner === currentControlId) {
+                return true;
+              }
+              //不同控件之间的警告
+              var flag = window.confirm(
+                "警告,在id为" +
+                currentControlId +
+                "的文档中粘贴来自" +
+                copydataKeyInner +
+                "的数据,是否粘贴?"
+              );
+              return flag;
+            }
+            //id相同直接粘贴
+            return true;
+          } else {
+            //来自于外部的数据
+            window.alert("禁止从编辑器外部获得数据");
+            return false;
+          }
+        }
+        // 操作系统
+        if (scope === "system") {
+          //复制的数据id和要粘贴的数据id相同，表示在同一个编辑器内操作，不需要校验
+          if (copydataKeyInner === currentControlId) {
+            return true;
+          }
+          //其他控件数据或者外部数据的粘贴 则发出警告
+          var flag1 = window.confirm(
+            "警告,在id为" +
+            currentControlId +
+            "的文档中粘贴来自" +
+            (copydataKeyInner === "text/plain"
+              ? "外部"
+              : copydataKeyInner) +
+            "的数据,是否粘贴?"
+          );
+          return flag1;
+        }
+      }
+      // 检查并禁止，不区分操作系统和单控件
+      if (checkStyle === "PromptForBitWhenFail") {
+        //本地存储中的id等于当前粘贴数据的id，表示要粘贴的数据来自编辑器
+        if (dcClipboardDataKeyInner === copydataKeyInner) {
+          //禁止粘贴id不同的编辑器数据
+          if (copydataKeyInner !== currentControlId) {
+            window.alert("禁止从其他编辑器获得数据");
+            return false;
+          }
+          return true;
+        } else {
+          //外部数据的粘贴禁止提示
+          window.alert("禁止从外部获得数据");
+          return false;
+        }
+      }
+
+      // 检查，不区分操作系统和单控件
+      if (checkStyle === "ForBitWhenFail") {
+        //本地存储中的id等于当前粘贴数据的id，表示要粘贴的数据来自编辑器
+        if (dcClipboardDataKeyInner === copydataKeyInner) {
+          //禁止粘贴id不同的编辑器数据
+          if (copydataKeyInner !== currentControlId) {
+            return false;
+          }
+          return true;
+        } else {
+          return false;
+        }
+      }
+    };
+
+  };
+  // -------------------------------------------------------------------------------------------
+
+
+</script>
+<script>
+  var strDemoFileXml = `<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="1.2023.9.4">\r\n   <Attributes>\r\n      <Attribute>\r\n         <Name>DCLocalDataSource</Name>\r\n         <Value>&lt;DataSourceDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="DataSource" Name="DataSource" Guid="9c34a38d-a29b-4685-83f9-db43397b4d3a" Title=""&gt;&lt;Parameters /&gt;&lt;Nodes /&gt;&lt;/DataSourceDocument&gt;</Value>\r\n      </Attribute>\r\n   </Attributes>\r\n   <InnerID>5096</InnerID>\r\n   <XElements>\r\n      <Element xsi:type="XTextHeader">\r\n         <InnerID>6</InnerID>\r\n         <AcceptTab>true</AcceptTab>\r\n         <XElements>\r\n            <Element xsi:type="XParagraphFlag" StyleIndex="9">\r\n               <InnerID>5119</InnerID>\r\n            </Element>\r\n            <Element xsi:type="XInputField" StyleIndex="1">\r\n               <InnerID>5121</InnerID>\r\n               <ID>机构名称</ID>\r\n               <EnableValueValidate>true</EnableValueValidate>\r\n               <XElements>\r\n                  <Element xsi:type="XString" StyleIndex="2">\r\n                     <InnerID>5396</InnerID>\r\n                     <Text>XXXXXX医院</Text>\r\n                  </Element>\r\n               </XElements>\r\n               <Deleteable>false</Deleteable>\r\n               <BorderElementColor />\r\n               <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n               <SpecifyWidth>1181.102</SpecifyWidth>\r\n               <Alignment>Center</Alignment>\r\n               <Name>机构名称</Name>\r\n               <InnerValue>XXXXXX医院</InnerValue>\r\n               <BackgroundText>机构名称</BackgroundText>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag" StyleIndex="12">\r\n               <InnerID>5130</InnerID>\r\n            </Element>\r\n            <Element xsi:type="XString">\r\n               <InnerID>5392</InnerID>\r\n               <Text>科别：</Text>\r\n            </Element>\r\n            <Element xsi:type="XInputField">\r\n               <InnerID>5135</InnerID>\r\n               <ID>科别</ID>\r\n               <EnableValueValidate>true</EnableValueValidate>\r\n               <BorderElementColor />\r\n               <Name>科别</Name>\r\n               <BackgroundText>科别</BackgroundText>\r\n            </Element>\r\n            <Element xsi:type="XString">\r\n               <InnerID>5393</InnerID>\r\n               <Text>     床号：</Text>\r\n            </Element>\r\n            <Element xsi:type="XInputField">\r\n               <InnerID>5144</InnerID>\r\n               <ID>床号</ID>\r\n               <EnableValueValidate>true</EnableValueValidate>\r\n               <BorderElementColor />\r\n               <Name>床号</Name>\r\n               <BackgroundText>床号</BackgroundText>\r\n            </Element>\r\n            <Element xsi:type="XString">\r\n               <InnerID>5394</InnerID>\r\n               <Text>床    姓名：</Text>\r\n            </Element>\r\n            <Element xsi:type="XInputField">\r\n               <InnerID>5153</InnerID>\r\n               <ID>姓名YM</ID>\r\n               <EnableValueValidate>true</EnableValueValidate>\r\n               <BorderElementColor />\r\n               <Name>姓名</Name>\r\n               <BackgroundText>姓名</BackgroundText>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="3">\r\n               <InnerID>5395</InnerID>\r\n               <Text>    住院号：</Text>\r\n            </Element>\r\n            <Element xsi:type="XInputField" StyleIndex="3">\r\n               <InnerID>5162</InnerID>\r\n               <ID>住院号</ID>\r\n               <EnableValueValidate>true</EnableValueValidate>\r\n               <BorderElementColor />\r\n               <Name>住院号</Name>\r\n               <BackgroundText>住院号</BackgroundText>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag" StyleIndex="11">\r\n               <InnerID>5163</InnerID>\r\n            </Element>\r\n         </XElements>\r\n      </Element>\r\n      <Element xsi:type="XTextBody">\r\n         <InnerID>20</InnerID>\r\n         <AcceptTab>true</AcceptTab>\r\n         <XElements>\r\n            <Element xsi:type="XString" StyleIndex="4">\r\n               <InnerID>5397</InnerID>\r\n               <Text>入</Text>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="5">\r\n               <InnerID>5398</InnerID>\r\n               <Text> </Text>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="4">\r\n               <InnerID>5399</InnerID>\r\n               <Text>院</Text>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="5">\r\n               <InnerID>5400</InnerID>\r\n               <Text> </Text>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="4">\r\n               <InnerID>5401</InnerID>\r\n               <Text>记</Text>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="5">\r\n               <InnerID>5402</InnerID>\r\n               <Text> </Text>\r\n            </Element>\r\n            <Element xsi:type="XString" StyleIndex="4">\r\n               <InnerID>5403</InnerID>\r\n               <Text>录</Text>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag" StyleIndex="10">\r\n               <InnerID>5212</InnerID>\r\n            </Element>\r\n            <Element xsi:type="XTextTable" NumOfRows="6" NumOfColumns="2">\r\n               <InnerID>5214</InnerID>\r\n               <ID>table1</ID>\r\n               <XElements>\r\n                  <Element xsi:type="XTextTableRow">\r\n                     <InnerID>5217</InnerID>\r\n                     <XElements>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5405</InnerID>\r\n                                 <Text> 姓名：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5224</InnerID>\r\n                                 <ID>姓名</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValidateStyle>\r\n                                    <Required>true</Required>\r\n                                 </ValidateStyle>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>Name333</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>姓名</Name>\r\n                                 <BackgroundText>姓名</BackgroundText>\r\n                              </Element>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5406</InnerID>\r\n                                 <Text> </Text>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5226</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>1</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5407</InnerID>\r\n                                 <Text>出生地：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5233</InnerID>\r\n                                 <ID>出生地</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValidateStyle>\r\n                                    <Required>true</Required>\r\n                                 </ValidateStyle>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>BirthPlace</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>出生地</Name>\r\n                                 <BackgroundText>出生地</BackgroundText>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5234</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                     </XElements>\r\n                  </Element>\r\n                  <Element xsi:type="XTextTableRow">\r\n                     <InnerID>5235</InnerID>\r\n                     <XElements>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>2</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5408</InnerID>\r\n                                 <Text> 性别：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5242</InnerID>\r\n                                 <ID>性别</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValidateStyle>\r\n                                    <Required>true</Required>\r\n                                 </ValidateStyle>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>sex</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>性别</Name>\r\n                                 <BackgroundText>性别</BackgroundText>\r\n                                 <EditorActiveMode>Program F2 MouseClick</EditorActiveMode>\r\n                                 <FieldSettings>\r\n                                    <EditStyle>DropdownList</EditStyle>\r\n                                    <ListSource>\r\n                                       <Items>\r\n                                          <Item>\r\n                                             <Text>男</Text>\r\n                                             <Value>1</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>女</Text>\r\n                                             <Value>2</Value>\r\n                                          </Item>\r\n                                       </Items>\r\n                                    </ListSource>\r\n                                 </FieldSettings>\r\n                              </Element>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5409</InnerID>\r\n                                 <Text>  </Text>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5245</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>3</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5410</InnerID>\r\n                                 <Text>职业：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5251</InnerID>\r\n                                 <ID>职业</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>Job</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>职业</Name>\r\n                                 <BackgroundText>职业</BackgroundText>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5252</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                     </XElements>\r\n                  </Element>\r\n                  <Element xsi:type="XTextTableRow">\r\n                     <InnerID>5253</InnerID>\r\n                     <XElements>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>4</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5411</InnerID>\r\n                                 <Text> 年龄：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5260</InnerID>\r\n                                 <ID>年龄</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValidateStyle>\r\n                                    <Required>true</Required>\r\n                                    <ValueType>Integer</ValueType>\r\n                                    <CheckMaxValue>true</CheckMaxValue>\r\n                                    <CheckMinValue>true</CheckMinValue>\r\n                                    <MaxValue>120</MaxValue>\r\n                                 </ValidateStyle>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>Age</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>年龄</Name>\r\n                                 <BackgroundText>年龄</BackgroundText>\r\n                                 <FieldSettings>\r\n                                    <EditStyle>Numeric</EditStyle>\r\n                                 </FieldSettings>\r\n                              </Element>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5412</InnerID>\r\n                                 <Text>岁</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5262</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>5</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5413</InnerID>\r\n                                 <Text>入院时间：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5270</InnerID>\r\n                                 <ID>入院时间</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>indate</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>入院时间</Name>\r\n                                 <DisplayFormat>\r\n                                    <Style>DateTime</Style>\r\n                                    <Format>yyyy-MM-dd HH:mm:ss</Format>\r\n                                 </DisplayFormat>\r\n                                 <BackgroundText>入院时间</BackgroundText>\r\n                                 <EditorActiveMode>Program F2 MouseClick</EditorActiveMode>\r\n                                 <FieldSettings>\r\n                                    <EditStyle>DateTime</EditStyle>\r\n                                 </FieldSettings>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5271</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                     </XElements>\r\n                  </Element>\r\n                  <Element xsi:type="XTextTableRow">\r\n                     <InnerID>5272</InnerID>\r\n                     <XElements>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>6</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5414</InnerID>\r\n                                 <Text> 民族：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField" StyleIndex="7">\r\n                                 <InnerID>5279</InnerID>\r\n                                 <ID>民族</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>mingzu</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>民族</Name>\r\n                                 <BackgroundText>民族</BackgroundText>\r\n                                 <EditorActiveMode>Program F2 MouseClick</EditorActiveMode>\r\n                                 <FieldSettings>\r\n                                    <EditStyle>DropdownList</EditStyle>\r\n                                    <ListSource>\r\n                                       <Items>\r\n                                          <Item>\r\n                                             <Text>汉族</Text>\r\n                                             <Value>01</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>蒙古族</Text>\r\n                                             <Value>02</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>回族</Text>\r\n                                             <Value>03</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>藏族</Text>\r\n                                             <Value>04</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>维吾尔族</Text>\r\n                                             <Value>05</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>苗族</Text>\r\n                                             <Value>06</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>彝族</Text>\r\n                                             <Value>07</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>壮族</Text>\r\n                                             <Value>08</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>布依族</Text>\r\n                                             <Value>09</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>朝鲜族</Text>\r\n                                             <Value>10</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>满族</Text>\r\n                                             <Value>11</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>侗族</Text>\r\n                                             <Value>12</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>瑶族</Text>\r\n                                             <Value>13</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>白族</Text>\r\n                                             <Value>14</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>土家族</Text>\r\n                                             <Value>15</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>哈尼族</Text>\r\n                                             <Value>16</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>哈萨克族</Text>\r\n                                             <Value>17</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>傣族</Text>\r\n                                             <Value>18</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>黎族</Text>\r\n                                             <Value>19</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>傈僳族</Text>\r\n                                             <Value>20</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>佤族</Text>\r\n                                             <Value>21</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>畲族</Text>\r\n                                             <Value>22</Value>\r\n                                          </Item>\r\n                                       </Items>\r\n                                    </ListSource>\r\n                                 </FieldSettings>\r\n                              </Element>\r\n                              <Element xsi:type="XString" StyleIndex="7">\r\n                                 <InnerID>5415</InnerID>\r\n                                 <Text> </Text>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5281</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>7</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5416</InnerID>\r\n                                 <Text>记录时间：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5289</InnerID>\r\n                                 <ID>记录时间</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>recorddate</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>记录时间</Name>\r\n                                 <BackgroundText>记录时间</BackgroundText>\r\n                                 <EditorActiveMode>Program F2 MouseClick</EditorActiveMode>\r\n                                 <FieldSettings>\r\n                                    <EditStyle>DateTime</EditStyle>\r\n                                 </FieldSettings>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5290</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                     </XElements>\r\n                  </Element>\r\n                  <Element xsi:type="XTextTableRow">\r\n                     <InnerID>5291</InnerID>\r\n                     <XElements>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>8</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5417</InnerID>\r\n                                 <Text> 婚姻：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5298</InnerID>\r\n                                 <ID>婚姻</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>marriage</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>婚姻</Name>\r\n                                 <BackgroundText>婚姻</BackgroundText>\r\n                                 <EditorActiveMode>Program F2 MouseClick</EditorActiveMode>\r\n                                 <FieldSettings>\r\n                                    <EditStyle>DropdownList</EditStyle>\r\n                                    <ListSource>\r\n                                       <Items>\r\n                                          <Item>\r\n                                             <Text>未婚</Text>\r\n                                             <Value>0</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>已婚</Text>\r\n                                             <Value>1</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>离异</Text>\r\n                                             <Value>2</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>丧偶</Text>\r\n                                             <Value>3</Value>\r\n                                          </Item>\r\n                                          <Item>\r\n                                             <Text>其他</Text>\r\n                                             <Value>4</Value>\r\n                                          </Item>\r\n                                       </Items>\r\n                                    </ListSource>\r\n                                 </FieldSettings>\r\n                              </Element>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5418</InnerID>\r\n                                 <Text>  </Text>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5301</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>9</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5419</InnerID>\r\n                                 <Text>病史陈述者：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5310</InnerID>\r\n                                 <ID>病史陈述者</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <ValueBinding>\r\n                                    <DataSource>EMR_Patients</DataSource>\r\n                                    <BindingPath>patientname</BindingPath>\r\n                                 </ValueBinding>\r\n                                 <BorderElementColor />\r\n                                 <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n                                 <Name>病史陈述者</Name>\r\n                                 <BackgroundText>病史陈述者</BackgroundText>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5311</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                     </XElements>\r\n                  </Element>\r\n                  <Element xsi:type="XTextTableRow">\r\n                     <InnerID>5312</InnerID>\r\n                     <XElements>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>10</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XString">\r\n                                 <InnerID>5420</InnerID>\r\n                                 <Text> 发病节气：</Text>\r\n                              </Element>\r\n                              <Element xsi:type="XInputField">\r\n                                 <InnerID>5321</InnerID>\r\n                                 <ID>发病季节</ID>\r\n                                 <EnableValueValidate>true</EnableValueValidate>\r\n                                 <BorderElementColor />\r\n                                 <Name>发病节气</Name>\r\n                                 <BackgroundText>发病节气</BackgroundText>\r\n                              </Element>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5322</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                        <Element xsi:type="XTextTableCell" StyleIndex="6">\r\n                           <InnerID>11</InnerID>\r\n                           <XElements>\r\n                              <Element xsi:type="XParagraphFlag">\r\n                                 <InnerID>5326</InnerID>\r\n                              </Element>\r\n                           </XElements>\r\n                        </Element>\r\n                     </XElements>\r\n                  </Element>\r\n               </XElements>\r\n               <Columns>\r\n                  <Element xsi:type="XTextTableColumn">\r\n                     <InnerID>5215</InnerID>\r\n                     <Width>937.375</Width>\r\n                  </Element>\r\n                  <Element xsi:type="XTextTableColumn">\r\n                     <InnerID>5216</InnerID>\r\n                     <Width>957.375</Width>\r\n                  </Element>\r\n               </Columns>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag" StyleIndex="9">\r\n               <InnerID>5328</InnerID>\r\n            </Element>\r\n            <Element xsi:type="XString">\r\n               <InnerID>5404</InnerID>\r\n               <Text>                                                     医师签名：</Text>\r\n            </Element>\r\n            <Element xsi:type="XInputField">\r\n               <InnerID>5388</InnerID>\r\n               <ID>医师签名</ID>\r\n               <EnableValueValidate>true</EnableValueValidate>\r\n               <BorderElementColor />\r\n               <MoveFocusHotKey>Tab</MoveFocusHotKey>\r\n               <SpecifyWidth>236.2205</SpecifyWidth>\r\n               <Name>医师签名</Name>\r\n               <BackgroundText>医师签名</BackgroundText>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag" StyleIndex="9">\r\n               <InnerID>5389</InnerID>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag">\r\n               <InnerID>5391</InnerID>\r\n            </Element>\r\n         </XElements>\r\n      </Element>\r\n      <Element xsi:type="XTextFooter">\r\n         <InnerID>96</InnerID>\r\n         <AcceptTab>true</AcceptTab>\r\n         <XElements>\r\n            <Element xsi:type="XString">\r\n               <InnerID>5421</InnerID>\r\n               <Text>                                   第</Text>\r\n            </Element>\r\n            <Element xsi:type="XPageInfo" StyleIndex="8">\r\n               <InnerID>5201</InnerID>\r\n               <Width>85</Width>\r\n               <AutoHeight>true</AutoHeight>\r\n               <Height>62.73437</Height>\r\n               <FormatString>[%PageIndex%]</FormatString>\r\n            </Element>\r\n            <Element xsi:type="XString">\r\n               <InnerID>5422</InnerID>\r\n               <Text>页</Text>\r\n            </Element>\r\n            <Element xsi:type="XParagraphFlag">\r\n               <InnerID>5203</InnerID>\r\n            </Element>\r\n         </XElements>\r\n      </Element>\r\n   </XElements>\r\n   <SerializeParameterValue>true</SerializeParameterValue>\r\n   <FileName>Test\\演示文档\\常规文档\\入院记录通用测试.xml</FileName>\r\n   <FileFormat>xml</FileFormat>\r\n   <ContentStyles>\r\n      <Default xsi:type="DocumentContentStyle">\r\n         <FontName>宋体</FontName>\r\n         <FontSize>12</FontSize>\r\n      </Default>\r\n      <Styles>\r\n         <Style Index="0">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <Align>Center</Align>\r\n         </Style>\r\n         <Style Index="1">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>15</FontSize>\r\n            <Bold>true</Bold>\r\n            <Align>Center</Align>\r\n         </Style>\r\n         <Style Index="2">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>15</FontSize>\r\n            <Bold>true</Bold>\r\n            <Align>Center</Align>\r\n         </Style>\r\n         <Style Index="3">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <BorderLeft>true</BorderLeft>\r\n            <BorderBottom>true</BorderBottom>\r\n            <BorderTop>true</BorderTop>\r\n            <BorderRight>true</BorderRight>\r\n         </Style>\r\n         <Style Index="4">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>18</FontSize>\r\n            <Bold>true</Bold>\r\n         </Style>\r\n         <Style Index="5">\r\n            <FontName>Times New Roman</FontName>\r\n            <FontSize>18</FontSize>\r\n            <Bold>true</Bold>\r\n         </Style>\r\n         <Style Index="6">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <BorderWidth>1</BorderWidth>\r\n            <PaddingLeft>15</PaddingLeft>\r\n            <PaddingTop>10</PaddingTop>\r\n            <PaddingRight>12.5</PaddingRight>\r\n            <PaddingBottom>10</PaddingBottom>\r\n         </Style>\r\n         <Style Index="7">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>10.5</FontSize>\r\n         </Style>\r\n         <Style Index="8">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n         </Style>\r\n         <Style Index="9">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <LineSpacingStyle>Space1pt5</LineSpacingStyle>\r\n         </Style>\r\n         <Style Index="10">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <LineSpacingStyle>Space1pt5</LineSpacingStyle>\r\n            <Align>Center</Align>\r\n         </Style>\r\n         <Style Index="11">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>\r\n            <LineSpacing>1.2</LineSpacing>\r\n         </Style>\r\n         <Style Index="12">\r\n            <FontName>宋体</FontName>\r\n            <FontSize>12</FontSize>\r\n            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>\r\n            <LineSpacing>1.2</LineSpacing>\r\n            <Align>Center</Align>\r\n         </Style>\r\n      </Styles>\r\n   </ContentStyles>\r\n   <Info>\r\n      <LicenseText>都昌:都昌旗舰版（100并发）</LicenseText>\r\n      <CreationTime>1980-01-01T00:00:00</CreationTime>\r\n      <LastModifiedTime>2023-10-18T11:10:18.8636436+08:00</LastModifiedTime>\r\n      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>\r\n      <Operator>DCSoft.Writer Version:1.2019.1.4</Operator>\r\n      <NumOfPage>1</NumOfPage>\r\n   </Info>\r\n   <BodyText>入 院 记 录\r\n\r\n 姓名：姓名  出生地：出生地 \r\n 性别：性别   职业：职业 \r\n 年龄：年龄岁 入院时间：入院时间 \r\n 民族：民族  记录时间：记录时间 \r\n 婚姻：婚姻   病史陈述者：病史陈述者 \r\n 发病节气：发病节气   \r\n                                                     医师签名：医师签名\r\n</BodyText>\r\n   <LocalConfig />\r\n   <PageSettings>\r\n      <LeftMargin>95</LeftMargin>\r\n      <RightMargin>95</RightMargin>\r\n      <StrictUsePageSize>false</StrictUsePageSize>\r\n   </PageSettings>\r\n</XTextDocument>`
+</script>
+
+</html>
