@@ -1,0 +1,3661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes />
+   <AutoFixTextMode>None</AutoFixTextMode>
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="15">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>陕西省肿瘤</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="16">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>医院</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="17" />
+            <Element xsi:type="XString" StyleIndex="18">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>CT </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="19">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>检</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="18" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="19">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>查</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="18" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="19">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>报</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="18" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="19">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>告</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="18" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="19">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>单</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="34">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>CT Scanning Report</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="6">
+               <Attributes />
+               <ID>1001</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>临时报告</Text>
+                  </Element>
+               </XElements>
+               <Visible>false</Visible>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <UserEditable>false</UserEditable>
+               <Name>临时报告</Name>
+               <InnerValue>临时报告</InnerValue>
+               <BackgroundText>临时报告</BackgroundText>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="30" />
+            <Element xsi:type="XTextTable" StyleIndex="20" NumOfRows="9" NumOfColumns="17">
+               <Attributes />
+               <ID />
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>姓名：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Name:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField">
+                                 <Attributes />
+                                 <ID>NAME</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="20">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>韩</Text>
+                                    </Element>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>XX</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>NAME</Name>
+                                 <InnerValue>XX</InnerValue>
+                                 <BackgroundText>姓名</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>性  别：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Sex:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField">
+                                 <Attributes />
+                                 <ID>SEX</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="20">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>女</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>SEX</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Sex</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>年龄：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Age:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField">
+                                 <Attributes />
+                                 <ID>AGE</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="20">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>27岁</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>AGE</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Age</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>CT号：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>CT No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField">
+                                 <Attributes />
+                                 <ID>PATIENT_LOCAL_ID</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>CT14005372</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>PATIENT_LOCAL_ID</Name>
+                                 <InnerValue>CT14005372</InnerValue>
+                                 <BackgroundText>影像号</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>科室：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Department:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField">
+                                 <Attributes />
+                                 <ID>REQ_DEPT</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>胸部外科</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>REQ_DEPT</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Department</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>住院号：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Admission No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>INPUT_ID</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>INPUT_ID</Name>
+                                 <InnerValue />
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>床号：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>BED_NO</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>BED_NO</Name>
+                                 <InnerValue />
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>检查日期：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>EXAM_DATE_TIME</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>2014-04-18</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>EXAM_DATE_TIME</Name>
+                                 <InnerValue>2014-04-18</InnerValue>
+                                 <BackgroundText>检查时间</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>检查部位：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Location:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>EXAM_SUB_CLASS</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>胸部</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>EXAM_SUB_CLASS</Name>
+                                 <InnerValue>胸部</InnerValue>
+                                 <BackgroundText>检查部位</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>4</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>检查设备：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>DEVICE</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>西门子64排</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>DEVICE</Name>
+                                 <InnerValue>西门子64排</InnerValue>
+                                 <BackgroundText>检查设备</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>5</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>报告日期：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>CREATETIME</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>2014-04-18</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>CREATETIME</Name>
+                                 <InnerValue>2014-04-18</InnerValue>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="20">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>检查项目：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Examination Item:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>EXAM_ITEM</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>胸部CT平扫</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>EXAM_ITEM</Name>
+                                 <InnerValue>胸部CT平扫</InnerValue>
+                                 <BackgroundText>检查项目</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>15</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="22">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>CT </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="23">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>所见：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="24">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>CT Findings:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>16</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="27">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>阳性：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="21">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Positive:</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="11">
+                                 <ID>IS_ABNORMAL</ID>
+                                 <PropertyExpressions />
+                                 <Name>IS_ABNORMAL</Name>
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <GroupName>IS_ABNORMAL</GroupName>
+                                 <Checked>true</Checked>
+                                 <EventExpressions />
+                                 <RuntimeVisible>false</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="13">
+                                 <Attributes />
+                                 <ID>DESCRIPTION</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="25">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>     右前胸壁结构乱，肌群形态欠规整、肌间隙模糊，邻近皮肤稍厚，邻近肋骨结构欠清晰，余肺纹理走行自然，肺野内未见明显结节及软组织肿块影，肺门大小形态如常，气管支气管通畅，纵隔内未见明显肿大淋巴结影，右侧胸膜局限性稍厚，胸腔无积液。 </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="21">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="26">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>spatium intermusculare</Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="21">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>; the adjacent rib structure is not clear, the veins of the rest of lungs are natural; no obvious nodule or soft tissue mass is seen within the pulmonary field; the size and form of the pulmonary hilum is as usual; tracheal bronchi are open; no obvious enlargement of lymph node or shadow is seen in mediastinum; the pleura is locally a little thicker, and there is no hydrops in thoracic cavity.</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>DESCRIPTION</Name>
+                                 <InnerValue>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure spatium intermusculare; the adjacent rib structure is not clear, the veins of the rest of lungs are natural; no obvious nodule or soft tissue mass is seen within the pulmonary field; the size and form of the pulmonary hilum is as usual; tracheal bronchi are open; no obvious enlargement of lymph node or shadow is seen in mediastinum; the pleura is locally a little thicker, and there is no hydrops in thoracic cavity.</InnerValue>
+                                 <BackgroundText>CT Findings</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>16</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>5</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-1263.77954</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>诊断意见：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>17</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>5</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="7">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="13">
+                                 <Attributes />
+                                 <ID>IMPRESSION</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="13">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>    右前胸壁结构乱，肌群形态欠规整、肌间隙模糊，邻近皮肤稍厚，请结合临床。</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>IMPRESSION</Name>
+                                 <InnerValue>    右前胸壁结构乱，肌群形态欠规整、肌间隙模糊，邻近皮肤稍厚，请结合临床。</InnerValue>
+                                 <BackgroundText>检查诊断</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>16</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>5</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-730.283447</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="8">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>报告医生：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>14</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField">
+                                 <Attributes />
+                                 <ID>CREATEUSER</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements>
+                                    <Element xsi:type="XString">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>赵妍</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>CREATEUSER</Name>
+                                 <InnerValue>赵妍</InnerValue>
+                                 <BackgroundText>报告医生</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>签名：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>审核医生：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>CHECKUSER</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="14">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>王曙升</Text>
+                                    </Element>
+                                 </XElements>
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <EventExpressions>
+                                    <Expression>
+                                       <Expression>value=''</Expression>
+                                       <Target>Custom</Target>
+                                       <CustomTargetName>1002</CustomTargetName>
+                                    </Expression>
+                                    <Expression>
+                                       <Expression>value=''</Expression>
+                                       <Target>Custom</Target>
+                                       <CustomTargetName>1001</CustomTargetName>
+                                    </Expression>
+                                 </EventExpressions>
+                                 <UserEditable>false</UserEditable>
+                                 <Name>CHECKUSER</Name>
+                                 <InnerValue>王曙升</InnerValue>
+                                 <BackgroundText>审核医生</BackgroundText>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>签名：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>96.48819</SpecifyHeight>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>229.21875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>50</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>55.84375</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>199.911438</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>158.011719</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>59.670578</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>132.859375</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>135.859375</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>57.911438</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>50</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>145.734314</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>133.013916</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>210.027832</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>94.16144</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>94.16144</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>97.3411255</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>330.0235</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="48" />
+            <Element xsi:type="XTextTable" StyleIndex="14" NumOfRows="9" NumOfColumns="12">
+               <Attributes />
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="36">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Name:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="50">
+                                 <Attributes />
+                                 <ID>field21</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Name</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="49" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="36">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Sex:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field22</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Sex</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Age:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field23</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Age</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>CT No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field24</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>CT No</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="36">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Department:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field25</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Department</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Admission No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field26</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Admission No.</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Bed No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field27</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Bed No.</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Date of Examination:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field28</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Date of Examination</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="36">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Location:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field29</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Location</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Examination Equipment:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field30</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Examination Equipment</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Date of Report:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field31</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Date of Report</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="36">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Examination Item:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field32</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Examination Item</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="40">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>CT Findings:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>9</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Positive:</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="52">
+                                 <ID>checkbox2</ID>
+                                 <PropertyExpressions />
+                                 <Width>62</Width>
+                                 <Height>62</Height>
+                                 <Checked>true</Checked>
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                                 <RuntimeVisible>true</RuntimeVisible>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="38" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="41">
+                                 <Attributes />
+                                 <ID>field19</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="36">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="42">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>spatium intermusculare</Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="36">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>; the adjacent rib structure is not clear, the veins of the rest of lungs are natural; no obvious nodule or soft tissue mass is seen within the pulmonary field; the size and form of the pulmonary hilum is as usual; tracheal bronchi are open; no obvious enlargement of lymph node or shadow is seen in mediastinum; the pleura is locally a little thicker, and there is no hydrops in thoracic cavity.</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <InnerValue>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure spatium intermusculare; the adjacent rib structure is not clear, the veins of the rest of lungs are natural; no obvious nodule or soft tissue mass is seen within the pulmonary field; the size and form of the pulmonary hilum is as usual; tracheal bronchi are open; no obvious enlargement of lymph node or shadow is seen in mediastinum; the pleura is locally a little thicker, and there is no hydrops in thoracic cavity.</InnerValue>
+                                 <BackgroundText>CT Findings</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="31">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="32">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>spatium intermusculare</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="31">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>; the adjacent rib structure is not clear, the veins of the rest of lungs are natural; no obvious nodule or soft tissue mass is seen within the pulmonary field; the size and form of the pulmonary hilum is as usual; tracheal bronchi are open; no obvious enlargement of lymph node or shadow is seen in mediastinum; the pleura is locally a little thicker, and there is no hydrops in thoracic cavity.</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="43" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>614</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="40">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Diagnostic Opinion:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>125</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="38" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="41">
+                                 <Attributes />
+                                 <ID>field20</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="36">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="42">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>spatium intermusculare</Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="36">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>; the adjacent skin is a little thicker; please combine with clinical diagnosis.</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <InnerValue>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure spatium intermusculare; the adjacent skin is a little thicker; please combine with clinical diagnosis.</InnerValue>
+                                 <BackgroundText>Diagnostic Opinion</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="31">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="32">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>spatium intermusculare</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="31">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>; the adjacent skin is a little thicker; please combine with clinical diagnosis.</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>475</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="28">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="36">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Reported by:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="38" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field33</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Reported by</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Signature:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field34</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Signature</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Reviewed by:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field35</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Reviewed by</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="39">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Signature:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="51">
+                                 <Attributes />
+                                 <ID>field36</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <BackgroundText>Signature</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="37" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="29">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>306</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>236</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>26</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>238</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>236</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>59</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>214</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>21</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>216</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>268</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>76</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Width>336</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="44" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="53" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="35" />
+            <Element xsi:type="XString" StyleIndex="45" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="33">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>注：本报告单仅供临床医师参考，不作证明之用，未经医师亲笔签名无效。</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="46">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Note: this report shall be provided only for reference by clinicians instead of as evidence and be invalid without signature by a physician.</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="47" />
+            <Element xsi:type="XInputField" StyleIndex="2">
+               <Attributes />
+               <ID>1002</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="2">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>该报告为临时报告，请于</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>CT室</Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="2">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>正式上班时间换取正式报告。</Text>
+                  </Element>
+               </XElements>
+               <Visible>false</Visible>
+               <BorderElementColor />
+               <EventExpressions />
+               <Name>临时报告说明</Name>
+               <InnerValue>该报告为临时报告，请于CT室正式上班时间换取正式报告。</InnerValue>
+               <BackgroundText>临时报告说明</BackgroundText>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+   </XElements>
+   <Parameters />
+   <FileName>D:\hlj\产品文档\DCSoftDemo\DemoFile2\检查报告--陕西省肿瘤医院CT检查报告单-EN.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <UserHistories>
+      <History>
+         <ID>355</ID>
+         <Name>王曙升</Name>
+         <SavedTime>2019-01-18T13:59:56.4943538+08:00</SavedTime>
+         <ClientName>PC:2012-20131217HM,IP:172.16.141.144.</ClientName>
+      </History>
+      <History>
+         <ID>355</ID>
+         <Name>王曙升</Name>
+         <SavedTime>2019-01-18T14:05:16.3555589+08:00</SavedTime>
+      </History>
+   </UserHistories>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>4</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+            <GridLineType>ExtentToBottom</GridLineType>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+            <ProtectType>Range</ProtectType>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>4</BorderWidth>
+            <BorderTop>true</BorderTop>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+            <GridLineType>ExtentToBottom</GridLineType>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>4</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+            <GridLineType>ExtentToBottom</GridLineType>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>4</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>14</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="7">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>4</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="8">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>4</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="9">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="10">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="11">
+            <Visibility>PDF</Visibility>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="12">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+         </Style>
+         <Style Index="13">
+            <BackgroundColor>#FFFFFF</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>14</FontSize>
+         </Style>
+         <Style Index="14">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="15">
+            <FontName>宋体</FontName>
+            <FontSize>22</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="16">
+            <FontName>宋体</FontName>
+            <FontSize>22</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+            <ProtectType>Range</ProtectType>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="17">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+            <ProtectType>Range</ProtectType>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="18">
+            <FontName>宋体</FontName>
+            <FontSize>22</FontSize>
+            <Bold>true</Bold>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="19">
+            <FontName>宋体</FontName>
+            <FontSize>22</FontSize>
+            <Bold>true</Bold>
+            <ProtectType>Range</ProtectType>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="20">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="21">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>10.5</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="22">
+            <FontName>宋体</FontName>
+            <FontSize>14</FontSize>
+            <Bold>true</Bold>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="23">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="24">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="25">
+            <BackgroundColor>#FFFFFF</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>14</FontSize>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="26">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>11</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="27">
+            <Visibility>PDF</Visibility>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="28">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="29">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>10</PaddingLeft>
+            <PaddingRight>10</PaddingRight>
+         </Style>
+         <Style Index="30">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <ProtectType>Range</ProtectType>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="31">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>10.5</FontSize>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="32">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Arial</FontName>
+            <FontSize>11</FontSize>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="33">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+            <Bold>true</Bold>
+            <ProtectType>Range</ProtectType>
+            <DeleterIndex>0</DeleterIndex>
+         </Style>
+         <Style Index="34">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>16</FontSize>
+            <Bold>true</Bold>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="35">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10</FontSize>
+            <Bold>true</Bold>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="36">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="37">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>10</BorderWidth>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="38">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+            <BorderWidth>10</BorderWidth>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="39">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="40">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="41">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="42">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>11</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="43">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Justify</Align>
+            <BorderWidth>10</BorderWidth>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="44">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="45">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <ProtectType>Range</ProtectType>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="46">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="47">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10</FontSize>
+            <Bold>true</Bold>
+            <ProtectType>Range</ProtectType>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="48">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+            <CreatorIndex>0</CreatorIndex>
+         </Style>
+         <Style Index="49">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>10</BorderWidth>
+            <CreatorIndex>1</CreatorIndex>
+         </Style>
+         <Style Index="50">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>10</BorderWidth>
+            <CreatorIndex>1</CreatorIndex>
+         </Style>
+         <Style Index="51">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>10</BorderWidth>
+            <CreatorIndex>1</CreatorIndex>
+         </Style>
+         <Style Index="52">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <CreatorIndex>1</CreatorIndex>
+         </Style>
+         <Style Index="53">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10</FontSize>
+            <Bold>true</Bold>
+            <CreatorIndex>0</CreatorIndex>
+            <DeleterIndex>1</DeleterIndex>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <RepeatedImages />
+   <ControlOptionsForDebug>
+      <RuleVisible>false</RuleVisible>
+      <UserInfo>
+         <ID>511</ID>
+         <Name>上官海燕</Name>
+         <PermissionLevel>0</PermissionLevel>
+      </UserInfo>
+      <DocumentOptions>
+         <SecurityOptions>
+            <AutoEnablePermissionWhenUserLogin>false</AutoEnablePermissionWhenUserLogin>
+            <TrackVisibleLevel0>
+               <UnderLineColorString>#ADD8E6</UnderLineColorString>
+               <DeleteLineColorString>#FF7F50</DeleteLineColorString>
+            </TrackVisibleLevel0>
+            <TrackVisibleLevel1 />
+            <TrackVisibleLevel2>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel2>
+            <TrackVisibleLevel3>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel3>
+         </SecurityOptions>
+         <ViewOptions>
+            <NewInputContentUnderlineColor />
+            <AdornTextBackColorValue>#64808080</AdornTextBackColorValue>
+            <FieldHoverBackColorValue>#FFFFFF</FieldHoverBackColorValue>
+            <TagColorForNormalFieldValue>#FF0000</TagColorForNormalFieldValue>
+         </ViewOptions>
+         <BehaviorOptions>
+            <EnabledShowWinTaskBarProgress>false</EnabledShowWinTaskBarProgress>
+            <ParagraphFlagFollowTableOrSection>true</ParagraphFlagFollowTableOrSection>
+            <ValidateUserIDWhenEditDeleteComment>true</ValidateUserIDWhenEditDeleteComment>
+            <InsertDocumentWithCheckMRID>PromptForbitWhenFail</InsertDocumentWithCheckMRID>
+         </BehaviorOptions>
+         <EditOptions>
+            <GridLinePreviewText>DCWriter是南京都昌信息科技有限公司自主研发的专业的电子病历文档编辑器。</GridLinePreviewText>
+         </EditOptions>
+      </DocumentOptions>
+      <Font>
+         <Size>12</Size>
+      </Font>
+      <HeaderFooterFlagVisible>None</HeaderFooterFlagVisible>
+      <JumpPrint />
+      <PageTitlePosition>BottomRight</PageTitlePosition>
+      <Readonly>true</Readonly>
+   </ControlOptionsForDebug>
+   <GlobalJavaScriptReferences />
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司:南京都昌信息科技有限公司2019年旗舰版</LicenseText>
+      <CreationTime>2013-08-01T09:26:41.765625+08:00</CreationTime>
+      <LastModifiedTime>2019-01-18T14:05:19.2672161+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.1.2013.10718</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>CT Scanning Report
+Name:   Sex:   Age:   CT No.:   
+Department:   Admission No.:   Bed No.:   Date of Examination:   
+Location:   Examination Equipment:   Date of Report:   
+Examination Item:   
+CT Findings:   Positive:■ 
+  The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure spatium intermusculare; the adjacent rib structure is not clear, the veins of the rest of lungs are natural; no obvious nodule or soft tissue mass is seen within the pulmonary field; the size and form of the pulmonary hilum is as usual; tracheal bronchi are open; no obvious enlargement of lymph node or shadow is seen in mediastinum; the pleura is locally a little thicker, and there is no hydrops in thoracic cavity. 
+Diagnostic Opinion:   
+  The right anterior thoracic wall structure is disorderly, with irregular muscle group form and an obscure spatium intermusculare; the adjacent skin is a little thicker; please combine with clinical diagnosis. 
+Reported by:   Signature:   Reviewed by:   Signature:   
+
+ Note: this report shall be provided only for reference by clinicians instead of as evidence and be invalid without signature by a physician.
+</BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <PrinterName />
+      <PaperSource />
+      <HeaderDistance>0</HeaderDistance>
+      <FooterDistance>0</FooterDistance>
+      <LeftMargin>39</LeftMargin>
+      <TopMargin>77</TopMargin>
+      <RightMargin>39</RightMargin>
+      <BottomMargin>77</BottomMargin>
+   </PageSettings>
+</XTextDocument>

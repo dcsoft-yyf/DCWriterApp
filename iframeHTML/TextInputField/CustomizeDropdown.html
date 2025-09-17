@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>测试第五代接口</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .describe-box {
+            /* max-width: 50%;
+        min-width: 500px; */
+            border: 1px solid #dcdfe6;
+            line-height: 23px;
+            text-align: left;
+            background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+            box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+            border-radius: 0px 8px 8px 0px;
+        }
+
+        .describe-box span:first-child {
+            /* text-align: center; */
+            font-weight: bold;
+            line-height: 32px;
+            border-bottom: 1px solid rgb(155, 187, 227)
+        }
+
+        .describe-box span {
+            display: block;
+            margin: 0 5px;
+            font-size: 13px;
+
+        }
+
+        .toolBox {
+            /* height: 40px; */
+            width: 100%;
+            border: 1px solid #dcdfe6;
+            display: flex;
+            font-size: 13px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .toolBox span {
+            display: inline-table;
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            padding: 5px 10px;
+            min-width: 50px;
+            height: 18px;
+            white-space: nowrap
+        }
+
+        .toolBox select {
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            padding: 3px 10px;
+            min-width: 50px;
+            height: 29px;
+        }
+
+        #FontNameSelect {
+            min-width: 150px
+        }
+
+        .toolBox span:has(select) {
+            padding: 0px;
+            /* margin: 0px; */
+        }
+
+        .toolBox span:hover {
+            border: 1px solid #4e6ef2;
+            cursor: pointer;
+        }
+
+        .dc-writer-box {
+            /* height: 100% !important; */
+            border-bottom: 0px solid black;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .main-container {
+            height: 100%;
+            display: flex;
+
+        }
+
+        .ringbox {
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        #myWriterControl {
+            width: 70%;
+        }
+
+        .TracesListContentItem {
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid saddlebrown;
+            text-align: center;
+            line-height: 50px;
+            background: #dce1f7;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center">
+    <div class="header">
+        <div class="describe-box">
+            <span>查看编辑器版本</span>
+
+        </div>
+        <div class="toolBox">
+            <span commandName="fileopen">打开本地文件</span>
+            <span localMethod="DownLoadFile">导出到本地</span>
+            <span localMethod="PrintDocument">打印</span>
+            <span localMethod="LoadPrintPreview">打印预览</span>
+            <span localMethod="ClosePrintPreview">关闭预览</span>
+            <span localMethod="AboutControl">关于</span>
+            <br>
+
+        </div>
+
+        <div class="toolBox">
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+            RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+            RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC"
+            PageCssString222="box-shadow:0px 0px 0px grey" PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+            RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+        </div>
+    </div>
+    </div>
+
+    <script src=""></script>
+
+    <script src="../../_framework/dcwriter5.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+
+    <script>
+        window.onload = function () {
+        };
+        let toolBoxDOM = document.querySelector(".toolBox");
+        if (toolBoxDOM) {
+            toolBoxDOM.addEventListener("click", (e) => {
+                if (e.target.tagName == "SPAN") {
+                    let commandName = e.target.getAttribute("commandName");
+                    let localMethod = e.target.getAttribute("localMethod");
+                    if (commandName) {
+                        let ctl = document.getElementById("myWriterControl");
+                        ctl.DCExecuteCommand(commandName, false, null);
+                    } else if (localMethod) {
+                        funcOBJ[localMethod].call(funcOBJ);
+                    }
+                }
+            });
+        }
+        //编辑器方法组
+        let funcOBJ = {
+            DownLoadFile: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.DownLoadFile("xml");
+            },
+            PrintDocument: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.PrintDocument();
+            },
+            LoadPrintPreview: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.LoadPrintPreview();
+            },
+            ClosePrintPreview: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.ClosePrintPreview();
+            },
+            AboutControl: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.AboutControl();
+            },
+        };
+
+        function WriterControl_OnLoad(rootElement) {
+            rootElement.LoadDocumentFromString(strDemoFileXml, 'xml');
+            rootElement.EventShowContextMenu = Handle_EventShowContextMenu;// 这个函数定义在DemoApp.js中
+            // rootElement.EventUpdateToolarState = Handle_EventUpdateToolarState;// 这个函数定义在DemoApp.js中
+            rootElement.EventDropdownEditor = function (container) {
+
+                var currentElement = rootElement.GetElementProperties(rootElement.CurrentElement());
+
+                container.innerHTML = `<style>
+                #divDropdownContainer20230111{
+                    width: 700px;
+                    height: 410px;
+                    text-align: left;
+                    background: #b6f4f4;
+                    word-wrap: break-word;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    max-height: 420px !important;
+                }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    max-height: 200px;
+                    overflow: auto;
+                }
+
+                th, td {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                }
+
+                th {
+                    background-color: #f2f2f2;
+                }
+
+                tr:hover {
+                    background-color: #e0f0ff;
+                }
+                tr.active{
+                    background-color: #e0f0ff;
+                }
+               </style>
+               <div>
+                    <table id="medicineTable">
+                        <thead>
+                            <th>药品名称</th>
+                            <th>代码</th>
+                            <th>规格</th>
+                            <th>价格</th>
+                        </thead>
+                        <tbody id="medicineTableTbody"></tbody>
+                    </table>
+                </div>
+               `;
+                const medicineTableTbody = document.getElementById("medicineTableTbody");
+                var TableInnerHtml = ``;
+
+                medicines.forEach(item => {
+                    TableInnerHtml += `
+                    <tr dataName="${item['药品名称']}" class=${currentElement.Text === item['药品名称'] ? 'active' : ''}>
+                        <td>${item['药品名称']}</td>
+                        <td>${item['代码']}</td>
+                        <td>${item['规格']}</td>
+                        <td>${item['价格']}</td>
+                    </tr>
+                    `;
+                });
+                medicineTableTbody.innerHTML = TableInnerHtml;
+                medicineTableTbody.addEventListener('click', function (event) {
+                    var target = event.target;
+
+                    // 检查点击的元素是否在表格行内
+                    while (target && target.nodeName !== 'TR') {
+                        target = target.parentNode;
+                    }
+
+                    // 如果点击的是表格行内的元素
+                    if (target && target.nodeName === 'TR' && !target.parentNode.classList.contains('thead')) {
+                        // 在这里执行你想要的操作
+                        var currentTr = medicineTableTbody.querySelector('tr.active');
+                        currentTr && currentTr.classList.remove('active');
+                        target.classList.add('active');
+                        var dataName = target.getAttribute('dataName');
+                        console.log(dataName, '============dataname');
+                        rootElement.SetElementTextByID(currentElement.ID, dataName);
+                        container.innerHTML = null;
+                        container.style.display = 'none';
+                    }
+                });
+                return false;
+            };
+        };
+        var medicines = [
+            {
+                "药品名称": "5%葡萄糖注射液",
+                "代码": "01",
+                "规格": "5%250ml",
+                "价格": "3.2"
+            },
+            {
+                "药品名称": "0.9%氯化钠注射液(生理盐水注射液)",
+                "代码": "02",
+                "规格": "0.9%100ml",
+                "价格": "2.7"
+            },
+            {
+                "药品名称": "阿莫西林胶囊",
+                "代码": "03",
+                "规格": "0.25*24",
+                "价格": "15.53"
+            },
+            {
+                "药品名称": "奥美拉唑肠溶胶囊",
+                "代码": "04",
+                "规格": "20mg*24",
+                "价格": "3.7"
+            },
+            {
+                "药品名称": "葡萄糖钙酸针",
+                "代码": "05",
+                "规格": "10ml",
+                "价格": "1.08"
+            },
+            {
+                "药品名称": "温肾消肿丸☆[甲][省甲][公]",
+                "代码": "06",
+                "规格": "(60g)*60克",
+                "价格": "107"
+            },
+            {
+                "药品名称": "维生素B1片☆[乙][省乙][公]",
+                "代码": "07",
+                "规格": "10mg*100片",
+                "价格": "3.24"
+            },
+            {
+                "药品名称": "乌体林斯注射剂[乙]",
+                "代码": "08",
+                "规格": "1.72ug",
+                "价格": "0.97"
+            },
+            {
+                "药品名称": "别嘌呤醇片☆[甲][省甲][公]",
+                "代码": "09",
+                "规格": "0.1g*100片",
+                "价格": "19.45"
+            }
+        ];
+        function Handle_EventShowContextMenu(eventSender, args) {
+            var typename = args.ElementType;
+            if (typename != null && typename != "") {
+                typename = typename.toLowerCase();
+                var options = [
+                    {
+                        label: '撤销',
+                        exec: () => {
+                            console.log('撤销');
+                            eventSender.DCExecuteCommand('Undo', false, null);
+                        },
+                    },
+                    {
+                        label: '重做',
+                        exec: () => {
+                            console.log('重做');
+                            eventSender.DCExecuteCommand('Redo', false, null);
+                        },
+                    },
+                    '-',
+                    {
+                        label: '复制(Ctrl+C)',
+                        exec: () => {
+                            console.log('复制(Ctrl+C)');
+                            eventSender.DCExecuteCommand('Copy', false, null);
+                        },
+                    },
+                    {
+                        label: '粘贴(Ctrl+V)',
+                        exec: () => {
+                            eventSender.DCExecuteCommand('Paste', false, null);
+                        },
+                    },
+                    {
+                        label: '剪切(Ctrl+X)',
+                        exec: () => {
+                            eventSender.DCExecuteCommand('Cut', false, null);
+                        },
+                    },
+                    {
+                        label: '纯文本复制',
+                        exec: () => {
+                            eventSender.DCExecuteCommand('CopyAsText', false, null);
+                        },
+                    },
+                    {
+                        label: '纯文本粘贴',
+                        exec: () => {
+                            console.log('纯文本粘贴');
+                            eventSender.DCExecuteCommand('PasteAsText', false, null);
+                        },
+                    },
+                    '-',
+                    {
+                        label: '属性',
+                        exec: () => {
+                            //非只读模式下可以打开属性对话框
+                            if (eventSender.Readonly === false) {
+                                eventSender.DCExecuteCommand('ElementProperties', true, null);
+                            }
+                        },
+                    },
+                ];
+                if (typename == "xtexttablecellelement") {//单元格
+                    var options2 = [
+                        '-',
+                        {
+                            label: '表格属性',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    eventSender.DCExecuteCommand("tableproperties", true, null);
+                                }
+
+                            },
+                        },
+                        {
+                            label: '表格行属性',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    eventSender.DCExecuteCommand("tablerowproperties", true, null);
+                                }
+                            },
+                        },
+                        {
+                            label: '单元格属性',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    eventSender.DCExecuteCommand("tablecellproperties", true, null);
+                                }
+                            },
+                        },
+                        '-',
+                        {
+                            label: '表格行列',
+                            exec: () => {
+
+                            },
+
+                            subMenu: [
+                                {
+                                    label: '删除表格行',
+                                    exec: () => {
+                                        eventSender.DCExecuteCommand("Table_DeleteRow", false, null);
+                                    },
+                                },
+                                {
+                                    label: '删除表格列',
+                                    exec: () => {
+                                        eventSender.DCExecuteCommand("Table_DeleteColumn", false, null);
+                                    },
+                                },
+                                {
+                                    label: '在上面插入行',
+                                    exec: () => {
+                                        eventSender.DCExecuteCommand("Table_InsertRowUp", false, null);
+                                    },
+                                },
+                                {
+                                    label: '在下面插入行',
+                                    exec: () => {
+                                        eventSender.DCExecuteCommand("Table_InsertRowDown", false, null);
+                                    },
+                                },
+                                {
+                                    label: '在左侧插入列',
+                                    exec: () => {
+                                        eventSender.DCExecuteCommand("Table_InsertColumnLeft", false, null);
+                                    },
+                                },
+                                {
+                                    label: '在右侧插入列',
+                                    exec: () => {
+                                        eventSender.DCExecuteCommand("Table_InsertColumnRight", false, null);
+                                    },
+                                },
+                            ]
+                        },
+
+                        '-',
+                        {
+                            label: '合并单元格',
+                            exec: () => {
+                                if (eventSender.Readonly === false) {
+                                    eventSender.DCExecuteCommand("Table_MergeCell", false, null);
+                                };
+                            },
+                        },
+                        {
+                            label: '拆分单元格',
+                            exec: () => {
+                                if (eventSender.Readonly === false) {
+                                    eventSender.DCExecuteCommand("Table_SplitCellExt", true, null);
+                                };
+                            },
+                        },
+                        '-',
+                        {
+                            label: '设置单元格网格线',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    console.log('设置单元格网格线');
+                                    var cell = eventSender.CurrentTableCell();
+                                    if (cell != null) {
+                                        var settings = {
+                                            AlignToGridLine: "True", //文本行对齐到网格线
+                                            ColorValue: "#000000",  //网格线颜色
+                                            GridSpanInCM: 1,  //网格线之间的宽度
+                                            LineStyle: "Solid", //网格线样式
+                                            LineWidth: 1,  //网格线宽度
+                                            Printable: "True", //打印预览是否显示
+                                            Visible: "True", //网格是否显示
+                                        };
+                                        eventSender.cellGridlineDialog(settings, eventSender);
+                                    }
+                                };
+
+                            },
+                        },
+                        {
+                            label: '设置单元格斜分线',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    console.log('设置单元格斜分线');
+                                    var cell = eventSender.CurrentTableCell();
+                                    if (cell != null) {
+                                        eventSender.cellDiagonalLineDialog(cell, eventSender);
+                                    };
+                                }
+                            },
+                        },
+                        {
+                            label: '设置表格边框',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    eventSender.bordersShadingDialog();
+                                };
+                            },
+                        },
+                        {
+                            label: '设置单元格边框',
+                            exec: () => {
+                                //非只读模式下可以打开属性对话框
+                                if (eventSender.Readonly === false) {
+                                    eventSender.borderShadingcellDialog();
+                                };
+                            },
+                        }
+                    ];
+
+                    options = options.concat(options2);
+                }
+                else {
+
+                }
+                ContextMenu(options, args, eventSender);
+
+            }
+
+            //return { eventSender,orgs }
+        };
+        function ContextMenu(options, menuObj, rootElement) {
+            if (options != null && Array.isArray(options)) {
+                if (menuObj) {
+                    //获取到包裹元素
+                    var pageContainer = rootElement.querySelector('[dctype=page-container]');
+                    //判断是否为打印预览
+                    if (rootElement.IsPrintPreview()) {
+                        pageContainer = rootElement.querySelector('[dctype=page-printpreview]');
+                    }
+                    //判断是否存在dcContextMenu的元素
+                    var hasContextMenu = pageContainer.querySelector('#dcContextMenu');
+                    if (!hasContextMenu) {
+                        var meunDiv = document.createElement('div');
+                        meunDiv.setAttribute('id', 'dcContextMenu');
+                        pageContainer.appendChild(meunDiv);
+                        meunDiv.innerHTML = `<div class="dcMenu-line"></div>`;
+                        hasContextMenu = meunDiv;
+                        //判断是否有css
+                        var dcHead = document.head;
+                        //判断是否存在对应的css
+                        var hasContextMenuCss = dcHead.querySelector('#ContextMenuCss');
+                        if (!hasContextMenuCss) {
+                            var newCssString = `
+                    #dcContextMenu{
+                        position: absolute;
+                        margin: 0;
+                        padding: 2px;
+                        border-width: 1px;
+                        border-style: solid;
+                        background-color: #fafafa;
+                        border-color: #ddd;
+                        color: #444;
+                        box-shadow: rgb(204, 204, 204) 2px 2px 3px;
+                        min-width: 144px;
+                        /* left: 8px;
+                        top: 481.672px;
+                        overflow: hidden;*/
+                        z-index: 110008;
+                        display: none;
+                    }
+                    #dcContextMenu div.dcMenu-item:hover{
+                        color: rgb(0, 0, 0);
+                        border-color: rgb(183,210,255);
+                        background: rgb(234,242,255);
+                    }
+                    #dcContextMenu .dcMenu-line{
+                        position: absolute;
+                        left: 26px;
+                        top: 0;
+                        height: 100%;
+                        font-size: 1px;
+                        border-left: 1px solid #ccc;
+                        border-right: 1px solid #fff;
+                    }
+                    #dcContextMenu .dcMenu-item{
+                        position: relative;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        margin: 0px;
+                        padding: 0px;
+                        font-size: 12px;
+                        overflow: hidden;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: transparent;
+                        box-sizing: content-box;
+                    }
+                    #dcContextMenu .dcMenu-item .dcMenu-text{
+                        float: left;
+                        padding-left: 28px;
+                        padding-right: 20px;
+                        font-size: 12px;
+                    }
+
+                    #dcContextMenu .dcMenu-icon{
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        left: 2px;
+                        top: 50%;
+                        margin-top: -8px;
+                    }
+                    #dcContextMenu .dcMenu-sep{
+                        margin: 3px 0px 3px 25px;
+                        font-size: 1px;
+                        border-top: 1px solid #ccc;
+                        border-bottom: 1px solid #fff;
+                    }
+                    #dcContextMenu .secondaryMenu{
+                        position: absolute;
+                        z-index: 110011;
+                        margin: 0;
+                        padding: 2px;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: #ddd;
+                        min-width: 144px;
+                        overflow: hidden;
+                        display: none;
+                        background-color: #fafafa;
+                    }
+                    #dcContextMenu .dcMenu-rightarrow {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: 0;
+                        top: 50%;
+                        margin-top: -8px;
+                        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAACm53kpAAAAZ0lEQVR42u2VMQ7AMAgD+f9XeYBHd+mA2IqrJFJ8EkMGrNiCJMIYY86Eh2otDYA7dNgq2/kLEEzwhxDGGrURQxGlN97gUUrxQCU9DM33ALjYQA0vlRGCcPEUjGxdgasfQX+DxphreAA2tk8BzQnbmgAAAABJRU5ErkJggg==) no-repeat -32px center;
+                    }`;
+                            var ContextMenuCss = document.createElement('style');
+                            ContextMenuCss.setAttribute('id', 'ContextMenuCss');
+                            dcHead.appendChild(ContextMenuCss);
+                            ContextMenuCss.innerHTML = newCssString;
+
+                            //页面滚动
+                            pageContainer.addEventListener('scroll', function () {
+                                var hasContextMenu = rootElement.querySelector('#dcContextMenu');
+                                if (hasContextMenu) {
+                                    hasContextMenu.remove();
+                                }
+                            });
+                            //丢失焦点
+                            window.addEventListener('blur', function () {
+                                var hasContextMenu = rootElement.querySelector('#dcContextMenu');
+                                if (hasContextMenu) {
+                                    hasContextMenu.remove();
+                                }
+                            });
+                        }
+
+                    } else {
+                        //存在时，清空所有item和sep的元素
+                        var allItem = hasContextMenu.querySelectorAll('.dcMenu-item, .dcMenu-sep');
+                        for (var i = 0; i < allItem.length; i++) {
+                            allItem[i].remove();
+                        }
+                    }
+                    var containerHeight = 0;
+                    if (Array.isArray(options) && options.length > 0) {
+                        //根据options显示元素
+                        for (var option = 0; option < options.length; option++) {
+                            if (typeof options[option] == 'object') {
+                                var thisItem = insertItem(options[option], hasContextMenu, true);
+                                //判断是否存在subMenu，如果需要更多可以使用递归调用
+                                if (options[option].subMenu && Array.isArray(options[option].subMenu)) {
+                                    var secondaryMenu = document.createElement('div');
+                                    secondaryMenu.setAttribute('class', 'secondaryMenu');
+                                    secondaryMenu.innerHTML = `<div class="dcMenu-line"></div>`;
+                                    hasContextMenu.appendChild(secondaryMenu);
+                                    for (var meun = 0; meun < options[option].subMenu.length; meun++) {
+                                        insertItem(options[option].subMenu[meun], secondaryMenu, false);
+                                    }
+                                    var rightItem = document.createElement('div');
+                                    rightItem.setAttribute('class', 'dcMenu-rightarrow');
+                                    thisItem.appendChild(rightItem);
+                                    //添加事件
+                                    thisItem.addEventListener('mouseenter', function (e) {
+                                        //console.log(e)
+                                        //console.log($(e.target))
+                                        //找到下一个子元素
+                                        var targetEle = e.target.nextElementSibling;
+                                        targetEle.style.top = e.target.offsetTop + 'px';
+                                        targetEle.style.left = e.target.offsetLeft + e.target.offsetWidth + 'px';
+                                        targetEle.style.display = 'block';
+                                    });
+                                    thisItem.addEventListener('mouseleave', function (e) {
+                                        var targetEle = e.target.nextElementSibling;
+                                        targetEle.style.display = 'none';
+                                    });
+                                    secondaryMenu.addEventListener('mouseenter', function (e) {
+                                        var targetEle = e.target.previousElementSibling;
+                                        e.target.style.top = targetEle.offsetTop + 'px';
+                                        e.target.style.left = targetEle.offsetLeft + targetEle.offsetWidth + 'px';
+                                        e.target.style.display = 'block';
+                                    });
+                                    secondaryMenu.addEventListener('mouseleave', function (e) {
+                                        e.target.style.display = 'none';
+                                    });
+
+                                }
+                            } else if (typeof options[option] == 'string' && options[option] == '-') {
+                                var sepEle = document.createElement('div');
+                                sepEle.setAttribute('class', 'dcMenu-sep');
+                                hasContextMenu.appendChild(sepEle);
+                                containerHeight += 8;
+                            }
+                        }
+                        var pageElement = menuObj.PageElement;
+                        //计算展示的高度
+                        var minHeight = pageContainer.scrollTop;
+                        var maxHeight = minHeight + pageContainer.clientHeight;
+                        containerHeight = containerHeight ? containerHeight + 6 : 0;
+                        hasContextMenu.style.height = containerHeight + 'px';
+                        hasContextMenu.style.left = pageElement.offsetLeft + menuObj.X + 'px';
+                        var cursorTop = pageElement.offsetTop + menuObj.Y;
+                        var menuLastHeight = cursorTop + containerHeight;
+                        //计算最下方的距离是否够显示全
+                        if (menuLastHeight > maxHeight) {
+                            //显示不全
+                            var topHasSpacing = - minHeight;
+                            //判断上边是否存在足够的距离
+                            if (topHasSpacing > containerHeight) {
+                                //距离足够
+                                hasContextMenu.style.top = cursorTop - containerHeight + 'px';
+                            } else {
+                                //距离不够
+                                if ((maxHeight - cursorTop) > (cursorTop - minHeight)) {
+                                    //下方的距离大于上方
+                                    hasContextMenu.style.top = cursorTop + 'px';
+                                } else {
+                                    //上方的距离大于下方
+                                    hasContextMenu.style.top = cursorTop - containerHeight + 'px';
+                                }
+                            }
+                        } else {
+                            //显示全
+                            hasContextMenu.style.top = cursorTop + 'px';
+                        }
+                        hasContextMenu.style.display = 'block';
+                    }
+                }
+            }
+
+            //插入内部的item项
+            function insertItem(options, hasContextMenu, needHeight) {
+                if (typeof options == 'object') {
+                    var itemEle = document.createElement('div');
+                    itemEle.setAttribute('class', 'dcMenu-item');
+                    itemEle.style.cssText = 'height: 22px;line-height: 22px';
+                    hasContextMenu.appendChild(itemEle);
+                    itemEle.innerHTML = `
+                <div class="dcMenu-text" style="height: 22px; line-height: 22px;">${options.label}</div>
+                <div class="dcMenu-icon"></div>
+            `;
+                    itemEle.addEventListener('mousedown', function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                    });
+                    itemEle.onclick;
+                    itemEle.addEventListener('click', function () {
+                        options.exec();
+                        hasContextMenu.remove();
+                    });
+                    if (needHeight) {
+                        containerHeight += 24;
+                    }
+                    return itemEle;
+                } else if (typeof options == 'string' && options == '-') {
+                    var sepEle = document.createElement('div');
+                    sepEle.setAttribute('class', 'dcMenu-sep');
+                    hasContextMenu.appendChild(sepEle);
+                    if (needHeight) {
+                        containerHeight += 24;
+                    }
+                    return sepEle;
+                }
+            }
+        }
+
+
+
+
+
+
+
+        var strDemoFileXml = '<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="2024.10.10.0"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextHeader"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="1"><Text>某 某 人 民 医 院</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="8" /><Element xsi:type="XParagraphFlag" StyleIndex="8" /><Element xsi:type="XString" WhitespaceCount="18"><Text>                  </Text></Element><Element xsi:type="XString" StyleIndex="2" WhitespaceCount="1"><Text> </Text></Element><Element xsi:type="XString" StyleIndex="3"><Text>处 方 笺</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextBody"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTable" NumOfRows="3" NumOfColumns="4"><ID>table1</ID><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="5"><Text>姓名：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="5" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="5"><Text>年龄：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="5" /></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="5"><Text>性别：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="5" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="5"><Text>住址电话：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="5" /></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="5"><Text>过敏史：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="5" /></XElements><ColSpan>2</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="5"><Text>临床诊断：</Text></Element><Element xsi:type="XParagraphFlag" StyleIndex="5" /></XElements><ColSpan>4</ColSpan></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element></XElements><AcceptChildElementTypes2>TableRow TableColumn</AcceptChildElementTypes2><Columns><Element xsi:type="XTextTableColumn"><Width>380.9167</Width></Element><Element xsi:type="XTextTableColumn"><Width>190.4583</Width></Element><Element xsi:type="XTextTableColumn"><Width>190.4583</Width></Element><Element xsi:type="XTextTableColumn"><Width>380.9167</Width></Element></Columns></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XTextTable" NumOfRows="2" NumOfColumns="1"><ID>table2</ID><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="6"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString" StyleIndex="7"><Text>R</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="6"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XInputField"><ID>处方</ID><EnableValueValidate>true</EnableValueValidate><BorderElementColor>#00000000</BorderElementColor><BackgroundText>双击此处下达处方！！！</BackgroundText><FieldSettings><EditStyle>DropdownList</EditStyle><DynamicListItems>true</DynamicListItems></FieldSettings></Element><Element xsi:type="XParagraphFlag" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element></XElements><AcceptChildElementTypes2>TableRow TableColumn</AcceptChildElementTypes2><Columns><Element xsi:type="XTextTableColumn"><Width>1142.75</Width></Element></Columns></Element><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextFooter"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTable" NumOfRows="2" NumOfColumns="3"><ID>table3</ID><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>医师</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>审核</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>金额</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element><Element xsi:type="XTextTableRow"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>调配</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>核对</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element><Element xsi:type="XTextTableCell" StyleIndex="4"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>发药</Text></Element><Element xsi:type="XParagraphFlag" /></XElements></Element></XElements><AcceptChildElementTypes2>TableCell</AcceptChildElementTypes2></Element></XElements><AcceptChildElementTypes2>TableRow TableColumn</AcceptChildElementTypes2><Columns><Element xsi:type="XTextTableColumn"><Width>380.9167</Width></Element><Element xsi:type="XTextTableColumn"><Width>380.9167</Width></Element><Element xsi:type="XTextTableColumn"><Width>380.9167</Width></Element></Columns></Element><Element xsi:type="XParagraphFlag" /></XElements></Element></XElements><SerializeParameterValue>true</SerializeParameterValue><FileFormat>XML</FileFormat><ContentStyles><Default xsi:type="DocumentContentStyle"><FontName>宋体</FontName><FontSize>12</FontSize></Default><Styles><Style Index="0"><FontName>宋体</FontName><FontSize>12</FontSize><Align>Center</Align></Style><Style Index="1"><FontName>宋体</FontName><FontSize>15.75</FontSize><Bold>true</Bold></Style><Style Index="2"><FontName>宋体</FontName><FontSize>12</FontSize><Bold>true</Bold></Style><Style Index="3"><FontName>宋体</FontName><FontSize>15</FontSize><Bold>true</Bold></Style><Style Index="4"><FontName>宋体</FontName><FontSize>12</FontSize><BorderWidth>1</BorderWidth><BorderLeft>true</BorderLeft><BorderBottom>true</BorderBottom><BorderTop>true</BorderTop><BorderRight>true</BorderRight><PaddingLeft>15</PaddingLeft><PaddingTop>10</PaddingTop><PaddingRight>12.5</PaddingRight><PaddingBottom>10</PaddingBottom></Style><Style Index="5"><FontName>宋体</FontName><FontSize>10.5</FontSize></Style><Style Index="6"><FontName>宋体</FontName><FontSize>12</FontSize><BorderLeftColor>#FFFFFF</BorderLeftColor><BorderTopColor>#FFFFFF</BorderTopColor><BorderRightColor>#FFFFFF</BorderRightColor><BorderBottomColor>#FFFFFF</BorderBottomColor><BorderWidth>1</BorderWidth><BorderLeft>true</BorderLeft><BorderBottom>true</BorderBottom><BorderTop>true</BorderTop><BorderRight>true</BorderRight><PaddingLeft>15</PaddingLeft><PaddingTop>10</PaddingTop><PaddingRight>12.5</PaddingRight><PaddingBottom>10</PaddingBottom></Style><Style Index="7"><FontName>微软雅黑</FontName><FontSize>42</FontSize><Bold>true</Bold></Style><Style Index="8"><FontName>宋体</FontName><FontSize>15</FontSize><Bold>true</Bold><Align>Center</Align></Style></Styles></ContentStyles><Info><LicenseText>未注册|Unregister</LicenseText><CreationTime>1980-01-01T00:00:00+08:00</CreationTime><LastModifiedTime>2024-10-10T15:02:20+08:00</LastModifiedTime><LastPrintTime>1980-01-01T00:00:00+08:00</LastPrintTime><Operator>DCSoft.Writer Version:1.2019.1.29</Operator><NumOfPage>1</NumOfPage></Info><BodyText>姓名： 年龄： 性别： \n住址电话： 过敏史： \n临床诊断： \n\nR \n双击此处下达处方！！！ </BodyText><LocalConfig /><PageSettings><PaperKind>A5</PaperKind><PaperWidth>583</PaperWidth><PaperHeight>827</PaperHeight></PageSettings></XTextDocument>'
+    </script>
+</body>
+
+</html>

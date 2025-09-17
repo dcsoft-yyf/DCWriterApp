@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>【第五代】用户内容锁定</title>
+   <style>
+      html,
+      body {
+         height: 100%;
+         overflow: hidden;
+         padding: 0;
+         margin: 0;
+      }
+
+      .describe-box {
+         border: 1px solid #dcdfe6;
+         line-height: 23px;
+         text-align: left;
+         background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+         box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+         border-radius: 0px 8px 8px 0px;
+         border-bottom: 1px solid rgb(155, 187, 227)
+      }
+
+      .describe-box span:first-child {
+         /* text-align: center; */
+         font-weight: bold;
+         line-height: 32px;
+
+      }
+
+      .describe-box span {
+         /* display: block; */
+         margin: 0 5px;
+         font-size: 13px;
+      }
+
+      .toolBox {
+         height: 40px;
+         width: 100%;
+         border: 1px solid #dcdfe6;
+         display: flex;
+         font-size: 13px;
+         overflow-x: auto;
+         overflow-y: hidden;
+      }
+
+      .toolBox span {
+         text-align: center;
+         display: inline-table;
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 5px 10px;
+         min-width: 50px;
+         height: 18px;
+         white-space: nowrap
+      }
+
+      .toolBox select {
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 3px 10px;
+         min-width: 50px;
+         height: 29px;
+      }
+
+      #FontNameSelect {
+         min-width: 150px
+      }
+
+      .toolBox span:has(select) {
+         padding: 0px;
+         margin: 0px;
+      }
+
+      .toolBox span:hover {
+         border: 1px solid #4e6ef2;
+         cursor: pointer;
+      }
+
+      .dc-writer-box {
+         /* height: 100% !important; */
+         border-bottom: 0px solid black;
+         background-attachment: fixed;
+         background-size: cover;
+         background-position: center top;
+      }
+
+      .main-container {
+         height: 100%;
+         display: flex;
+
+      }
+
+      .ringbox {
+         width: 30%;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+      }
+
+      .list-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px;
+         border-bottom: 1px solid #eee;
+      }
+
+      .list-item:last-child {
+         border-bottom: none;
+      }
+
+      #myWriterControl {
+         width: 70%;
+      }
+
+      .TracesListContentItem {
+         height: 50px;
+         width: 100%;
+         border-bottom: 1px solid saddlebrown;
+         text-align: center;
+         line-height: 50px;
+         background: #dce1f7;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="header">
+      <div class="describe-box">
+         <span>DCWriter5.0 集成了权限控制功能,可通过当前用户在当前行进行签名来控制其他用户登录后不能进行修改。</span>
+      </div>
+      <div class="toolBox">
+         <span commandName="fileopen">打开本地文件</span>
+         <span localMethod="DownLoadFile">导出到本地</span>
+         <span localMethod="PrintDocument">打印</span>
+         <span localMethod="LoadPrintPreview">打印预览</span>
+         <span localMethod="ClosePrintPreview">关闭预览</span>
+         <span localMethod="AboutControl">关于</span>
+      </div>
+      <!-- 修改内容 -->
+      <div class="toolBox">
+
+         <select name="" id="userID">
+            <option value="李护士">李护士</option>
+            <option value="张护士">张护士</option>
+         </select>
+         <span onclick="Login()">登录</span>
+         <span onclick="SignAndLockCurrentTableRow()">给当前表格行签名并加锁</span>
+      </div>
+   </div>
+   <div class="main-container">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+         RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+         RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+         PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+         RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+   </div>
+</body>
+<script src="../../_framework/dcwriter5.js"></script>
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+<script>
+
+   function WriterControl_OnLoad(rootElement) {
+      console.log('WriterControl_OnLoad888888888888');
+      loadXML();
+   };
+
+   let toolBoxDOM = document.querySelector(".toolBox");
+   if (toolBoxDOM) {
+      toolBoxDOM.addEventListener("click", (e) => {
+         if (e.target.tagName == "SPAN") {
+            let commandName = e.target.getAttribute("commandName");
+            let localMethod = e.target.getAttribute("localMethod");
+            if (commandName) {
+               let ctl = document.getElementById("myWriterControl");
+               ctl.DCExecuteCommand(commandName, false, null);
+            } else if (localMethod) {
+               funcOBJ[localMethod].call(funcOBJ);
+            }
+         }
+      });
+   }
+   //编辑器方法组
+   let funcOBJ = {
+      DownLoadFile: function () {
+         let ctl = document.getElementById("myWriterControl");
+         let fName = Date.now();
+         ctl.DownLoadFile("xml");
+      },
+      PrintDocument: function () {
+         let ctl = document.getElementById("myWriterControl");
+         let fName = Date.now();
+         ctl.PrintDocument();
+      },
+      LoadPrintPreview: function () {
+         let ctl = document.getElementById("myWriterControl");
+         let fName = Date.now();
+         ctl.LoadPrintPreview();
+      },
+      ClosePrintPreview: function () {
+         let ctl = document.getElementById("myWriterControl");
+         let fName = Date.now();
+         ctl.ClosePrintPreview();
+      },
+      AboutControl: function () {
+         let ctl = document.getElementById("myWriterControl");
+         let fName = Date.now();
+         ctl.AboutControl();
+      },
+   };
+   function loadXML() {
+      console.log('loadXML');
+      let ctl = document.getElementById('myWriterControl');
+      ctl.LoadDocumentFromString(strDemoFileXml);
+   }
+
+   // -------------------------------------------------------------------------------------------
+   function Login() {
+      var ctl = document.getElementById("myWriterControl");
+      var userID = document.getElementById("userID").value;//用户ID
+      var opt = {
+         ID: userID,// 用户编号
+         Name: userID, // 用户名
+         ClientName: "xxxx", // 客户端电脑名称
+         PermissionLevel: 0, // 用户授权等级
+         Description: "" // 其他说明
+      };
+      ctl.UserLoginByUserLoginInfo(opt, true);
+      window.alert(userID + '登录成功！');
+   }
+   function SignAndLockCurrentTableRow() {
+      var ctl = document.getElementById("myWriterControl");
+      var CurrentTable = ctl.CurrentTable();//获取当前表格
+      if (!CurrentTable) return;
+      var table_props = ctl.GetElementProperties(CurrentTable);//获取当前表格属性
+      var CurrentTableRow = ctl.CurrentTableRow();//获取当前表格行
+      if (!CurrentTableRow) return;
+      var tr_props = ctl.GetElementProperties(CurrentTableRow);//获取当前表格行属性
+      if (tr_props.HeaderStyle == true) {
+         alert("当前表格行为表头，无法锁定。");
+         return;
+      }
+      var lastTd = tr_props.Cells[tr_props.Cells.length - 1];//获取最后一个单元格
+      var userID = document.getElementById("userID").value;//用户ID
+      var result = ctl.LockContentByTableRow(table_props.ID, tr_props.RowIndex, userID, "", true);
+      if (result) {
+         // 锁定成功，将用户ID写入最后一个单元格
+         ctl.SetElementTextByID(lastTd, userID);
+      }
+   }
+</script>
+<script>
+   var strDemoFileXml = `<?xml version="1      encoding="utf-8"?>
+<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http      ww.w3.org/2001/         ema-instance" EditorVers         ing="1.2023.2.21">
+ <InnerID>37</InnerID>      Ele   nts>
+me    xsi:type="XTextHeader">
+       <InnerID>6</InnerID>
+       <AcceptTab>true</AcceptTab>
+       <XElements>
+          <Element xsi:type="XString" StyleIndex="1">
+             <InnerID>705</InnerID>
+             <Text>南 京 市 市 级 机 关 医 院</Text>
+          </Element>
+          <Element xsi:type="XParagraphFlag" StyleIndex="2">
+             <InnerID>77</InnerID>
+          </Element>
+          <Element xsi:type="XString" StyleIndex="1">
+             <InnerID>706</InnerID>
+             <Text>非手术科室护理记录单</Text>
+          </Element>
+          <Element xsi:type="XParagraphFlag" StyleIndex="0">
+             <InnerID>89</InnerID>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>707</InnerID>
+             <Text>科别： 床号：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>52a1a990-fcc0-41d8-8029-15a34a921fae</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>ca3265b2-958a-4e88-bed6-edd9036b46e7</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>98</InnerID>
+             <ID>床号</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>c9cf5e5f-0e78-4ee6-971a-69e6bce1f0cb</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>708</InnerID>
+             <Text>    姓名：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>37683f7f-e9c7-4b8c-a1b2-012669e2715f</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>6e1ab368-b53b-4ede-a89a-b23bb69d48f6</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>106</InnerID>
+             <ID>姓名</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>7b7981df-98e2-4d3f-8b4c-106f58b0567b</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>709</InnerID>
+             <Text>     性别：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>822e6e4e-08f0-480a-bfff-76501d1a6734</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>6c3550d3-ea7d-4913-82dc-9d9aa469a14f</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>115</InnerID>
+             <ID>性别</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>8c388332-881f-43c1-af53-c50bed9270c4</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>710</InnerID>
+             <Text>    年龄：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>efa1c7b5-89ae-4605-8846-2b0b6fe3178b</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>77fe4849-161e-424e-8de4-1d8dc477492e</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>123</InnerID>
+             <ID>年龄</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>f3dcfdd2-f847-47df-93ac-f17ac5200fcc</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>711</InnerID>
+             <Text>       住院号：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>b688db04-c266-474d-b93a-3f378ed68894</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>8d120f1e-4322-455a-ac1a-f83716710665</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>135</InnerID>
+             <ID>住院号</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>802db8a6-b5f6-4cf3-a0a0-a09775c6d424</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>712</InnerID>
+             <Text>      入院日期：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>da8c8fdc-c211-4d3e-b9e0-db5b64b9bb3f</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>21b394e7-238f-4272-bd69-3f95f9fc586e</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>147</InnerID>
+             <ID>入院日期</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>21c98395-7728-4e0b-88c3-24a4d7860079</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XString">
+             <InnerID>713</InnerID>
+             <Text>      诊断：</Text>
+          </Element>
+          <Element xsi:type="XInputField">
+             <Attributes>
+                <Attribute>
+                   <Name>ID</Name>
+                   <Value>4426daca-9d40-4151-94a7-c5d1e60e6451</Value>
+                </Attribute>
+                <Attribute>
+                   <Name>ClickID</Name>
+                   <Value>672b3867-78ca-4f5b-9f6d-cfa49f87896b</Value>
+                </Attribute>
+             </Attributes>
+             <InnerID>157</InnerID>
+             <ID>诊断</ID>
+             <EnableValueValidate>true</EnableValueValidate>
+             <BorderElementColor />
+             <Name>74fa205c-15c5-4456-9ae7-135ca1def73d</Name>
+             <BackgroundText>XXXX</BackgroundText>
+             <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+          </Element>
+          <Element xsi:type="XParagraphFlag">
+             <InnerID>158</InnerID>
+          </Element>
+       </XElements>
+    </Element>
+    <Element xsi:type="XTextBody">
+       <InnerID>35</InnerID>
+       <AcceptTab>true</AcceptTab>
+       <XElements>
+          <Element xsi:type="XTextTable" NumOfRows="6" NumOfColumns="18">
+             <InnerID>163</InnerID>
+             <ID>bg1</ID>
+             <XElements>
+                <Element xsi:type="XTextTableRow">
+                   <Attributes>
+                      <Attribute>
+                         <Name>科室</Name>
+                         <Value>骨科</Value>
+                      </Attribute>
+                   </Attributes>
+                   <InnerID>182</InnerID>
+                   <XElements>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>714</InnerID>
+                               <Text>日期时间</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>189</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>1</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>715</InnerID>
+                               <Text>生命体征</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>196</InnerID>
+                            </Element>
+                         </XElements>
+                         <ColSpan>4</ColSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>689</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>690</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>691</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>2</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>716</InnerID>
+                               <Text>S</Text>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="6">
+                               <InnerID>717</InnerID>
+                               <Text>P</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>201</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>718</InnerID>
+                               <Text>O</Text>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="6">
+                               <InnerID>719</InnerID>
+                               <Text>2</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>205</InnerID>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>208</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>720</InnerID>
+                               <Text>%</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>211</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>3</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>721</InnerID>
+                               <Text>意</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>215</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>722</InnerID>
+                               <Text>识</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>218</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>4</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>723</InnerID>
+                               <Text>吸</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>222</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>724</InnerID>
+                               <Text>氧</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>225</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>725</InnerID>
+                               <Text>L/</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>229</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>726</InnerID>
+                               <Text>min</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>234</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>5</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>727</InnerID>
+                               <Text>皮</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>238</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>728</InnerID>
+                               <Text>肤</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>241</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>729</InnerID>
+                               <Text>情</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>244</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>730</InnerID>
+                               <Text>况</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>247</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>6</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>731</InnerID>
+                               <Text>入量</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>252</InnerID>
+                            </Element>
+                         </XElements>
+                         <ColSpan>2</ColSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>692</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>7</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>732</InnerID>
+                               <Text>出量</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>257</InnerID>
+                            </Element>
+                         </XElements>
+                         <ColSpan>5</ColSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>693</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>694</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>695</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>696</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>8</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>733</InnerID>
+                               <Text>病情及护理</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>265</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>9</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>734</InnerID>
+                               <Text>护士</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>270</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>735</InnerID>
+                               <Text>签名</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>274</InnerID>
+                            </Element>
+                         </XElements>
+                         <RowSpan>2</RowSpan>
+                      </Element>
+                   </XElements>
+                   <HeaderStyle>true</HeaderStyle>
+                </Element>
+                <Element xsi:type="XTextTableRow">
+                   <Attributes>
+                      <Attribute>
+                         <Name>科室</Name>
+                         <Value>骨科</Value>
+                      </Attribute>
+                   </Attributes>
+                   <InnerID>275</InnerID>
+                   <XElements>
+                      <Element xsi:type="XTextTableCell">
+                         <InnerID>697</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>10</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>736</InnerID>
+                               <Text>体</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>279</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>737</InnerID>
+                               <Text>温</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>282</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>738</InnerID>
+                               <Text>℃</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>285</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>11</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>739</InnerID>
+                               <Text>脉</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>289</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>740</InnerID>
+                               <Text>搏</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>292</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>741</InnerID>
+                               <Text>次/分</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>297</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>12</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>742</InnerID>
+                               <Text>呼</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>301</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>743</InnerID>
+                               <Text>吸</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>304</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>744</InnerID>
+                               <Text>次/</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>308</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>745</InnerID>
+                               <Text>分</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>311</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>13</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>746</InnerID>
+                               <Text>血</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>315</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>747</InnerID>
+                               <Text>压</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>318</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>748</InnerID>
+                               <Text>mm</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>322</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>749</InnerID>
+                               <Text>Hg</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>326</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>698</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>699</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>700</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>701</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>14</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>750</InnerID>
+                               <Text>名</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>330</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>751</InnerID>
+                               <Text>称</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>333</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>15</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>752</InnerID>
+                               <Text>量</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>337</InnerID>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>340</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>753</InnerID>
+                               <Text>ml</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>344</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>16</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>754</InnerID>
+                               <Text>胃</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>348</InnerID>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>351</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>755</InnerID>
+                               <Text>管</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>354</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>17</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>756</InnerID>
+                               <Text>导</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>358</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>757</InnerID>
+                               <Text>尿</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>361</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>758</InnerID>
+                               <Text>管</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>364</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>18</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>759</InnerID>
+                               <Text>引</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>368</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>760</InnerID>
+                               <Text>流</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>371</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>761</InnerID>
+                               <Text>管</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>374</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>19</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>762</InnerID>
+                               <Text>名</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>378</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>763</InnerID>
+                               <Text>称</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>381</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>20</InnerID>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>764</InnerID>
+                               <Text>量</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>385</InnerID>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>388</InnerID>
+                            </Element>
+                            <Element xsi:type="XString" StyleIndex="4">
+                               <InnerID>765</InnerID>
+                               <Text>ml</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="5">
+                               <InnerID>392</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>702</InnerID>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="3">
+                         <InnerID>703</InnerID>
+                      </Element>
+                   </XElements>
+                   <SpecifyHeight>248.3902</SpecifyHeight>
+                   <HeaderStyle>true</HeaderStyle>
+                </Element>
+                <Element xsi:type="XTextTableRow">
+                   <Attributes>
+                      <Attribute>
+                         <Name>科室</Name>
+                         <Value>骨科</Value>
+                      </Attribute>
+                   </Attributes>
+                   <InnerID>393</InnerID>
+                   <ID>ab1</ID>
+            
+                   <ValueBinding>
+                      <DataSource>peopledatasource</DataSource>
+                   </ValueBinding>
+                   <XElements>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>21</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Data</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>397</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>22</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Temperature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>401</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>23</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Pulse</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>405</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>24</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Breathe</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>409</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>25</InnerID>
+                         <ValueBinding>
+                            <BindingPath>pressure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>413</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>26</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Saturation</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>417</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>27</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Consciousness</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>421</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>28</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Oxygen</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>425</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>29</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Skin</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>429</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>30</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>433</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>31</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsML</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>437</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>32</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Gastric</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>441</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>33</InnerID>
+                         <ValueBinding>
+                            <BindingPath>catheter</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>445</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>34</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Drainage</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>449</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>35</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>453</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>36</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputMl</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>457</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>37</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Measure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>461</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>38</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Signature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="8">
+                               <InnerID>766</InnerID>
+                               <Text></Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="8">
+                               <InnerID>466</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                   </XElements>
+                   <SpecifyHeight>131.25</SpecifyHeight>
+                </Element>
+                <Element xsi:type="XTextTableRow">
+                   <Attributes>
+                      <Attribute>
+                         <Name>科室</Name>
+                         <Value>骨科</Value>
+                      </Attribute>
+                   </Attributes>
+                   <InnerID>467</InnerID>
+                   <ID>ab2</ID>
+                  
+                   <ValueBinding>
+                      <DataSource>peopledatasource</DataSource>
+                   </ValueBinding>
+                   <XElements>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>21</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Data</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>471</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>22</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Temperature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>475</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>23</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Pulse</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>479</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>24</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Breathe</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>483</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>25</InnerID>
+                         <ValueBinding>
+                            <BindingPath>pressure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>487</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>26</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Saturation</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>491</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>27</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Consciousness</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>495</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>28</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Oxygen</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>499</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>29</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Skin</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>503</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>30</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>507</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>31</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsML</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>511</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>32</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Gastric</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>515</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>33</InnerID>
+                         <ValueBinding>
+                            <BindingPath>catheter</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>519</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>34</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Drainage</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>523</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>35</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>527</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>36</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputMl</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>531</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>37</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Measure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>535</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>38</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Signature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XString" StyleIndex="8">
+                               <InnerID>767</InnerID>
+                               <Text></Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="8">
+                               <InnerID>540</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                   </XElements>
+                   <SpecifyHeight>143.75</SpecifyHeight>
+                </Element>
+                <Element xsi:type="XTextTableRow">
+                   <Attributes>
+                      <Attribute>
+                         <Name>科室</Name>
+                         <Value>骨科</Value>
+                      </Attribute>
+                   </Attributes>
+                   <InnerID>541</InnerID>
+                   <ID>ab3</ID>
+                
+                   <ValueBinding>
+                      <DataSource>peopledatasource</DataSource>
+                   </ValueBinding>
+                   <XElements>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>21</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Data</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>545</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>22</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Temperature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>549</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>23</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Pulse</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>553</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>24</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Breathe</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>557</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>25</InnerID>
+                         <ValueBinding>
+                            <BindingPath>pressure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>561</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>26</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Saturation</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>565</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>27</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Consciousness</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>569</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>28</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Oxygen</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>573</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>29</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Skin</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>577</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>30</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>581</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>31</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsML</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>585</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>32</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Gastric</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>589</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>33</InnerID>
+                         <ValueBinding>
+                            <BindingPath>catheter</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>593</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>34</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Drainage</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>597</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>35</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>601</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>36</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputMl</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>605</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>37</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Measure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>609</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>38</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Signature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="8">
+                               <InnerID>613</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                   </XElements>
+                   <SpecifyHeight>181.25</SpecifyHeight>
+                </Element>
+                <Element xsi:type="XTextTableRow">
+                   <Attributes>
+                      <Attribute>
+                         <Name>科室</Name>
+                         <Value>骨科</Value>
+                      </Attribute>
+                   </Attributes>
+                   <InnerID>614</InnerID>
+                   <ID>ab4</ID>
+            
+                   <ValueBinding>
+                      <DataSource>peopledatasource</DataSource>
+                   </ValueBinding>
+                   <XElements>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>21</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Data</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>618</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>22</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Temperature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>622</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>23</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Pulse</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>626</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>24</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Breathe</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>630</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>25</InnerID>
+                         <ValueBinding>
+                            <BindingPath>pressure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>634</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>26</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Saturation</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>638</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>27</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Consciousness</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>642</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>28</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Oxygen</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>646</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>29</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Skin</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>650</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>30</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>654</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>31</InnerID>
+                         <ValueBinding>
+                            <BindingPath>DRIsML</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>658</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>32</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Gastric</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>662</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>33</InnerID>
+                         <ValueBinding>
+                            <BindingPath>catheter</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>666</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>34</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Drainage</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>670</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>35</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputName</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>674</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>36</InnerID>
+                         <ValueBinding>
+                            <BindingPath>OutputMl</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>678</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>37</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Measure</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XString">
+                               <InnerID>768</InnerID>
+                               <Text>ab</Text>
+                            </Element>
+                            <Element xsi:type="XParagraphFlag">
+                               <InnerID>683</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                      <Element xsi:type="XTextTableCell" StyleIndex="7">
+                         <InnerID>38</InnerID>
+                         <ValueBinding>
+                            <BindingPath>Signature</BindingPath>
+                         </ValueBinding>
+                         <XElements>
+                            <Element xsi:type="XParagraphFlag" StyleIndex="8">
+                               <InnerID>687</InnerID>
+                            </Element>
+                         </XElements>
+                      </Element>
+                   </XElements>
+                   <SpecifyHeight>168.75</SpecifyHeight>
+                </Element>
+             </XElements>
+             <Columns>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>164</InnerID>
+                   <Width>373.931274</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>165</InnerID>
+                   <Width>133.990631</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>166</InnerID>
+                   <Width>112.178131</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>167</InnerID>
+                   <Width>109.0625</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>168</InnerID>
+                   <Width>143.340622</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>169</InnerID>
+                   <Width>84.13438</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>170</InnerID>
+                   <Width>158.921875</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>171</InnerID>
+                   <Width>105.946877</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>172</InnerID>
+                   <Width>121.52813</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>173</InnerID>
+                   <Width>190.081253</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>174</InnerID>
+                   <Width>105.946877</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>175</InnerID>
+                   <Width>87.25</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>176</InnerID>
+                   <Width>81.01875</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>177</InnerID>
+                   <Width>81.01875</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>178</InnerID>
+                   <Width>208.778137</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>179</InnerID>
+                   <Width>118.412506</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>180</InnerID>
+                   <Width>881.853149</Width>
+                </Element>
+                <Element xsi:type="XTextTableColumn">
+                   <InnerID>181</InnerID>
+                   <Width>180.734375</Width>
+                </Element>
+             </Columns>
+          </Element>
+          <Element xsi:type="XParagraphFlag">
+             <InnerID>704</InnerID>
+          </Element>
+       </XElements>
+    </Element>
+    <Element xsi:type="XTextFooter">
+       <InnerID>40544</InnerID>
+       <AcceptTab>true</AcceptTab>
+       <XElements>
+          <Element xsi:type="XPageInfo" StyleIndex="9">
+             <InnerID>160</InnerID>
+             <Width>100</Width>
+             <AutoHeight>true</AutoHeight>
+             <Height>54.89257</Height>
+          </Element>
+          <Element xsi:type="XParagraphFlag" StyleIndex="0">
+             <InnerID>161</InnerID>
+          </Element>
+       </XElements>
+    </Element>
+ </XElements>
+ <SerializeParameterValue>true</SerializeParameterValue>
+ <Parameters>
+    <Parameter Name="当前时间" />
+ </Parameters>
+ <FileName>C:\Users\admin\Desktop\护理示例\护理记录--南京市市级机关医院非手术科室护理记录单.xml</FileName>
+ <FileFormat>XML</FileFormat>
+ <ContentStyles>
+    <Default xsi:type="DocumentContentStyle">
+       <FontName>宋体</FontName>
+       <FontSize>10.5</FontSize>
+    </Default>
+    <Styles>
+       <Style Index="0">
+          <FontName>宋体</FontName>
+          <FontSize>10.5</FontSize>
+          <Align>Center</Align>
+       </Style>
+       <Style Index="1">
+          <FontName>宋体</FontName>
+          <FontSize>15.75</FontSize>
+          <Bold>true</Bold>
+       </Style>
+       <Style Index="2">
+          <FontName>宋体</FontName>
+          <FontSize>15.75</FontSize>
+          <Align>Center</Align>
+       </Style>
+       <Style Index="3">
+          <FontName>宋体</FontName>
+          <FontSize>10.5</FontSize>
+          <VerticalAlign>Middle</VerticalAlign>
+          <BorderWidth>1</BorderWidth>
+          <BorderLeft>true</BorderLeft>
+          <BorderBottom>true</BorderBottom>
+          <BorderTop>true</BorderTop>
+          <BorderRight>true</BorderRight>
+          <PaddingLeft>15</PaddingLeft>
+          <PaddingTop>10</PaddingTop>
+          <PaddingBottom>10</PaddingBottom>
+       </Style>
+       <Style Index="4">
+          <FontName>宋体</FontName>
+          <FontSize>10.5</FontSize>
+          <Bold>true</Bold>
+       </Style>
+       <Style Index="5">
+          <FontName>宋体</FontName>
+          <FontSize>10.5</FontSize>
+          <Bold>true</Bold>
+          <Align>Center</Align>
+       </Style>
+       <Style Index="6">
+          <FontName>宋体</FontName>
+          <FontSize>7.5</FontSize>
+          <Bold>true</Bold>
+       </Style>
+       <Style Index="7">
+          <FontName>宋体</FontName>
+          <FontSize>10.5</FontSize>
+          <BorderWidth>1</BorderWidth>
+          <BorderLeft>true</BorderLeft>
+          <BorderBottom>true</BorderBottom>
+          <BorderTop>true</BorderTop>
+          <BorderRight>true</BorderRight>
+          <PaddingLeft>20</PaddingLeft>
+       </Style>
+       <Style Index="8">
+          <FontName>宋体</FontName>
+          <FontSize>9.5</FontSize>
+       </Style>
+       <Style Index="9">
+          <FontName>宋体</FontName>
+          <FontSize>10.5</FontSize>
+       </Style>
+    </Styles>
+ </ContentStyles>
+ <Info>
+    <ShowHeaderBottomLine>False</ShowHeaderBottomLine>
+    <LicenseText>南京都昌信息科技有限公司内部使用:南京都昌信息科技有限公司内测旗舰版</LicenseText>
+    <CreationTime>2014-02-13T09:40:47.625+08:00</CreationTime>
+    <LastModifiedTime>2023-04-12T14:02:25.5914554+08:00</LastModifiedTime>
+    <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+    <Operator>DCSoft.Writer Version:1.1.1820.19321</Operator>
+    <NumOfPage>1</NumOfPage>
+ </Info>
+ <BodyText>日期时间 生命体征 SP
+O2
+
+% 意
+识 吸
+氧
+L/
+min 皮
+肤
+情
+况 入量 出量 病情及护理 护士
+签名 
+体
+温
+℃ 脉
+搏
+次/分 呼
+吸
+次/
+分 血
+压
+mm
+Hg 名
+称 量
+
+ml 胃
+
+管 导
+尿
+管 引
+流
+管 名
+称 量
+
+ml 
+                                22 
+                                22 
+                                  
+                              ab   </BodyText>
+ <LocalConfig />
+ <PageSettings>
+    <FooterDistance>7</FooterDistance>
+    <LeftMargin>38</LeftMargin>
+    <TopMargin>59</TopMargin>
+    <RightMargin>38</RightMargin>
+    <BottomMargin>7</BottomMargin>
+    <Landscape>true</Landscape>
+    <StrictUsePageSize>false</StrictUsePageSize>
+ </PageSettings>
+</XTextDocument>`;
+</script>
+
+</html>

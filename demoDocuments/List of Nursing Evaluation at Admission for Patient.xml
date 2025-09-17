@@ -1,0 +1,2750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes />
+   <AutoFixTextMode>None</AutoFixTextMode>
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="9">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>List of Nursing Evaluation at Admission for Patient</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Name:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field1</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Name</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>        Specialty:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field2</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Specialty</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>         Ward:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field3</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Ward</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>         Bed No.:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field4</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Bed No.</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>          Inpatient No.:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field5</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Inpatient No.</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="2" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="4">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>General Information</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Name: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field6</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Name</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                                Sex: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field7</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Sex</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                        Age:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field8</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Age</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                              Occupation: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field9</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Occupation</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="2">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Ethnicity:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field10</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Ethnicity</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                       Native Place:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field11</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Native Place</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                                           Marital Status:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field12</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Marital Status</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Education: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field13</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <InnerValue />
+               <BackgroundText>Education</BackgroundText>
+               <FieldSettings>
+                  <EditStyle>DropdownList</EditStyle>
+                  <ListSource>
+                     <SourceName />
+                     <Items>
+                        <Item>
+                           <TextInList />
+                           <Text>primary school</Text>
+                           <Value>1</Value>
+                           <Group />
+                        </Item>
+                        <Item>
+                           <TextInList />
+                           <Text>secondary school</Text>
+                           <Value>2</Value>
+                           <Group />
+                        </Item>
+                        <Item>
+                           <TextInList />
+                           <Text>junior college</Text>
+                           <Value>3</Value>
+                           <Group />
+                        </Item>
+                        <Item>
+                           <TextInList />
+                           <Text>bachelor or above</Text>
+                           <Value>4</Value>
+                           <Group />
+                        </Item>
+                     </Items>
+                  </ListSource>
+                  <ListValueFormatString />
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>      Address:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field14</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Address</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>        Time of data collection:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field15</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Time of data collection</BackgroundText>
+               <FieldSettings>
+                  <EditStyle>DateTime</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="7" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Processing at admission: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox1</ID>
+               <PropertyExpressions />
+               <Caption>skin cleaning</Caption>
+               <Width>337.20993</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox2</ID>
+               <PropertyExpressions />
+               <Caption>change clothes</Caption>
+               <Width>367.7031</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox3</ID>
+               <PropertyExpressions />
+               <Caption>trimming nails</Caption>
+               <Width>365.041962</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>,</Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox4</ID>
+               <PropertyExpressions />
+               <Caption>no disposal</Caption>
+               <Width>298.391571</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Admission manner: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox5</ID>
+               <PropertyExpressions />
+               <Caption>walking</Caption>
+               <Width>233.083969</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox6</ID>
+               <PropertyExpressions />
+               <Caption>being supported</Caption>
+               <Width>392.776337</Width>
+               <Height>62</Height>
+               <Checked>true</Checked>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="8" WhiteSpaceLength="2">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox7</ID>
+               <PropertyExpressions />
+               <Caption>wheelchair, stretcher</Caption>
+               <Width>488.4306</Width>
+               <Height>62</Height>
+               <Checked>true</Checked>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox8</ID>
+               <PropertyExpressions />
+               <Caption>being carried on the back</Caption>
+               <Width>577.3222</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Admission introduction: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox9</ID>
+               <PropertyExpressions />
+               <Caption>admission guide</Caption>
+               <Width>398.367157</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox10</ID>
+               <PropertyExpressions />
+               <Caption>disease education</Caption>
+               <Width>423.2451</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox11</ID>
+               <PropertyExpressions />
+               <Caption>diet</Caption>
+               <Width>146.975586</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox12</ID>
+               <PropertyExpressions />
+               <Caption>routine</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox13</ID>
+               <PropertyExpressions />
+               <Caption>visit and chaperonage</Caption>
+               <Width>507.937439</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox14</ID>
+               <PropertyExpressions />
+               <Caption>hygiene</Caption>
+               <Width>230.276352</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox15</ID>
+               <PropertyExpressions />
+               <Caption>materials management</Caption>
+               <Width>523.1962</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox16</ID>
+               <PropertyExpressions />
+               <Caption>security protection</Caption>
+               <Width>445.4863</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Medical diagnosis at admission: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field16</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Grade 1 hypertension (of high risk)</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <InnerValue>Grade 1 hypertension (of high risk)</InnerValue>
+               <BackgroundText>Medical diagnosis at admission</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Allergy history: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_0</ID>
+               <PropertyExpressions />
+               <Caption>with</Caption>
+               <Width>160.8916</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>0</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_1</ID>
+               <PropertyExpressions />
+               <Caption>without</Caption>
+               <Width>224.783188</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>1</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>(medicine:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field17</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>medicine</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  food:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field18</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>food</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  others:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field19</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>others</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>)</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Family history: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox19</ID>
+               <PropertyExpressions />
+               <Caption>with</Caption>
+               <Width>160.8916</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox20</ID>
+               <PropertyExpressions />
+               <Caption>without</Caption>
+               <Width>224.783188</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (</Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox21</ID>
+               <PropertyExpressions />
+               <Caption>hypertension</Caption>
+               <Width>330.276337</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox22</ID>
+               <PropertyExpressions />
+               <Caption>coronary disease</Caption>
+               <Width>406.570282</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox23</ID>
+               <PropertyExpressions />
+               <Caption>diabetes mellitus</Caption>
+               <Width>409.426727</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="8" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox24</ID>
+               <PropertyExpressions />
+               <Caption>mental disease</Caption>
+               <Width>364.9443</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox25</ID>
+               <PropertyExpressions />
+               <Caption>tumor</Caption>
+               <Width>191.433578</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox26</ID>
+               <PropertyExpressions />
+               <Caption>heredity or others</Caption>
+               <Width>424.6611</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>)</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="4">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Level of life and self-care </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Dietary habit: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox27</ID>
+               <PropertyExpressions />
+               <Caption>rice and flour</Caption>
+               <Width>341.3115</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox28</ID>
+               <PropertyExpressions />
+               <Caption>high protein</Caption>
+               <Width>315.017548</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox29</ID>
+               <PropertyExpressions />
+               <Caption>high carbohydrate</Caption>
+               <Width>434.3535</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox30</ID>
+               <PropertyExpressions />
+               <Caption>high fat</Caption>
+               <Width>226.125961</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox31</ID>
+               <PropertyExpressions />
+               <Caption>vegetarian diet</Caption>
+               <Width>367.67868</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox32</ID>
+               <PropertyExpressions />
+               <Caption>dietary bias</Caption>
+               <Width>303.860321</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="8" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox33</ID>
+               <PropertyExpressions />
+               <Caption>dietetic restraint</Caption>
+               <Width>395.461884</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox34</ID>
+               <PropertyExpressions />
+               <Caption>other</Caption>
+               <Width>174.73436</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Appetite: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox35</ID>
+               <PropertyExpressions />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox36</ID>
+               <PropertyExpressions />
+               <Width>62</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>hyperfunction for (</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field20</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>) days </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox37</ID>
+               <PropertyExpressions />
+               <Width>62</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>loss for (</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field21</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>) days </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox38</ID>
+               <PropertyExpressions />
+               <Width>62</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>loss of appetite for (</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field22</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>) days</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Bradymasesis: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox39</ID>
+               <PropertyExpressions />
+               <Caption>without</Caption>
+               <Width>224.783188</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox40</ID>
+               <PropertyExpressions />
+               <Caption>with</Caption>
+               <Width>160.8916</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (cause(s):</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field23</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XXX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>)   Dysphagia: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox41</ID>
+               <PropertyExpressions />
+               <Caption>without</Caption>
+               <Width>224.783188</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> or </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox42</ID>
+               <PropertyExpressions />
+               <Caption>with</Caption>
+               <Width>160.8916</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (cause(s):</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field24</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XXX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>)</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Sleep:</Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox43</ID>
+               <PropertyExpressions />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox44</ID>
+               <PropertyExpressions />
+               <Caption>difficulty in falling asleep</Caption>
+               <Width>589.895447</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox45</ID>
+               <PropertyExpressions />
+               <Caption>restless sleep</Caption>
+               <Width>334.426727</Width>
+               <Height>62</Height>
+               <Checked>true</Checked>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox46</ID>
+               <PropertyExpressions />
+               <Caption>dreaminess</Caption>
+               <Width>296.926727</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="8" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox47</ID>
+               <PropertyExpressions />
+               <Caption>insomnia</Caption>
+               <Width>255.32518</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Sleep aid: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox48</ID>
+               <PropertyExpressions />
+               <Caption>none</Caption>
+               <Width>169.192383</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox49</ID>
+               <PropertyExpressions />
+               <Caption>drug</Caption>
+               <Width>163.650391</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox50</ID>
+               <PropertyExpressions />
+               <Caption>other</Caption>
+               <Width>174.73436</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Excretion: excrement: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox51</ID>
+               <PropertyExpressions />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox52</ID>
+               <PropertyExpressions />
+               <Caption>constipation</Caption>
+               <Width>316.409149</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (1 time/</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field25</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> days), </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox53</ID>
+               <PropertyExpressions />
+               <Caption>diarrhea</Caption>
+               <Width>235.769516</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (1 time/</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field26</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> days), </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox54</ID>
+               <PropertyExpressions />
+               <Caption>incontinence or other</Caption>
+               <Width>496.829041</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>      Urination: (</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field27</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> times/day), color: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="15">
+               <Attributes />
+               <ID>field28</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XXX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox55</ID>
+               <PropertyExpressions />
+               <Caption>urinary tract interruption</Caption>
+               <Width>566.262634</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox56</ID>
+               <PropertyExpressions />
+               <Caption>frequent micturition</Caption>
+               <Width>473.26947</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox57</ID>
+               <PropertyExpressions />
+               <Caption>urgent urination</Caption>
+               <Width>392.751923</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox58</ID>
+               <PropertyExpressions />
+               <Caption>odynuria</Caption>
+               <Width>249.73436</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox59</ID>
+               <PropertyExpressions />
+               <Caption>retention catheterization or other</Caption>
+               <Width>725.857361</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Self-care ability: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox60</ID>
+               <PropertyExpressions />
+               <Caption>full</Caption>
+               <Width>141.4336</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox61</ID>
+               <PropertyExpressions />
+               <Caption>disabled (needing to be coordinated)</Caption>
+               <Width>802.2978</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Activity: </Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox62</ID>
+               <PropertyExpressions />
+               <Caption>off-bed activity</Caption>
+               <Width>381.5947</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>, </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo3</ID>
+               <PropertyExpressions />
+               <Caption>sit on chair</Caption>
+               <Width>294.167938</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>sit on chair</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo3636834196501100786</ID>
+               <PropertyExpressions />
+               <Caption>lie in bed (turn over by oneself or with aid from others)</Caption>
+               <Width>1178.6405</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>lie in bed (turn over by oneself or with aid from others)</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Health consciousness: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo5</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>good</Caption>
+               <Width>172</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>good</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo5636834197480441851</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>ordinary</Caption>
+               <Width>241.38475</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>ordinary</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_2</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>poor (causes)</Caption>
+               <Width>339.9443</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>poor (causes)</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   smoking: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo8</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>yes</Caption>
+               <Width>138.650391</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>yes</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo8636834197833932354</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>no</Caption>
+               <Width>122</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>no</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   Drinking: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo10</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>yes</Caption>
+               <Width>138.650391</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>yes</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo10636834198288958940</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>no</Caption>
+               <Width>122</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>no</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo10636834198288958941</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>other</Caption>
+               <Width>174.73436</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>other</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="4">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Mentality and society</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Mental state: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo13</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>calm</Caption>
+               <Width>169.167969</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>calm</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo13636834199717819668</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>sad</Caption>
+               <Width>138.650391</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>sad</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo13636834199717819669</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>excitable</Caption>
+               <Width>252.444321</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>excitable</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_3</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>anxious</Caption>
+               <Width>227.541977</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>anxious</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_4</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>fear</Caption>
+               <Width>149.685547</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>fear</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_5</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>lonely</Caption>
+               <Width>196.975571</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>lonely</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_6</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>depressed</Caption>
+               <Width>269.143555</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>depressed</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_7</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>euphoria</Caption>
+               <Width>246.926743</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>euphoria</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>_8</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>adiaphoria</Caption>
+               <Width>283.0107</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>adiaphoria</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Sociability: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo22</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>willing to communicate with others</Caption>
+               <Width>782.986267</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>willing to communicate with others</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo22636834200332665359</ID>
+               <PropertyExpressions />
+               <Caption>unwilling to communicate with others</Caption>
+               <Width>832.986267</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>willing to communicate with others</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Hospitalization concerns: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo24</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>with</Caption>
+               <Width>160.8916</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>with</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo24636834201156814208</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>without</Caption>
+               <Width>224.783188</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>without</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (</Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo26</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>financial</Caption>
+               <Width>246.902328</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>financial</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo26636834201865235641</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>problem</Caption>
+               <Width>238.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>problem</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo26636834201865235642</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>self-care ability</Caption>
+               <Width>384.329071</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>self-care ability</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo26636834201865235643</ID>
+               <PropertyExpressions />
+               <Caption>role change</Caption>
+               <Width>303.8115</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>role change or others</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="8">
+               <ID>checkbox63</ID>
+               <PropertyExpressions />
+               <Caption>others</Caption>
+               <Width>194.192368</Width>
+               <Height>62</Height>
+               <VisualStyle>SystemDefault</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>)</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="4">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Nursing experience:</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Consciousness: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo30</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>clear minded</Caption>
+               <Width>331.5947</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>clear minded</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo30636834203219661340</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>absent-minded</Caption>
+               <Width>366.360321</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>absent-minded</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo30636834203219661341</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>coma</Caption>
+               <Width>180.276352</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>coma</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="8">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   Expression: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo33</ID>
+               <PropertyExpressions />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo33636834203512090914</ID>
+               <PropertyExpressions />
+               <Caption>indifferent</Caption>
+               <Width>283.0107</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>indifferent</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo33636834203512090915</ID>
+               <PropertyExpressions />
+               <Caption>miserable</Caption>
+               <Width>266.360352</Width>
+               <Height>62</Height>
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>miserable</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Pupil: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo36</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>equal size</Caption>
+               <Width>270.510742</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>equal size</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo36636834212300186209</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>unequal size</Caption>
+               <Width>320.5107</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>unequal size</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> (left, right), diffused   Miotic light reflex: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo38</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>existinexisting</Caption>
+               <Width>363.65036</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>existinexisting</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo38636834212868496315</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>slow</Caption>
+               <Width>166.458008</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>slow</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo38636834212868496316</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>disappearing</Caption>
+               <Width>327.468719</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>disappearing</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Global nutritional status: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo41</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>good</Caption>
+               <Width>172</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>good</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo41636834213404123453</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>medium</Caption>
+               <Width>235.867172</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>medium</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo41636834213404123454</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>poor</Caption>
+               <Width>163.650391</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>poor</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo41636834213404123455</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>fat</Caption>
+               <Width>124.734367</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>fat</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo41636834213404123456</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>thin</Caption>
+               <Width>149.7832</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>thin</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo41636834213404123457</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>cachexia</Caption>
+               <Width>246.8535</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>cachexia</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Skin and mucosa: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo47</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo47636834213621886400</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>abnormal</Caption>
+               <Width>260.818359</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>abnormal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>     Bedsore: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo49</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>I</Caption>
+               <Width>88.65039</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>I</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo49636834214895424349</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>II</Caption>
+               <Width>105.300781</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>II</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo49636834214895424350</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>III</Caption>
+               <Width>121.951172</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>III</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6" WhiteSpaceLength="2">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field29</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XXX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> location /scope</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Function of the five sense organs: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo52</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo52636834216985415857</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>blind (left, right)</Caption>
+               <Width>406.643524</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>blind (left, right)</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo52636834216985415858</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>deaf (left, right)</Caption>
+               <Width>389.895477</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>deaf (left, right)</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo52636834216985415859</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>aphasia</Caption>
+               <Width>221.926743</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>aphasia</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Mouth: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo56</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo56636834217392498430</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>ulcer</Caption>
+               <Width>171.926758</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>ulcer</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo56636834217392498431</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>pseudomembrane</Caption>
+               <Width>424.6611</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>pseudomembrane</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo56636834217392498432</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>eruption</Caption>
+               <Width>238.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>eruption</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   Tongue: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo60</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo60636834217675003064</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>skewed</Caption>
+               <Width>221.951157</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>skewed</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo60636834217675003065</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>tremor</Caption>
+               <Width>205.276352</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>tremor</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Gingivae: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo63</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo63636834218199080790</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>red and swollen</Caption>
+               <Width>388.577118</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>red and swollen</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo63636834218199080791</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>bleeding</Caption>
+               <Width>244.167953</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>bleeding</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo63636834218199080792</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>ulcer</Caption>
+               <Width>171.926758</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>ulcer</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  Tooth: </Text>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo67</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>denture</Caption>
+               <Width>221.926743</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>denture</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo67636834218463618118</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>tooth loss</Caption>
+               <Width>265.09082</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>tooth loss</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XTextRadioBox" StyleIndex="8">
+               <ID>rdo67636834218463618119</ID>
+               <PropertyExpressions />
+               <Name />
+               <Caption>normal</Caption>
+               <Width>213.625961</Width>
+               <Height>62</Height>
+               <GroupName />
+               <ControlStyle>RadioBox</ControlStyle>
+               <CheckedValue>normal</CheckedValue>
+               <VisualStyle>CheckBox</VisualStyle>
+               <RuntimeVisible>true</RuntimeVisible>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Various catheters: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field30</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Various catheters</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Wound:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field31</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Wound</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Others: </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field32</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>Others</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XString" StyleIndex="6">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                                            	                                                                                            Signature of nurse:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes />
+               <ID>field33</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XXX</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="5">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>/</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="16">
+               <Attributes />
+               <ID>field34</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <XElements />
+               <BorderElementColor />
+               <BackgroundText>XXX</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>第</Text>
+            </Element>
+            <Element xsi:type="XPageInfo" StyleIndex="1">
+               <PropertyExpressions />
+               <Width>100</Width>
+               <AutoHeight>true</AutoHeight>
+               <Height>62.7343674</Height>
+               <FormatString />
+            </Element>
+            <Element xsi:type="XString">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>页</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+   </XElements>
+   <Parameters>
+      <Parameter Name="当前时间" />
+      <Parameter Name="T_DA_0001" ValueTypeFullName="WebApplication1.DA_0001_Model,WebApplication1" />
+   </Parameters>
+   <FileName>D:\hlj\产品文档\DCSoftDemo\DemoFile2\评估文书--南京市市级机关医院病人入院护理评估单--en.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <UserHistories />
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="2">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>4</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>4</SpacingBeforeParagraph>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.1</LineSpacing>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="4">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="5">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>6</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>6</SpacingBeforeParagraph>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.1</LineSpacing>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="6">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="7">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>6</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>6</SpacingBeforeParagraph>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.1</LineSpacing>
+         </Style>
+         <Style Index="8">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="9">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>14</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="10">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="11">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="12">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>6</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>6</SpacingBeforeParagraph>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.1</LineSpacing>
+            <Align>Justify</Align>
+            <LeftIndent>300</LeftIndent>
+         </Style>
+         <Style Index="13">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <SpacingAfterParagraph>6</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>6</SpacingBeforeParagraph>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.1</LineSpacing>
+            <Align>Justify</Align>
+         </Style>
+         <Style Index="14">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="15">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="16">
+            <BackgroundColor>#00000000</BackgroundColor>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>6</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>6</SpacingBeforeParagraph>
+            <LineSpacingStyle>SpaceMultiple</LineSpacingStyle>
+            <LineSpacing>1.1</LineSpacing>
+            <Align>Justify</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <RepeatedImages />
+   <ControlOptionsForDebug>
+      <RuleVisible>false</RuleVisible>
+      <UserInfo>
+         <ID>511</ID>
+         <Name>上官海燕</Name>
+         <PermissionLevel>0</PermissionLevel>
+      </UserInfo>
+      <DocumentOptions>
+         <SecurityOptions>
+            <AutoEnablePermissionWhenUserLogin>false</AutoEnablePermissionWhenUserLogin>
+            <TrackVisibleLevel0>
+               <UnderLineColorString>#ADD8E6</UnderLineColorString>
+               <DeleteLineColorString>#FF7F50</DeleteLineColorString>
+            </TrackVisibleLevel0>
+            <TrackVisibleLevel1 />
+            <TrackVisibleLevel2>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel2>
+            <TrackVisibleLevel3>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel3>
+         </SecurityOptions>
+         <ViewOptions>
+            <NewInputContentUnderlineColor />
+            <AdornTextBackColorValue>#64808080</AdornTextBackColorValue>
+            <FieldHoverBackColorValue>#FFFFFF</FieldHoverBackColorValue>
+            <TagColorForNormalFieldValue>#FF0000</TagColorForNormalFieldValue>
+         </ViewOptions>
+         <BehaviorOptions>
+            <EnabledShowWinTaskBarProgress>false</EnabledShowWinTaskBarProgress>
+            <ParagraphFlagFollowTableOrSection>true</ParagraphFlagFollowTableOrSection>
+            <ValidateUserIDWhenEditDeleteComment>true</ValidateUserIDWhenEditDeleteComment>
+            <InsertDocumentWithCheckMRID>PromptForbitWhenFail</InsertDocumentWithCheckMRID>
+         </BehaviorOptions>
+         <EditOptions>
+            <GridLinePreviewText>DCWriter是南京都昌信息科技有限公司自主研发的专业的电子病历文档编辑器。</GridLinePreviewText>
+         </EditOptions>
+      </DocumentOptions>
+      <Font>
+         <Size>12</Size>
+      </Font>
+      <HeaderFooterFlagVisible>None</HeaderFooterFlagVisible>
+      <JumpPrint />
+      <PageTitlePosition>BottomRight</PageTitlePosition>
+      <Readonly>true</Readonly>
+   </ControlOptionsForDebug>
+   <GlobalJavaScriptReferences />
+   <Info>
+      <MRID>16270</MRID>
+      <LicenseText>南京都昌信息科技有限公司:南京都昌信息科技有限公司2019年旗舰版</LicenseText>
+      <CreationTime>2014-03-10T19:48:03.8515445+08:00</CreationTime>
+      <LastModifiedTime>2019-01-18T15:26:21.483447+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2014.122.30318</Operator>
+      <NumOfPage>2</NumOfPage>
+   </Info>
+   <BodyText>General Information
+Name:                                 Sex:                         Age:                              Occupation:   
+Ethnicity:                       Native Place:                                           Marital Status:
+Education:       Address:        Time of data collection:
+Processing at admission: □skin cleaning, □change clothes, □trimming nails,□no disposal
+Admission manner: □walking■being supported 
+  ■wheelchair, stretcher □being carried on the back
+Admission introduction: □admission guide □disease education □diet □routine □visit and chaperonage □hygiene □materials management □security protection
+Medical diagnosis at admission: Grade 1 hypertension (of high risk)
+Allergy history: ○with○without(medicine:  food:  others:)
+Family history: □with □without (□hypertension □coronary disease □diabetes mellitus □mental disease, □tumor □heredity or others)
+
+Level of life and self-care 
+Dietary habit: □rice and flour □high protein □high carbohydrate □high fat □vegetarian diet □dietary bias □dietetic restraint □other
+Appetite: □normal, □hyperfunction for () days □loss for () days □loss of appetite for () days
+Bradymasesis: □without □with (cause(s):)   Dysphagia: □without or □with (cause(s):)
+Sleep:□normal□difficulty in falling asleep ■restless sleep □dreaminess □insomnia
+Sleep aid: □none, □drug, □other
+Excretion: excrement: □normal, □constipation (1 time/ days), □diarrhea (1 time/ days), □incontinence or other
+      Urination: ( times/day), color: , □urinary tract interruption, □frequent micturition, □urgent urination, □odynuria, □retention catheterization or other
+Self-care ability: □full, □disabled (needing to be coordinated) 
+Activity: □off-bed activity, ○sit on chair○lie in bed (turn over by oneself or with aid from others) 
+Health consciousness: ○good○ordinary○poor (causes)   smoking: ○yes○no   Drinking: ○yes○no○other
+
+Mentality and society
+Mental state: ○calm○sad○excitable○anxious○fear○lonely○depressed○euphoria○adiaphoria
+Sociability: ○willing to communicate with others○unwilling to communicate with others
+Hospitalization concerns: ○with○without (○financial○problem○self-care ability○role change□others)
+
+Nursing experience:
+Consciousness: ○clear minded○absent-minded○coma   Expression: ○normal○indifferent○miserable
+Pupil: ○equal size○unequal size (left, right), diffused   Miotic light reflex: ○existinexisting○slow○disappearing
+Global nutritional status: ○good○medium○poor○fat○thin○cachexia
+Skin and mucosa: ○normal○abnormal     Bedsore: ○I○II○III   location /scope
+Function of the five sense organs: ○normal○blind (left, right)○deaf (left, right)○aphasia
+Mouth: ○normal○ulcer○pseudomembrane○eruption   Tongue: ○normal○skewed○tremor
+Gingivae: ○normal○red and swollen○bleeding○ulcer  Tooth: ○denture○tooth loss○normal
+Various catheters: 
+Wound:
+Others: 
+
+                                            	                                                                                            Signature of nurse:/
+</BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <PrinterName />
+      <PaperSource />
+      <LeftMargin>47</LeftMargin>
+      <RightMargin>47</RightMargin>
+   </PageSettings>
+</XTextDocument>

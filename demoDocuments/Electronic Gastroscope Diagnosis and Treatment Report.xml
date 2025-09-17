@@ -1,0 +1,2114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes />
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XTextTable" NumOfRows="16" NumOfColumns="11">
+               <Attributes />
+               <ID />
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Zhuhai Maternal and Child Health Care Hospital</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="7">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Electronic Gastroscope Diagnosis and Treatment Report</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="8">
+                                 <XElements xsi:nil="true" />
+                                 <Text>TEL：0756-0000000</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>6</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <XElements xsi:nil="true" />
+                                 <Text> Date:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>EXAM_DATE_TIME</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>2012-06-29 10:16:00</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>EXAM_DATE_TIME</Name>
+                                 <InnerValue>2012-06-29 10:16:00</InnerValue>
+                                 <BackgroundText>Time</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>PATIENT_LOCAL_ID</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>W-</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>PATIENT_LOCAL_ID</Name>
+                                 <InnerValue>W-</InnerValue>
+                                 <BackgroundText>Image No.</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="8">
+                                 <XElements xsi:nil="true" />
+                                 <Text>000000</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Name:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>NAME</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>LiuXX</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>NAME</Name>
+                                 <InnerValue>LiuXX</InnerValue>
+                                 <BackgroundText>Name</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Sex:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>SEX</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>M</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>SEX</Name>
+                                 <InnerValue>M</InnerValue>
+                                 <BackgroundText>Sex</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Age:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>AGE</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>48</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>AGE</Name>
+                                 <InnerValue>48</InnerValue>
+                                 <BackgroundText>Age</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Equip:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>DEVICE</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>DEVICE</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Equip</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Inpatient ID:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>INPUT_ID</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>INPUT_ID</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Inpatient No.</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Bed No.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>BED_NO</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>BED_NO</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Bed No.</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Depart.:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>REQ_DEPT</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>REQ_DEPT</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Apply Depart.</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>TEL:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>PHONE_NUMBER</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>000000000</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>PHONE_NUMBER</Name>
+                                 <InnerValue>000000000</InnerValue>
+                                 <BackgroundText>TEL</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-169.677155</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Clinical </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>diagnosis:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>CLIN_DIAG</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>chronic gastritis</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>CLIN_DIAG</Name>
+                                 <InnerValue>chronic gastritis</InnerValue>
+                                 <BackgroundText>Clinical diagnosis</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Symptom:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>CLIN_DIAG</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>CLIN_DIAG</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Clinical diagnosis</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Type:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>MODALITY</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>MODALITY</Name>
+                                 <InnerValue />
+                                 <BackgroundText>Equip.Type</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-194.677155</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Examination Result：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>DESCRIPTION</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>All inner atrioventricular diameter of the heart were within </Text>
+                                    </Element>
+                                    <Element xsi:type="XInputField" StyleIndex="8">
+                                       <Attributes />
+                                       <ID>201307011344520706</ID>
+                                       <EnableValueValidate>true</EnableValueValidate>
+                                       <ValidateStyle>
+                                          <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                          <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                       </ValidateStyle>
+                                       <ValueBinding />
+                                       <XElements>
+                                          <Element xsi:type="XString" StyleIndex="11">
+                                             <XElements xsi:nil="true" />
+                                             <Text>normal</Text>
+                                          </Element>
+                                       </XElements>
+                                       <BorderElementColor />
+                                       <EventExpressions />
+                                       <InnerValue>4</InnerValue>
+                                       <FieldSettings>
+                                          <EditStyle>DropdownList</EditStyle>
+                                          <ListSource>
+                                             <Items>
+                                                <Item>
+                                                   <Text>Slightly bigger</Text>
+                                                   <Value>1</Value>
+                                                </Item>
+                                                <Item>
+                                                   <Text>increase</Text>
+                                                   <Value>2</Value>
+                                                </Item>
+                                                <Item>
+                                                   <Text>contract</Text>
+                                                   <Value>3</Value>
+                                                </Item>
+                                                <Item>
+                                                   <Text>normal</Text>
+                                                   <Value>4</Value>
+                                                </Item>
+                                             </Items>
+                                          </ListSource>
+                                       </FieldSettings>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>range. The thickness of the wall was normal and the movement was coordinated. The diameter of the aortic root was normal and the amplitude of movement was normal. The valve structure of each group was well opened and closed. The diameter of the main pulmonary artery was normal.</Text>
+                                    </Element>
+                                    <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                                    <Element xsi:type="XString" StyleIndex="8" WhiteSpaceLength="1">
+                                       <XElements xsi:nil="true" />
+                                       <Text> </Text>
+                                    </Element>
+                                    <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>No abnormal movement of ventricular wall.</Text>
+                                    </Element>
+                                    <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                                    <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>Color Doppler examiniation result showed that the forward flow spectrum of the two or three cusp was normal during diastole: the E peak was larger than the A peak.</Text>
+                                    </Element>
+                                    <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                                    <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>There was no abnormal blood flow in the aorta and pulmonary artery.</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>DESCRIPTION</Name>
+                                 <InnerValue>All inner atrioventricular diameter of the heart were within normalrange. The thickness of the wall was normal and the movement was coordinated. The diameter of the aortic root was normal and the amplitude of movement was normal. The valve structure of each group was well opened and closed. The diameter of the main pulmonary artery was normal.
+ 
+No abnormal movement of ventricular wall.
+
+Color Doppler examiniation result showed that the forward flow spectrum of the two or three cusp was normal during diastole: the E peak was larger than the A peak.
+
+There was no abnormal blood flow in the aorta and pulmonary artery.</InnerValue>
+                                 <BackgroundText>Checking results</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-869</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <ID>image</ID>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>11</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>891</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Microscopy</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>diagnosis:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>IMPRESSION</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="8">
+                                       <XElements xsi:nil="true" />
+                                       <Text>No abnormalities were found in the cardiac structure and blood flow spectrum. </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>IMPRESSION</Name>
+                                 <InnerValue>No abnormalities were found in the cardiac structure and blood flow spectrum. </InnerValue>
+                                 <BackgroundText>Checking image</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <RowSpan>3</RowSpan>
+                           <ColSpan>6</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Pathology no:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>binglihao</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Pathological No.</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Test:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>shiyan</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Test</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Diagnosis:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>zhiliao</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Diagnosis</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Pathology</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>diagnosis:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <RowSpan>2</RowSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes />
+                                 <ID>zhenduan</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Diagnosis</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                           <RowSpan>2</RowSpan>
+                           <ColSpan>6</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Anaesthesia:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>mazui</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>anaesthesia</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Check physician:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>jianchayisheng</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Checking doctor</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>3</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Suggestions:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>jianyi</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>Advice</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>10</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="8">
+                                 <XElements xsi:nil="true" />
+                                 <Text>Report Date:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                           <ColSpan>8</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="8">
+                                 <Attributes />
+                                 <ID>CREATETIME</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <Name>CREATETIME</Name>
+                                 <InnerValue />
+                                 <BackgroundText>time</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="1">
+                           <Attributes />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="8" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-82.67716</SpecifyHeight>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>298.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>292.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>218.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>194.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>243.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>122.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>134</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>295.75</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>198.875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>128.958344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>202.916656</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+   </XElements>
+   <RepeatedImages />
+   <ControlOptionsForDebug>
+      <RuleVisible>false</RuleVisible>
+      <UserInfo>
+         <ID>511</ID>
+         <Name>上官海燕</Name>
+         <PermissionLevel>0</PermissionLevel>
+      </UserInfo>
+      <DocumentOptions>
+         <SecurityOptions>
+            <AutoEnablePermissionWhenUserLogin>false</AutoEnablePermissionWhenUserLogin>
+            <TrackVisibleLevel0>
+               <UnderLineColorString>#ADD8E6</UnderLineColorString>
+               <DeleteLineColorString>#FF7F50</DeleteLineColorString>
+            </TrackVisibleLevel0>
+            <TrackVisibleLevel1 />
+            <TrackVisibleLevel2>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel2>
+            <TrackVisibleLevel3>
+               <BackgroundColorString>#FFFFE0</BackgroundColorString>
+               <UnderLineColorNum>2</UnderLineColorNum>
+               <DeleteLineNum>2</DeleteLineNum>
+            </TrackVisibleLevel3>
+         </SecurityOptions>
+         <ViewOptions>
+            <NewInputContentUnderlineColor />
+            <AdornTextBackColorValue>#64808080</AdornTextBackColorValue>
+            <FieldBackColorValue>#F0F8FF</FieldBackColorValue>
+            <FieldHoverBackColorValue>#FFFFFF</FieldHoverBackColorValue>
+            <TagColorForNormalFieldValue>#FF0000</TagColorForNormalFieldValue>
+         </ViewOptions>
+         <BehaviorOptions>
+            <ParagraphFlagFollowTableOrSection>true</ParagraphFlagFollowTableOrSection>
+            <ValidateUserIDWhenEditDeleteComment>true</ValidateUserIDWhenEditDeleteComment>
+            <InsertDocumentWithCheckMRID>PromptForbitWhenFail</InsertDocumentWithCheckMRID>
+         </BehaviorOptions>
+         <EditOptions>
+            <GridLinePreviewText>DCWriter是南京都昌信息科技有限公司自主研发的专业的电子病历文档编辑器。</GridLinePreviewText>
+         </EditOptions>
+      </DocumentOptions>
+      <Font>
+         <Size>12</Size>
+      </Font>
+      <HeaderFooterFlagVisible>None</HeaderFooterFlagVisible>
+      <JumpPrint />
+      <PageTitlePosition>BottomRight</PageTitlePosition>
+      <Readonly>true</Readonly>
+   </ControlOptionsForDebug>
+   <GlobalJavaScriptReferences />
+   <Info>
+      <LicenseText>南京都昌信息科技有限公司2018年旗舰版:南京都昌信息科技有限公司2018年旗舰版</LicenseText>
+      <CreationTime>2013-07-08T10:31:39+08:00</CreationTime>
+      <LastModifiedTime>2018-09-17T11:17:57.3598565+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.1.1616.34665</Operator>
+      <NumOfPage>2</NumOfPage>
+   </Info>
+   <BodyText>Zhuhai Maternal and Child Health Care Hospital 
+Electronic Gastroscope Diagnosis and Treatment Report 
+TEL：0756-0000000  Date: 2012-06-29 10:16:00 
+No.: W-000000 Name: LiuXX Sex: M Age: 48 Equip:   
+Inpatient ID:   Bed No.:   Depart.:   TEL: 000000000 
+Clinical 
+diagnosis: chronic gastritis Symptom:   Type:   
+Examination Result： 
+All inner atrioventricular diameter of the heart were within normalrange. The thickness of the wall was normal and the movement was coordinated. The diameter of the aortic root was normal and the amplitude of movement was normal. The valve structure of each group was well opened and closed. The diameter of the main pulmonary artery was normal.
+ 
+No abnormal movement of ventricular wall.
+
+Color Doppler examiniation result showed that the forward flow spectrum of the two or three cusp was normal during diastole: the E peak was larger than the A peak.
+
+There was no abnormal blood flow in the aorta and pulmonary artery. 
+  
+Microscopy
+diagnosis: No abnormalities were found in the cardiac structure and blood flow spectrum.  Pathology no:   
+Test:   
+Diagnosis:   
+Pathology
+diagnosis:   Anaesthesia:   
+Check physician:   
+Suggestions:   
+Report Date:     </BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <LeftMargin>21</LeftMargin>
+      <TopMargin>39</TopMargin>
+      <RightMargin>21</RightMargin>
+      <BottomMargin>39</BottomMargin>
+   </PageSettings>
+   <UserHistories />
+   <Parameters>
+      <Parameter Name="当前时间" />
+      <Parameter Name="T_DA_0001" ValueTypeFullName="WebApplication1.DA_0001_Model,WebApplication1" />
+   </Parameters>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>1</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <VerticalAlign>Middle</VerticalAlign>
+            <BorderWidth>1</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="5">
+            <Color>#0000FF</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>22</FontSize>
+         </Style>
+         <Style Index="6">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="7">
+            <Color>#0000FF</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>18</FontSize>
+         </Style>
+         <Style Index="8">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="9">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Align>Right</Align>
+         </Style>
+         <Style Index="10">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="11">
+            <Color>#0000FF</Color>
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="12">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <FileName>C:\Users\Administrator\Desktop\Electronic Gastroscope Diagnosis and Treatment Report.xml</FileName>
+   <FileFormat>XML</FileFormat>
+</XTextDocument>

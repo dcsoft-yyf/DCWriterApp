@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>测试第五代接口</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .describe-box {
+            /* max-width: 50%;
+        min-width: 500px; */
+            border: 1px solid #dcdfe6;
+            line-height: 23px;
+            text-align: left;
+            background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+            box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+            border-radius: 0px 8px 8px 0px;
+        }
+
+        .describe-box span:first-child {
+            /* text-align: center; */
+            font-weight: bold;
+            line-height: 32px;
+            border-bottom: 1px solid rgb(155, 187, 227)
+        }
+
+        .describe-box span {
+            display: block;
+            margin: 0 5px;
+            font-size: 13px;
+
+        }
+
+        .toolBox {
+            /* height: 40px; */
+            width: 100%;
+            border: 1px solid #dcdfe6;
+            display: flex;
+            font-size: 13px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .toolBox span {
+            display: inline-table;
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            padding: 5px 10px;
+            min-width: 50px;
+            height: 18px;
+            white-space: nowrap
+        }
+
+        .toolBox select {
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            padding: 3px 10px;
+            min-width: 50px;
+            height: 29px;
+        }
+
+        #FontNameSelect {
+            min-width: 150px
+        }
+
+        .toolBox span:has(select) {
+            padding: 0px;
+            /* margin: 0px; */
+        }
+
+        .toolBox span:hover {
+            border: 1px solid #4e6ef2;
+            cursor: pointer;
+        }
+
+        .dc-writer-box {
+            /* height: 100% !important; */
+            border-bottom: 0px solid black;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .main-container {
+            height: 100%;
+            display: flex;
+
+        }
+
+        .ringbox {
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        #myWriterControl {
+            width: 70%;
+        }
+
+        .TracesListContentItem {
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid saddlebrown;
+            text-align: center;
+            line-height: 50px;
+            background: #dce1f7;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center">
+    <div class="header">
+        <div class="describe-box">
+            <span>五代表格式下拉</span>
+
+        </div>
+        <div class="toolBox">
+            <span commandName="fileopen">打开本地文件</span>
+            <span localMethod="DownLoadFile">导出到本地</span>
+            <span localMethod="PrintDocument">打印</span>
+            <span localMethod="LoadPrintPreview">打印预览</span>
+            <span localMethod="ClosePrintPreview">关闭预览</span>
+            <span localMethod="AboutControl">关于</span>
+            <br>
+
+        </div>
+
+        <div class="toolBox">
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+            RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+            RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC"
+            PageCssString222="box-shadow:0px 0px 0px grey" PageBorderColor="#F3F5F7" pagetitleposition="BottomRight"
+            RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+        </div>
+    </div>
+    </div>
+
+    <script src=""></script>
+
+    <script src="../../_framework/dcwriter5.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+
+    <script>
+        window.onload = function () {
+        };
+        let toolBoxDOM = document.querySelector(".toolBox");
+        if (toolBoxDOM) {
+            toolBoxDOM.addEventListener("click", (e) => {
+                if (e.target.tagName == "SPAN") {
+                    let commandName = e.target.getAttribute("commandName");
+                    let localMethod = e.target.getAttribute("localMethod");
+                    if (commandName) {
+                        let ctl = document.getElementById("myWriterControl");
+                        ctl.DCExecuteCommand(commandName, false, null);
+                    } else if (localMethod) {
+                        funcOBJ[localMethod].call(funcOBJ);
+                    }
+                }
+            });
+        }
+        //编辑器方法组
+        let funcOBJ = {
+            DownLoadFile: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.DownLoadFile("xml");
+            },
+            PrintDocument: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.PrintDocument();
+            },
+            LoadPrintPreview: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.LoadPrintPreview();
+            },
+            ClosePrintPreview: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.ClosePrintPreview();
+            },
+            AboutControl: function () {
+                let ctl = document.getElementById("myWriterControl");
+                let fName = Date.now();
+                ctl.AboutControl();
+            },
+        };
+
+        //带分组互斥-------------
+        //记录查询文本
+        var laodSearchText = '';
+        //数据分页方法
+        function getPageOptions(pageIndex = 1) {
+            var tableOptions = JSON.parse(JSON.stringify(alljsondata));
+            if (laodSearchText) {
+                //先按查询内容查找出所有数据
+                let filterData = {};
+                let allFiltertotalNum = 0;
+                Object.keys(tableOptions.tableData).forEach(function (key) {
+                    let tableDataItem = tableOptions.tableData[key];
+                    tableDataItem.forEach(item => {
+                        if (item.name.indexOf(laodSearchText) > -1) {
+                            allFiltertotalNum++;
+                            if (filterData[key]) {
+                                filterData[key].push(item);
+                            } else {
+                                filterData[key] = [item];
+                            }
+                        }
+                    });
+                });
+                //查找后的数据
+                tableOptions.tableData = filterData;
+                // 修改总页数
+                tableOptions.pagination.page_total = Math.ceil(allFiltertotalNum / tableOptions.pagination.ever_count);
+            }
+
+
+
+            let searchData = {};
+            let alltotalNum = 0;
+            let startNum = (pageIndex - 1) * tableOptions.pagination.ever_count;
+            let endNum = startNum + tableOptions.pagination.ever_count;
+            Object.keys(tableOptions.tableData).forEach(function (key) {
+                if (tableOptions.tableData[key].length > 0) {
+                    let tableDataItem = tableOptions.tableData[key];
+                    tableDataItem.forEach(item => {
+                        alltotalNum++;
+                        if (alltotalNum <= endNum && alltotalNum > startNum) {
+                            if (searchData[key]) {
+                                searchData[key].push(item);
+                            } else {
+                                searchData[key] = [item];
+                            }
+                        }
+                    });
+                }
+            });
+            return searchData;
+        }
+
+        function WriterControl_OnLoad(rootElement) {
+            // rootElement.EventShowContextMenu = Handle_EventShowContextMenu;// 这个函数定义在DemoApp.js中
+            // rootElement.EventUpdateToolarState = Handle_EventUpdateToolarState;// 这个函数定义在DemoApp.js中
+
+            rootElement.LoadDocumentFromString(xmlstr);
+            rootElement.QueryListItems = function (ele, eventObject) {
+                let DropdownListTable = JSON.parse(JSON.stringify(alljsondata));
+                DropdownListTable['tableData'] = getPageOptions();
+                //第一次要传入全部的数据
+                eventObject.AddTableListData(DropdownListTable);
+            };
+
+            //下拉选项选择事件
+            rootElement.EventQueryTableListItemSelected = function (SelectedOption) {
+                let ctl = document.getElementById("myWriterControl");
+                let targetInput = ctl.CurrentInputField();
+                let targetInputProps = ctl.GetElementProperties(targetInput);
+
+            };
+
+            //分页事件
+            rootElement.EventQueryTableListDataPageChanged = function (currentPage, ChangedPageTabelData) {
+                //需要传入分页后的数据。注意：ChangedPageTabelData只接收tableData，其他属性不生效。
+                ChangedPageTabelData(getPageOptions(currentPage));
+            };
+            rootElement.EventQueryTableListDataSearch = function (searchText, TabelDataSearchForReset) {
+                // TabelDataSearchForReset 需要传入整体数据，因为查找后的数据不再是全部数据，分页计算会被改变。
+                let DropdownListTable = JSON.parse(JSON.stringify(alljsondata));
+                laodSearchText = searchText;
+
+                //如果为空（重置时），则显示全部数据
+                if (!searchText) {
+                    //为空时，从全部数据中分页
+                    DropdownListTable['tableData'] = getPageOptions();
+                    TabelDataSearchForReset(DropdownListTable);
+                } else {
+                    var data = getPageOptions();
+                    //不为空时，查找数据并分页
+                    let searchData = {};
+                    let alltotalNum = 0;
+                    Object.keys(DropdownListTable.tableData).forEach(function (key) {
+                        let tableDataItem = DropdownListTable.tableData[key];
+                        tableDataItem.forEach(item => {
+                            if (item.name.indexOf(searchText) > -1) {
+                                alltotalNum++;
+                                if (searchData[key]) {
+                                    searchData[key].push(item);
+                                } else {
+                                    searchData[key] = [item];
+                                }
+                            }
+                        });
+                    });
+
+                    DropdownListTable['tableData'] = searchData;
+                    // //获取第一页数据
+                    DropdownListTable['tableData'] = getPageOptions(1, '', DropdownListTable);
+                    // //重新计算页数
+                    DropdownListTable.pagination.page_total = Math.ceil(alltotalNum / DropdownListTable.pagination.ever_count);
+                    TabelDataSearchForReset(DropdownListTable);//传入全部数据，分页计算会被改变。
+                }
+            };
+        };
+
+        //用于存储搜索过的数据
+        var searchTableData = {};
+        let xmlstr = `<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="2024.8.10.0"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextHeader"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag" StyleIndex="0"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextBody"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>单选动态表格下拉，有分组互斥：</Text></Element><Element xsi:type="XInputField"><ID>txtList</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>下拉域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><RepulsionForGroup>true</RepulsionForGroup><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XParagraphFlag" /><Element xsi:type="XString"><Text>多选动态表格下拉，有分组互斥：</Text></Element><Element xsi:type="XInputField"><ID>txtList_1</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>多选下拉输入域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><RepulsionForGroup>true</RepulsionForGroup><MultiSelect>true</MultiSelect><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XParagraphFlag" /><Element xsi:type="XParagraphFlag" /><Element xsi:type="XString"><Text>不带分组互斥单选：</Text></Element><Element xsi:type="XInputField" StyleIndex="1"><ID>aaa</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>下拉域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XString"><Text>不带分组互斥多选：</Text></Element><Element xsi:type="XInputField" StyleIndex="1"><ID>bbb</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>下拉域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><MultiSelect>true</MultiSelect><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextFooter"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SerializeParameterValue>true</SerializeParameterValue><FileFormat>XML</FileFormat><ContentStyles><Default xsi:type="DocumentContentStyle"><FontName>宋体</FontName><FontSize>12</FontSize></Default><Styles><Style Index="0"><FontName>宋体</FontName><FontSize>12</FontSize><Align>Center</Align></Style><Style Index="1"><FontName>宋体</FontName><FontSize>12</FontSize></Style></Styles></ContentStyles><Info><LicenseText>都昌信息科技有限公司:都昌5.0WEB旗舰版演示</LicenseText><CreationTime>1980-01-01T00:00:00+08:00</CreationTime><LastModifiedTime>2024-08-12T16:18:39+08:00</LastModifiedTime><LastPrintTime>1980-01-01T00:00:00+08:00</LastPrintTime><Operator>DCSoft.Writer Version:2024.6.26.0</Operator><NumOfPage>1</NumOfPage></Info><BodyText>单选动态表格下拉，有分组互斥：下拉域
+
+多选动态表格下拉，有分组互斥：多选下拉输入域
+
+
+不带分组互斥单选：下拉域
+不带分组互斥多选：下拉域</BodyText><LocalConfig /><PageSettings /></XTextDocument>`
+
+    </script>
+    <script>
+        // 分组互斥
+        var alljsondata = {
+            pagination: { //如果不传pagination，默认全部数据不分页
+                ever_count: 10,//默认10条
+                page_total: 6,//总共2页，
+                page_currentpage: 1//当前页码
+            },
+            tableHeader: [
+                {
+                    prop: "name",//表格数据标记
+                    label: "药品名称",//表头名称
+                    width: "180"//当前列所占宽度，单位像素
+                },
+                {
+                    prop: "code",
+                    label: "代码",
+                    // width: "180"
+                },
+                {
+                    prop: "Specifications",
+                    label: "规格",
+                    // width: "180"
+                },
+                {
+                    prop: "Price",
+                    label: "价格",
+                    // width: "180"
+                }
+            ],
+            tableData: {
+                "药品分类一": [
+                    {
+                        code: '1-01',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '1111'
+                    },
+                    {
+                        code: '1-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '1116'
+                    },
+                    {
+                        code: '1-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '1117'
+                    },
+                    {
+                        code: '1-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '1118'
+                    },
+                    {
+                        code: '1-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '1119'
+                    },
+                    {
+                        code: '1-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '11110'
+                    }
+
+                ],
+                "药品分类二": [
+                    {
+                        code: '2-01',
+                        name: '注射用甲泼尼龙琥珀酸钠',
+                        Specifications: '40mg*1ml',
+                        Price: "15.8",
+                        text: '注射用甲泼尼龙琥珀酸钠',
+                        value: '22211'
+                    },
+                    {
+                        code: '2-02',
+                        name: '注射用头孢他啶',
+                        Specifications: '1g*1支',
+                        Price: "20.5",
+                        text: '注射用头孢他啶',
+                        value: '22212'
+                    },
+                    {
+                        code: '2-03',
+                        name: '注射用阿米卡星',
+                        Specifications: '0.1g*2ml',
+                        Price: "8.9",
+                        text: '注射用阿米卡星',
+                        value: '22213'
+                    },
+                    {
+                        code: '2-04',
+                        name: '注射用甲硝唑',
+                        Specifications: '0.5g*100ml',
+                        Price: "6.2",
+                        text: '注射用甲硝唑',
+                        value: '22214'
+                    },
+                    {
+                        code: '2-05',
+                        name: '注射用利巴韦林',
+                        Specifications: '1mg*1ml',
+                        Price: "9.5",
+                        text: '注射用利巴韦林',
+                        value: '22215'
+                    },
+                    {
+                        code: '2-06',
+                        name: '注射用多巴胺',
+                        Specifications: '40mg*5ml',
+                        Price: "11.8",
+                        text: '注射用多巴胺',
+                        value: '22216'
+                    },
+                    {
+                        code: '2-07',
+                        name: '注射用硝酸甘油',
+                        Specifications: '5mg*1ml',
+                        Price: "7.5",
+                        text: '注射用硝酸甘油',
+                        value: '22217'
+                    },
+                    {
+                        code: '2-08',
+                        name: '注射用丙泊酚',
+                        Specifications: '20mg*2ml',
+                        Price: "10.8",
+                        text: '注射用丙泊酚',
+                        value: '22218'
+                    },
+                    {
+                        code: '2-09',
+                        name: '注射用氨酚烷胺',
+                        Specifications: '0.5g*2ml',
+                        Price: "8.2",
+                        text: '注射用氨酚烷胺',
+                        value: '22219'
+                    },
+                    {
+                        code: '2-10',
+                        name: '注射用地塞米松',
+                        Specifications: '5mg*1ml',
+                        Price: "12.6",
+                        text: '注射用地塞米松',
+                        value: '22220'
+                    }
+                ],
+                "药品分类三": [
+                    {
+                        "code": "3-01",
+                        "name": "注射用头孢曲松钠",
+                        "Specifications": "1g*1支",
+                        "Price": "15.2",
+                        "text": "注射用头孢曲松钠",
+                        "value": "33382"
+                    },
+                    {
+                        "code": "3-02",
+                        "name": "注射用甲氧苄啶钠",
+                        "Specifications": "0.5g*1支",
+                        "Price": "10.8",
+                        "text": "注射用甲氧苄啶钠",
+                        "value": "33383"
+                    },
+                    {
+                        "code": "3-03",
+                        "name": "注射用氯化钠",
+                        "Specifications": "0.9%10ml",
+                        "Price": "2.5",
+                        "text": "注射用氯化钠",
+                        "value": "33384"
+                    },
+                    {
+                        "code": "3-04",
+                        "name": "注射用葡萄糖",
+                        "Specifications": "5%250ml",
+                        "Price": "3.8",
+                        "text": "注射用葡萄糖",
+                        "value": "33385"
+                    },
+                    {
+                        "code": "3-05",
+                        "name": "注射用枸橼酸钠",
+                        "Specifications": "10%10ml",
+                        "Price": "5.5",
+                        "text": "注射用枸橼酸钠",
+                        "value": "33386"
+                    },
+                    {
+                        "code": "3-06",
+                        "name": "注射用硫酸镁",
+                        "Specifications": "5g*10支",
+                        "Price": "12.6",
+                        "text": "注射用硫酸镁",
+                        "value": "33387"
+                    },
+                    {
+                        "code": "3-07",
+                        "name": "注射用头孢氨苄钠",
+                        "Specifications": "1g*1支",
+                        "Price": "16.9",
+                        "text": "注射用头孢氨苄钠",
+                        "value": "33388"
+                    },
+                    {
+                        "code": "3-08",
+                        "name": "注射用头孢他啶钠",
+                        "Specifications": "1g*1支",
+                        "Price": "15.5",
+                        "text": "注射用头孢他啶钠",
+                        "value": "33389"
+                    },
+                    {
+                        "code": "3-09",
+                        "name": "注射用头孢克洛钠",
+                        "Specifications": "1g*1支",
+                        "Price": "18.5",
+                        "text": "注射用头孢克洛钠",
+                        "value": "333811"
+                    },
+                    {
+                        "code": "3-10",
+                        "name": "注射用头孢地尼钠",
+                        "Specifications": "0.5g*1支",
+                        "Price": "14.8",
+                        "text": "注射用头孢地尼钠",
+                        "value": "333815"
+                    },
+                    {
+                        "code": "3-11",
+                        "name": "注射用头孢美唑钠",
+                        "Specifications": "0.5g*1支",
+                        "Price": "16.8",
+                        "text": "注射用头孢美唑钠",
+                        "value": "333817"
+                    },
+
+                ],
+                "药品分类四": [
+                    {
+                        "code": "4-01",
+                        "name": "维生素C片",
+                        "Specifications": "1000mg*30片",
+                        "Price": "15.0",
+                        "text": "维生素C片",
+                        "value": "44457"
+                    },
+                    {
+                        "code": "4-02",
+                        "name": "钙片",
+                        "Specifications": "500mg*60片",
+                        "Price": "20.0",
+                        "text": "钙片",
+                        "value": "44458"
+                    },
+                    {
+                        "code": "4-03",
+                        "name": "铁剂",
+                        "Specifications": "60mg*20片",
+                        "Price": "25.0",
+                        "text": "铁剂",
+                        "value": "44459"
+                    },
+                    {
+                        "code": "4-04",
+                        "name": "维生素D3软胶囊",
+                        "Specifications": "200IU*30粒",
+                        "Price": "18.0",
+                        "text": "维生素D3软胶囊",
+                        "value": "44460"
+                    },
+                    {
+                        "code": "4-05",
+                        "name": "复合维生素片",
+                        "Specifications": "多维多矿*30片",
+                        "Price": "22.0",
+                        "text": "复合维生素片",
+                        "value": "44461"
+                    },
+                    {
+                        "code": "4-06",
+                        "name": "止咳糖浆",
+                        "Specifications": "100ml",
+                        "Price": "10.0",
+                        "text": "止咳糖浆",
+                        "value": "444616"
+                    },
+                    {
+                        "code": "4-07",
+                        "name": "退烧药",
+                        "Specifications": "布洛芬*10片",
+                        "Price": "8.0",
+                        "text": "退烧药",
+                        "value": "444617"
+                    },
+                    {
+                        "code": "4-08",
+                        "name": "抗过敏药",
+                        "Specifications": "氯雷他定*30片",
+                        "Price": "16.0",
+                        "text": "抗过敏药",
+                        "value": "444618"
+                    },
+                    {
+                        "code": "4-09",
+                        "name": "消化酶片",
+                        "Specifications": "10mg*30片",
+                        "Price": "14.0",
+                        "text": "消化酶片",
+                        "value": "444619"
+                    },
+                    {
+                        "code": "4-10",
+                        "name": "维生素E软胶囊",
+                        "Specifications": "400mg*30粒",
+                        "Price": "20.0",
+                        "text": "维生素E软胶囊",
+                        "value": "444620"
+                    }
+                ],
+                "药品分类五": [
+                    {
+                        code: '5-01',
+                        name: '5%葡萄糖注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '5%葡萄糖注射液',
+                        value: '5551'
+                    },
+                    {
+                        code: '5-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '5556'
+                    },
+                    {
+                        code: '5-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '5557'
+                    },
+                    {
+                        code: '5-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '5558'
+                    },
+                    {
+                        code: '5-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '5559'
+                    },
+                    {
+                        code: '5-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '55510'
+                    }
+
+                ],
+                "药品分类六": [
+                    {
+                        code: '6-01',
+                        name: '5%葡萄糖注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '5%葡萄糖注射液',
+                        value: '6661'
+                    },
+                    {
+                        code: '6-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '6666'
+                    },
+                    {
+                        code: '6-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '6667'
+                    },
+                    {
+                        code: '6-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '6668'
+                    },
+                    {
+                        code: '6-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '6669'
+                    },
+                    {
+                        code: '6-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '66610'
+                    }
+
+                ],
+
+                "药品分类七": [
+                    {
+                        code: '7-01',
+                        name: '5%葡萄糖注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '5%葡萄糖注射液',
+                        value: '7771'
+                    },
+                    {
+                        code: '7-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '7776'
+                    },
+                    {
+                        code: '7-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '7777'
+                    },
+                    {
+                        code: '7-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '7778'
+                    },
+                    {
+                        code: '7-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '7779'
+                    },
+                    {
+                        code: '7-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '77710'
+                    }
+
+                ],
+            }
+        };
+
+
+
+
+
+
+
+
+
+
+        //带分组互斥-------------
+        //记录查询文本
+        var laodSearchText = '';
+        //数据分页方法
+        function getPageOptions(pageIndex = 1) {
+            var tableOptions = JSON.parse(JSON.stringify(alljsondata));
+            if (laodSearchText) {
+                //先按查询内容查找出所有数据
+                let filterData = {};
+                let allFiltertotalNum = 0;
+                Object.keys(tableOptions.tableData).forEach(function (key) {
+                    let tableDataItem = tableOptions.tableData[key];
+                    tableDataItem.forEach(item => {
+                        if (item.name.indexOf(laodSearchText) > -1) {
+                            allFiltertotalNum++;
+                            if (filterData[key]) {
+                                filterData[key].push(item);
+                            } else {
+                                filterData[key] = [item];
+                            }
+                        }
+                    });
+                });
+                //查找后的数据
+                tableOptions.tableData = filterData;
+                // 修改总页数
+                tableOptions.pagination.page_total = Math.ceil(allFiltertotalNum / tableOptions.pagination.ever_count);
+            }
+
+
+
+            let searchData = {};
+            let alltotalNum = 0;
+            let startNum = (pageIndex - 1) * tableOptions.pagination.ever_count;
+            let endNum = startNum + tableOptions.pagination.ever_count;
+            Object.keys(tableOptions.tableData).forEach(function (key) {
+                if (tableOptions.tableData[key].length > 0) {
+                    let tableDataItem = tableOptions.tableData[key];
+                    tableDataItem.forEach(item => {
+                        alltotalNum++;
+                        if (alltotalNum <= endNum && alltotalNum > startNum) {
+                            if (searchData[key]) {
+                                searchData[key].push(item);
+                            } else {
+                                searchData[key] = [item];
+                            }
+                        }
+                    });
+                }
+            });
+            return searchData;
+        }
+
+        function WriterControl_OnLoad(rootElement) {
+            // rootElement.EventShowContextMenu = Handle_EventShowContextMenu;// 这个函数定义在DemoApp.js中
+            // rootElement.EventUpdateToolarState = Handle_EventUpdateToolarState;// 这个函数定义在DemoApp.js中
+
+            rootElement.LoadDocumentFromString(xml);
+            rootElement.QueryListItems = function (ele, eventObject) {
+                let DropdownListTable = JSON.parse(JSON.stringify(alljsondata));
+                DropdownListTable['tableData'] = getPageOptions();
+                //第一次要传入全部的数据
+                eventObject.AddTableListData(DropdownListTable);
+            };
+
+            //下拉选项选择事件
+            rootElement.EventQueryTableListItemSelected = function (SelectedOption) {
+                let ctl = document.getElementById("myWriterControl");
+                let targetInput = ctl.CurrentInputField();
+                let targetInputProps = ctl.GetElementProperties(targetInput);
+
+            };
+
+            //分页事件
+            rootElement.EventQueryTableListDataPageChanged = function (currentPage, ChangedPageTabelData) {
+                //需要传入分页后的数据。注意：ChangedPageTabelData只接收tableData，其他属性不生效。
+                ChangedPageTabelData(getPageOptions(currentPage));
+            };
+            rootElement.EventQueryTableListDataSearch = function (searchText, TabelDataSearchForReset) {
+                // TabelDataSearchForReset 需要传入整体数据，因为查找后的数据不再是全部数据，分页计算会被改变。
+                let DropdownListTable = JSON.parse(JSON.stringify(alljsondata));
+                laodSearchText = searchText;
+
+                //如果为空（重置时），则显示全部数据
+                if (!searchText) {
+                    //为空时，从全部数据中分页
+                    DropdownListTable['tableData'] = getPageOptions();
+                    TabelDataSearchForReset(DropdownListTable);
+                } else {
+                    var data = getPageOptions();
+                    //不为空时，查找数据并分页
+                    let searchData = {};
+                    let alltotalNum = 0;
+                    Object.keys(DropdownListTable.tableData).forEach(function (key) {
+                        let tableDataItem = DropdownListTable.tableData[key];
+                        tableDataItem.forEach(item => {
+                            if (item.name.indexOf(searchText) > -1) {
+                                alltotalNum++;
+                                if (searchData[key]) {
+                                    searchData[key].push(item);
+                                } else {
+                                    searchData[key] = [item];
+                                }
+                            }
+                        });
+                    });
+
+                    DropdownListTable['tableData'] = searchData;
+                    // //获取第一页数据
+                    DropdownListTable['tableData'] = getPageOptions(1, '', DropdownListTable);
+                    // //重新计算页数
+                    DropdownListTable.pagination.page_total = Math.ceil(alltotalNum / DropdownListTable.pagination.ever_count);
+                    TabelDataSearchForReset(DropdownListTable);//传入全部数据，分页计算会被改变。
+                }
+            };
+        };
+
+        //用于存储搜索过的数据
+        var searchTableData = {};
+        let xml = `<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="2024.8.10.0"><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XTextHeader"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag" StyleIndex="0"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextBody"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XString"><Text>单选动态表格下拉，有分组互斥：</Text></Element><Element xsi:type="XInputField"><ID>txtList</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>下拉域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><RepulsionForGroup>true</RepulsionForGroup><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XParagraphFlag" /><Element xsi:type="XString"><Text>多选动态表格下拉，有分组互斥：</Text></Element><Element xsi:type="XInputField"><ID>txtList_1</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>多选下拉输入域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><RepulsionForGroup>true</RepulsionForGroup><MultiSelect>true</MultiSelect><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XParagraphFlag" /><Element xsi:type="XParagraphFlag" /><Element xsi:type="XString"><Text>不带分组互斥单选：</Text></Element><Element xsi:type="XInputField" StyleIndex="1"><ID>aaa</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>下拉域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag" /><Element xsi:type="XString"><Text>不带分组互斥多选：</Text></Element><Element xsi:type="XInputField" StyleIndex="1"><ID>bbb</ID><ToolTip>请双击</ToolTip><EnableValueValidate>true</EnableValueValidate><ValidateStyle><CheckMaxValue>true</CheckMaxValue><CheckMinValue>true</CheckMinValue><DateTimeMaxValue>0001-01-01T00:00:00+08:00</DateTimeMaxValue><DateTimeMinValue>0001-01-01T00:00:00+08:00</DateTimeMinValue></ValidateStyle><ValueBinding /><CopySource /><BorderElementColor /><TextColor>#000000</TextColor><BackgroundTextColor>#000000</BackgroundTextColor><MoveFocusHotKey>None</MoveFocusHotKey><SpecifyWidth>300</SpecifyWidth><Alignment>Far</Alignment><DisplayFormat /><BackgroundText>下拉域</BackgroundText><EnableHighlight>Default</EnableHighlight><EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode><FieldSettings><EditStyle>DropdownList</EditStyle><MultiSelect>true</MultiSelect><DynamicListItems>true</DynamicListItems><ListSource><Items><Item><Text>男</Text><Value>0</Value></Item><Item><Text>女</Text><Value>1</Value></Item><Item><Text>未知</Text><Value>3</Value></Item></Items></ListSource></FieldSettings></Element><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element><Element xsi:type="XTextFooter"><AcceptTab>true</AcceptTab><EnableValueValidate>true</EnableValueValidate><XElements><Element xsi:type="XParagraphFlag"><AutoCreate>true</AutoCreate></Element></XElements></Element></XElements><SerializeParameterValue>true</SerializeParameterValue><FileFormat>XML</FileFormat><ContentStyles><Default xsi:type="DocumentContentStyle"><FontName>宋体</FontName><FontSize>12</FontSize></Default><Styles><Style Index="0"><FontName>宋体</FontName><FontSize>12</FontSize><Align>Center</Align></Style><Style Index="1"><FontName>宋体</FontName><FontSize>12</FontSize></Style></Styles></ContentStyles><Info><LicenseText>都昌信息科技有限公司:都昌5.0WEB旗舰版演示</LicenseText><CreationTime>1980-01-01T00:00:00+08:00</CreationTime><LastModifiedTime>2024-08-12T16:18:39+08:00</LastModifiedTime><LastPrintTime>1980-01-01T00:00:00+08:00</LastPrintTime><Operator>DCSoft.Writer Version:2024.6.26.0</Operator><NumOfPage>1</NumOfPage></Info><BodyText>单选动态表格下拉，有分组互斥：下拉域
+
+多选动态表格下拉，有分组互斥：多选下拉输入域
+
+
+不带分组互斥单选：下拉域
+不带分组互斥多选：下拉域</BodyText><LocalConfig /><PageSettings /></XTextDocument>`
+
+    </script>
+    <script>
+        // 分组互斥
+        var alljsondata = {
+            pagination: { //如果不传pagination，默认全部数据不分页
+                ever_count: 10,//默认10条
+                page_total: 6,//总共2页，
+                page_currentpage: 1//当前页码
+            },
+            tableHeader: [
+                {
+                    prop: "name",//表格数据标记
+                    label: "药品名称",//表头名称
+                    width: "180"//当前列所占宽度，单位像素
+                },
+                {
+                    prop: "code",
+                    label: "代码",
+                    // width: "180"
+                },
+                {
+                    prop: "Specifications",
+                    label: "规格",
+                    // width: "180"
+                },
+                {
+                    prop: "Price",
+                    label: "价格",
+                    // width: "180"
+                }
+            ],
+            tableData: {
+                "药品分类一": [
+                    {
+                        code: '1-01',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '1111'
+                    },
+                    {
+                        code: '1-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '1116'
+                    },
+                    {
+                        code: '1-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '1117'
+                    },
+                    {
+                        code: '1-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '1118'
+                    },
+                    {
+                        code: '1-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '1119'
+                    },
+                    {
+                        code: '1-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '11110'
+                    }
+
+                ],
+                "药品分类二": [
+                    {
+                        code: '2-01',
+                        name: '注射用甲泼尼龙琥珀酸钠',
+                        Specifications: '40mg*1ml',
+                        Price: "15.8",
+                        text: '注射用甲泼尼龙琥珀酸钠',
+                        value: '22211'
+                    },
+                    {
+                        code: '2-02',
+                        name: '注射用头孢他啶',
+                        Specifications: '1g*1支',
+                        Price: "20.5",
+                        text: '注射用头孢他啶',
+                        value: '22212'
+                    },
+                    {
+                        code: '2-03',
+                        name: '注射用阿米卡星',
+                        Specifications: '0.1g*2ml',
+                        Price: "8.9",
+                        text: '注射用阿米卡星',
+                        value: '22213'
+                    },
+                    {
+                        code: '2-04',
+                        name: '注射用甲硝唑',
+                        Specifications: '0.5g*100ml',
+                        Price: "6.2",
+                        text: '注射用甲硝唑',
+                        value: '22214'
+                    },
+                    {
+                        code: '2-05',
+                        name: '注射用利巴韦林',
+                        Specifications: '1mg*1ml',
+                        Price: "9.5",
+                        text: '注射用利巴韦林',
+                        value: '22215'
+                    },
+                    {
+                        code: '2-06',
+                        name: '注射用多巴胺',
+                        Specifications: '40mg*5ml',
+                        Price: "11.8",
+                        text: '注射用多巴胺',
+                        value: '22216'
+                    },
+                    {
+                        code: '2-07',
+                        name: '注射用硝酸甘油',
+                        Specifications: '5mg*1ml',
+                        Price: "7.5",
+                        text: '注射用硝酸甘油',
+                        value: '22217'
+                    },
+                    {
+                        code: '2-08',
+                        name: '注射用丙泊酚',
+                        Specifications: '20mg*2ml',
+                        Price: "10.8",
+                        text: '注射用丙泊酚',
+                        value: '22218'
+                    },
+                    {
+                        code: '2-09',
+                        name: '注射用氨酚烷胺',
+                        Specifications: '0.5g*2ml',
+                        Price: "8.2",
+                        text: '注射用氨酚烷胺',
+                        value: '22219'
+                    },
+                    {
+                        code: '2-10',
+                        name: '注射用地塞米松',
+                        Specifications: '5mg*1ml',
+                        Price: "12.6",
+                        text: '注射用地塞米松',
+                        value: '22220'
+                    }
+                ],
+                "药品分类三": [
+                    {
+                        "code": "3-01",
+                        "name": "注射用头孢曲松钠",
+                        "Specifications": "1g*1支",
+                        "Price": "15.2",
+                        "text": "注射用头孢曲松钠",
+                        "value": "33382"
+                    },
+                    {
+                        "code": "3-02",
+                        "name": "注射用甲氧苄啶钠",
+                        "Specifications": "0.5g*1支",
+                        "Price": "10.8",
+                        "text": "注射用甲氧苄啶钠",
+                        "value": "33383"
+                    },
+                    {
+                        "code": "3-03",
+                        "name": "注射用氯化钠",
+                        "Specifications": "0.9%10ml",
+                        "Price": "2.5",
+                        "text": "注射用氯化钠",
+                        "value": "33384"
+                    },
+                    {
+                        "code": "3-04",
+                        "name": "注射用葡萄糖",
+                        "Specifications": "5%250ml",
+                        "Price": "3.8",
+                        "text": "注射用葡萄糖",
+                        "value": "33385"
+                    },
+                    {
+                        "code": "3-05",
+                        "name": "注射用枸橼酸钠",
+                        "Specifications": "10%10ml",
+                        "Price": "5.5",
+                        "text": "注射用枸橼酸钠",
+                        "value": "33386"
+                    },
+                    {
+                        "code": "3-06",
+                        "name": "注射用硫酸镁",
+                        "Specifications": "5g*10支",
+                        "Price": "12.6",
+                        "text": "注射用硫酸镁",
+                        "value": "33387"
+                    },
+                    {
+                        "code": "3-07",
+                        "name": "注射用头孢氨苄钠",
+                        "Specifications": "1g*1支",
+                        "Price": "16.9",
+                        "text": "注射用头孢氨苄钠",
+                        "value": "33388"
+                    },
+                    {
+                        "code": "3-08",
+                        "name": "注射用头孢他啶钠",
+                        "Specifications": "1g*1支",
+                        "Price": "15.5",
+                        "text": "注射用头孢他啶钠",
+                        "value": "33389"
+                    },
+                    {
+                        "code": "3-09",
+                        "name": "注射用头孢克洛钠",
+                        "Specifications": "1g*1支",
+                        "Price": "18.5",
+                        "text": "注射用头孢克洛钠",
+                        "value": "333811"
+                    },
+                    {
+                        "code": "3-10",
+                        "name": "注射用头孢地尼钠",
+                        "Specifications": "0.5g*1支",
+                        "Price": "14.8",
+                        "text": "注射用头孢地尼钠",
+                        "value": "333815"
+                    },
+                    {
+                        "code": "3-11",
+                        "name": "注射用头孢美唑钠",
+                        "Specifications": "0.5g*1支",
+                        "Price": "16.8",
+                        "text": "注射用头孢美唑钠",
+                        "value": "333817"
+                    },
+
+                ],
+                "药品分类四": [
+                    {
+                        "code": "4-01",
+                        "name": "维生素C片",
+                        "Specifications": "1000mg*30片",
+                        "Price": "15.0",
+                        "text": "维生素C片",
+                        "value": "44457"
+                    },
+                    {
+                        "code": "4-02",
+                        "name": "钙片",
+                        "Specifications": "500mg*60片",
+                        "Price": "20.0",
+                        "text": "钙片",
+                        "value": "44458"
+                    },
+                    {
+                        "code": "4-03",
+                        "name": "铁剂",
+                        "Specifications": "60mg*20片",
+                        "Price": "25.0",
+                        "text": "铁剂",
+                        "value": "44459"
+                    },
+                    {
+                        "code": "4-04",
+                        "name": "维生素D3软胶囊",
+                        "Specifications": "200IU*30粒",
+                        "Price": "18.0",
+                        "text": "维生素D3软胶囊",
+                        "value": "44460"
+                    },
+                    {
+                        "code": "4-05",
+                        "name": "复合维生素片",
+                        "Specifications": "多维多矿*30片",
+                        "Price": "22.0",
+                        "text": "复合维生素片",
+                        "value": "44461"
+                    },
+                    {
+                        "code": "4-06",
+                        "name": "止咳糖浆",
+                        "Specifications": "100ml",
+                        "Price": "10.0",
+                        "text": "止咳糖浆",
+                        "value": "444616"
+                    },
+                    {
+                        "code": "4-07",
+                        "name": "退烧药",
+                        "Specifications": "布洛芬*10片",
+                        "Price": "8.0",
+                        "text": "退烧药",
+                        "value": "444617"
+                    },
+                    {
+                        "code": "4-08",
+                        "name": "抗过敏药",
+                        "Specifications": "氯雷他定*30片",
+                        "Price": "16.0",
+                        "text": "抗过敏药",
+                        "value": "444618"
+                    },
+                    {
+                        "code": "4-09",
+                        "name": "消化酶片",
+                        "Specifications": "10mg*30片",
+                        "Price": "14.0",
+                        "text": "消化酶片",
+                        "value": "444619"
+                    },
+                    {
+                        "code": "4-10",
+                        "name": "维生素E软胶囊",
+                        "Specifications": "400mg*30粒",
+                        "Price": "20.0",
+                        "text": "维生素E软胶囊",
+                        "value": "444620"
+                    }
+                ],
+                "药品分类五": [
+                    {
+                        code: '5-01',
+                        name: '5%葡萄糖注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '5%葡萄糖注射液',
+                        value: '5551'
+                    },
+                    {
+                        code: '5-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '5556'
+                    },
+                    {
+                        code: '5-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '5557'
+                    },
+                    {
+                        code: '5-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '5558'
+                    },
+                    {
+                        code: '5-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '5559'
+                    },
+                    {
+                        code: '5-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '55510'
+                    }
+
+                ],
+                "药品分类六": [
+                    {
+                        code: '6-01',
+                        name: '5%葡萄糖注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '5%葡萄糖注射液',
+                        value: '6661'
+                    },
+                    {
+                        code: '6-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '6666'
+                    },
+                    {
+                        code: '6-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '6667'
+                    },
+                    {
+                        code: '6-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '6668'
+                    },
+                    {
+                        code: '6-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '6669'
+                    },
+                    {
+                        code: '6-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '66610'
+                    }
+
+                ],
+
+                "药品分类七": [
+                    {
+                        code: '7-01',
+                        name: '5%葡萄糖注射液',
+                        Specifications: '5%250ml',
+                        Price: "3.2",
+                        text: '5%葡萄糖注射液',
+                        value: '7771'
+                    },
+                    {
+                        code: '7-02',
+                        name: '葡萄糖氯化钠注射液',
+                        Specifications: '5%+0.9%100ml',
+                        Price: "5.8",
+                        text: '葡萄糖氯化钠注射液',
+                        value: '7776'
+                    },
+                    {
+                        code: '7-03',
+                        name: '头孢氨苄胶囊',
+                        Specifications: '250mg*12粒',
+                        Price: "12.5",
+                        text: '头孢氨苄胶囊',
+                        value: '7777'
+                    },
+                    {
+                        code: '7-04',
+                        name: '阿司匹林肠溶片',
+                        Specifications: '100mg*30片',
+                        Price: "18.9",
+                        text: '阿司匹林肠溶片',
+                        value: '7778'
+                    },
+                    {
+                        code: '7-05',
+                        name: '布洛芬缓释胶囊',
+                        Specifications: '400mg*12粒',
+                        Price: "25.5",
+                        text: '布洛芬缓释胶囊',
+                        value: '7779'
+                    },
+                    {
+                        code: '7-06',
+                        name: '维生素B12注射液',
+                        Specifications: '1mg/1ml',
+                        Price: "10.2",
+                        text: '维生素B12注射液',
+                        value: '77710'
+                    }
+
+                ],
+            }
+        };
+    </script>
+</body>
+
+</html>

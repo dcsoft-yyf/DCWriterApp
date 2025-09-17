@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>测试第五代接口</title>
+   <style>
+      html,
+      body {
+         height: 100%;
+         overflow: hidden;
+         padding: 0;
+         margin: 0;
+      }
+
+
+      .describe-box {
+         /* max-width: 50%;
+        min-width: 500px; */
+         border: 1px solid #dcdfe6;
+         line-height: 23px;
+         text-align: left;
+         background: linear-gradient(180deg, #dcdfe6 0%, #fff 100%);
+         box-shadow: inset 0px 0px 10px 1px #dcdfe6;
+         border-radius: 0px 8px 8px 0px;
+      }
+
+      .describe-box span:first-child {
+         /* text-align: center; */
+         font-weight: bold;
+         line-height: 32px;
+         border-bottom: 1px solid rgb(155, 187, 227)
+      }
+
+      .describe-box span {
+         display: block;
+         margin: 0 5px;
+         font-size: 13px;
+
+      }
+
+      .toolBox {
+         /* height: 40px; */
+         width: 100%;
+         border: 1px solid #dcdfe6;
+         display: flex;
+         font-size: 13px;
+         overflow-x: auto;
+         overflow-y: hidden;
+      }
+
+      .toolBox span {
+         display: inline-table;
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 5px 10px;
+         min-width: 50px;
+         height: 18px;
+         white-space: nowrap
+      }
+
+      .toolBox select {
+         margin: 5px;
+         border-radius: 8px;
+         border: 1px solid #dcdfe6;
+         padding: 3px 10px;
+         min-width: 50px;
+         height: 29px;
+      }
+
+      #FontNameSelect {
+         min-width: 150px
+      }
+
+      .toolBox span:has(select) {
+         padding: 0px;
+         /* margin: 0px; */
+      }
+
+      .toolBox span:hover {
+         border: 1px solid #4e6ef2;
+         cursor: pointer;
+      }
+
+      .dc-writer-box {
+         /* height: 100% !important; */
+         border-bottom: 0px solid black;
+         background-attachment: fixed;
+         background-size: cover;
+         background-position: center top;
+      }
+
+      .main-container {
+         height: 100%;
+         display: flex;
+
+      }
+
+      .ringbox {
+         width: 30%;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+      }
+
+      .list-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px;
+         border-bottom: 1px solid #eee;
+      }
+
+      .list-item:last-child {
+         border-bottom: none;
+      }
+
+      #myWriterControl {
+         width: 70%;
+      }
+
+      .TracesListContentItem {
+         height: 50px;
+         width: 100%;
+         border-bottom: 1px solid saddlebrown;
+         text-align: center;
+         line-height: 50px;
+         background: #dce1f7;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body style="text-align: center">
+   <div class="header">
+      <div class="describe-box">
+         <span>弹框插入结构化元素</span>
+
+      </div>
+      <div class="toolBox">
+         <span commandName="fileopen">打开本地文件</span>
+         <span localMethod="DownLoadFile">导出到本地</span>
+         <span localMethod="PrintDocument">打印</span>
+         <span localMethod="LoadPrintPreview">打印预览</span>
+         <span localMethod="ClosePrintPreview">关闭预览</span>
+         <span localMethod="AboutControl">关于</span>
+         <br>
+
+      </div>
+
+      <div class="toolBox">
+         <span onclick="InsertInputField()">插入输入域</span>
+         <span onclick="insertcheckboxorradio()">插入单,复选框</span>
+         <span onclick="InsertTable()">插入表格</span>
+         <span onclick="InsertLabelElement()">插入标签文本</span>
+         <span onclick="InsertBarcodeElement()">插入条形码</span>
+         <span onclick="InsertTDBarcodeElement()">插入二维码</span>
+
+
+      </div>
+   </div>
+
+
+   <div class="main-container">
+      <div id="myWriterControl" dctype="WriterControlForWASM" style="height: 100%;  background: #F3F5F7; width: 100%;"
+         RuleVisible="true" rulebackcolor="#F3F5F7" RuleClientBackColor="#F3F5F7"
+         RuleClientBorderColor="rgb(237 240 243)" RuleLineColor="#CCCCCC" PageCssString222="box-shadow:0px 0px 0px grey"
+         PageBorderColor="#F3F5F7" pagetitleposition="BottomRight" style="background-image: url();"
+         RegisterCode="0566987B1B6CD6DECCBEE8CE4CDEAD577FCF5A30201BE7553AFD47C841548F0C0CA6212C10F259E9AF13820AF8E4A17CCBF7612FFFF1A779EBF962627BCAF7ECB906FA8C96694D242208ED9CECD19A907F6820C142920C54553B32B4FE661F78E553F9D3CCE077B455FA558F71D78FE816">
+      </div>
+   </div>
+   </div>
+
+   <script src=""></script>
+
+   <script src="../../_framework/dcwriter5.js"></script>
+   <script src="../../js/jquery-1.7.2.min.js"></script>
+   <!-- <script>
+      // 动态加载脚本的简单方法
+      function loadScript(src) {
+         var script = document.createElement('script');
+         script.src = window.location.origin + '/' + src;
+         document.head.appendChild(script);
+      }
+
+      // 加载所需的JS文件
+      loadScript('DCWriter5NewDemo/js/jquery-1.7.2.min.js');
+      loadScript('DCWriter5NewDemo/_framework/dcwriter5.js');
+   </script> -->
+
+   <script>
+      window.onload = function () {
+      };
+      let toolBoxDOM = document.querySelector(".toolBox");
+      if (toolBoxDOM) {
+         toolBoxDOM.addEventListener("click", (e) => {
+            if (e.target.tagName == "SPAN") {
+               let commandName = e.target.getAttribute("commandName");
+               let localMethod = e.target.getAttribute("localMethod");
+               if (commandName) {
+                  let ctl = document.getElementById("myWriterControl");
+                  ctl.DCExecuteCommand(commandName, false, null);
+               } else if (localMethod) {
+                  funcOBJ[localMethod].call(funcOBJ);
+               }
+            }
+         });
+      }
+      //编辑器方法组
+      let funcOBJ = {
+         DownLoadFile: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.DownLoadFile("xml");
+         },
+         PrintDocument: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.PrintDocument();
+         },
+         LoadPrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.LoadPrintPreview();
+         },
+         ClosePrintPreview: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.ClosePrintPreview();
+         },
+         AboutControl: function () {
+            let ctl = document.getElementById("myWriterControl");
+            let fName = Date.now();
+            ctl.AboutControl();
+         },
+      };
+
+
+
+
+      function InsertInputField() {
+         let ctl = document.getElementById("myWriterControl");
+
+         ctl.DCExecuteCommand('InsertInputField', true, null);
+      }
+
+      function InsertLabelElement() {
+         let ctl = document.getElementById("myWriterControl");
+
+         ctl.DCExecuteCommand('InsertLabelElement', true, null);
+      }
+
+      function insertcheckboxorradio() {
+         let ctl = document.getElementById("myWriterControl");
+
+         ctl.DCExecuteCommand('insertcheckboxorradio', true, null);
+      }
+
+
+      function InsertTDBarcodeElement() {
+         let ctl = document.getElementById("myWriterControl");
+
+         ctl.DCExecuteCommand('InsertTDBarcodeElement', true, null);
+      }
+
+
+      function InsertBarcodeElement() {
+         let ctl = document.getElementById("myWriterControl");
+         ctl.DCExecuteCommand('InsertBarcodeElement', true, null);
+      }
+
+      function InsertTable() {
+         let ctl = document.getElementById("myWriterControl");
+         ctl.DCExecuteCommand('InsertTable', true, null);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>

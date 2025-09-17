@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # 所需的最小权限
+      contents: write # 赋予写入仓库的权限，用于推送 gh-pages 分支
+      pages: write      # 核心：部署 Pages 所需的写入权限
+      
+    steps:
+      # 步骤 1: 获取代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # 如果构建需要子模块，可以添加 with 块
+        # with:
+        #   submodules: recursive
+
+      # 步骤 2: 安装 .NET SDK
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      # 步骤 3: 还原 NuGet 包
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # 步骤 4: 发布项目
+      - name: Publish project
+        run: dotnet publish -c Release -o ./publish
+
+      # 步骤 5: 将发布成果物上传，为部署做准备
+      - name: Upload artifact (publish)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./publish/wwwroot
+
+      # 步骤 6: 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

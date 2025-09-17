@@ -1,0 +1,3520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.12.23">
+   <Attributes />
+   <AutoFixTextMode>None</AutoFixTextMode>
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="8">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Medical Record</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="6">
+               <Attributes />
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Name：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="9">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>3_986CA0301001</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="9">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Li XX</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <InnerValue>Li XX</InnerValue>
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Sex：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="9">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>4</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>4_986CA0305002</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="9">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>F</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Age：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="9">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>5</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>5_986CA030A003</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="9">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>29</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Depart.：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="9">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>26</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>26_986CA0337004</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="9">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Hand surgery</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Bed No.：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="9">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>27</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>27_986CA033A005</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="9">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>0511</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="5">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="9">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Inpatient No.：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="9">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>28</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>28_986CA033E006</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="9">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>0000000</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <InnerValue>0000000</InnerValue>
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="9" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>354.80545</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>215.205048</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>282.0278</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>337.9827</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>264.182465</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>426.796539</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XTextTable" NumOfRows="6" NumOfColumns="3">
+               <Attributes />
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <Expressions />
+               <XElements>
+                  <Element xsi:type="XTextTableRow" StyleIndex="1">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Occupation：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>93</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>93_986CA04C8007</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="10">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Guide              </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Ethnic：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>22</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>22_986CA04CB008</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="10">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Han</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Marital Status：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="11">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>TRUE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>94</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>94_986CA06E1017</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="11">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Other</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <ViewEncryptType>Partial</ViewEncryptType>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="1">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>NativePlace：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="11">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>TRUE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>92</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>92_986CA05C2012</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="11">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>FoshanCity,Guangdong</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <InnerValue>FoshanCity,Guangdong</InnerValue>
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <ViewEncryptType>Partial</ViewEncryptType>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="4">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>    </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="10">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Place of Birth：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="10">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>41</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>41_986CA05F1013</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="10">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Nanhai District,Foshan,Guangdong</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="1">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Address：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="11">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>43</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>43_986CA060C015</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="11">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>Liya Park,Nanhai District,Foshan</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Postcode：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="11">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>TextBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>3</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>44</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>44_986CA0612016</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="11">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>528200</Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <BackgroundText>XXXX</BackgroundText>
+                                 <EditorActiveMode>MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="1">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Admission date：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="11">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>DateTimeBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>8</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>116</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>116_986CA0722018</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="11">
+                                       <AutoFixTextMode>None</AutoFixTextMode>
+                                       <XElements xsi:nil="true" />
+                                       <Text>2014-07-14 08:52</Text>
+                                    </Element>
+                                 </XElements>
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <DisplayFormat>
+                                    <Style>DateTime</Style>
+                                    <Format>yyyy-MM-dd HH:mm</Format>
+                                 </DisplayFormat>
+                                 <InnerValue>2014-07-14 08:52:00</InnerValue>
+                                 <BackgroundText>yyyy-MM-dd HH:mm</BackgroundText>
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                                 <FieldSettings>
+                                    <EditStyle>DateTime</EditStyle>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="1">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Medical record acquisition time：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="11">
+                                 <Attributes>
+                                    <Attribute>
+                                       <Name>NsoElementTypeName</Name>
+                                       <Value>NewControl</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>NsoControlTypeName</Name>
+                                       <Value>DateTimeBox</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Type</Name>
+                                       <Value>8</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>eemr_ele_id</Name>
+                                       <Value>73</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Printable</Name>
+                                       <Value>TRUE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>IsNotRecordInXML</Name>
+                                       <Value>False</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>Edge</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>ViewSecret</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>MustFillContent</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>DelFlag</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                    <Attribute>
+                                       <Name>EditProtect</Name>
+                                       <Value>FALSE</Value>
+                                    </Attribute>
+                                 </Attributes>
+                                 <ID>986CA07E8019</ID>
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <XElements />
+                                 <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+                                 <BorderElementColor />
+                                 <EventExpressions />
+                                 <DisplayFormat>
+                                    <Style>DateTime</Style>
+                                    <Format>yyyyYMMdDHHH</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <BackgroundText>yyyy-MM-dd HH:mm</BackgroundText>
+                                 <BorderVisible>Hidden</BorderVisible>
+                                 <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+                                 <LastSelectedListItems />
+                                 <FieldSettings>
+                                    <EditStyle>DateTime</EditStyle>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Solar term with incidence: GreatCold</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="16" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow" StyleIndex="1">
+                     <Attributes />
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <Expressions />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Narrator: patient and family members</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <AutoFixTextMode>None</AutoFixTextMode>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="11">
+                                 <AutoFixTextMode>None</AutoFixTextMode>
+                                 <XElements xsi:nil="true" />
+                                 <Text>Reliability:  almost reliable </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                           </XElements>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>617</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>604</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>687</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0C44024</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Chief Complaints：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0C44024</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0D24025</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>History of present illness：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0D24025</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0DDC026</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>History of previous illness：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0DDC026</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0E3A027</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Allergic history：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0E3A027</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0E50028</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Personal history：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0E50028</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0E5C029</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Obsterical history：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0E5C029</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0E94030</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Family history：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="12" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0E94030</Name>
+            </Element>
+            <Element xsi:type="XTextSection">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>Region</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA0E9F031</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <AcceptTab>true</AcceptTab>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="12">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Diagnosis of TCM：</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+                  <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+               </XElements>
+               <ForeColorForCollapsed />
+               <ForeColorValueForCollapsed>#00000000</ForeColorValueForCollapsed>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Name>986CA0E9F031</Name>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+            <Element xsi:type="XString" StyleIndex="17">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Physical Examination</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="3" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>T </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>NumberBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>5</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoNumboxPrecision</Name>
+                     <Value>0</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>36</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Temperature</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1027034</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <ValueType>Numeric</ValueType>
+                  <CheckMaxValue>true</CheckMaxValue>
+                  <CheckMinValue>true</CheckMinValue>
+                  <MaxValue>80</MaxValue>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                  <CustomMessage>Please enter the numeric value in the control.</CustomMessage>
+               </ValidateStyle>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <DisplayFormat>
+                  <Style>Numeric</Style>
+                  <Format>0.</Format>
+               </DisplayFormat>
+               <BackgroundText>Temperature</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+               <FieldSettings>
+                  <EditStyle>Numeric</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>℃    P</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>NumberBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>5</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoNumboxPrecision</Name>
+                     <Value>0</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>37</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Pulse</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1039035</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <ValueType>Numeric</ValueType>
+                  <CheckMaxValue>true</CheckMaxValue>
+                  <CheckMinValue>true</CheckMinValue>
+                  <MaxValue>200</MaxValue>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                  <CustomMessage>Please enter the numeric value in the control.</CustomMessage>
+               </ValidateStyle>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <DisplayFormat>
+                  <Style>Numeric</Style>
+                  <Format>0.</Format>
+               </DisplayFormat>
+               <BackgroundText>Pulse</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+               <FieldSettings>
+                  <EditStyle>Numeric</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>beat/m    R </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>NumberBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>5</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoNumboxPrecision</Name>
+                     <Value>0</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>38</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Breath</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1044036</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <ValueType>Numeric</ValueType>
+                  <CheckMaxValue>true</CheckMaxValue>
+                  <CheckMinValue>true</CheckMinValue>
+                  <MaxValue>100</MaxValue>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                  <CustomMessage>Please enter the numeric value in the control.</CustomMessage>
+               </ValidateStyle>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <DisplayFormat>
+                  <Style>Numeric</Style>
+                  <Format>0.</Format>
+               </DisplayFormat>
+               <BackgroundText>Breath</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+               <FieldSettings>
+                  <EditStyle>Numeric</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>beat/m    BP </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>NumberBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>5</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoNumboxPrecision</Name>
+                     <Value>0</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>20</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EdgeStyle2</Name>
+                     <Value>0</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>BP1</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1087037</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <ValueType>Numeric</ValueType>
+                  <CheckMaxValue>true</CheckMaxValue>
+                  <CheckMinValue>true</CheckMinValue>
+                  <MaxValue>500</MaxValue>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                  <CustomMessage>Please enter the numeric value in the control.</CustomMessage>
+               </ValidateStyle>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <DisplayFormat>
+                  <Style>Numeric</Style>
+                  <Format>0.</Format>
+               </DisplayFormat>
+               <BackgroundText>BP1</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+               <FieldSettings>
+                  <EditStyle>Numeric</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>/</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>NumberBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>5</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoNumboxPrecision</Name>
+                     <Value>0</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>48</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>BP2</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA109E038</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <ValueType>Numeric</ValueType>
+                  <CheckMaxValue>true</CheckMaxValue>
+                  <CheckMinValue>true</CheckMinValue>
+                  <MaxValue>500</MaxValue>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                  <CustomMessage>Please enter the numeric value in the control.</CustomMessage>
+               </ValidateStyle>
+               <XElements />
+               <AcceptChildElementTypes2>Text</AcceptChildElementTypes2>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <EventExpressions />
+               <DisplayFormat>
+                  <Style>Numeric</Style>
+                  <Format>0.</Format>
+               </DisplayFormat>
+               <BackgroundText>BP2</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>F2 MouseDblClick MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+               <FieldSettings>
+                  <EditStyle>Numeric</EditStyle>
+               </FieldSettings>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> mmHg</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Specialist diagnosis：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Auxiliary examination：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Preliminary diagnosis：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                    TCD name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>353</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Please double click here to select</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_datapropertycustom</Name>
+                     <Value>DBsubID0=986CA1364045|DBsubID1=986CA1364046|SelectId=4</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1363044</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="11">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Exogenous cough</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Please double click here to select</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  	             TCD Code：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>372</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1364045</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="11">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>BNF021  </Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="2">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                    Diagnostic name of TCM： </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>358</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA1364046</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Exogenous cough</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                    ICD name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>24</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Please double click here to select</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_datapropertycustom</Name>
+                     <Value>DBsubID0=986CA24E5048|DBsubID1=986CA24E5049|SelectId=28362</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA24E5047</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="11">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Chronic pharyngitis</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Please double click here to select</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>  	 ICD Code： </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>374</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA24E5048</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="11">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>J31.200</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                    Diagnostic name of Western Medicine：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>361</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA24E5049</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Chronic pharyngitis</Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Three days diagnosis：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>          TCD name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>354</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Please double click here to select</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_datapropertycustom</Name>
+                     <Value>DBsubID0=986CA259E051|DBsubID1=986CA259E052</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA259E050</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Please double click here to select</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>    TCD Code：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>360</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA259E051</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="3">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>          Diagnostic name of TCM：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>357</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA259E052</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>          ICD name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="14">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>351</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Please double click here to select</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_datapropertycustom</Name>
+                     <Value>DBsubID0=986CA260B054|DBsubID1=986CA260B055|SelectId=20000</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA260B053</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Please double click here to select</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   		</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>ICD Code：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="14">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>375</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA260B054</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>          Diagnostic name of Western Medicine：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="4">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>360</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA260B055</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>Final diagnosis：</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>         TCD Name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="11">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>355</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Please double click here to select</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_datapropertycustom</Name>
+                     <Value>DBsubID0=98C460187001|DBsubID1=986CA2753058</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ReverseEdit</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditAndSave</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA2753056</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Please double click here to select</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>    TCD Code：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>373</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>True</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>98C460187001</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11" WhiteSpaceLength="3">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="13" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>         Diagnostic name of TCM：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>356</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA2753058</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>         ICD Name：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="14">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>352</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Please double click here to select</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_datapropertycustom</Name>
+                     <Value>DBsubID0=986CA27AB060|DBsubID1=986CA27AB061</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA27AB059</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Please double click here to select</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>   		</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>ICD Code：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="14">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>376</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA27AB060</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XString" StyleIndex="14" WhiteSpaceLength="1">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+            <Element xsi:type="XString" StyleIndex="11">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>         Diagnostic name of Western Medicine：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="4">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>359</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>False</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>TRUE</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>986CA27AB061</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>XXXX</BackgroundText>
+               <ViewEncryptType>Partial</ViewEncryptType>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="14" />
+            <Element xsi:type="XString" StyleIndex="7" WhiteSpaceLength="24">
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <XElements xsi:nil="true" />
+               <Text>                        </Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="7">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>True</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>DoctorName1</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="15">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>Super Administrator  Signature: </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="7" WhiteSpaceLength="8">
+                     <AutoFixTextMode>None</AutoFixTextMode>
+                     <XElements xsi:nil="true" />
+                     <Text>        </Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <EventExpressions />
+               <InnerValue>Super Administrator  Signature:         </InnerValue>
+               <BackgroundText>XXXX</BackgroundText>
+               <EnableHighlight>Disabled</EnableHighlight>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="18" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <AutoFixTextMode>None</AutoFixTextMode>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XPageInfo" StyleIndex="6">
+               <PropertyExpressions />
+               <Width>319</Width>
+               <AutoHeight>true</AutoHeight>
+               <Height>54.89257</Height>
+               <FormatString>Page[%PageIndex%] Total[%NumOfPages%]</FormatString>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+            <Element xsi:type="XInputField" StyleIndex="6">
+               <Attributes>
+                  <Attribute>
+                     <Name>NsoElementTypeName</Name>
+                     <Value>NewControl</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>NsoControlTypeName</Name>
+                     <Value>TextBox</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Type</Name>
+                     <Value>3</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>eemr_ele_id</Name>
+                     <Value>-9991</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Printable</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>IsNotRecordInXML</Name>
+                     <Value>True</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>Edge</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>ViewSecret</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>MustFillContent</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>DelFlag</Name>
+                     <Value>FALSE</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>EditProtect</Name>
+                     <Value>True</Value>
+                  </Attribute>
+                  <Attribute>
+                     <Name>PlaceHolder</Name>
+                     <Value>Final printing time</Value>
+                  </Attribute>
+               </Attributes>
+               <ID>98C6522B4003</ID>
+               <AutoFixTextMode>None</AutoFixTextMode>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValidateStyle>
+                  <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                  <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+               </ValidateStyle>
+               <ContentReadonly>True</ContentReadonly>
+               <XElements />
+               <BorderElementColor />
+               <EventExpressions />
+               <BackgroundText>Final printing time</BackgroundText>
+               <BorderVisible>Hidden</BorderVisible>
+               <EditorActiveMode>MouseClick</EditorActiveMode>
+               <LastSelectedListItems />
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+   </XElements>
+   <Parameters>
+      <Parameter Name="当前时间" />
+   </Parameters>
+   <FileName>D:\hlj\产品文档\WinformDEMO20181013\DemoFile2\Medical Record.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <UserHistories />
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>5</PaddingLeft>
+            <PaddingTop>5</PaddingTop>
+            <PaddingRight>5</PaddingRight>
+            <PaddingBottom>5</PaddingBottom>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>11</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>11</SpacingBeforeParagraph>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <FirstLineIndent>100</FirstLineIndent>
+            <LeftIndent>100</LeftIndent>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>11</PaddingLeft>
+            <PaddingTop>11</PaddingTop>
+            <PaddingRight>11</PaddingRight>
+            <PaddingBottom>11</PaddingBottom>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="7">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+            <Align>Right</Align>
+            <FirstLineIndent>100</FirstLineIndent>
+            <LeftIndent>100</LeftIndent>
+         </Style>
+         <Style Index="8">
+            <FontName>Times New Roman</FontName>
+            <FontSize>18</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="9">
+            <FontName>Times New Roman</FontName>
+            <FontSize>10.5</FontSize>
+         </Style>
+         <Style Index="10">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+         </Style>
+         <Style Index="11">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="12">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="13">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <SpacingAfterParagraph>11</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>11</SpacingBeforeParagraph>
+         </Style>
+         <Style Index="14">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <FirstLineIndent>100</FirstLineIndent>
+            <LeftIndent>100</LeftIndent>
+         </Style>
+         <Style Index="15">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+            <Align>Right</Align>
+            <FirstLineIndent>100</FirstLineIndent>
+            <LeftIndent>100</LeftIndent>
+         </Style>
+         <Style Index="16">
+            <FontName>Times New Roman</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="17">
+            <FontName>Times New Roman</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="18">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+            <FirstLineIndent>100</FirstLineIndent>
+            <LeftIndent>100</LeftIndent>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <RepeatedImages />
+   <ControlOptionsForDebug>
+      <HeaderFooterFlagVisible>None</HeaderFooterFlagVisible>
+   </ControlOptionsForDebug>
+   <GlobalJavaScriptReferences />
+   <Info>
+      <LicenseText>This software is unregistered.</LicenseText>
+      <CreationTime>2014-09-16T09:15:13.02025+08:00</CreationTime>
+      <LastModifiedTime>2019-01-23T10:11:27.1807298+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2014.1217.1</Operator>
+      <NumOfPage>2</NumOfPage>
+   </Info>
+   <BodyText>Occupation：Guide               Ethnic：Han Marital Status：Other 
+NativePlace：FoshanCity,Guangdong     Place of Birth：Nanhai District,Foshan,Guangdong 
+Address：Liya Park,Nanhai District,Foshan Postcode：528200 
+Admission date：2014-07-14 08:52   
+Medical record acquisition time： Solar term with incidence: GreatCold 
+Narrator: patient and family members Reliability:  almost reliable  
+Chief Complaints：
+History of present illness：
+History of previous illness：
+Allergic history：
+Personal history：
+Obsterical history：
+Family history：
+Diagnosis of TCM：
+
+Physical Examination
+
+T ℃    Pbeat/m    R beat/m    BP / mmHg
+Specialist diagnosis：
+Auxiliary examination：
+Preliminary diagnosis：
+                    TCD name：Exogenous cough  	             TCD Code：BNF021    
+                    Diagnostic name of TCM： Exogenous cough
+                    ICD name：Chronic pharyngitis  	 ICD Code： J31.200 
+                    Diagnostic name of Western Medicine：Chronic pharyngitis
+Three days diagnosis：
+          TCD name：    TCD Code：   
+          Diagnostic name of TCM：
+          ICD name：   		ICD Code： 
+          Diagnostic name of Western Medicine：
+Final diagnosis：
+         TCD Name：    TCD Code：   
+         Diagnostic name of TCM：
+         ICD Name：   		ICD Code： 
+         Diagnostic name of Western Medicine：
+
+                        Super Administrator  Signature:         </BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings />
+</XTextDocument>
