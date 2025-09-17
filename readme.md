@@ -2,17 +2,17 @@
 # DCWriter Structured Document Editor (Latest Version V5.0)
 <br />Online demo:[https://dcsoft-yyf.github.io/DCWriterApp/index.html](https://dcsoft-yyf.github.io/DCWriterApp/index.html)
 <br />Site: [http://dcsoftcn.com/](http://dcsoftcn.com/).
-<br />Email: [28348092@qq.com](mailto:28348092@qq.com)
+<br />Email: [28348092@qq.com](mailto:28348092@qq.com) or [yyf9989@hotmail.com](mailto:yyf9989@hotmail.com)
 
-# Changelog
+# Update log
 2025-9-17 First upload
 # Screen snapshort
 
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/form designer.jpg"/>
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/dc-be.jpg" />
-[More screen snapshort](https://github.com/dcsoft-yyf/DCWriterApp/blob/main/snapshort.md)
+<br/>[More screen snapshort](https://github.com/dcsoft-yyf/DCWriterApp/blob/main/snapshort.md)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oIeLRqbndKU?si=GRil_ZbsJJFhkArb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br/>[![Video](https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/video.jpg)](https://www.youtube.com/watch?v=oIeLRqbndKU)
 
 # Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;DCWriter is a professional rich text editor based on front-end technology, dedicated to providing an editing experience consistent with MS Word, and fully supports various text formats and style settings. The product supports drag-and-drop insertion of structured elements, maintaining the flexibility of flow layout while enabling rapid construction of structured templates. With its powerful features, excellent performance, and convenient integration, DCWriter has become an industry-leading document editing solution and holds three related invention patents.
