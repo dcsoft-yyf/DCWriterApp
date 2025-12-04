@@ -1,204 +1,205 @@
-# ÈçºÎ½«WinForm.NET´úÂëÇ¨ÒÆµ½Blazor WASMÆ½Ì¨ÉÏ
-<span style="blue">How to Migrate WinForm.NET Code to Blazor WASM Platform</span>
+# å¦‚ä½•å°†WinForm.NETä»£ç è¿ç§»åˆ°Blazor WASMå¹³å°ä¸Š
+<span style="color:blue">How to Migrate WinForm.NET Code to Blazor WASM Platform</span>
 
-ÄÏ¾©¶¼²ıĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾ Ô¬ÓÀ¸£ 2025-12-3
+å—äº¬éƒ½æ˜Œä¿¡æ¯ç§‘æŠ€æœ‰é™å…¬å¸ è¢æ°¸ç¦ 2025-12-3
 <br/><span style="color:blue">Nanjing Duchang Information Technology Co., Ltd. Yuan Yongfu 2025-12-3</span>
 
-## 1.Ç°ÑÔ<span style="color:blue"> Preface</span>
+## 1.å‰è¨€<span style="color:blue"> Preface</span>
 
-×Ô´Ó»ùÓÚMS .NET FrameworkµÄWinForm.NET¿ª·¢Ä£Ê½µÄµ®Éú£¬20¶àÄêÀ´ITÒµ½ç¿ª·¢ÁË´óÁ¿µÄWinForm.NETÈí¼ş¡£
+è‡ªä»åŸºäºMS .NET Frameworkçš„WinForm.NETå¼€å‘æ¨¡å¼çš„è¯ç”Ÿï¼Œ20å¤šå¹´æ¥ITä¸šç•Œå¼€å‘äº†å¤§é‡çš„WinForm.NETè½¯ä»¶ã€‚
 <br/><span style="color:blue">Since the birth of the WinForm.NET development model based on MS .NET Framework, the IT industry has developed a large number of WinForm.NET software over the past 20 years.</span>
 
-µ«½ü¼¸Äê£¬Ëæ×ÅtoBÈí¼ş¿ìËÙ´ÓCSÄ£Ê½×ª±äÎªBSÄ£Ê½£¬µş¼Ó¹ú²úĞÅ´´µÄÌ©É½Ñ¹¶¥¡£
+ä½†è¿‘å‡ å¹´ï¼Œéšç€toBè½¯ä»¶å¿«é€Ÿä»CSæ¨¡å¼è½¬å˜ä¸ºBSæ¨¡å¼ï¼Œå åŠ å›½äº§ä¿¡åˆ›çš„æ³°å±±å‹é¡¶ã€‚
 <br/><span style="color:blue">However, in recent years, with the rapid transformation of toB software from CS mode to BS mode, coupled with the pressure of domestic independent innovation.</span>
 
-´óÁ¿µÄWinForm.NETÈí¼şÓöµ½ÉúËÀ¾Ö£¬ÊıÇ§ÍòĞĞC#´úÂë¿ÉÄÜ»á·ÏÆú£¬´óÁ¿¿ª·¢×éÖ¯ºÍÓÃ»§ÃæÁÙÖØ´ó¼ÛÖµËğÊ§¡£
+å¤§é‡çš„WinForm.NETè½¯ä»¶é‡åˆ°ç”Ÿæ­»å±€ï¼Œæ•°åƒä¸‡è¡ŒC#ä»£ç å¯èƒ½ä¼šåºŸå¼ƒï¼Œå¤§é‡å¼€å‘ç»„ç»‡å’Œç”¨æˆ·é¢ä¸´é‡å¤§ä»·å€¼æŸå¤±ã€‚
 <br/><span style="color:blue">A large number of WinForm.NET software are facing a life-or-death situation, tens of millions of lines of C# code may be abandoned, and a large number of development organizations and users are facing significant value losses.</span>
 
-ÎÒÃÇÒ²Óöµ½Õâ¸öÄÑÌâ£¬ÔÚ¹ıÈ¥2ÄêµÄÊ±¼ä£¬ÎÒÃÇ»¨·ÑÁËºÜ´óµÄ¾«Á¦£¬³É¹¦µÄ½«DCWriter±à¼­Æ÷¿Ø¼şWinForm.NET°æÇ¨ÒÆµ½Blazor WASMÆ½Ì¨ÉÏ£¬ÍêÃÀµÄ½â¾öÁËÕâ¸öÉúËÀÄÑÌâ¡£
+æˆ‘ä»¬ä¹Ÿé‡åˆ°è¿™ä¸ªéš¾é¢˜ï¼Œåœ¨è¿‡å»2å¹´çš„æ—¶é—´ï¼Œæˆ‘ä»¬èŠ±è´¹äº†å¾ˆå¤§çš„ç²¾åŠ›ï¼ŒæˆåŠŸçš„å°†DCWriterç¼–è¾‘å™¨æ§ä»¶WinForm.NETç‰ˆè¿ç§»åˆ°Blazor WASMå¹³å°ä¸Šï¼Œå®Œç¾çš„è§£å†³äº†è¿™ä¸ªç”Ÿæ­»éš¾é¢˜ã€‚
 <br/><span style="color:blue">We also encountered this problem. Over the past 2 years, we have spent a lot of effort to successfully migrate the WinForm.NET version of the DCWriter editor control to the Blazor WASM platform, perfectly solving this life-or-death problem.</span>
 
-ÔÚ´ËËµÃ÷ÆäÖĞµÄ¼¼ÊõÔ­Àí£¬Õ¹Ê¾ÎÒÃÇÊÇÈçºÎ×öµ½µÄ£¬Ï£ÍûÄÜ¸øÓöµ½ÀàËÆÇé¿öµÄ¿ª·¢ÕßÌá¹©Ò»¸ö²Î¿¼Òâ¼û¡£
+åœ¨æ­¤è¯´æ˜å…¶ä¸­çš„æŠ€æœ¯åŸç†ï¼Œå±•ç¤ºæˆ‘ä»¬æ˜¯å¦‚ä½•åšåˆ°çš„ï¼Œå¸Œæœ›èƒ½ç»™é‡åˆ°ç±»ä¼¼æƒ…å†µçš„å¼€å‘è€…æä¾›ä¸€ä¸ªå‚è€ƒæ„è§ã€‚
 <br/><span style="color:blue">Here we explain the technical principles, show how we did it, and hope to provide a reference for developers who encounter similar situations.</span>
 
-## 2.»ù±¾Ô­Àí<span style="color:blue"> Basic Principles</span>
+## 2.åŸºæœ¬åŸç†<span style="color:blue"> Basic Principles</span>
 
-ÏÂÍ¼ÊÇWinForm.NET³ÌĞòµÄ»ù´¡¼Ü¹¹Í¼£º
+ä¸‹å›¾æ˜¯WinForm.NETç¨‹åºçš„åŸºç¡€æ¶æ„å›¾ï¼š
 <br/><span style="color:blue">The following figure is the basic architecture diagram of the WinForm.NET program:</span>
 <br/><img src="1.png?raw=true" /><br/>
-ÔÚÕâ¸ö¼Ü¹¹Í¼ÖĞ£¬System.Windows.Forms.ControlºÍSystem.Drawings.GraphicsÊÇ×îºËĞÄµÄÀàĞÍ¡£
+åœ¨è¿™ä¸ªæ¶æ„å›¾ä¸­ï¼ŒSystem.Windows.Forms.Controlå’ŒSystem.Drawings.Graphicsæ˜¯æœ€æ ¸å¿ƒçš„ç±»å‹ã€‚
 <br/><span style="color:blue">In this architecture diagram, System.Windows.Forms.Control and System.Drawings.Graphics are the core types.</span>
 
-System.Windows.Forms.ControlÀàĞÍÓÃÓÚ½«Êó±ê¼üÅÌÊÂ¼ş·¢ËÍ¸øDCWriterºËĞÄÄ£¿éÀ´Íê³ÉÓÃ»§»¥¶¯µÄ²Ù×÷¡£
+System.Windows.Forms.Controlç±»å‹ç”¨äºå°†é¼ æ ‡é”®ç›˜äº‹ä»¶å‘é€ç»™DCWriteræ ¸å¿ƒæ¨¡å—æ¥å®Œæˆç”¨æˆ·äº’åŠ¨çš„æ“ä½œã€‚
 <br/><span style="color:blue">The System.Windows.Forms.Control type is used to send mouse and keyboard events to the DCWriter core module to complete user interaction operations.</span>
 
-¶øDCWriterºËĞÄÄ£¿éÔòÊ¹ÓÃSystem.Drawings.GraphicsÀàĞÍÀ´»æÖÆÓÃ»§½çÃæ£¬Ê¹µÃÈí¼şºÍÓÃ»§»¥¶¯£¬ĞÎ³ÉÒ»¸ö±Õ»·¡£
+è€ŒDCWriteræ ¸å¿ƒæ¨¡å—åˆ™ä½¿ç”¨System.Drawings.Graphicsç±»å‹æ¥ç»˜åˆ¶ç”¨æˆ·ç•Œé¢ï¼Œä½¿å¾—è½¯ä»¶å’Œç”¨æˆ·äº’åŠ¨ï¼Œå½¢æˆä¸€ä¸ªé—­ç¯ã€‚
 <br/><span style="color:blue">The DCWriter core module uses the System.Drawings.Graphics type to draw the user interface, enabling the software to interact with users and form a closed loop.</span>
 
-²Î¿¼WinForm.NET³ÌĞòµÄ»ù±¾Ô­Àí£¬ÎÒÃÇÃşË÷³öÈçÏÂµÄ³ÌĞò¼Ü¹¹£º
+å‚è€ƒWinForm.NETç¨‹åºçš„åŸºæœ¬åŸç†ï¼Œæˆ‘ä»¬æ‘¸ç´¢å‡ºå¦‚ä¸‹çš„ç¨‹åºæ¶æ„ï¼š
 <br/><span style="color:blue">Referring to the basic principles of the WinForm.NET program, we have explored the following program architecture:</span>
 <br/><img src="2.png?raw=true" /><br/>
-ÒªÊµÏÖÕâ¸ö¼Ü¹¹£¬ºËĞÄÊÇÄ£Äâ³öSystem.Windows.Forms.ControlºÍSystem.Drawing.GraphicsÀàĞÍ£¬Ö»ÒªÄ£ÄâµÃ×ã¹»Ïñ£¬ÔòDCWriterºËĞÄÄ£¿éÎŞĞè´ó¸Ä¾ÍÄÜÔËĞĞÆğÀ´¡£
+è¦å®ç°è¿™ä¸ªæ¶æ„ï¼Œæ ¸å¿ƒæ˜¯æ¨¡æ‹Ÿå‡ºSystem.Windows.Forms.Controlå’ŒSystem.Drawing.Graphicsç±»å‹ï¼Œåªè¦æ¨¡æ‹Ÿå¾—è¶³å¤Ÿåƒï¼Œåˆ™DCWriteræ ¸å¿ƒæ¨¡å—æ— éœ€å¤§æ”¹å°±èƒ½è¿è¡Œèµ·æ¥ã€‚
 <br/><span style="color:blue">To implement this architecture, the core is to simulate the System.Windows.Forms.Control and System.Drawing.Graphics types. As long as the simulation is similar enough, the DCWriter core module can run without major modifications.</span>
 
-ÕâÑùDCWriterºËĞÄÄ£¿éºÍÓÃ»§²Ù×÷Ò²ÄÜĞÎ³É±Õ»·£¬´ï³ÉÊµÊ±»¥¶¯¡£Õâ¾ÍÊÇ½«WinForm.NET³ÌĞòÇ¨ÒÆµ½Blazor WASMÆ½Ì¨ÉÏµÄ»ù±¾Ô­Àí¡£
+è¿™æ ·DCWriteræ ¸å¿ƒæ¨¡å—å’Œç”¨æˆ·æ“ä½œä¹Ÿèƒ½å½¢æˆé—­ç¯ï¼Œè¾¾æˆå®æ—¶äº’åŠ¨ã€‚è¿™å°±æ˜¯å°†WinForm.NETç¨‹åºè¿ç§»åˆ°Blazor WASMå¹³å°ä¸Šçš„åŸºæœ¬åŸç†ã€‚
 <br/><span style="color:blue">In this way, the DCWriter core module and user operations can also form a closed loop to achieve real-time interaction. This is the basic principle of migrating WinForm.NET programs to the Blazor WASM platform.</span>
 
-## 3.ÊµÏÖ¹ı³Ì<span style="color:blue"> Implementation Process</span>
+## 3.å®ç°è¿‡ç¨‹<span style="color:blue"> Implementation Process</span>
 
-°´ÕÕÕâ¸ö¼Ü¹¹Í¼£¬ÎÒÃÇÈçÏÂ½øĞĞ·Ö²½ÊµÏÖµÄ£º
+æŒ‰ç…§è¿™ä¸ªæ¶æ„å›¾ï¼Œæˆ‘ä»¬å¦‚ä¸‹è¿›è¡Œåˆ†æ­¥å®ç°çš„ï¼š
 <br/><span style="color:blue">According to this architecture diagram, we implemented it step by step as follows:</span>
 
-### 3.1.Ä£ÄâSystem.Windows.Forms.ControlÀàĞÍ
+### 3.1.æ¨¡æ‹ŸSystem.Windows.Forms.Controlç±»å‹
 <br/><span style="color:blue">3.1 Simulate the System.Windows.Forms.Control Type</span>
 
-Blazor WASM¼Ü¹¹ÖĞÊÇÃ»ÓĞSystem.Windows.Forms.dllµÄ£¬Òò´ËÎÒÃÇÀ´´´½¨Ò»¸öC#ÀàĞÍ public class Control{}¡£
+Blazor WASMæ¶æ„ä¸­æ˜¯æ²¡æœ‰System.Windows.Forms.dllçš„ï¼Œå› æ­¤æˆ‘ä»¬æ¥åˆ›å»ºä¸€ä¸ªC#ç±»å‹ public class Control{}ã€‚
 <br/><span style="color:blue">There is no System.Windows.Forms.dll in the Blazor WASM architecture, so we create a C# type: public class Control{}.</span>
 <br/><img src="3.png?raw=true" /><br/>
-¸ÃÀàĞÍ°üº¬ÒÔÏÂ³ÉÔ±£º
+è¯¥ç±»å‹åŒ…å«ä»¥ä¸‹æˆå‘˜ï¼š
 <br/><span style="color:blue">This type contains the following members:</span>
 
-Õâ¸ö³ÉÔ±º¯ÊıÍêÕûÄ£ÄâÁËºËĞÄÄ£¿éËùÒÀÀµµÄ±ê×¼System.Windows.Forms.ControlµÄ³ÉÔ±¡£
+è¿™ä¸ªæˆå‘˜å‡½æ•°å®Œæ•´æ¨¡æ‹Ÿäº†æ ¸å¿ƒæ¨¡å—æ‰€ä¾èµ–çš„æ ‡å‡†System.Windows.Forms.Controlçš„æˆå‘˜ã€‚
 <br/><span style="color:blue">This member function completely simulates the members of the standard System.Windows.Forms.Control that the core module depends on.</span>
 
-ÔÚ´úÂëÖĞÊ¹ÓÃÁËºÜ¶àBlazor WASM±ê×¼¿âÖĞ²»´æÔÚµÄÀàĞÍ£¬±ÈÈçColor¡¢Rectange¡¢Cursor¡¢KeyEventArgs¡¢KeyPressEventArgs¡¢MouseEventArgs¡¢PaintEventArgsÖ®ÀàµÄ£¬¶¼ĞèÒªÎÒÃÇÀ©É¢¶¨Òå¡£
+åœ¨ä»£ç ä¸­ä½¿ç”¨äº†å¾ˆå¤šBlazor WASMæ ‡å‡†åº“ä¸­ä¸å­˜åœ¨çš„ç±»å‹ï¼Œæ¯”å¦‚Colorã€Rectangeã€Cursorã€KeyEventArgsã€KeyPressEventArgsã€MouseEventArgsã€PaintEventArgsä¹‹ç±»çš„ï¼Œéƒ½éœ€è¦æˆ‘ä»¬æ‰©æ•£å®šä¹‰ã€‚
 <br/><span style="color:blue">The code uses many types that do not exist in the Blazor WASM standard library, such as Color, Rectange, Cursor, KeyEventArgs, KeyPressEventArgs, MouseEventArgs, PaintEventArgs, etc., which all need us to define extensively.</span>
 
-È»ºóÎÒÃÇ¸ú×Å¶¨ÒåÖÜ±ßµÄÀàĞÍ£¬±ÈÈçScrollableControl¡¢UserControlÖ®ÀàµÄ¡£ÓÉÓÚÎÒÃÇµÄDCWriter±à¼­Æ÷¿Ø¼şÊÇÅÉÉú×ÔUserControl£¬ÓÚÊÇÒ»²¿·ÖDCWriterºËĞÄÄ£¿éĞÎÊ½ÉÏ¿ªÊ¼Ç¨ÒÆ¹ıÀ´ÁË¡£
+ç„¶åæˆ‘ä»¬è·Ÿç€å®šä¹‰å‘¨è¾¹çš„ç±»å‹ï¼Œæ¯”å¦‚ScrollableControlã€UserControlä¹‹ç±»çš„ã€‚ç”±äºæˆ‘ä»¬çš„DCWriterç¼–è¾‘å™¨æ§ä»¶æ˜¯æ´¾ç”Ÿè‡ªUserControlï¼Œäºæ˜¯ä¸€éƒ¨åˆ†DCWriteræ ¸å¿ƒæ¨¡å—å½¢å¼ä¸Šå¼€å§‹è¿ç§»è¿‡æ¥äº†ã€‚
 <br/><span style="color:blue">Then we define the surrounding types accordingly, such as ScrollableControl, UserControl, etc. Since our DCWriter editor control is derived from UserControl, part of the DCWriter core module has formally started to be migrated over.</span>
 
-#### 3.1.1.Ä£Äâ¼üÅÌÊÂ¼ş
+#### 3.1.1.æ¨¡æ‹Ÿé”®ç›˜äº‹ä»¶
 <br/><span style="color:blue">3.1.1 Simulate Keyboard Events</span>
 
-WinForm.NET³ÌĞòÊÇ¿¿ÖØĞ´Control.OnKeyUp/OnKeyPres/OnKeyDownĞéº¯ÊıÀ´ÊµÏÖ¼üÅÌÊÂ¼ş¡£ÊÂ¼ş²ÎÊıÀàĞÍÊÇSystem.Windows.Forms.KeyEventArgs/KeyPressEventArgs¡£
+WinForm.NETç¨‹åºæ˜¯é é‡å†™Control.OnKeyUp/OnKeyPres/OnKeyDownè™šå‡½æ•°æ¥å®ç°é”®ç›˜äº‹ä»¶ã€‚äº‹ä»¶å‚æ•°ç±»å‹æ˜¯System.Windows.Forms.KeyEventArgs/KeyPressEventArgsã€‚
 <br/><span style="color:blue">WinForm.NET programs implement keyboard events by overriding the virtual functions Control.OnKeyUp/OnKeyPres/OnKeyDown. The event parameter types are System.Windows.Forms.KeyEventArgs/KeyPressEventArgs.</span>
-Ê×ÏÈ¶¨ÒåÒ»¸öÊó±êÊÂ¼ş×ª·¢Æ÷¡£Æä´úÂëÈçÏÂ£º
+é¦–å…ˆå®šä¹‰ä¸€ä¸ªé¼ æ ‡äº‹ä»¶è½¬å‘å™¨ã€‚å…¶ä»£ç å¦‚ä¸‹ï¼š
 <br/><span style="color:blue">First, define a mouse event forwarder. Its code is as follows:</span>
 <br/><img src="4.png?raw=true" /><br/>
 
-ÕâÊÇÒ»¸ö±ê¼ÇÁË[JSInvokeable]µÄº¯Êı£¬Õâ¸öº¯Êı½ÓÊÜJS¶Ë´«¹ıÀ´µÄÊÂ¼ş²ÎÊı£¬½«Æä×ª»»ÎªÒ»¸öSystem.Windows.Forms.KeyEventArgs£¬È»ºó¸ù¾İÊÂ¼şÃû³Æ´¥·¢¿Ø¼şµÄ¼üÅÌÊÂ¼ş¡£
+è¿™æ˜¯ä¸€ä¸ªæ ‡è®°äº†[JSInvokeable]çš„å‡½æ•°ï¼Œè¿™ä¸ªå‡½æ•°æ¥å—JSç«¯ä¼ è¿‡æ¥çš„äº‹ä»¶å‚æ•°ï¼Œå°†å…¶è½¬æ¢ä¸ºä¸€ä¸ªSystem.Windows.Forms.KeyEventArgsï¼Œç„¶åæ ¹æ®äº‹ä»¶åç§°è§¦å‘æ§ä»¶çš„é”®ç›˜äº‹ä»¶ã€‚
 <br/><span style="color:blue">This is a function marked with [JSInvokeable]. This function accepts the event parameters passed from the JS side, converts them into a System.Windows.Forms.KeyEventArgs, and then triggers the keyboard event of the control according to the event name.</span>
 
-È»ºóÔÚJavaScript¶Ë£¬ÎÒÃÇ¶ÔÒ»¸ö`<input type=text>`°ó¶¨ÁË¼üÅÌÊÂ¼ş´¦Àí£º
+ç„¶ååœ¨JavaScriptç«¯ï¼Œæˆ‘ä»¬å¯¹ä¸€ä¸ª`<input type=text>`ç»‘å®šäº†é”®ç›˜äº‹ä»¶å¤„ç†ï¼š
 <br/><span style="color:blue">Then on the JavaScript side, we bind keyboard event handling to an `<input type=text>` element:</span>
 <br/><img src="5.png?raw=true" /><br/>
-ÔÚÕâ¸ö¼üÅÌÊÂ¼ş´¦ÀíµÄJS´úÂëÖĞ£¬ÎÒÃÇÊ¹ÓÃinvokeMethod()Í¨¹ıJSInteropµ÷ÓÃÁËÔÚC#¶Ë¶¨ÒåµÄEditorHandleKeyEvent()º¯Êı£¬²¢½«ÊÂ¼ş²ÎÊı´«µİ¸øC#¶Ë¡£
+åœ¨è¿™ä¸ªé”®ç›˜äº‹ä»¶å¤„ç†çš„JSä»£ç ä¸­ï¼Œæˆ‘ä»¬ä½¿ç”¨invokeMethod()é€šè¿‡JSInteropè°ƒç”¨äº†åœ¨C#ç«¯å®šä¹‰çš„EditorHandleKeyEvent()å‡½æ•°ï¼Œå¹¶å°†äº‹ä»¶å‚æ•°ä¼ é€’ç»™C#ç«¯ã€‚
 <br/><span style="color:blue">In the JS code for this keyboard event handling, we use invokeMethod() to call the EditorHandleKeyEvent() function defined on the C# side through JSInterop, and pass the event parameters to the C# side.</span>
 <br/><img src="6.png?raw=true" /><br/>
-Í¨¹ıÕâÖÖ·½Ê½£¬ÎÒÃÇ´òÍ¨ÁË¡°HTMLÔªËØ¼üÅÌÊÂ¼ş->×ª»»Æ÷->KeyEventArgs->Control.OnKeyDown->DCWriterºËĞÄÄ£¿é¡±µÄÊÂ¼ş´«µİÍ¨µÀ¡£
+é€šè¿‡è¿™ç§æ–¹å¼ï¼Œæˆ‘ä»¬æ‰“é€šäº†â€œHTMLå…ƒç´ é”®ç›˜äº‹ä»¶->è½¬æ¢å™¨->KeyEventArgs->Control.OnKeyDown->DCWriteræ ¸å¿ƒæ¨¡å—â€çš„äº‹ä»¶ä¼ é€’é€šé“ã€‚
 <br/><span style="color:blue">In this way, we have opened up the event transmission channel of "HTML element keyboard event -> converter -> KeyEventArgs -> Control.OnKeyDown -> DCWriter core module".</span>
 
-Í¨¹ıÀàËÆµÄ·½Ê½£¬ÎÒÃÇ´òÍ¨ÁËÊó±êµã»÷¡¢ÒÆ¶¯¡¢ÍÏ×§ÊÂ¼şµÄ´«µİÍ¨µÀ¡£
+é€šè¿‡ç±»ä¼¼çš„æ–¹å¼ï¼Œæˆ‘ä»¬æ‰“é€šäº†é¼ æ ‡ç‚¹å‡»ã€ç§»åŠ¨ã€æ‹–æ‹½äº‹ä»¶çš„ä¼ é€’é€šé“ã€‚
 <br/><span style="color:blue">In a similar way, we have opened up the transmission channel for mouse click, movement, and drag events.</span>
 
-#### 3.1.2.Ä£ÄâControl.Invalidate(Rectangle)
+#### 3.1.2.æ¨¡æ‹ŸControl.Invalidate(Rectangle)
 <br/><span style="color:blue">3.1.2 Simulate Control.Invalidate(Rectangle)</span>
 
-ÔÚ WinForm.NET³ÌĞòÖĞ£¬Control.Invalidate()Ò²ÊÇÒ»¸ö·Ç³£ÖØÒªµÄ³ÉÔ±·½·¨ĞèÒªÄ£Äâ³öÀ´£¬Îª´ËÎÒÃÇ¶¨ÒåÒÔÏÂ·½·¨£º
+åœ¨ WinForm.NETç¨‹åºä¸­ï¼ŒControl.Invalidate()ä¹Ÿæ˜¯ä¸€ä¸ªéå¸¸é‡è¦çš„æˆå‘˜æ–¹æ³•éœ€è¦æ¨¡æ‹Ÿå‡ºæ¥ï¼Œä¸ºæ­¤æˆ‘ä»¬å®šä¹‰ä»¥ä¸‹æ–¹æ³•ï¼š
 <br/><span style="color:blue">In WinForm.NET programs, Control.Invalidate() is also a very important member method that needs to be simulated. For this purpose, we define the following methods:</span>
 
-1.¶¨ÒåC#·½·¨void Control.Invalidate( Rectangle )·½·¨£¬Ôò¸Ã·½·¨ÄÚ²¿Ê¹ÓÃÒ»¸öList<Rectangle>À´´æ´¢¶à¸öÎŞĞ§¾ØĞÎÇøÓò£¬²¢½øĞĞ¾ØĞÎÇøÓòµÄºÏ²¢²Ù×÷£¬¼õÉÙÖØ»æµÄ¹¤×÷Á¿¡£È»ºóÍ¨¹ıJSInteropµ÷ÓÃÎŞ²ÎÊıµÄJSº¯ÊıNeedUpdateView()¡£
+1.å®šä¹‰C#æ–¹æ³•void Control.Invalidate( Rectangle )æ–¹æ³•ï¼Œåˆ™è¯¥æ–¹æ³•å†…éƒ¨ä½¿ç”¨ä¸€ä¸ªList<Rectangle>æ¥å­˜å‚¨å¤šä¸ªæ— æ•ˆçŸ©å½¢åŒºåŸŸï¼Œå¹¶è¿›è¡ŒçŸ©å½¢åŒºåŸŸçš„åˆå¹¶æ“ä½œï¼Œå‡å°‘é‡ç»˜çš„å·¥ä½œé‡ã€‚ç„¶åé€šè¿‡JSInteropè°ƒç”¨æ— å‚æ•°çš„JSå‡½æ•°NeedUpdateView()ã€‚
 <br/><span style="color:blue">1. Define the C# method void Control.Invalidate(Rectangle). Internally, this method uses a List<Rectangle> to store multiple invalid rectangular areas, and performs merging operations on the rectangular areas to reduce the workload of redrawing. Then call the parameterless JS function NeedUpdateView() through JSInterop.</span>
 
-2.¶¨ÒåC#·½·¨[JSInvokeable]public byte[] GetInvalidateViewData()£¬¸Ãº¯Êı¼ìË÷ÎŞĞ§¾ØĞÎÁĞ±í£¬»ñµÃµÚÒ»¸öÎŞĞ§¾ØĞÎ×÷ÎªClipRectangle£¬È»ºó´´½¨Graphcis¶ÔÏó£¬´´½¨Ò»¸öSystem.Windows.Forms.PaintEventArgs¶ÔÏó£¬µ÷ÓÃºËĞÄÄ£¿éµÄ»æÍ¼Ä£¿éÀ´»æÖÆÍ¼ĞÎ£¬·µ»Ø°üº¬»æÍ¼Ö¸ÁîµÄ×Ö½ÚÊı×é£¬É¾³ıµÚÒ»¸öÎŞĞ§¾ØĞÎ¶ÔÏó¡£Èç¹ûÃ»ÓĞÈÎºÎÎŞĞ§¾ØĞÎÇøÓò£¬Ôò·µ»Ønull¡£
+2.å®šä¹‰C#æ–¹æ³•[JSInvokeable]public byte[] GetInvalidateViewData()ï¼Œè¯¥å‡½æ•°æ£€ç´¢æ— æ•ˆçŸ©å½¢åˆ—è¡¨ï¼Œè·å¾—ç¬¬ä¸€ä¸ªæ— æ•ˆçŸ©å½¢ä½œä¸ºClipRectangleï¼Œç„¶ååˆ›å»ºGraphciså¯¹è±¡ï¼Œåˆ›å»ºä¸€ä¸ªSystem.Windows.Forms.PaintEventArgså¯¹è±¡ï¼Œè°ƒç”¨æ ¸å¿ƒæ¨¡å—çš„ç»˜å›¾æ¨¡å—æ¥ç»˜åˆ¶å›¾å½¢ï¼Œè¿”å›åŒ…å«ç»˜å›¾æŒ‡ä»¤çš„å­—èŠ‚æ•°ç»„ï¼Œåˆ é™¤ç¬¬ä¸€ä¸ªæ— æ•ˆçŸ©å½¢å¯¹è±¡ã€‚å¦‚æœæ²¡æœ‰ä»»ä½•æ— æ•ˆçŸ©å½¢åŒºåŸŸï¼Œåˆ™è¿”å›nullã€‚
 <br/><span style="color:blue">2. Define the C# method [JSInvokeable] public byte[] GetInvalidateViewData(). This function retrieves the invalid rectangle list, obtains the first invalid rectangle as ClipRectangle, then creates a Graphics object and a System.Windows.Forms.PaintEventArgs object, calls the drawing module of the core module to draw graphics, returns a byte array containing drawing instructions, and deletes the first invalid rectangle object. If there are no invalid rectangular areas, return null.</span>
 
-3.¶¨ÒåJS·½·¨ function NeedUpdateView()º¯Êı£¬¸Ãº¯ÊıÊ¹ÓÃwindow.setTimeout()À´ÑÓÊ±µ÷ÓÃÁíÍâÒ»¸öJSº¯Êı function DrawContent()¡£
+3.å®šä¹‰JSæ–¹æ³• function NeedUpdateView()å‡½æ•°ï¼Œè¯¥å‡½æ•°ä½¿ç”¨window.setTimeout()æ¥å»¶æ—¶è°ƒç”¨å¦å¤–ä¸€ä¸ªJSå‡½æ•° function DrawContent()ã€‚
 <br/><span style="color:blue">3. Define the JS method function NeedUpdateView(), which uses window.setTimeout() to delay calling another JS function function DrawContent().</span>
 
-4.¶¨ÒåJS·½·¨function DrawContent()£¬¸Ãº¯ÊıÍ¨¹ıJSInteropµ÷ÓÃC#º¯ÊıGetInvalidateViewData()£¬³¢ÊÔ»ñµÃ»æÍ¼Ö¸Áî×Ö½ÚÊı×é¡£Èç¹û´æÔÚÔòµ÷ÓÃJSÀàPageCotentDrawerÔÚHtmlCanvasElementÉÏµÄÖ¸¶¨ÇøÓò»æÖÆÍ¼ĞÎ¡£
+4.å®šä¹‰JSæ–¹æ³•function DrawContent()ï¼Œè¯¥å‡½æ•°é€šè¿‡JSInteropè°ƒç”¨C#å‡½æ•°GetInvalidateViewData()ï¼Œå°è¯•è·å¾—ç»˜å›¾æŒ‡ä»¤å­—èŠ‚æ•°ç»„ã€‚å¦‚æœå­˜åœ¨åˆ™è°ƒç”¨JSç±»PageCotentDraweråœ¨HtmlCanvasElementä¸Šçš„æŒ‡å®šåŒºåŸŸç»˜åˆ¶å›¾å½¢ã€‚
 <br/><span style="color:blue">4. Define the JS method function DrawContent(), which calls the C# function GetInvalidateViewData() through JSInterop to try to obtain the drawing instruction byte array. If it exists, call the JS class PageCotentDrawer to draw graphics in the specified area on the HtmlCanvasElement.</span>
 
-Í¨¹ıÕâ4¸ö·½·¨ÒÔControl.Invalidate() Ç£Í·´®ÁªÔÚÒ»Æğ£¬¹²Í¬Íê³ÉÓÃ»§½çÃæµÄÖ÷¶¯¾Ö²¿ÖØ»æµÄ¹¦ÄÜ¡£
+é€šè¿‡è¿™4ä¸ªæ–¹æ³•ä»¥Control.Invalidate() ç‰µå¤´ä¸²è”åœ¨ä¸€èµ·ï¼Œå…±åŒå®Œæˆç”¨æˆ·ç•Œé¢çš„ä¸»åŠ¨å±€éƒ¨é‡ç»˜çš„åŠŸèƒ½ã€‚
 <br/><span style="color:blue">These 4 methods are connected together led by Control.Invalidate() to jointly complete the function of active partial redrawing of the user interface.</span>
 
-### 3.2.Ä£ÄâSystem.Drawing.GraphcisÀàĞÍ
+### 3.2.æ¨¡æ‹ŸSystem.Drawing.Graphcisç±»å‹
 <br/><span style="color:blue">3.2 Simulate the System.Drawing.Graphics Type</span>
 
-ÎÒÃÇÔÚC#¶Ë¶¨ÒåÁËGraphcisÀàĞÍ£¬Æä°üº¬µÄ³ÉÔ±ÈçÏÂËùÊ¾£º
+æˆ‘ä»¬åœ¨C#ç«¯å®šä¹‰äº†Graphcisç±»å‹ï¼Œå…¶åŒ…å«çš„æˆå‘˜å¦‚ä¸‹æ‰€ç¤ºï¼š
 <br/><span style="color:blue">We defined the Graphics type on the C# side, which contains the following members:</span>
 <br/><img src="7.png?raw=true" /><br/>
-ÔÚ¸÷¸ö»æÍ¼º¯ÊıÄÚ²¿£¬»á½«»æÍ¼Ö¸¶¨ºÍÊ¹ÓÃµÄ²ÎÊıÖµ×ª´¢µ½Ò»¸öÄÚ´æ×Ö½ÚÁ÷ÖĞ¡£±ÈÈç¶ÔÓÚDrawLine()Æä´úÂëÈçÏÂ£º
+åœ¨å„ä¸ªç»˜å›¾å‡½æ•°å†…éƒ¨ï¼Œä¼šå°†ç»˜å›¾æŒ‡å®šå’Œä½¿ç”¨çš„å‚æ•°å€¼è½¬å‚¨åˆ°ä¸€ä¸ªå†…å­˜å­—èŠ‚æµä¸­ã€‚æ¯”å¦‚å¯¹äºDrawLine()å…¶ä»£ç å¦‚ä¸‹ï¼š
 <br/><span style="color:blue">Inside each drawing function, the drawing instructions and the parameter values used are dumped into an in-memory byte stream. For example, the code for DrawLine() is as follows:</span>
 <br/><img src="8.png?raw=true" /><br/>
-ÕâÑùµ±ËùÓĞµÄ»æÍ¼²Ù×÷Íê³É£¬GraphicsÄÚ²¿Ò»½áËã£¬¾Í¿ÉÒÔ»ñµÃÒ»¸ö°üº¬»æÍ¼Ö¸ÁîµÄ×Ö½ÚÊı×é£¬È»ºó·µ»Ø¸øJS¶Ë¡£
+è¿™æ ·å½“æ‰€æœ‰çš„ç»˜å›¾æ“ä½œå®Œæˆï¼ŒGraphicså†…éƒ¨ä¸€ç»“ç®—ï¼Œå°±å¯ä»¥è·å¾—ä¸€ä¸ªåŒ…å«ç»˜å›¾æŒ‡ä»¤çš„å­—èŠ‚æ•°ç»„ï¼Œç„¶åè¿”å›ç»™JSç«¯ã€‚
 <br/><span style="color:blue">In this way, when all drawing operations are completed, the internal settlement of Graphics can obtain a byte array containing drawing instructions, which is then returned to the JS side.</span>
 
-#### 3.2.1.Ä£ÄâGraphics.MeasureString()
+#### 3.2.1.æ¨¡æ‹ŸGraphics.MeasureString()
 <br/><span style="color:blue">3.2.1 Simulate Graphics.MeasureString()</span>
 
-ÕâÀï»¹ÓĞÒ»¸ö·Ç³£ÖØÒªµÄ³ÉÔ±·½·¨MeasureString()ĞèÒª½øĞĞÄ£Äâ£¬Õâ¸ö·½·¨ÓÃÓÚ²âÁ¿×Ö·ûµÄÏÔÊ¾¿í¶È£¬Ö±½Ó¾ö¶¨ÁËÎÄµµµÄÅÅ°æ½á¹û¡£
+è¿™é‡Œè¿˜æœ‰ä¸€ä¸ªéå¸¸é‡è¦çš„æˆå‘˜æ–¹æ³•MeasureString()éœ€è¦è¿›è¡Œæ¨¡æ‹Ÿï¼Œè¿™ä¸ªæ–¹æ³•ç”¨äºæµ‹é‡å­—ç¬¦çš„æ˜¾ç¤ºå®½åº¦ï¼Œç›´æ¥å†³å®šäº†æ–‡æ¡£çš„æ’ç‰ˆç»“æœã€‚
 <br/><span style="color:blue">There is another very important member method MeasureString() that needs to be simulated. This method is used to measure the display width of characters, which directly determines the typesetting result of the document.</span>
 
-ÓÉÓÚÎÄµµÖĞ¿ÉÄÜ°üÀ¨Ê®Íò¸ö×Ö·û£¬Èç¹ûÒÀÀµä¯ÀÀÆ÷µÄmeasureText()£¬ÔòÓÉÓÚÆµ·±µÄJSInterop²Ù×÷½µµÍĞÔÄÜ£¬¶øÇÒ¸÷¸öä¯ÀÀÆ÷Ö®¼äÔËËã½á¹û¿ÉÄÜ²»Ò»ÖÂ¡£Îª´ËÎÒÃÇ²ÉÓÃÈçÏÂ·½·¨£º
+ç”±äºæ–‡æ¡£ä¸­å¯èƒ½åŒ…æ‹¬åä¸‡ä¸ªå­—ç¬¦ï¼Œå¦‚æœä¾èµ–æµè§ˆå™¨çš„measureText()ï¼Œåˆ™ç”±äºé¢‘ç¹çš„JSInteropæ“ä½œé™ä½æ€§èƒ½ï¼Œè€Œä¸”å„ä¸ªæµè§ˆå™¨ä¹‹é—´è¿ç®—ç»“æœå¯èƒ½ä¸ä¸€è‡´ã€‚ä¸ºæ­¤æˆ‘ä»¬é‡‡ç”¨å¦‚ä¸‹æ–¹æ³•ï¼š
 <br/><span style="color:blue">Since a document may contain 100,000 characters, relying on the browser's measureText() will reduce performance due to frequent JSInterop operations, and the calculation results may be inconsistent between different browsers. For this reason, we adopt the following methods:</span>
 
-1.Ê¹ÓÃWinForm.NET¿ª·¢Ò»¸ö×¨ÓÃ¹¤¾ß½âÎö×ÖÌåTTC/TTFÎÄ¼ş£¬ÌáÈ¡ËùÓĞ×Ö·ûµÄ¿í¶ÈÊıÖµ¡£
+1.ä½¿ç”¨WinForm.NETå¼€å‘ä¸€ä¸ªä¸“ç”¨å·¥å…·è§£æå­—ä½“TTC/TTFæ–‡ä»¶ï¼Œæå–æ‰€æœ‰å­—ç¬¦çš„å®½åº¦æ•°å€¼ã€‚
 <br/><span style="color:blue">1. Use WinForm.NET to develop a special tool to parse font TTC/TTF files and extract the width values of all characters.</span>
 
-2.½«×Ö·ûµÄUncode±àÂë¸ù¾İÏàÍ¬µÄ×Ö·û¿í¶ÈÀ´»®·ÖÇøÓò£¬ÒÔ´Ë½«ÕâĞ©¿í¶ÈÊıÖµ¸ß¶ÈÑ¹ËõÎª¡°×ÖÌå¿ìÕÕĞÅÏ¢¡±¡£ÀıÈçËÎÌå×ÖÌåÎÄ¼şsimsun.ttcÓĞ18MB´óĞ¡£¬ÓÉÓÚÊÇµÈ¿í×ÖÌå£¬Æä¿ìÕÕĞÅÏ¢½ö 1KB¡£
+2.å°†å­—ç¬¦çš„Uncodeç¼–ç æ ¹æ®ç›¸åŒçš„å­—ç¬¦å®½åº¦æ¥åˆ’åˆ†åŒºåŸŸï¼Œä»¥æ­¤å°†è¿™äº›å®½åº¦æ•°å€¼é«˜åº¦å‹ç¼©ä¸ºâ€œå­—ä½“å¿«ç…§ä¿¡æ¯â€ã€‚ä¾‹å¦‚å®‹ä½“å­—ä½“æ–‡ä»¶simsun.ttcæœ‰18MBå¤§å°ï¼Œç”±äºæ˜¯ç­‰å®½å­—ä½“ï¼Œå…¶å¿«ç…§ä¿¡æ¯ä»… 1KBã€‚
 <br/><span style="color:blue">2. Divide the Unicode encoding of characters into regions according to the same character width, thereby highly compressing these width values into "font snapshot information". For example, the SimSun font file simsun.ttc is 18MB in size, and its snapshot information is only 1KB because it is a monospaced font.</span>
 
-3.ÓÉÓÚ¿ìÕÕĞÅÏ¢ºÜĞ¡£¬ËùÒÔÎÒÃÇ¸É´à½«¿ìÕÕĞÅÏ¢Ó²±àÂëµ½³ÌĞòÖĞ£¬ÎªÁË·½±ãÎ¬»¤£¬ÎÒÃÇ·ÅÖÃµ½JSÖĞ£¬Æä´úÂëÈçÏÂÍ¼ËùÊ¾¡£
+3.ç”±äºå¿«ç…§ä¿¡æ¯å¾ˆå°ï¼Œæ‰€ä»¥æˆ‘ä»¬å¹²è„†å°†å¿«ç…§ä¿¡æ¯ç¡¬ç¼–ç åˆ°ç¨‹åºä¸­ï¼Œä¸ºäº†æ–¹ä¾¿ç»´æŠ¤ï¼Œæˆ‘ä»¬æ”¾ç½®åˆ°JSä¸­ï¼Œå…¶ä»£ç å¦‚ä¸‹å›¾æ‰€ç¤ºã€‚
 <br/><span style="color:blue">3. Since the snapshot information is very small, we simply hard-code the snapshot information into the program. For easy maintenance, we place it in JS, and its code is shown in the following figure.</span>
 <br/><img src="9.png?raw=true" /><br/>
-4.»ùÓÚÕâĞ©×ÖÌå¿ìÕÕĞÅÏ¢£¬ÎÒÃÇ¾Í¿ÉÒÔÄ£Äâ³öMeasureString()¡£Êµ¼ùÖ¤Ã÷Õâ¸ö·½·¨µÄ¼ÆËãËÙ¶È·Ç³£¿ì£¬¶øÇÒÆä¼ÆËã½á¹ûÓëÔ­ÉúMeasureString()µÄ¼ÆËã½á¹û¸ß¶ÈÒ»ÖÂ¡£
+4.åŸºäºè¿™äº›å­—ä½“å¿«ç…§ä¿¡æ¯ï¼Œæˆ‘ä»¬å°±å¯ä»¥æ¨¡æ‹Ÿå‡ºMeasureString()ã€‚å®è·µè¯æ˜è¿™ä¸ªæ–¹æ³•çš„è®¡ç®—é€Ÿåº¦éå¸¸å¿«ï¼Œè€Œä¸”å…¶è®¡ç®—ç»“æœä¸åŸç”ŸMeasureString()çš„è®¡ç®—ç»“æœé«˜åº¦ä¸€è‡´ã€‚
 <br/><span style="color:blue">4. Based on this font snapshot information, we can simulate MeasureString(). Practice has proved that this method has a very fast calculation speed, and its calculation results are highly consistent with those of the native MeasureString().</span>
 
-#### 3.2.2.´òÓ¡
+#### 3.2.2.æ‰“å°
 <br/><span style="color:blue">3.2.2 Printing</span>
 
-ÎÒÃÇ»áÔÚJSÖĞÊ¹ÓÃwindow.print()·½·¨À´Ö´ĞĞ´òÓ¡£¬µ«´òÓ¡HtmlCanvasElement»á³öÏÖ½á¹ûÄ£ºıµÄÎÊÌâ£¬ÕâÊÇÓÉÓÚ´òÓ¡»úDPIÔ¶³¬ÏÔÊ¾Æ÷DPI¶øµ¼ÖÂ¡£Òò´ËÎÒÃÇÊ¹ÓÃSVGµÄÄ£Ê½½øĞĞ¸ßÇå´òÓ¡¡£
+æˆ‘ä»¬ä¼šåœ¨JSä¸­ä½¿ç”¨window.print()æ–¹æ³•æ¥æ‰§è¡Œæ‰“å°ï¼Œä½†æ‰“å°HtmlCanvasElementä¼šå‡ºç°ç»“æœæ¨¡ç³Šçš„é—®é¢˜ï¼Œè¿™æ˜¯ç”±äºæ‰“å°æœºDPIè¿œè¶…æ˜¾ç¤ºå™¨DPIè€Œå¯¼è‡´ã€‚å› æ­¤æˆ‘ä»¬ä½¿ç”¨SVGçš„æ¨¡å¼è¿›è¡Œé«˜æ¸…æ‰“å°ã€‚
 <br/><span style="color:blue">We use the window.print() method in JS to perform printing, but printing HtmlCanvasElement will result in blurry results, which is caused by the printer's DPI being much higher than the display's DPI. Therefore, we use SVG mode for high-definition printing.</span>
 
-Îª´Ë£¬ÎÒÃÇÔÚC#¶ËÊ¹ÓÃÒ»¸öSVGÖ¸Áî·­ÒëÆ÷À´ÊµÏÖ¸Ã¹¦ÄÜ¡£¶ÔÓÚGraphicsĞÂÔöSVG´òÓ¡Ä£Ê½¡£±ÈÈç¶ÔÓÚGraphics.DrawLine()£¬µ±Graphics´¦ÓÚSVG´òÓ¡Ä£Ê½£¬ÔòÊä³öµÄ²»ÊÇ¶ş½øÖÆÊı¾İ£¬¶øÊÇÊä³öSVG´úÂë£¬ÀıÈç<line x1="74" y1="121.5" x2="720" y2="121.5" stroke="Black"></line>¡£×îºó½«SVG´úÂë×Ö·û´®´«µİµ½JS¶Ë£¬È»ºóÊ¹ÓÃ¶¯Ì¬´´½¨SVGÔªËØÀ´³ĞÔØÕâĞ©SVG´úÂë£¬ÊµÏÖ¸ßÇå´òÓ¡¡£
+ä¸ºæ­¤ï¼Œæˆ‘ä»¬åœ¨C#ç«¯ä½¿ç”¨ä¸€ä¸ªSVGæŒ‡ä»¤ç¿»è¯‘å™¨æ¥å®ç°è¯¥åŠŸèƒ½ã€‚å¯¹äºGraphicsæ–°å¢SVGæ‰“å°æ¨¡å¼ã€‚æ¯”å¦‚å¯¹äºGraphics.DrawLine()ï¼Œå½“Graphicså¤„äºSVGæ‰“å°æ¨¡å¼ï¼Œåˆ™è¾“å‡ºçš„ä¸æ˜¯äºŒè¿›åˆ¶æ•°æ®ï¼Œè€Œæ˜¯è¾“å‡ºSVGä»£ç ï¼Œä¾‹å¦‚<line x1="74" y1="121.5" x2="720" y2="121.5" stroke="Black"></line>ã€‚æœ€åå°†SVGä»£ç å­—ç¬¦ä¸²ä¼ é€’åˆ°JSç«¯ï¼Œç„¶åä½¿ç”¨åŠ¨æ€åˆ›å»ºSVGå…ƒç´ æ¥æ‰¿è½½è¿™äº›SVGä»£ç ï¼Œå®ç°é«˜æ¸…æ‰“å°ã€‚
 <br/><span style="color:blue">To this end, we use an SVG instruction translator on the C# side to implement this function. Add SVG printing mode for Graphics. For example, for Graphics.DrawLine(), when Graphics is in SVG printing mode, it outputs not binary data but SVG code, such as <line x1="74" y1="121.5" x2="720" y2="121.5" stroke="Black"></line>. Finally, pass the SVG code string to the JS side, and then use dynamically created SVG elements to carry the SVG code to achieve high-definition printing.</span>
 
-#### 3.2.3. JS¶ËDCBinaryReaderÀà
+#### 3.2.3. JSç«¯DCBinaryReaderç±»
 <br/><span style="color:blue">3.2.3 DCBinaryReader Class on JS Side</span>
 
-ÎÒÃÇ¶¨ÒåÁËÒ»¸öJSÀà class DCBinaryReader {}¡£ËüÔÚDataViewµÄ»ù´¡ÉÏÊµÏÖÁËÒ»¸öÏòÇ°µÄ¶ş½øÖÆÊı¾İ¶ÁÈ¡Æ÷¡£ÓÃÓÚ¼ò»¯ºóĞø²Ù×÷¡£
+æˆ‘ä»¬å®šä¹‰äº†ä¸€ä¸ªJSç±» class DCBinaryReader {}ã€‚å®ƒåœ¨DataViewçš„åŸºç¡€ä¸Šå®ç°äº†ä¸€ä¸ªå‘å‰çš„äºŒè¿›åˆ¶æ•°æ®è¯»å–å™¨ã€‚ç”¨äºç®€åŒ–åç»­æ“ä½œã€‚
 <br/><span style="color:blue">We defined a JS class class DCBinaryReader {}. It implements a forward binary data reader based on DataView, which is used to simplify subsequent operations.</span>
 <br/><img src="10.png?raw=true" /><br/>
-#### 3.2.4. JS¶ËPageContentDrawerÀà
+#### 3.2.4. JSç«¯PageContentDrawerç±»
 <br/><span style="color:blue">3.2.4 PageContentDrawer Class on JS Side</span>
 
-ÎÒÃÇ¶¨ÒåÁËÒ»¸öJSÀàclass PageContentDrawer{}¡£Ëü»ñµÃC#¶ËGraphics¶ÔÏóÉú³ÉµÄ¶ş½øÖÆÊı×é£¬Ê¹ÓÃDCBinaryReader·â×°Ò»ÏÂ£¬È»ºóÔÚÒ»¸öHTMLµÄCANVASÔªËØÉÏ½øĞĞ»æÖÆ¡£Ö÷Ìå´úÂëÈçÍ¼£º
+æˆ‘ä»¬å®šä¹‰äº†ä¸€ä¸ªJSç±»class PageContentDrawer{}ã€‚å®ƒè·å¾—C#ç«¯Graphicså¯¹è±¡ç”Ÿæˆçš„äºŒè¿›åˆ¶æ•°ç»„ï¼Œä½¿ç”¨DCBinaryReaderå°è£…ä¸€ä¸‹ï¼Œç„¶ååœ¨ä¸€ä¸ªHTMLçš„CANVASå…ƒç´ ä¸Šè¿›è¡Œç»˜åˆ¶ã€‚ä¸»ä½“ä»£ç å¦‚å›¾ï¼š
 <br/><span style="color:blue">We defined a JS class class PageContentDrawer{}. It obtains the binary array generated by the Graphics object on the C# side, encapsulates it with DCBinaryReader, and then draws on an HTML CANVAS element. The main code is shown in the figure:</span>
 
-ÔÚÕâ¸öÑ­»·ÌåÖĞ£¬Ê×ÏÈ¶ÁÈ¡»æÍ¼Ö¸Áî±àºÅ£¬È»ºóÔÚ»æÍ¼º¯Êı¼¯ÖĞ»ñµÃ±àºÅµÄ»æÍ¼º¯Êı£¬È»ºó½øĞĞµ÷ÓÃ¡£±ÈÈç¶ÔÓÚ5ºÅÖ¸Áî£¬ÕâÊÇ»æÖÆÏß¶ÎµÄ¹¦ÄÜ£¬Æä¹¦ÄÜ´úÂëÈçÏÂ£º
+åœ¨è¿™ä¸ªå¾ªç¯ä½“ä¸­ï¼Œé¦–å…ˆè¯»å–ç»˜å›¾æŒ‡ä»¤ç¼–å·ï¼Œç„¶ååœ¨ç»˜å›¾å‡½æ•°é›†ä¸­è·å¾—ç¼–å·çš„ç»˜å›¾å‡½æ•°ï¼Œç„¶åè¿›è¡Œè°ƒç”¨ã€‚æ¯”å¦‚å¯¹äº5å·æŒ‡ä»¤ï¼Œè¿™æ˜¯ç»˜åˆ¶çº¿æ®µçš„åŠŸèƒ½ï¼Œå…¶åŠŸèƒ½ä»£ç å¦‚ä¸‹ï¼š
 <br/><span style="color:blue">In this loop body, first read the drawing instruction number, then obtain the drawing function of the number in the drawing function set, and then call it. For example, for instruction No. 5, which is the function of drawing line segments, its function code is as follows:</span>
 
-ÔÚÕâ¸öº¯ÊıÖĞ£¬³ÌĞòÊ×ÏÈ»ñµÃint16Êı¾İ£¬ÕâÊÇ»­±Ê¶ÔÏó±àºÅ£¬´Óthis.PenTableÖĞ»ñµÃ»­±Ê¶ÔÏó¡£È»ºóÊ¹ÓÃDrawLineº¯ÊıÀ´»æÖÆÏß¶Î¡£ÕâÀïµ÷ÓÃÁË4´ÎReaderInt32()£¬ÕâÊÇ»ñÈ¡Ïß¶ÎµÄ×ø±êĞÅÏ¢£¬Ò²¾ÍÊÇx1,y1,x2,y2¡£
+åœ¨è¿™ä¸ªå‡½æ•°ä¸­ï¼Œç¨‹åºé¦–å…ˆè·å¾—int16æ•°æ®ï¼Œè¿™æ˜¯ç”»ç¬”å¯¹è±¡ç¼–å·ï¼Œä»this.PenTableä¸­è·å¾—ç”»ç¬”å¯¹è±¡ã€‚ç„¶åä½¿ç”¨DrawLineå‡½æ•°æ¥ç»˜åˆ¶çº¿æ®µã€‚è¿™é‡Œè°ƒç”¨äº†4æ¬¡ReaderInt32()ï¼Œè¿™æ˜¯è·å–çº¿æ®µçš„åæ ‡ä¿¡æ¯ï¼Œä¹Ÿå°±æ˜¯x1,y1,x2,y2ã€‚
 <br/><span style="color:blue">In this function, the program first obtains int16 data, which is the brush object number, and obtains the brush object from this.PenTable. Then use the DrawLine function to draw the line segment. Here, ReaderInt32() is called 4 times to obtain the coordinate information of the line segment, namely x1, y1, x2, y2.</span>
 
-ÕâÑù£¬ÎÒÃÇ¾ÍÄÜ½«C#¶ËGraphis.DrawLine()×ª»»ÎªJS¶ËµÄcanvas.drawLine()£¬ÊµÏÖÁËÔÚÒ»¸öHTMLCanvasElementÉÏ»æÖÆÍ¼ĞÎ¡£
+è¿™æ ·ï¼Œæˆ‘ä»¬å°±èƒ½å°†C#ç«¯Graphis.DrawLine()è½¬æ¢ä¸ºJSç«¯çš„canvas.drawLine()ï¼Œå®ç°äº†åœ¨ä¸€ä¸ªHTMLCanvasElementä¸Šç»˜åˆ¶å›¾å½¢ã€‚
 <br/><span style="color:blue">In this way, we can convert Graphis.DrawLine() on the C# side to canvas.drawLine() on the JS side, realizing drawing graphics on an HTMLCanvasElement.</span>
 <br/><img src="11.png?raw=true" /><br/>
-ÖÁ´Ë£¬ÎÒÃÇ¾ÍÄ£Äâ³öSystem.Drawing.GraphicsÀàĞÍ¡£
+è‡³æ­¤ï¼Œæˆ‘ä»¬å°±æ¨¡æ‹Ÿå‡ºSystem.Drawing.Graphicsç±»å‹ã€‚
 <br/><span style="color:blue">At this point, we have simulated the System.Drawing.Graphics type.</span>
 
-## 4.´ó±ä»îJS <span style="color:blue"> Transform to JS</span>
+## 4.å¤§å˜æ´»JS <span style="color:blue"> Transform to JS</span>
 
-Ê¹ÓÃÎÒÃÇ¿ª·¢µÄ¡¾½á½ç.NET¡¿£¨https://github.com/dcsoft-yyf/JIEJIE.NET£©½øĞĞ³ÌĞò¼¯»ìÏı¼ÓÃÜ£¬Ê¹ÓÃ¡¾BlazorWASMPackager¡¿(https://github.com/dcsoft-yyf/BlazorWASMPackager)½«Blazor WASMµÄ±àÒë½á¹û´ò°ü³ÉÒ»¸ö¶ÀÁ¢ÔËĞĞµÄJSÎÄ¼ş¡£
+ä½¿ç”¨æˆ‘ä»¬å¼€å‘çš„ã€ç»“ç•Œ.NETã€‘ï¼ˆhttps://github.com/dcsoft-yyf/JIEJIE.NETï¼‰è¿›è¡Œç¨‹åºé›†æ··æ·†åŠ å¯†ï¼Œä½¿ç”¨ã€BlazorWASMPackagerã€‘(https://github.com/dcsoft-yyf/BlazorWASMPackager)å°†Blazor WASMçš„ç¼–è¯‘ç»“æœæ‰“åŒ…æˆä¸€ä¸ªç‹¬ç«‹è¿è¡Œçš„JSæ–‡ä»¶ã€‚
 <br/><span style="color:blue">Use the [JIEJIE.NET] (https://github.com/dcsoft-yyf/JIEJIE.NET) developed by us to obfuscate and encrypt the assembly, and use [BlazorWASMPackager] (https://github.com/dcsoft-yyf/BlazorWASMPackager) to package the compiled result of Blazor WASM into an independently runnable JS file.</span>
 
-ÕâÑùÎÒÃÇÒ»¶Ù²Ù×÷ÃÍÈç»¢£¬½«Ô­ÏÈµÄWinForm.NETµÄEXEÎÄ¼ş×ª±äÎªÒ»¸ö15MBµÄJSÎÄ¼ş£¬Ãæ¶ÔBS¼Ü¹¹ºÍĞÅ´´£¬±äµÃ¸ü¼ÓµÄ¸ùÕıÃçºì£¬ÎŞĞ¸¿É»÷ÁË¡£
+è¿™æ ·æˆ‘ä»¬ä¸€é¡¿æ“ä½œçŒ›å¦‚è™ï¼Œå°†åŸå…ˆçš„WinForm.NETçš„EXEæ–‡ä»¶è½¬å˜ä¸ºä¸€ä¸ª15MBçš„JSæ–‡ä»¶ï¼Œé¢å¯¹BSæ¶æ„å’Œä¿¡åˆ›ï¼Œå˜å¾—æ›´åŠ çš„æ ¹æ­£è‹—çº¢ï¼Œæ— æ‡ˆå¯å‡»äº†ã€‚
 <br/><span style="color:blue">In this way, through a series of efficient operations, we transformed the original WinForm.NET EXE file into a 15MB JS file, which is more compliant and impeccable for BS architecture and domestic independent innovation requirements.</span>
 
-## 5. ×îÖÕĞ§¹û<span style="color:blue"> Final Effect</span>
+## 5. æœ€ç»ˆæ•ˆæœ<span style="color:blue"> Final Effect</span>
 
-¾­¹ıÉÏÊö²Ù×÷£¬ÎÒÃÇ³É¹¦µÄ½«DCWriter±à¼­Æ÷µÄWinForm.NET°æ±¾Ç¨ÒÆµ½Blazor WASMÆ½Ì¨ÉÏ£¬ÊµÏÖÁËÒ»¸ö´¿Ç°¶ËµÄ·ûºÏĞÅ´´µÄ±à¼­Æ÷×é¼ş¡£Ò»¸öÎÄµµÔÚWinForm.NET°æ±¾µÄÏÔÊ¾ÈçÏÂÍ¼ËùÊ¾£º
+ç»è¿‡ä¸Šè¿°æ“ä½œï¼Œæˆ‘ä»¬æˆåŠŸçš„å°†DCWriterç¼–è¾‘å™¨çš„WinForm.NETç‰ˆæœ¬è¿ç§»åˆ°Blazor WASMå¹³å°ä¸Šï¼Œå®ç°äº†ä¸€ä¸ªçº¯å‰ç«¯çš„ç¬¦åˆä¿¡åˆ›çš„ç¼–è¾‘å™¨ç»„ä»¶ã€‚ä¸€ä¸ªæ–‡æ¡£åœ¨WinForm.NETç‰ˆæœ¬çš„æ˜¾ç¤ºå¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
 <br/><span style="color:blue">After the above operations, we successfully migrated the WinForm.NET version of the DCWriter editor to the Blazor WASM platform, realizing a pure front-end editor component that complies with domestic independent innovation requirements. The display of a document in the WinForm.NET version is shown in the following figure:</span>
 <br/><img src="12.png?raw=true" /><br/>
-Í¬Ò»¸öÎÄµµÔÚ¹È¸èä¯ÀÀÆ÷ÖĞµÄÏÔÊ¾Ğ§¹ûÈçÏÂÍ¼ËùÊ¾£º
+åŒä¸€ä¸ªæ–‡æ¡£åœ¨è°·æ­Œæµè§ˆå™¨ä¸­çš„æ˜¾ç¤ºæ•ˆæœå¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
 <br/><span style="color:blue">The display effect of the same document in Google Chrome is shown in the following figure:</span>
 <br/><img src="13.png?raw=true" /><br/>
-Õâ¸öÎÄµµÔÚFireFoxä¯ÀÀÆ÷ÖĞµÄÏÔÊ¾ÈçÏÂÍ¼ËùÊ¾£º
+è¿™ä¸ªæ–‡æ¡£åœ¨FireFoxæµè§ˆå™¨ä¸­çš„æ˜¾ç¤ºå¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
 <br/><span style="color:blue">The display of this document in FireFox browser is shown in the following figure:</span>
 <br/><img src="14.png?raw=true" /><br/>
-¿ÉÒÔ¿´³ö£¬Í¬Ò»¸öÎÄµµ£¬ÔÚÈıÖÖÆ½Ì¨ÖĞÅÅ°æºÍÏÔÊ¾µÄ½á¹ûÍêÈ«Ò»ÖÂ£¬Æä¼üÅÌºÍÊó±êÊÂ¼ş´¦ÀíĞĞÎªÒ²¸ß¶ÈÒ»ÖÂ£¬¶øÇÒÍ¨¹ıÁËÒ»Ğ©¹ú²ú²Ù×÷ÏµÍ³³§¼ÒµÄÊÊÅäÈÏÖ¤¡£
+å¯ä»¥çœ‹å‡ºï¼ŒåŒä¸€ä¸ªæ–‡æ¡£ï¼Œåœ¨ä¸‰ç§å¹³å°ä¸­æ’ç‰ˆå’Œæ˜¾ç¤ºçš„ç»“æœå®Œå…¨ä¸€è‡´ï¼Œå…¶é”®ç›˜å’Œé¼ æ ‡äº‹ä»¶å¤„ç†è¡Œä¸ºä¹Ÿé«˜åº¦ä¸€è‡´ï¼Œè€Œä¸”é€šè¿‡äº†ä¸€äº›å›½äº§æ“ä½œç³»ç»Ÿå‚å®¶çš„é€‚é…è®¤è¯ã€‚
 <br/><span style="color:blue">It can be seen that the same document has exactly the same typesetting and display results on the three platforms, and its keyboard and mouse event handling behaviors are also highly consistent, and it has passed the adaptation certification of some domestic operating system manufacturers.</span>
 
-ÕâÑùµÄ½á¹û´ïµ½ÎÒÃÇµÄÔ¤ÆÚ£¬ÈÃÎÒÃÇµÄ²úÆ·ÓĞĞÒÄÜ»îÏÂÀ´¼ÌĞø¸ø¿Í»§´øÀ´³ÖĞøµÄ¼ÛÖµ¡£
+è¿™æ ·çš„ç»“æœè¾¾åˆ°æˆ‘ä»¬çš„é¢„æœŸï¼Œè®©æˆ‘ä»¬çš„äº§å“æœ‰å¹¸èƒ½æ´»ä¸‹æ¥ç»§ç»­ç»™å®¢æˆ·å¸¦æ¥æŒç»­çš„ä»·å€¼ã€‚
+
 <br/><span style="color:blue">This result meets our expectations, allowing our product to survive and continue to bring sustained value to customers.</span>
