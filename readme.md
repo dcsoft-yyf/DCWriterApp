@@ -5,7 +5,8 @@
 <br />Email: [28348092@qq.com](mailto:28348092@qq.com) or [yyf9989@hotmail.com](mailto:yyf9989@hotmail.com)
 
 # Update log
-2025-9-17 First upload
+2025-12-4 Add knowledge [How to Migrate WinForm.NET Code to Blazor WASM Platform?|如何将WinForm.NET代码迁移到Blazor WASM平台上?](https://github.com/dcsoft-yyf/DCWriterApp/blob/main/WinFormWASM/WinFormWASM.md)
+<br/>2025-9-17 First upload
 # Screen snapshort
 
 <img src="https://raw.githubusercontent.com/dcsoft-yyf/DCWriterApp/refs/heads/main/images/form designer.jpg"/>
